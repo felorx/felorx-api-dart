@@ -27,6 +27,7 @@ MessageTemplateDto _$MessageTemplateDtoFromJson(Map<String, dynamic> json) =>
           (v) => v == null ? null : DateTime.parse(v as String),
         ),
         name: $checkedConvert('name', (v) => v as String?),
+        displayName: $checkedConvert('displayName', (v) => v as String?),
         description: $checkedConvert('description', (v) => v as String?),
         latestVersion: $checkedConvert(
           'latestVersion',
@@ -50,6 +51,7 @@ Map<String, dynamic> _$MessageTemplateDtoToJson(MessageTemplateDto instance) =>
       if (instance.deletionTime?.toIso8601String() case final value?)
         'deletionTime': value,
       if (instance.name case final value?) 'name': value,
+      if (instance.displayName case final value?) 'displayName': value,
       if (instance.description case final value?) 'description': value,
       if (instance.latestVersion case final value?) 'latestVersion': value,
     };

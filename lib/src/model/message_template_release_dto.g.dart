@@ -30,6 +30,16 @@ MessageTemplateReleaseDto _$MessageTemplateReleaseDtoFromJson(
     templateName: $checkedConvert('templateName', (v) => v as String?),
     version: $checkedConvert('version', (v) => (v as num?)?.toInt()),
     content: $checkedConvert('content', (v) => v as String?),
+    schemaVersion: $checkedConvert(
+      'schemaVersion',
+      (v) => (v as num?)?.toInt(),
+    ),
+    contentHash: $checkedConvert('contentHash', (v) => v as String?),
+    status: $checkedConvert('status', (v) => v as String?),
+    publishedAt: $checkedConvert(
+      'publishedAt',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
     templateId: $checkedConvert('templateId', (v) => v as String?),
   );
   return val;
@@ -52,5 +62,10 @@ Map<String, dynamic> _$MessageTemplateReleaseDtoToJson(
   if (instance.templateName case final value?) 'templateName': value,
   if (instance.version case final value?) 'version': value,
   if (instance.content case final value?) 'content': value,
+  if (instance.schemaVersion case final value?) 'schemaVersion': value,
+  if (instance.contentHash case final value?) 'contentHash': value,
+  if (instance.status case final value?) 'status': value,
+  if (instance.publishedAt?.toIso8601String() case final value?)
+    'publishedAt': value,
   if (instance.templateId case final value?) 'templateId': value,
 };
