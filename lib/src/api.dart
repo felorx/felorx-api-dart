@@ -12,6 +12,13 @@ import 'package:puupee_api_client/src/api/abp_application_configuration_api.dart
 import 'package:puupee_api_client/src/api/abp_application_localization_api.dart';
 import 'package:puupee_api_client/src/api/abp_tenant_api.dart';
 import 'package:puupee_api_client/src/api/account_api.dart';
+import 'package:puupee_api_client/src/api/ai_chat_api.dart';
+import 'package:puupee_api_client/src/api/ai_image_api.dart';
+import 'package:puupee_api_client/src/api/ai_images_api.dart';
+import 'package:puupee_api_client/src/api/ai_job_api.dart';
+import 'package:puupee_api_client/src/api/ai_jobs_api.dart';
+import 'package:puupee_api_client/src/api/ai_video_api.dart';
+import 'package:puupee_api_client/src/api/ai_videos_api.dart';
 import 'package:puupee_api_client/src/api/api_keys_api.dart';
 import 'package:puupee_api_client/src/api/app_api.dart';
 import 'package:puupee_api_client/src/api/app_asset_api.dart';
@@ -40,6 +47,9 @@ import 'package:puupee_api_client/src/api/message_source_route_sub_api.dart';
 import 'package:puupee_api_client/src/api/message_template_api.dart';
 import 'package:puupee_api_client/src/api/message_template_release_api.dart';
 import 'package:puupee_api_client/src/api/notification_api.dart';
+import 'package:puupee_api_client/src/api/open_ai_compatible_chat_api.dart';
+import 'package:puupee_api_client/src/api/open_ai_compatible_images_api.dart';
+import 'package:puupee_api_client/src/api/open_ai_compatible_videos_api.dart';
 import 'package:puupee_api_client/src/api/ops_crypto_api.dart';
 import 'package:puupee_api_client/src/api/permissions_api.dart';
 import 'package:puupee_api_client/src/api/profile_api.dart';
@@ -131,6 +141,48 @@ class PuupeeApiClient {
   /// by doing that all interceptors will not be executed
   AccountApi getAccountApi() {
     return AccountApi(dio);
+  }
+
+  /// Get AiChatApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiChatApi getAiChatApi() {
+    return AiChatApi(dio);
+  }
+
+  /// Get AiImageApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiImageApi getAiImageApi() {
+    return AiImageApi(dio);
+  }
+
+  /// Get AiImagesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiImagesApi getAiImagesApi() {
+    return AiImagesApi(dio);
+  }
+
+  /// Get AiJobApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiJobApi getAiJobApi() {
+    return AiJobApi(dio);
+  }
+
+  /// Get AiJobsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiJobsApi getAiJobsApi() {
+    return AiJobsApi(dio);
+  }
+
+  /// Get AiVideoApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiVideoApi getAiVideoApi() {
+    return AiVideoApi(dio);
+  }
+
+  /// Get AiVideosApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiVideosApi getAiVideosApi() {
+    return AiVideosApi(dio);
   }
 
   /// Get ApiKeysApi instance, base route and serializer can be overridden by a given but be careful,
@@ -299,6 +351,24 @@ class PuupeeApiClient {
   /// by doing that all interceptors will not be executed
   NotificationApi getNotificationApi() {
     return NotificationApi(dio);
+  }
+
+  /// Get OpenAiCompatibleChatApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  OpenAiCompatibleChatApi getOpenAiCompatibleChatApi() {
+    return OpenAiCompatibleChatApi(dio);
+  }
+
+  /// Get OpenAiCompatibleImagesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  OpenAiCompatibleImagesApi getOpenAiCompatibleImagesApi() {
+    return OpenAiCompatibleImagesApi(dio);
+  }
+
+  /// Get OpenAiCompatibleVideosApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  OpenAiCompatibleVideosApi getOpenAiCompatibleVideosApi() {
+    return OpenAiCompatibleVideosApi(dio);
   }
 
   /// Get OpsCryptoApi instance, base route and serializer can be overridden by a given but be careful,

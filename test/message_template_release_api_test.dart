@@ -12,6 +12,11 @@ void main() {
       // TODO
     });
 
+    //Future<MessageTemplateReleaseDto> getByTemplateNameAndVersion({ String templateName, int version }) async
+    test('test getByTemplateNameAndVersion', () async {
+      // TODO
+    });
+
     //Future<MessageTemplateReleaseDto> getMessageTemplateReleaseById(String id) async
     test('test getMessageTemplateReleaseById', () async {
       // TODO

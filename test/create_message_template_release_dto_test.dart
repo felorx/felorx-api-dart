@@ -12,6 +12,16 @@ void main() {
       // TODO
     });
 
+    // int schemaVersion
+    test('to test the property `schemaVersion`', () async {
+      // TODO
+    });
+
+    // String status
+    test('to test the property `status`', () async {
+      // TODO
+    });
+
     // String templateId
     test('to test the property `templateId`', () async {
       // TODO

@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**getByToken**](DeviceApi.md#getbytoken) | **GET** /api/app/device/by-token | 
 [**getDeviceById**](DeviceApi.md#getdevicebyid) | **GET** /api/app/device/{id} | 
 [**getDeviceList**](DeviceApi.md#getdevicelist) | **GET** /api/app/device | 
+[**logout**](DeviceApi.md#logout) | **POST** /api/app/device/logout | 
 [**refreshDevice**](DeviceApi.md#refreshdevice) | **POST** /api/app/device/refresh-device | 
 [**remove**](DeviceApi.md#remove) | **DELETE** /api/app/device | 
 
@@ -172,6 +173,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeviceDtoPagedResultDto**](DeviceDtoPagedResultDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **logout**
+> logout(token)
+
+
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getDeviceApi();
+final String token = token_example; // String | 
+
+try {
+    api.logout(token);
+} on DioException catch (e) {
+    print('Exception when calling DeviceApi->logout: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 

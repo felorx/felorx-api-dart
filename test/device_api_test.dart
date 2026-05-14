@@ -27,6 +27,11 @@ void main() {
       // TODO
     });
 
+    //Future logout({ String token }) async
+    test('test logout', () async {
+      // TODO
+    });
+
     //Future refreshDevice({ RefreshDeviceStatusDto refreshDeviceStatusDto }) async
     test('test refreshDevice', () async {
       // TODO

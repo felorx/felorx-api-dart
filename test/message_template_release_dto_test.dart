@@ -62,6 +62,26 @@ void main() {
       // TODO
     });
 
+    // int schemaVersion
+    test('to test the property `schemaVersion`', () async {
+      // TODO
+    });
+
+    // String contentHash
+    test('to test the property `contentHash`', () async {
+      // TODO
+    });
+
+    // String status
+    test('to test the property `status`', () async {
+      // TODO
+    });
+
+    // DateTime publishedAt
+    test('to test the property `publishedAt`', () async {
+      // TODO
+    });
+
     // String templateId
     test('to test the property `templateId`', () async {
       // TODO
