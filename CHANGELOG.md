@@ -1,3 +1,8 @@
+## 1.23.0
+
+ - **FEAT**(puupee_api_client): 同步 AI Gateway 接口.
+ - **FEAT**(puupee_api_client): 支持消息模板发布接口.
+
 ## 1.22.0
 
  - **FEAT**(puupee_api_client): 同步认证中心 API 客户端.
