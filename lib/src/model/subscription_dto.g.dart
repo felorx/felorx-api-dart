@@ -43,7 +43,7 @@ SubscriptionDto _$SubscriptionDtoFromJson(Map<String, dynamic> json) =>
         ),
         billingPeriod: $checkedConvert(
           'billingPeriod',
-          (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+          (v) => $enumDecodeNullable(_$SubBillingPeriodEnumMap, v),
         ),
         billingMode: $checkedConvert(
           'billingMode',
@@ -88,7 +88,7 @@ Map<String, dynamic> _$SubscriptionDtoToJson(
   if (instance.planPriceId case final value?) 'planPriceId': value,
   if (_$BillingProviderEnumMap[instance.provider] case final value?)
     'provider': value,
-  if (_$BillingPeriodEnumMap[instance.billingPeriod] case final value?)
+  if (_$SubBillingPeriodEnumMap[instance.billingPeriod] case final value?)
     'billingPeriod': value,
   if (_$BillingModeEnumMap[instance.billingMode] case final value?)
     'billingMode': value,
@@ -115,12 +115,12 @@ const _$BillingProviderEnumMap = {
   BillingProvider.alipay: 'Alipay',
 };
 
-const _$BillingPeriodEnumMap = {
-  BillingPeriod.unknown: 'Unknown',
-  BillingPeriod.month: 'Month',
-  BillingPeriod.year: 'Year',
-  BillingPeriod.threeYears: 'ThreeYears',
-  BillingPeriod.lifetime: 'Lifetime',
+const _$SubBillingPeriodEnumMap = {
+  SubBillingPeriod.unknown: 'Unknown',
+  SubBillingPeriod.month: 'Month',
+  SubBillingPeriod.year: 'Year',
+  SubBillingPeriod.threeYears: 'ThreeYears',
+  SubBillingPeriod.lifetime: 'Lifetime',
 };
 
 const _$BillingModeEnumMap = {

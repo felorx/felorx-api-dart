@@ -26,7 +26,7 @@ _$CreateOrUpdateStoreProductMappingDtoFromJson(Map<String, dynamic> json) =>
         ),
         period: $checkedConvert(
           'period',
-          (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+          (v) => $enumDecodeNullable(_$SubBillingPeriodEnumMap, v),
         ),
         storeProductId: $checkedConvert('storeProductId', (v) => v as String?),
         externalProductId: $checkedConvert(
@@ -50,7 +50,7 @@ Map<String, dynamic> _$CreateOrUpdateStoreProductMappingDtoToJson(
     'provider': value,
   if (_$AppPlatformEnumMap[instance.platform] case final value?)
     'platform': value,
-  if (_$BillingPeriodEnumMap[instance.period] case final value?)
+  if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
     'period': value,
   if (instance.storeProductId case final value?) 'storeProductId': value,
   if (instance.externalProductId case final value?) 'externalProductId': value,
@@ -78,10 +78,10 @@ const _$AppPlatformEnumMap = {
   AppPlatform.other: 'Other',
 };
 
-const _$BillingPeriodEnumMap = {
-  BillingPeriod.unknown: 'Unknown',
-  BillingPeriod.month: 'Month',
-  BillingPeriod.year: 'Year',
-  BillingPeriod.threeYears: 'ThreeYears',
-  BillingPeriod.lifetime: 'Lifetime',
+const _$SubBillingPeriodEnumMap = {
+  SubBillingPeriod.unknown: 'Unknown',
+  SubBillingPeriod.month: 'Month',
+  SubBillingPeriod.year: 'Year',
+  SubBillingPeriod.threeYears: 'ThreeYears',
+  SubBillingPeriod.lifetime: 'Lifetime',
 };

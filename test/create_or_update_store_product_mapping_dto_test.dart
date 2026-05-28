@@ -37,7 +37,7 @@ void main() {
       // TODO
     });
 
-    // BillingPeriod period
+    // SubBillingPeriod period
     test('to test the property `period`', () async {
       // TODO
     });

@@ -10,8 +10,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **appId** | **String** |  | [optional] 
 **pricingId** | **String** |  | [optional] 
-**period** | [**BillingPeriod**](BillingPeriod.md) |  | [optional] 
-**mode** | [**BillingMode**](BillingMode.md) |  | [optional] 
+**period** | [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
+**mode** | [**BillingMode**](BillingMode.md) |  | [optional]
 **market** | [**BillingMarket**](BillingMarket.md) |  | [optional] 
 **currency** | **String** |  | [optional] 
 **amount** | **double** |  | [optional] 
@@ -23,5 +23,4 @@ Name | Type | Description | Notes
 **description** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

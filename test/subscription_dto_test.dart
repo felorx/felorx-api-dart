@@ -79,7 +79,7 @@ void main() {
       // TODO
     });
 
-    // BillingPeriod billingPeriod
+    // SubBillingPeriod billingPeriod
     test('to test the property `billingPeriod`', () async {
       // TODO
     });

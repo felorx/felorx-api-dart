@@ -30,7 +30,7 @@ AppPlanPriceDto _$AppPlanPriceDtoFromJson(Map<String, dynamic> json) =>
         pricingId: $checkedConvert('pricingId', (v) => v as String?),
         period: $checkedConvert(
           'period',
-          (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+          (v) => $enumDecodeNullable(_$SubBillingPeriodEnumMap, v),
         ),
         mode: $checkedConvert(
           'mode',
@@ -77,7 +77,7 @@ Map<String, dynamic> _$AppPlanPriceDtoToJson(AppPlanPriceDto instance) =>
         'deletionTime': value,
       if (instance.appId case final value?) 'appId': value,
       if (instance.pricingId case final value?) 'pricingId': value,
-      if (_$BillingPeriodEnumMap[instance.period] case final value?)
+      if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
         'period': value,
       if (_$BillingModeEnumMap[instance.mode] case final value?) 'mode': value,
       if (_$BillingMarketEnumMap[instance.market] case final value?)
@@ -93,12 +93,12 @@ Map<String, dynamic> _$AppPlanPriceDtoToJson(AppPlanPriceDto instance) =>
       if (instance.description case final value?) 'description': value,
     };
 
-const _$BillingPeriodEnumMap = {
-  BillingPeriod.unknown: 'Unknown',
-  BillingPeriod.month: 'Month',
-  BillingPeriod.year: 'Year',
-  BillingPeriod.threeYears: 'ThreeYears',
-  BillingPeriod.lifetime: 'Lifetime',
+const _$SubBillingPeriodEnumMap = {
+  SubBillingPeriod.unknown: 'Unknown',
+  SubBillingPeriod.month: 'Month',
+  SubBillingPeriod.year: 'Year',
+  SubBillingPeriod.threeYears: 'ThreeYears',
+  SubBillingPeriod.lifetime: 'Lifetime',
 };
 
 const _$BillingModeEnumMap = {

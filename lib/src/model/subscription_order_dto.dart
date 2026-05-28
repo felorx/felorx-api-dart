@@ -5,7 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:puupee_api_client/src/model/billing_provider.dart';
 import 'package:puupee_api_client/src/model/subscription_order_status.dart';
-import 'package:puupee_api_client/src/model/billing_period.dart';
+import 'package:puupee_api_client/src/model/sub_billing_period.dart';
 import 'package:puupee_api_client/src/model/subscription_order_type.dart';
 import 'package:puupee_api_client/src/model/billing_mode.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -252,7 +252,7 @@ class SubscriptionOrderDto {
   )
 
 
-  BillingPeriod? billingPeriod;
+  SubBillingPeriod? billingPeriod;
 
 
 

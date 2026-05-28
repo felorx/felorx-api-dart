@@ -23,12 +23,11 @@ Name | Type | Description | Notes
 **planPriceId** | **String** |  | [optional] 
 **productId** | **String** |  | [optional] 
 **provider** | [**BillingProvider**](BillingProvider.md) |  | [optional] 
-**billingPeriod** | [**BillingPeriod**](BillingPeriod.md) |  | [optional] 
-**billingMode** | [**BillingMode**](BillingMode.md) |  | [optional] 
+**billingPeriod** | [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
+**billingMode** | [**BillingMode**](BillingMode.md) |  | [optional]
 **amount** | **double** |  | [optional] 
 **currency** | **String** |  | [optional] 
 **approvalUrl** | **String** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

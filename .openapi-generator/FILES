@@ -119,7 +119,6 @@ doc/AvatarApi.md
 doc/AvatarDto.md
 doc/BillingMarket.md
 doc/BillingMode.md
-doc/BillingPeriod.md
 doc/BillingProvider.md
 doc/BindDeviceDto.md
 doc/BuildRecordApi.md
@@ -300,6 +299,7 @@ doc/SetDefaultAiModelDto.md
 doc/StorageObjectApi.md
 doc/StorageObjectCredentials.md
 doc/StoreProductMappingDto.md
+doc/SubBillingPeriod.md
 doc/SubscriptionApi.md
 doc/SubscriptionBillingAdminApi.md
 doc/SubscriptionDto.md
@@ -491,7 +491,6 @@ lib/src/model/authorized_app_dto.dart
 lib/src/model/avatar_dto.dart
 lib/src/model/billing_market.dart
 lib/src/model/billing_mode.dart
-lib/src/model/billing_period.dart
 lib/src/model/billing_provider.dart
 lib/src/model/bind_device_dto.dart
 lib/src/model/build_record_dto.dart
@@ -650,6 +649,7 @@ lib/src/model/set_app_linked_sdks_dto.dart
 lib/src/model/set_default_ai_model_dto.dart
 lib/src/model/storage_object_credentials.dart
 lib/src/model/store_product_mapping_dto.dart
+lib/src/model/sub_billing_period.dart
 lib/src/model/subscription_dto.dart
 lib/src/model/subscription_entitlement_status.dart
 lib/src/model/subscription_order_dto.dart
@@ -798,7 +798,6 @@ test/avatar_api_test.dart
 test/avatar_dto_test.dart
 test/billing_market_test.dart
 test/billing_mode_test.dart
-test/billing_period_test.dart
 test/billing_provider_test.dart
 test/bind_device_dto_test.dart
 test/build_record_api_test.dart
@@ -979,6 +978,7 @@ test/set_default_ai_model_dto_test.dart
 test/storage_object_api_test.dart
 test/storage_object_credentials_test.dart
 test/store_product_mapping_dto_test.dart
+test/sub_billing_period_test.dart
 test/subscription_api_test.dart
 test/subscription_billing_admin_api_test.dart
 test/subscription_dto_test.dart

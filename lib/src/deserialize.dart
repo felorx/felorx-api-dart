@@ -454,9 +454,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'BillingMode':
           
           
-        case 'BillingPeriod':
-          
-          
         case 'BillingProvider':
           
           
@@ -780,6 +777,9 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return StorageObjectCredentials.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'StoreProductMappingDto':
           return StoreProductMappingDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'SubBillingPeriod':
+
+
         case 'SubscriptionDto':
           return SubscriptionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SubscriptionEntitlementStatus':

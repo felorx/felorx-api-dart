@@ -1,4 +1,4 @@
-# puupee_api_client.model.BillingPeriod
+# puupee_api_client.model.SubBillingPeriod
 
 ## Load the model package
 ```dart

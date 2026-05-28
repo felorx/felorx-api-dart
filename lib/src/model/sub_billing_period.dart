@@ -6,7 +6,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 
-enum BillingPeriod {
+enum SubBillingPeriod {
       @JsonValue(r'Unknown')
       unknown(r'Unknown'),
       @JsonValue(r'Month')
@@ -18,7 +18,7 @@ enum BillingPeriod {
       @JsonValue(r'Lifetime')
       lifetime(r'Lifetime');
 
-  const BillingPeriod(this.value);
+  const SubBillingPeriod(this.value);
 
   final String value;
 
