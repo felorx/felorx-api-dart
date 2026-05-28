@@ -67,8 +67,43 @@ void main() {
       // TODO
     });
 
+    // String planPriceId
+    test('to test the property `planPriceId`', () async {
+      // TODO
+    });
+
     // String productId
     test('to test the property `productId`', () async {
+      // TODO
+    });
+
+    // BillingProvider provider
+    test('to test the property `provider`', () async {
+      // TODO
+    });
+
+    // BillingPeriod billingPeriod
+    test('to test the property `billingPeriod`', () async {
+      // TODO
+    });
+
+    // BillingMode billingMode
+    test('to test the property `billingMode`', () async {
+      // TODO
+    });
+
+    // double amount
+    test('to test the property `amount`', () async {
+      // TODO
+    });
+
+    // String currency
+    test('to test the property `currency`', () async {
+      // TODO
+    });
+
+    // String approvalUrl
+    test('to test the property `approvalUrl`', () async {
       // TODO
     });
 

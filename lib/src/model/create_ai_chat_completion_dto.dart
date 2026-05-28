@@ -21,6 +21,8 @@ class CreateAiChatCompletionDto {
 
      this.model,
 
+     this.provider,
+
      this.messages,
 
      this.temperature,
@@ -43,6 +45,18 @@ class CreateAiChatCompletionDto {
 
 
   String? model;
+
+
+
+  @JsonKey(
+    
+    name: r'provider',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? provider;
 
 
 
@@ -123,6 +137,7 @@ class CreateAiChatCompletionDto {
     @override
     bool operator ==(Object other) => identical(this, other) || other is CreateAiChatCompletionDto &&
       other.model == model &&
+      other.provider == provider &&
       other.messages == messages &&
       other.temperature == temperature &&
       other.topP == topP &&
@@ -133,6 +148,7 @@ class CreateAiChatCompletionDto {
     @override
     int get hashCode =>
         (model == null ? 0 : model.hashCode) +
+        (provider == null ? 0 : provider.hashCode) +
         (messages == null ? 0 : messages.hashCode) +
         (temperature == null ? 0 : temperature.hashCode) +
         (topP == null ? 0 : topP.hashCode) +

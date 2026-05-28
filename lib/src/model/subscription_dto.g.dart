@@ -36,6 +36,32 @@ SubscriptionDto _$SubscriptionDtoFromJson(Map<String, dynamic> json) =>
           (v) => $enumDecodeNullable(_$AppPriceNamingEnumMap, v),
         ),
         pricingId: $checkedConvert('pricingId', (v) => v as String?),
+        planPriceId: $checkedConvert('planPriceId', (v) => v as String?),
+        provider: $checkedConvert(
+          'provider',
+          (v) => $enumDecodeNullable(_$BillingProviderEnumMap, v),
+        ),
+        billingPeriod: $checkedConvert(
+          'billingPeriod',
+          (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+        ),
+        billingMode: $checkedConvert(
+          'billingMode',
+          (v) => $enumDecodeNullable(_$BillingModeEnumMap, v),
+        ),
+        status: $checkedConvert(
+          'status',
+          (v) => $enumDecodeNullable(_$SubscriptionEntitlementStatusEnumMap, v),
+        ),
+        isLifetime: $checkedConvert('isLifetime', (v) => v as bool?),
+        externalSubscriptionId: $checkedConvert(
+          'externalSubscriptionId',
+          (v) => v as String?,
+        ),
+        lastVerifiedAt: $checkedConvert(
+          'lastVerifiedAt',
+          (v) => v == null ? null : DateTime.parse(v as String),
+        ),
       );
       return val;
     });
@@ -59,6 +85,20 @@ Map<String, dynamic> _$SubscriptionDtoToJson(
   if (_$AppPriceNamingEnumMap[instance.priceNaming] case final value?)
     'priceNaming': value,
   if (instance.pricingId case final value?) 'pricingId': value,
+  if (instance.planPriceId case final value?) 'planPriceId': value,
+  if (_$BillingProviderEnumMap[instance.provider] case final value?)
+    'provider': value,
+  if (_$BillingPeriodEnumMap[instance.billingPeriod] case final value?)
+    'billingPeriod': value,
+  if (_$BillingModeEnumMap[instance.billingMode] case final value?)
+    'billingMode': value,
+  if (_$SubscriptionEntitlementStatusEnumMap[instance.status] case final value?)
+    'status': value,
+  if (instance.isLifetime case final value?) 'isLifetime': value,
+  if (instance.externalSubscriptionId case final value?)
+    'externalSubscriptionId': value,
+  if (instance.lastVerifiedAt?.toIso8601String() case final value?)
+    'lastVerifiedAt': value,
 };
 
 const _$AppPriceNamingEnumMap = {
@@ -66,4 +106,34 @@ const _$AppPriceNamingEnumMap = {
   AppPriceNaming.premium: 'Premium',
   AppPriceNaming.pro: 'Pro',
   AppPriceNaming.enterprise: 'Enterprise',
+};
+
+const _$BillingProviderEnumMap = {
+  BillingProvider.unknown: 'Unknown',
+  BillingProvider.appleAppStore: 'AppleAppStore',
+  BillingProvider.payPal: 'PayPal',
+  BillingProvider.alipay: 'Alipay',
+};
+
+const _$BillingPeriodEnumMap = {
+  BillingPeriod.unknown: 'Unknown',
+  BillingPeriod.month: 'Month',
+  BillingPeriod.year: 'Year',
+  BillingPeriod.threeYears: 'ThreeYears',
+  BillingPeriod.lifetime: 'Lifetime',
+};
+
+const _$BillingModeEnumMap = {
+  BillingMode.unknown: 'Unknown',
+  BillingMode.autoRenewable: 'AutoRenewable',
+  BillingMode.fixedTerm: 'FixedTerm',
+  BillingMode.lifetime: 'Lifetime',
+};
+
+const _$SubscriptionEntitlementStatusEnumMap = {
+  SubscriptionEntitlementStatus.inactive: 'Inactive',
+  SubscriptionEntitlementStatus.active: 'Active',
+  SubscriptionEntitlementStatus.gracePeriod: 'GracePeriod',
+  SubscriptionEntitlementStatus.expired: 'Expired',
+  SubscriptionEntitlementStatus.revoked: 'Revoked',
 };

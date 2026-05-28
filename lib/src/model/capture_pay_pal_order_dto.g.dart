@@ -11,6 +11,10 @@ CapturePayPalOrderDto _$CapturePayPalOrderDtoFromJson(
 ) => $checkedCreate('CapturePayPalOrderDto', json, ($checkedConvert) {
   final val = CapturePayPalOrderDto(
     payPalOrderId: $checkedConvert('payPalOrderId', (v) => v as String?),
+    payPalSubscriptionId: $checkedConvert(
+      'payPalSubscriptionId',
+      (v) => v as String?,
+    ),
   );
   return val;
 });
@@ -19,4 +23,6 @@ Map<String, dynamic> _$CapturePayPalOrderDtoToJson(
   CapturePayPalOrderDto instance,
 ) => <String, dynamic>{
   if (instance.payPalOrderId case final value?) 'payPalOrderId': value,
+  if (instance.payPalSubscriptionId case final value?)
+    'payPalSubscriptionId': value,
 };

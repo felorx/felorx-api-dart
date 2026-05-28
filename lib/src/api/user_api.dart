@@ -2,11 +2,13 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_import
+
 import 'dart:async';
 
-// ignore: unused_import
 import 'dart:convert';
 import 'package:puupee_api_client/src/deserialize.dart';
+
 import 'package:dio/dio.dart';
 
 import 'package:puupee_api_client/src/model/identity_role_dto_list_result_dto.dart';
@@ -15,6 +17,7 @@ import 'package:puupee_api_client/src/model/identity_user_dto.dart';
 import 'package:puupee_api_client/src/model/identity_user_dto_paged_result_dto.dart';
 import 'package:puupee_api_client/src/model/identity_user_update_dto.dart';
 import 'package:puupee_api_client/src/model/identity_user_update_roles_dto.dart';
+import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
 
 class UserApi {
 

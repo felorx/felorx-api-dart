@@ -14,6 +14,7 @@ OpenAiChatCompletionRequestDto _$OpenAiChatCompletionRequestDtoFromJson(
   ($checkedConvert) {
     final val = OpenAiChatCompletionRequestDto(
       model: $checkedConvert('model', (v) => v as String?),
+      provider: $checkedConvert('provider', (v) => v as String?),
       messages: $checkedConvert(
         'messages',
         (v) => (v as List<dynamic>?)
@@ -43,6 +44,7 @@ Map<String, dynamic> _$OpenAiChatCompletionRequestDtoToJson(
   OpenAiChatCompletionRequestDto instance,
 ) => <String, dynamic>{
   if (instance.model case final value?) 'model': value,
+  if (instance.provider case final value?) 'provider': value,
   if (instance.messages?.map((e) => e.toJson()).toList() case final value?)
     'messages': value,
   if (instance.temperature case final value?) 'temperature': value,

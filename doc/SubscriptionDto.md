@@ -20,6 +20,14 @@ Name | Type | Description | Notes
 **appId** | **String** | 应用 ID | [optional] 
 **priceNaming** | [**AppPriceNaming**](AppPriceNaming.md) |  | [optional] 
 **pricingId** | **String** |  | [optional] 
+**planPriceId** | **String** |  | [optional] 
+**provider** | [**BillingProvider**](BillingProvider.md) |  | [optional] 
+**billingPeriod** | [**BillingPeriod**](BillingPeriod.md) |  | [optional] 
+**billingMode** | [**BillingMode**](BillingMode.md) |  | [optional] 
+**status** | [**SubscriptionEntitlementStatus**](SubscriptionEntitlementStatus.md) |  | [optional] 
+**isLifetime** | **bool** |  | [optional] 
+**externalSubscriptionId** | **String** |  | [optional] 
+**lastVerifiedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -13,5 +13,11 @@ void main() {
       // TODO
     });
 
+    // PayPal 订阅 ID。自动续费场景使用该字段。
+    // String payPalSubscriptionId
+    test('to test the property `payPalSubscriptionId`', () async {
+      // TODO
+    });
+
   });
 }

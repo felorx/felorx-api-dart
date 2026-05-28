@@ -3,6 +3,10 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:puupee_api_client/src/model/billing_provider.dart';
+import 'package:puupee_api_client/src/model/subscription_entitlement_status.dart';
+import 'package:puupee_api_client/src/model/billing_period.dart';
+import 'package:puupee_api_client/src/model/billing_mode.dart';
 import 'package:puupee_api_client/src/model/app_price_naming.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -42,6 +46,22 @@ class SubscriptionDto {
      this.priceNaming,
 
      this.pricingId,
+
+     this.planPriceId,
+
+     this.provider,
+
+     this.billingPeriod,
+
+     this.billingMode,
+
+     this.status,
+
+     this.isLifetime,
+
+     this.externalSubscriptionId,
+
+     this.lastVerifiedAt,
   });
 
   @JsonKey(
@@ -190,6 +210,102 @@ class SubscriptionDto {
 
 
 
+  @JsonKey(
+    
+    name: r'planPriceId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? planPriceId;
+
+
+
+  @JsonKey(
+    
+    name: r'provider',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  BillingProvider? provider;
+
+
+
+  @JsonKey(
+    
+    name: r'billingPeriod',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  BillingPeriod? billingPeriod;
+
+
+
+  @JsonKey(
+    
+    name: r'billingMode',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  BillingMode? billingMode;
+
+
+
+  @JsonKey(
+    
+    name: r'status',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  SubscriptionEntitlementStatus? status;
+
+
+
+  @JsonKey(
+    
+    name: r'isLifetime',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  bool? isLifetime;
+
+
+
+  @JsonKey(
+    
+    name: r'externalSubscriptionId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? externalSubscriptionId;
+
+
+
+  @JsonKey(
+    
+    name: r'lastVerifiedAt',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  DateTime? lastVerifiedAt;
+
+
+
 
 
     @override
@@ -205,7 +321,15 @@ class SubscriptionDto {
       other.expireAt == expireAt &&
       other.appId == appId &&
       other.priceNaming == priceNaming &&
-      other.pricingId == pricingId;
+      other.pricingId == pricingId &&
+      other.planPriceId == planPriceId &&
+      other.provider == provider &&
+      other.billingPeriod == billingPeriod &&
+      other.billingMode == billingMode &&
+      other.status == status &&
+      other.isLifetime == isLifetime &&
+      other.externalSubscriptionId == externalSubscriptionId &&
+      other.lastVerifiedAt == lastVerifiedAt;
 
     @override
     int get hashCode =>
@@ -220,7 +344,15 @@ class SubscriptionDto {
         (expireAt == null ? 0 : expireAt.hashCode) +
         appId.hashCode +
         priceNaming.hashCode +
-        pricingId.hashCode;
+        pricingId.hashCode +
+        (planPriceId == null ? 0 : planPriceId.hashCode) +
+        provider.hashCode +
+        billingPeriod.hashCode +
+        billingMode.hashCode +
+        status.hashCode +
+        isLifetime.hashCode +
+        (externalSubscriptionId == null ? 0 : externalSubscriptionId.hashCode) +
+        (lastVerifiedAt == null ? 0 : lastVerifiedAt.hashCode);
 
   factory SubscriptionDto.fromJson(Map<String, dynamic> json) => _$SubscriptionDtoFromJson(json);
 

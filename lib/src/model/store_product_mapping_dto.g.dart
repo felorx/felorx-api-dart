@@ -1,0 +1,111 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'store_product_mapping_dto.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+StoreProductMappingDto _$StoreProductMappingDtoFromJson(
+  Map<String, dynamic> json,
+) => $checkedCreate('StoreProductMappingDto', json, ($checkedConvert) {
+  final val = StoreProductMappingDto(
+    id: $checkedConvert('id', (v) => v as String?),
+    creationTime: $checkedConvert(
+      'creationTime',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
+    creatorId: $checkedConvert('creatorId', (v) => v as String?),
+    lastModificationTime: $checkedConvert(
+      'lastModificationTime',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
+    lastModifierId: $checkedConvert('lastModifierId', (v) => v as String?),
+    isDeleted: $checkedConvert('isDeleted', (v) => v as bool?),
+    deleterId: $checkedConvert('deleterId', (v) => v as String?),
+    deletionTime: $checkedConvert(
+      'deletionTime',
+      (v) => v == null ? null : DateTime.parse(v as String),
+    ),
+    appId: $checkedConvert('appId', (v) => v as String?),
+    pricingId: $checkedConvert('pricingId', (v) => v as String?),
+    planPriceId: $checkedConvert('planPriceId', (v) => v as String?),
+    provider: $checkedConvert(
+      'provider',
+      (v) => $enumDecodeNullable(_$BillingProviderEnumMap, v),
+    ),
+    platform: $checkedConvert(
+      'platform',
+      (v) => $enumDecodeNullable(_$AppPlatformEnumMap, v),
+    ),
+    period: $checkedConvert(
+      'period',
+      (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+    ),
+    storeProductId: $checkedConvert('storeProductId', (v) => v as String?),
+    externalProductId: $checkedConvert(
+      'externalProductId',
+      (v) => v as String?,
+    ),
+    environment: $checkedConvert('environment', (v) => v as String?),
+    isEnabled: $checkedConvert('isEnabled', (v) => v as bool?),
+  );
+  return val;
+});
+
+Map<String, dynamic> _$StoreProductMappingDtoToJson(
+  StoreProductMappingDto instance,
+) => <String, dynamic>{
+  if (instance.id case final value?) 'id': value,
+  if (instance.creationTime?.toIso8601String() case final value?)
+    'creationTime': value,
+  if (instance.creatorId case final value?) 'creatorId': value,
+  if (instance.lastModificationTime?.toIso8601String() case final value?)
+    'lastModificationTime': value,
+  if (instance.lastModifierId case final value?) 'lastModifierId': value,
+  if (instance.isDeleted case final value?) 'isDeleted': value,
+  if (instance.deleterId case final value?) 'deleterId': value,
+  if (instance.deletionTime?.toIso8601String() case final value?)
+    'deletionTime': value,
+  if (instance.appId case final value?) 'appId': value,
+  if (instance.pricingId case final value?) 'pricingId': value,
+  if (instance.planPriceId case final value?) 'planPriceId': value,
+  if (_$BillingProviderEnumMap[instance.provider] case final value?)
+    'provider': value,
+  if (_$AppPlatformEnumMap[instance.platform] case final value?)
+    'platform': value,
+  if (_$BillingPeriodEnumMap[instance.period] case final value?)
+    'period': value,
+  if (instance.storeProductId case final value?) 'storeProductId': value,
+  if (instance.externalProductId case final value?) 'externalProductId': value,
+  if (instance.environment case final value?) 'environment': value,
+  if (instance.isEnabled case final value?) 'isEnabled': value,
+};
+
+const _$BillingProviderEnumMap = {
+  BillingProvider.unknown: 'Unknown',
+  BillingProvider.appleAppStore: 'AppleAppStore',
+  BillingProvider.payPal: 'PayPal',
+  BillingProvider.alipay: 'Alipay',
+};
+
+const _$AppPlatformEnumMap = {
+  AppPlatform.none: 'None',
+  AppPlatform.unknown: 'Unknown',
+  AppPlatform.android: 'Android',
+  AppPlatform.IOS: 'IOS',
+  AppPlatform.macOS: 'MacOS',
+  AppPlatform.windows: 'Windows',
+  AppPlatform.linux: 'Linux',
+  AppPlatform.web: 'Web',
+  AppPlatform.service: 'Service',
+  AppPlatform.other: 'Other',
+};
+
+const _$BillingPeriodEnumMap = {
+  BillingPeriod.unknown: 'Unknown',
+  BillingPeriod.month: 'Month',
+  BillingPeriod.year: 'Year',
+  BillingPeriod.threeYears: 'ThreeYears',
+  BillingPeriod.lifetime: 'Lifetime',
+};

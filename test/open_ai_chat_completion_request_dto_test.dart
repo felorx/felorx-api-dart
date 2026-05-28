@@ -12,6 +12,11 @@ void main() {
       // TODO
     });
 
+    // String provider
+    test('to test the property `provider`', () async {
+      // TODO
+    });
+
     // List<AiChatMessageDto> messages
     test('to test the property `messages`', () async {
       // TODO

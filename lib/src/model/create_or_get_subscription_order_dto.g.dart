@@ -66,4 +66,5 @@ const _$SubscriptionOrderTypeEnumMap = {
   SubscriptionOrderType.wechatOnce: 'WechatOnce',
   SubscriptionOrderType.wechatAuto: 'WechatAuto',
   SubscriptionOrderType.payPalOnce: 'PayPalOnce',
+  SubscriptionOrderType.payPalAuto: 'PayPalAuto',
 };

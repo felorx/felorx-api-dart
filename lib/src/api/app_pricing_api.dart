@@ -2,17 +2,20 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_import
+
 import 'dart:async';
 
-// ignore: unused_import
 import 'dart:convert';
 import 'package:puupee_api_client/src/deserialize.dart';
+
 import 'package:dio/dio.dart';
 
 import 'package:puupee_api_client/src/model/app_pricing_dto.dart';
 import 'package:puupee_api_client/src/model/app_pricing_dto_paged_result_dto.dart';
 import 'package:puupee_api_client/src/model/app_pricing_item_dto.dart';
 import 'package:puupee_api_client/src/model/create_or_update_app_pricing_dto.dart';
+import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
 
 class AppPricingApi {
 

@@ -2,16 +2,19 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_import
+
 import 'dart:async';
 
-// ignore: unused_import
 import 'dart:convert';
 import 'package:puupee_api_client/src/deserialize.dart';
+
 import 'package:dio/dio.dart';
 
 import 'package:puupee_api_client/src/model/ai_job_dto.dart';
 import 'package:puupee_api_client/src/model/create_ai_video_edit_dto.dart';
 import 'package:puupee_api_client/src/model/create_ai_video_generation_dto.dart';
+import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
 
 class AiVideoApi {
 

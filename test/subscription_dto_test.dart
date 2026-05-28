@@ -69,5 +69,45 @@ void main() {
       // TODO
     });
 
+    // String planPriceId
+    test('to test the property `planPriceId`', () async {
+      // TODO
+    });
+
+    // BillingProvider provider
+    test('to test the property `provider`', () async {
+      // TODO
+    });
+
+    // BillingPeriod billingPeriod
+    test('to test the property `billingPeriod`', () async {
+      // TODO
+    });
+
+    // BillingMode billingMode
+    test('to test the property `billingMode`', () async {
+      // TODO
+    });
+
+    // SubscriptionEntitlementStatus status
+    test('to test the property `status`', () async {
+      // TODO
+    });
+
+    // bool isLifetime
+    test('to test the property `isLifetime`', () async {
+      // TODO
+    });
+
+    // String externalSubscriptionId
+    test('to test the property `externalSubscriptionId`', () async {
+      // TODO
+    });
+
+    // DateTime lastVerifiedAt
+    test('to test the property `lastVerifiedAt`', () async {
+      // TODO
+    });
+
   });
 }

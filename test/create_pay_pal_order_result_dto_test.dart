@@ -19,5 +19,23 @@ void main() {
       // TODO
     });
 
+    // PayPal 订阅 ID（自动续费场景）
+    // String payPalSubscriptionId
+    test('to test the property `payPalSubscriptionId`', () async {
+      // TODO
+    });
+
+    // PayPal approve 链接，可用于不使用 JS SDK 的桌面端跳转。
+    // String approvalUrl
+    test('to test the property `approvalUrl`', () async {
+      // TODO
+    });
+
+    // order=一次性订单，subscription=自动续费订阅。
+    // String checkoutKind
+    test('to test the property `checkoutKind`', () async {
+      // TODO
+    });
+
   });
 }

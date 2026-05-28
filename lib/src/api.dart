@@ -13,12 +13,16 @@ import 'package:puupee_api_client/src/api/abp_application_localization_api.dart'
 import 'package:puupee_api_client/src/api/abp_tenant_api.dart';
 import 'package:puupee_api_client/src/api/account_api.dart';
 import 'package:puupee_api_client/src/api/ai_chat_api.dart';
+import 'package:puupee_api_client/src/api/ai_extraction_api.dart';
 import 'package:puupee_api_client/src/api/ai_image_api.dart';
 import 'package:puupee_api_client/src/api/ai_images_api.dart';
 import 'package:puupee_api_client/src/api/ai_job_api.dart';
 import 'package:puupee_api_client/src/api/ai_jobs_api.dart';
+import 'package:puupee_api_client/src/api/ai_provider_api.dart';
+import 'package:puupee_api_client/src/api/ai_providers_api.dart';
 import 'package:puupee_api_client/src/api/ai_video_api.dart';
 import 'package:puupee_api_client/src/api/ai_videos_api.dart';
+import 'package:puupee_api_client/src/api/ai_vision_api.dart';
 import 'package:puupee_api_client/src/api/api_keys_api.dart';
 import 'package:puupee_api_client/src/api/app_api.dart';
 import 'package:puupee_api_client/src/api/app_asset_api.dart';
@@ -56,6 +60,7 @@ import 'package:puupee_api_client/src/api/profile_api.dart';
 import 'package:puupee_api_client/src/api/role_api.dart';
 import 'package:puupee_api_client/src/api/storage_object_api.dart';
 import 'package:puupee_api_client/src/api/subscription_api.dart';
+import 'package:puupee_api_client/src/api/subscription_billing_admin_api.dart';
 import 'package:puupee_api_client/src/api/tenant_api.dart';
 import 'package:puupee_api_client/src/api/time_zone_settings_api.dart';
 import 'package:puupee_api_client/src/api/user_api.dart';
@@ -149,6 +154,12 @@ class PuupeeApiClient {
     return AiChatApi(dio);
   }
 
+  /// Get AiExtractionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiExtractionApi getAiExtractionApi() {
+    return AiExtractionApi(dio);
+  }
+
   /// Get AiImageApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   AiImageApi getAiImageApi() {
@@ -173,6 +184,18 @@ class PuupeeApiClient {
     return AiJobsApi(dio);
   }
 
+  /// Get AiProviderApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiProviderApi getAiProviderApi() {
+    return AiProviderApi(dio);
+  }
+
+  /// Get AiProvidersApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiProvidersApi getAiProvidersApi() {
+    return AiProvidersApi(dio);
+  }
+
   /// Get AiVideoApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   AiVideoApi getAiVideoApi() {
@@ -183,6 +206,12 @@ class PuupeeApiClient {
   /// by doing that all interceptors will not be executed
   AiVideosApi getAiVideosApi() {
     return AiVideosApi(dio);
+  }
+
+  /// Get AiVisionApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AiVisionApi getAiVisionApi() {
+    return AiVisionApi(dio);
   }
 
   /// Get ApiKeysApi instance, base route and serializer can be overridden by a given but be careful,
@@ -405,6 +434,12 @@ class PuupeeApiClient {
   /// by doing that all interceptors will not be executed
   SubscriptionApi getSubscriptionApi() {
     return SubscriptionApi(dio);
+  }
+
+  /// Get SubscriptionBillingAdminApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  SubscriptionBillingAdminApi getSubscriptionBillingAdminApi() {
+    return SubscriptionBillingAdminApi(dio);
   }
 
   /// Get TenantApi instance, base route and serializer can be overridden by a given but be careful,

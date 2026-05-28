@@ -23,6 +23,10 @@ class CreatePayPalOrderDto {
      this.pricingId,
 
      this.planType,
+
+     this.returnUrl,
+
+     this.cancelUrl,
   });
 
       /// 应用 ID
@@ -51,7 +55,7 @@ class CreatePayPalOrderDto {
 
 
 
-      /// 计划类型：month=月度, year=年度
+      /// 计划类型：month=月度, year=年度, three_year=三年, lifetime=终身
   @JsonKey(
     
     name: r'planType',
@@ -64,19 +68,49 @@ class CreatePayPalOrderDto {
 
 
 
+      /// 支付完成后返回地址，桌面端可传深链。
+  @JsonKey(
+    
+    name: r'returnUrl',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? returnUrl;
+
+
+
+      /// 支付取消后返回地址，桌面端可传深链。
+  @JsonKey(
+    
+    name: r'cancelUrl',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? cancelUrl;
+
+
+
 
 
     @override
     bool operator ==(Object other) => identical(this, other) || other is CreatePayPalOrderDto &&
       other.appId == appId &&
       other.pricingId == pricingId &&
-      other.planType == planType;
+      other.planType == planType &&
+      other.returnUrl == returnUrl &&
+      other.cancelUrl == cancelUrl;
 
     @override
     int get hashCode =>
         appId.hashCode +
         pricingId.hashCode +
-        (planType == null ? 0 : planType.hashCode);
+        (planType == null ? 0 : planType.hashCode) +
+        (returnUrl == null ? 0 : returnUrl.hashCode) +
+        (cancelUrl == null ? 0 : cancelUrl.hashCode);
 
   factory CreatePayPalOrderDto.fromJson(Map<String, dynamic> json) => _$CreatePayPalOrderDtoFromJson(json);
 

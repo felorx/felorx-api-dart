@@ -9,14 +9,56 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**alipayNotify**](SubscriptionApi.md#alipaynotify) | **POST** /api/app/subscription/alipay-notify | 支付宝异步通知。成功时必须返回纯文本 success，否则支付宝会重试通知。
 [**appleNotifications**](SubscriptionApi.md#applenotifications) | **POST** /api/app/subscription/apple-notifications | 苹果订阅 Callback 地址
 [**capturePayPalOrder**](SubscriptionApi.md#capturepaypalorder) | **POST** /api/app/subscription/capture-pay-pal-order | 捕获 PayPal 订单并完成订阅
+[**createAlipayOrder**](SubscriptionApi.md#createalipayorder) | **POST** /api/app/subscription/alipay-order | 创建支付宝一次性支付订单
 [**createOrder**](SubscriptionApi.md#createorder) | **POST** /api/app/subscription/order | 
 [**createPayPalOrder**](SubscriptionApi.md#createpaypalorder) | **POST** /api/app/subscription/pay-pal-order | 创建 PayPal 订单
+[**getPlanPrices**](SubscriptionApi.md#getplanprices) | **GET** /api/app/subscription/plan-prices/by-app-id/{appId} | 获取应用对客户端开放的订阅售卖价格。
 [**getSubscriptionById**](SubscriptionApi.md#getsubscriptionbyid) | **GET** /api/app/subscription | 
 [**getSubscriptionList**](SubscriptionApi.md#getsubscriptionlist) | **GET** /api/app/subscription/list | 获取用户订阅列表，每个应用只返回最新的一条订阅记录（含有效和已过期的）
+[**payPalReturn**](SubscriptionApi.md#paypalreturn) | **GET** /api/app/subscription/paypal-return | PayPal 浏览器审批后的返回入口。用于桌面/移动 App 跳转外部浏览器时免网站登录完成确认。
+[**payPalWebhook**](SubscriptionApi.md#paypalwebhook) | **POST** /api/app/subscription/paypal-webhook | PayPal webhook. Configure PayPal:WebhookId to enable signature verification.
 [**verifyReceipt**](SubscriptionApi.md#verifyreceipt) | **POST** /api/app/subscription/verify-receipt | 
 
+
+# **alipayNotify**
+> String alipayNotify()
+
+支付宝异步通知。成功时必须返回纯文本 success，否则支付宝会重试通知。
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getSubscriptionApi();
+
+try {
+    final response = api.alipayNotify();
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling SubscriptionApi->alipayNotify: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **appleNotifications**
 > appleNotifications(appleNotificaionDto)
@@ -87,6 +129,47 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SubscriptionDto**](SubscriptionDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **createAlipayOrder**
+> CreateAlipayOrderResultDto createAlipayOrder(createAlipayOrderDto)
+
+创建支付宝一次性支付订单
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getSubscriptionApi();
+final CreateAlipayOrderDto createAlipayOrderDto = ; // CreateAlipayOrderDto | 
+
+try {
+    final response = api.createAlipayOrder(createAlipayOrderDto);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling SubscriptionApi->createAlipayOrder: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createAlipayOrderDto** | [**CreateAlipayOrderDto**](CreateAlipayOrderDto.md)|  | [optional] 
+
+### Return type
+
+[**CreateAlipayOrderResultDto**](CreateAlipayOrderResultDto.md)
 
 ### Authorization
 
@@ -181,6 +264,47 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getPlanPrices**
+> List<AppPlanPriceDto> getPlanPrices(appId)
+
+获取应用对客户端开放的订阅售卖价格。
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getSubscriptionApi();
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try {
+    final response = api.getPlanPrices(appId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling SubscriptionApi->getPlanPrices: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  | 
+
+### Return type
+
+[**List&lt;AppPlanPriceDto&gt;**](AppPlanPriceDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getSubscriptionById**
 > SubscriptionDto getSubscriptionById(appId)
 
@@ -247,6 +371,85 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;SubscriptionDto&gt;**](SubscriptionDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payPalReturn**
+> payPalReturn(token, subscriptionId)
+
+PayPal 浏览器审批后的返回入口。用于桌面/移动 App 跳转外部浏览器时免网站登录完成确认。
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getSubscriptionApi();
+final String token = token_example; // String | 
+final String subscriptionId = subscriptionId_example; // String | 
+
+try {
+    api.payPalReturn(token, subscriptionId);
+} on DioException catch (e) {
+    print('Exception when calling SubscriptionApi->payPalReturn: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token** | **String**|  | [optional] 
+ **subscriptionId** | **String**|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **payPalWebhook**
+> PayPalWebhookProcessResultDto payPalWebhook()
+
+PayPal webhook. Configure PayPal:WebhookId to enable signature verification.
+
+### Example
+```dart
+import 'package:puupee_api_client/api.dart';
+
+final api = PuupeeApiClient().getSubscriptionApi();
+
+try {
+    final response = api.payPalWebhook();
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling SubscriptionApi->payPalWebhook: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PayPalWebhookProcessResultDto**](PayPalWebhookProcessResultDto.md)
 
 ### Authorization
 

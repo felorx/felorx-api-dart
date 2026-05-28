@@ -24,7 +24,10 @@ enum SubscriptionOrderType {
       wechatAuto(r'WechatAuto'),
           /// 订阅订单类型
       @JsonValue(r'PayPalOnce')
-      payPalOnce(r'PayPalOnce');
+      payPalOnce(r'PayPalOnce'),
+          /// 订阅订单类型
+      @JsonValue(r'PayPalAuto')
+      payPalAuto(r'PayPalAuto');
 
   const SubscriptionOrderType(this.value);
 

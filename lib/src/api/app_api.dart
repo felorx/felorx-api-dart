@@ -2,11 +2,13 @@
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
 
+// ignore_for_file: unused_import
+
 import 'dart:async';
 
-// ignore: unused_import
 import 'dart:convert';
 import 'package:puupee_api_client/src/deserialize.dart';
+
 import 'package:dio/dio.dart';
 
 import 'package:puupee_api_client/src/model/app_dto.dart';
@@ -20,6 +22,7 @@ import 'package:puupee_api_client/src/model/app_storefront_landing_dto.dart';
 import 'package:puupee_api_client/src/model/app_with_user_dto.dart';
 import 'package:puupee_api_client/src/model/app_with_user_dto_paged_result_dto.dart';
 import 'package:puupee_api_client/src/model/create_or_update_app_dto.dart';
+import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
 import 'package:puupee_api_client/src/model/set_app_linked_sdks_dto.dart';
 import 'package:puupee_api_client/src/model/storage_object_credentials.dart';
 

@@ -19,6 +19,8 @@ class CapturePayPalOrderDto {
   CapturePayPalOrderDto({
 
      this.payPalOrderId,
+
+     this.payPalSubscriptionId,
   });
 
       /// PayPal 订单 ID
@@ -34,15 +36,30 @@ class CapturePayPalOrderDto {
 
 
 
+      /// PayPal 订阅 ID。自动续费场景使用该字段。
+  @JsonKey(
+    
+    name: r'payPalSubscriptionId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? payPalSubscriptionId;
+
+
+
 
 
     @override
     bool operator ==(Object other) => identical(this, other) || other is CapturePayPalOrderDto &&
-      other.payPalOrderId == payPalOrderId;
+      other.payPalOrderId == payPalOrderId &&
+      other.payPalSubscriptionId == payPalSubscriptionId;
 
     @override
     int get hashCode =>
-        (payPalOrderId == null ? 0 : payPalOrderId.hashCode);
+        (payPalOrderId == null ? 0 : payPalOrderId.hashCode) +
+        (payPalSubscriptionId == null ? 0 : payPalSubscriptionId.hashCode);
 
   factory CapturePayPalOrderDto.fromJson(Map<String, dynamic> json) => _$CapturePayPalOrderDtoFromJson(json);
 

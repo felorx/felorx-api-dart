@@ -37,7 +37,23 @@ SubscriptionOrderDto _$SubscriptionOrderDtoFromJson(
     ),
     appId: $checkedConvert('appId', (v) => v as String?),
     pricingId: $checkedConvert('pricingId', (v) => v as String?),
+    planPriceId: $checkedConvert('planPriceId', (v) => v as String?),
     productId: $checkedConvert('productId', (v) => v as String?),
+    provider: $checkedConvert(
+      'provider',
+      (v) => $enumDecodeNullable(_$BillingProviderEnumMap, v),
+    ),
+    billingPeriod: $checkedConvert(
+      'billingPeriod',
+      (v) => $enumDecodeNullable(_$BillingPeriodEnumMap, v),
+    ),
+    billingMode: $checkedConvert(
+      'billingMode',
+      (v) => $enumDecodeNullable(_$BillingModeEnumMap, v),
+    ),
+    amount: $checkedConvert('amount', (v) => (v as num?)?.toDouble()),
+    currency: $checkedConvert('currency', (v) => v as String?),
+    approvalUrl: $checkedConvert('approvalUrl', (v) => v as String?),
   );
   return val;
 });
@@ -62,7 +78,17 @@ Map<String, dynamic> _$SubscriptionOrderDtoToJson(
     'status': value,
   if (instance.appId case final value?) 'appId': value,
   if (instance.pricingId case final value?) 'pricingId': value,
+  if (instance.planPriceId case final value?) 'planPriceId': value,
   if (instance.productId case final value?) 'productId': value,
+  if (_$BillingProviderEnumMap[instance.provider] case final value?)
+    'provider': value,
+  if (_$BillingPeriodEnumMap[instance.billingPeriod] case final value?)
+    'billingPeriod': value,
+  if (_$BillingModeEnumMap[instance.billingMode] case final value?)
+    'billingMode': value,
+  if (instance.amount case final value?) 'amount': value,
+  if (instance.currency case final value?) 'currency': value,
+  if (instance.approvalUrl case final value?) 'approvalUrl': value,
 };
 
 const _$SubscriptionOrderTypeEnumMap = {
@@ -72,10 +98,33 @@ const _$SubscriptionOrderTypeEnumMap = {
   SubscriptionOrderType.wechatOnce: 'WechatOnce',
   SubscriptionOrderType.wechatAuto: 'WechatAuto',
   SubscriptionOrderType.payPalOnce: 'PayPalOnce',
+  SubscriptionOrderType.payPalAuto: 'PayPalAuto',
 };
 
 const _$SubscriptionOrderStatusEnumMap = {
   SubscriptionOrderStatus.waiting: 'Waiting',
   SubscriptionOrderStatus.overtime: 'Overtime',
   SubscriptionOrderStatus.finished: 'Finished',
+};
+
+const _$BillingProviderEnumMap = {
+  BillingProvider.unknown: 'Unknown',
+  BillingProvider.appleAppStore: 'AppleAppStore',
+  BillingProvider.payPal: 'PayPal',
+  BillingProvider.alipay: 'Alipay',
+};
+
+const _$BillingPeriodEnumMap = {
+  BillingPeriod.unknown: 'Unknown',
+  BillingPeriod.month: 'Month',
+  BillingPeriod.year: 'Year',
+  BillingPeriod.threeYears: 'ThreeYears',
+  BillingPeriod.lifetime: 'Lifetime',
+};
+
+const _$BillingModeEnumMap = {
+  BillingMode.unknown: 'Unknown',
+  BillingMode.autoRenewable: 'AutoRenewable',
+  BillingMode.fixedTerm: 'FixedTerm',
+  BillingMode.lifetime: 'Lifetime',
 };

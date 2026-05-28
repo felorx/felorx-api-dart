@@ -9,6 +9,7 @@ import 'package:puupee_api_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **model** | **String** |  | [optional] 
+**provider** | **String** |  | [optional] 
 **messages** | [**List&lt;AiChatMessageDto&gt;**](AiChatMessageDto.md) |  | [optional] 
 **temperature** | **double** |  | [optional] 
 **topP** | **double** |  | [optional] 
