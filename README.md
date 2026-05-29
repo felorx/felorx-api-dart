@@ -80,18 +80,6 @@ Class | Method | HTTP request | Description
 [*AccountApi*](doc/AccountApi.md) | [**resetPassword**](doc/AccountApi.md#resetpassword) | **POST** /api/account/reset-password | 
 [*AccountApi*](doc/AccountApi.md) | [**sendPasswordResetCode**](doc/AccountApi.md#sendpasswordresetcode) | **POST** /api/account/send-password-reset-code | 
 [*AccountApi*](doc/AccountApi.md) | [**verifyPasswordResetToken**](doc/AccountApi.md#verifypasswordresettoken) | **POST** /api/account/verify-password-reset-token | 
-[*AiChatApi*](doc/AiChatApi.md) | [**createCompletion**](doc/AiChatApi.md#createcompletion) | **POST** /api/ai/chat/completions | 
-[*AiChatApi*](doc/AiChatApi.md) | [**createCompletion_0**](doc/AiChatApi.md#createcompletion_0) | **POST** /api/app/ai-chat/completion | 
-[*AiExtractionApi*](doc/AiExtractionApi.md) | [**createStructuredExtraction**](doc/AiExtractionApi.md#createstructuredextraction) | **POST** /api/ai/extraction/structured | 
-[*AiExtractionApi*](doc/AiExtractionApi.md) | [**createStructuredExtraction_0**](doc/AiExtractionApi.md#createstructuredextraction_0) | **POST** /api/app/ai-extraction/structured-extraction | 
-[*AiImageApi*](doc/AiImageApi.md) | [**createEdit**](doc/AiImageApi.md#createedit) | **POST** /api/app/ai-image/edit | 
-[*AiImageApi*](doc/AiImageApi.md) | [**createGeneration**](doc/AiImageApi.md#creategeneration) | **POST** /api/app/ai-image/generation | 
-[*AiImagesApi*](doc/AiImagesApi.md) | [**createEdit**](doc/AiImagesApi.md#createedit) | **POST** /api/ai/images/edits | 
-[*AiImagesApi*](doc/AiImagesApi.md) | [**createGeneration**](doc/AiImagesApi.md#creategeneration) | **POST** /api/ai/images/generations | 
-[*AiJobApi*](doc/AiJobApi.md) | [**cancel**](doc/AiJobApi.md#cancel) | **POST** /api/app/ai-job/{id}/cancel | 
-[*AiJobApi*](doc/AiJobApi.md) | [**getAiJobById**](doc/AiJobApi.md#getaijobbyid) | **GET** /api/app/ai-job/{id} | 
-[*AiJobsApi*](doc/AiJobsApi.md) | [**cancel**](doc/AiJobsApi.md#cancel) | **POST** /api/ai/jobs/{id}/cancel | 
-[*AiJobsApi*](doc/AiJobsApi.md) | [**getById**](doc/AiJobsApi.md#getbyid) | **GET** /api/ai/jobs/{id} | 
 [*AiProviderApi*](doc/AiProviderApi.md) | [**createAiProvider**](doc/AiProviderApi.md#createaiprovider) | **POST** /api/app/ai-provider | 
 [*AiProviderApi*](doc/AiProviderApi.md) | [**deleteAiProviderById**](doc/AiProviderApi.md#deleteaiproviderbyid) | **DELETE** /api/app/ai-provider/{id} | 
 [*AiProviderApi*](doc/AiProviderApi.md) | [**getAiProviderById**](doc/AiProviderApi.md#getaiproviderbyid) | **GET** /api/app/ai-provider/{id} | 
@@ -108,12 +96,6 @@ Class | Method | HTTP request | Description
 [*AiProvidersApi*](doc/AiProvidersApi.md) | [**setEnabled**](doc/AiProvidersApi.md#setenabled) | **POST** /api/ai/providers/{id}/enabled | 
 [*AiProvidersApi*](doc/AiProvidersApi.md) | [**test**](doc/AiProvidersApi.md#test) | **POST** /api/ai/providers/{id}/test | 
 [*AiProvidersApi*](doc/AiProvidersApi.md) | [**update**](doc/AiProvidersApi.md#update) | **PUT** /api/ai/providers/{id} | 
-[*AiVideoApi*](doc/AiVideoApi.md) | [**createEdit**](doc/AiVideoApi.md#createedit) | **POST** /api/app/ai-video/edit | 
-[*AiVideoApi*](doc/AiVideoApi.md) | [**createGeneration**](doc/AiVideoApi.md#creategeneration) | **POST** /api/app/ai-video/generation | 
-[*AiVideosApi*](doc/AiVideosApi.md) | [**createEdit**](doc/AiVideosApi.md#createedit) | **POST** /api/ai/videos/edits | 
-[*AiVideosApi*](doc/AiVideosApi.md) | [**createGeneration**](doc/AiVideosApi.md#creategeneration) | **POST** /api/ai/videos/generations | 
-[*AiVisionApi*](doc/AiVisionApi.md) | [**analyzeImage**](doc/AiVisionApi.md#analyzeimage) | **POST** /api/ai/vision/analysis | 
-[*AiVisionApi*](doc/AiVisionApi.md) | [**analyzeImage_0**](doc/AiVisionApi.md#analyzeimage_0) | **POST** /api/app/ai-vision/analyze-image | 
 [*ApiKeysApi*](doc/ApiKeysApi.md) | [**createApiKeys**](doc/ApiKeysApi.md#createapikeys) | **POST** /api/api-keys | 
 [*ApiKeysApi*](doc/ApiKeysApi.md) | [**deleteApiKeysById**](doc/ApiKeysApi.md#deleteapikeysbyid) | **DELETE** /api/api-keys/{id} | 
 [*ApiKeysApi*](doc/ApiKeysApi.md) | [**getApiKeysById**](doc/ApiKeysApi.md#getapikeysbyid) | **GET** /api/api-keys/{id} | 
@@ -259,10 +241,6 @@ Class | Method | HTTP request | Description
 [*NotificationApi*](doc/NotificationApi.md) | [**getNotificationList**](doc/NotificationApi.md#getnotificationlist) | **GET** /api/app/notification | 
 [*NotificationApi*](doc/NotificationApi.md) | [**push**](doc/NotificationApi.md#push) | **POST** /api/app/notification/push | 
 [*OpenAiCompatibleChatApi*](doc/OpenAiCompatibleChatApi.md) | [**create**](doc/OpenAiCompatibleChatApi.md#create) | **POST** /api/ai/v1/chat/completions | 
-[*OpenAiCompatibleImagesApi*](doc/OpenAiCompatibleImagesApi.md) | [**createEdit**](doc/OpenAiCompatibleImagesApi.md#createedit) | **POST** /api/ai/v1/images/edits | 
-[*OpenAiCompatibleImagesApi*](doc/OpenAiCompatibleImagesApi.md) | [**createGeneration**](doc/OpenAiCompatibleImagesApi.md#creategeneration) | **POST** /api/ai/v1/images/generations | 
-[*OpenAiCompatibleVideosApi*](doc/OpenAiCompatibleVideosApi.md) | [**create**](doc/OpenAiCompatibleVideosApi.md#create) | **POST** /api/ai/v1/videos | 
-[*OpenAiCompatibleVideosApi*](doc/OpenAiCompatibleVideosApi.md) | [**getById**](doc/OpenAiCompatibleVideosApi.md#getbyid) | **GET** /api/ai/v1/videos/{id} | 
 [*OpsCryptoApi*](doc/OpsCryptoApi.md) | [**getVault**](doc/OpsCryptoApi.md#getvault) | **GET** /api/app/ops-crypto/vault | 
 [*OpsCryptoApi*](doc/OpsCryptoApi.md) | [**putVault**](doc/OpsCryptoApi.md#putvault) | **PUT** /api/app/ops-crypto/vault | 
 [*PermissionsApi*](doc/PermissionsApi.md) | [**getPermissions**](doc/PermissionsApi.md#getpermissions) | **GET** /api/permission-management/permissions | 
@@ -339,25 +317,10 @@ Class | Method | HTTP request | Description
  - [AiChatChoiceDto](doc/AiChatChoiceDto.md)
  - [AiChatCompletionDto](doc/AiChatCompletionDto.md)
  - [AiChatMessageDto](doc/AiChatMessageDto.md)
- - [AiErrorDto](doc/AiErrorDto.md)
- - [AiImageAnalysisDto](doc/AiImageAnalysisDto.md)
- - [AiImageAnalysisTask](doc/AiImageAnalysisTask.md)
- - [AiImageLabelDto](doc/AiImageLabelDto.md)
- - [AiImageProductDto](doc/AiImageProductDto.md)
- - [AiJobDto](doc/AiJobDto.md)
- - [AiJobKind](doc/AiJobKind.md)
- - [AiJobOperation](doc/AiJobOperation.md)
- - [AiJobStatus](doc/AiJobStatus.md)
- - [AiMediaOutputDto](doc/AiMediaOutputDto.md)
- - [AiMediaReferenceDto](doc/AiMediaReferenceDto.md)
- - [AiMediaType](doc/AiMediaType.md)
  - [AiModelDto](doc/AiModelDto.md)
- - [AiOcrTextDto](doc/AiOcrTextDto.md)
  - [AiProviderDto](doc/AiProviderDto.md)
  - [AiProviderDtoPagedResultDto](doc/AiProviderDtoPagedResultDto.md)
- - [AiProviderResultDto](doc/AiProviderResultDto.md)
  - [AiProviderType](doc/AiProviderType.md)
- - [AiStructuredExtractionDto](doc/AiStructuredExtractionDto.md)
  - [AiUsageDto](doc/AiUsageDto.md)
  - [ApiKeyCreateDto](doc/ApiKeyCreateDto.md)
  - [ApiKeyDto](doc/ApiKeyDto.md)
@@ -433,13 +396,6 @@ Class | Method | HTTP request | Description
  - [ClockDto](doc/ClockDto.md)
  - [ControllerApiDescriptionModel](doc/ControllerApiDescriptionModel.md)
  - [ControllerInterfaceApiDescriptionModel](doc/ControllerInterfaceApiDescriptionModel.md)
- - [CreateAiChatCompletionDto](doc/CreateAiChatCompletionDto.md)
- - [CreateAiImageAnalysisDto](doc/CreateAiImageAnalysisDto.md)
- - [CreateAiImageEditDto](doc/CreateAiImageEditDto.md)
- - [CreateAiImageGenerationDto](doc/CreateAiImageGenerationDto.md)
- - [CreateAiStructuredExtractionDto](doc/CreateAiStructuredExtractionDto.md)
- - [CreateAiVideoEditDto](doc/CreateAiVideoEditDto.md)
- - [CreateAiVideoGenerationDto](doc/CreateAiVideoGenerationDto.md)
  - [CreateAlipayOrderDto](doc/CreateAlipayOrderDto.md)
  - [CreateAlipayOrderResultDto](doc/CreateAlipayOrderResultDto.md)
  - [CreateAppFeedbackDto](doc/CreateAppFeedbackDto.md)
@@ -545,11 +501,6 @@ Class | Method | HTTP request | Description
  - [NotificationInfoDtoPagedResultDto](doc/NotificationInfoDtoPagedResultDto.md)
  - [ObjectExtensionsDto](doc/ObjectExtensionsDto.md)
  - [OpenAiChatCompletionRequestDto](doc/OpenAiChatCompletionRequestDto.md)
- - [OpenAiImageDataDto](doc/OpenAiImageDataDto.md)
- - [OpenAiImageGenerationRequestDto](doc/OpenAiImageGenerationRequestDto.md)
- - [OpenAiImageResponseDto](doc/OpenAiImageResponseDto.md)
- - [OpenAiVideoRequestDto](doc/OpenAiVideoRequestDto.md)
- - [OpenAiVideoResponseDto](doc/OpenAiVideoResponseDto.md)
  - [OpsCryptoVaultDto](doc/OpsCryptoVaultDto.md)
  - [ParameterApiDescriptionModel](doc/ParameterApiDescriptionModel.md)
  - [PayPalWebhookProcessResultDto](doc/PayPalWebhookProcessResultDto.md)

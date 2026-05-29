@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // String content
+    // Object content
     test('to test the property `content`', () async {
       // TODO
     });

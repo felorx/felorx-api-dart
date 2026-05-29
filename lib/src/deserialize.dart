@@ -3,19 +3,9 @@ import 'package:puupee_api_client/src/model/action_api_description_model.dart';
 import 'package:puupee_api_client/src/model/ai_chat_choice_dto.dart';
 import 'package:puupee_api_client/src/model/ai_chat_completion_dto.dart';
 import 'package:puupee_api_client/src/model/ai_chat_message_dto.dart';
-import 'package:puupee_api_client/src/model/ai_error_dto.dart';
-import 'package:puupee_api_client/src/model/ai_image_analysis_dto.dart';
-import 'package:puupee_api_client/src/model/ai_image_label_dto.dart';
-import 'package:puupee_api_client/src/model/ai_image_product_dto.dart';
-import 'package:puupee_api_client/src/model/ai_job_dto.dart';
-import 'package:puupee_api_client/src/model/ai_media_output_dto.dart';
-import 'package:puupee_api_client/src/model/ai_media_reference_dto.dart';
 import 'package:puupee_api_client/src/model/ai_model_dto.dart';
-import 'package:puupee_api_client/src/model/ai_ocr_text_dto.dart';
 import 'package:puupee_api_client/src/model/ai_provider_dto.dart';
 import 'package:puupee_api_client/src/model/ai_provider_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/ai_provider_result_dto.dart';
-import 'package:puupee_api_client/src/model/ai_structured_extraction_dto.dart';
 import 'package:puupee_api_client/src/model/ai_usage_dto.dart';
 import 'package:puupee_api_client/src/model/api_key_create_dto.dart';
 import 'package:puupee_api_client/src/model/api_key_dto.dart';
@@ -75,13 +65,6 @@ import 'package:puupee_api_client/src/model/check_sync_auth_result_dto.dart';
 import 'package:puupee_api_client/src/model/clock_dto.dart';
 import 'package:puupee_api_client/src/model/controller_api_description_model.dart';
 import 'package:puupee_api_client/src/model/controller_interface_api_description_model.dart';
-import 'package:puupee_api_client/src/model/create_ai_chat_completion_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_image_analysis_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_image_edit_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_image_generation_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_structured_extraction_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_video_edit_dto.dart';
-import 'package:puupee_api_client/src/model/create_ai_video_generation_dto.dart';
 import 'package:puupee_api_client/src/model/create_alipay_order_dto.dart';
 import 'package:puupee_api_client/src/model/create_alipay_order_result_dto.dart';
 import 'package:puupee_api_client/src/model/create_app_feedback_dto.dart';
@@ -184,11 +167,6 @@ import 'package:puupee_api_client/src/model/notification_info_dto.dart';
 import 'package:puupee_api_client/src/model/notification_info_dto_paged_result_dto.dart';
 import 'package:puupee_api_client/src/model/object_extensions_dto.dart';
 import 'package:puupee_api_client/src/model/open_ai_chat_completion_request_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_image_data_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_image_generation_request_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_image_response_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_video_request_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_video_response_dto.dart';
 import 'package:puupee_api_client/src/model/ops_crypto_vault_dto.dart';
 import 'package:puupee_api_client/src/model/parameter_api_description_model.dart';
 import 'package:puupee_api_client/src/model/pay_pal_webhook_process_result_dto.dart';
@@ -275,50 +253,15 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return AiChatCompletionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiChatMessageDto':
           return AiChatMessageDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiErrorDto':
-          return AiErrorDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiImageAnalysisDto':
-          return AiImageAnalysisDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiImageAnalysisTask':
-          
-          
-        case 'AiImageLabelDto':
-          return AiImageLabelDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiImageProductDto':
-          return AiImageProductDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiJobDto':
-          return AiJobDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiJobKind':
-          
-          
-        case 'AiJobOperation':
-          
-          
-        case 'AiJobStatus':
-          
-          
-        case 'AiMediaOutputDto':
-          return AiMediaOutputDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiMediaReferenceDto':
-          return AiMediaReferenceDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiMediaType':
-          
-          
         case 'AiModelDto':
           return AiModelDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiOcrTextDto':
-          return AiOcrTextDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiProviderDto':
           return AiProviderDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiProviderDtoPagedResultDto':
           return AiProviderDtoPagedResultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'AiProviderResultDto':
-          return AiProviderResultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiProviderType':
           
           
-        case 'AiStructuredExtractionDto':
-          return AiStructuredExtractionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiUsageDto':
           return AiUsageDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ApiKeyCreateDto':
@@ -485,20 +428,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return ControllerApiDescriptionModel.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ControllerInterfaceApiDescriptionModel':
           return ControllerInterfaceApiDescriptionModel.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiChatCompletionDto':
-          return CreateAiChatCompletionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiImageAnalysisDto':
-          return CreateAiImageAnalysisDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiImageEditDto':
-          return CreateAiImageEditDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiImageGenerationDto':
-          return CreateAiImageGenerationDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiStructuredExtractionDto':
-          return CreateAiStructuredExtractionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiVideoEditDto':
-          return CreateAiVideoEditDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'CreateAiVideoGenerationDto':
-          return CreateAiVideoGenerationDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateAlipayOrderDto':
           return CreateAlipayOrderDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateAlipayOrderResultDto':
@@ -712,16 +641,6 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return ObjectExtensionsDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'OpenAiChatCompletionRequestDto':
           return OpenAiChatCompletionRequestDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'OpenAiImageDataDto':
-          return OpenAiImageDataDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'OpenAiImageGenerationRequestDto':
-          return OpenAiImageGenerationRequestDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'OpenAiImageResponseDto':
-          return OpenAiImageResponseDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'OpenAiVideoRequestDto':
-          return OpenAiVideoRequestDto.fromJson(value as Map<String, dynamic>) as ReturnType;
-        case 'OpenAiVideoResponseDto':
-          return OpenAiVideoResponseDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'OpsCryptoVaultDto':
           return OpsCryptoVaultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ParameterApiDescriptionModel':
@@ -778,8 +697,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
         case 'StoreProductMappingDto':
           return StoreProductMappingDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SubBillingPeriod':
-
-
+          
+          
         case 'SubscriptionDto':
           return SubscriptionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'SubscriptionEntitlementStatus':

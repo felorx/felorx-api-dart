@@ -45,7 +45,7 @@ class AiChatMessageDto {
   )
 
 
-  String? content;
+  Object? content;
 
 
 

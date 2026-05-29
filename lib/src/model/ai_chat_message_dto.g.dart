@@ -10,7 +10,7 @@ AiChatMessageDto _$AiChatMessageDtoFromJson(Map<String, dynamic> json) =>
     $checkedCreate('AiChatMessageDto', json, ($checkedConvert) {
       final val = AiChatMessageDto(
         role: $checkedConvert('role', (v) => v as String?),
-        content: $checkedConvert('content', (v) => v as String?),
+        content: $checkedConvert('content', (v) => v),
         name: $checkedConvert('name', (v) => v as String?),
       );
       return val;

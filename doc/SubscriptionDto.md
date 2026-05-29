@@ -22,12 +22,13 @@ Name | Type | Description | Notes
 **pricingId** | **String** |  | [optional] 
 **planPriceId** | **String** |  | [optional] 
 **provider** | [**BillingProvider**](BillingProvider.md) |  | [optional] 
-**billingPeriod** | [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional]
-**billingMode** | [**BillingMode**](BillingMode.md) |  | [optional]
+**billingPeriod** | [**SubBillingPeriod**](SubBillingPeriod.md) |  | [optional] 
+**billingMode** | [**BillingMode**](BillingMode.md) |  | [optional] 
 **status** | [**SubscriptionEntitlementStatus**](SubscriptionEntitlementStatus.md) |  | [optional] 
 **isLifetime** | **bool** |  | [optional] 
 **externalSubscriptionId** | **String** |  | [optional] 
 **lastVerifiedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
