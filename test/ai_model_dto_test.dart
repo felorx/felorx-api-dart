@@ -52,6 +52,11 @@ void main() {
       // TODO
     });
 
+    // String routeName
+    test('to test the property `routeName`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO

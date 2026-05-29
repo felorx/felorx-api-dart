@@ -7,6 +7,11 @@ void main() {
   // TODO add properties to the entity
 
   group(CreateOrUpdateAiModelDto, () {
+    // String routeName
+    test('to test the property `routeName`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO

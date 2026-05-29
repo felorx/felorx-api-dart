@@ -20,7 +20,11 @@ enum AiCapability {
       @JsonValue(r'StructuredExtraction')
       structuredExtraction(r'StructuredExtraction'),
       @JsonValue(r'Caption')
-      caption(r'Caption');
+      caption(r'Caption'),
+      @JsonValue(r'ImageGeneration')
+      imageGeneration(r'ImageGeneration'),
+      @JsonValue(r'VideoGeneration')
+      videoGeneration(r'VideoGeneration');
 
   const AiCapability(this.value);
 

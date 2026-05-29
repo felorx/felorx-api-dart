@@ -13,6 +13,7 @@ CreateOrUpdateAiModelDto _$CreateOrUpdateAiModelDtoFromJson(
   json,
   ($checkedConvert) {
     final val = CreateOrUpdateAiModelDto(
+      routeName: $checkedConvert('route_name', (v) => v as String?),
       name: $checkedConvert('name', (v) => v as String?),
       displayName: $checkedConvert('display_name', (v) => v as String?),
       capabilities: $checkedConvert(
@@ -33,6 +34,7 @@ CreateOrUpdateAiModelDto _$CreateOrUpdateAiModelDtoFromJson(
     return val;
   },
   fieldKeyMap: const {
+    'routeName': 'route_name',
     'displayName': 'display_name',
     'isDefault': 'is_default',
     'defaultParameters': 'default_parameters',
@@ -42,6 +44,7 @@ CreateOrUpdateAiModelDto _$CreateOrUpdateAiModelDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAiModelDtoToJson(
   CreateOrUpdateAiModelDto instance,
 ) => <String, dynamic>{
+  if (instance.routeName case final value?) 'route_name': value,
   if (instance.name case final value?) 'name': value,
   if (instance.displayName case final value?) 'display_name': value,
   if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
@@ -60,4 +63,6 @@ const _$AiCapabilityEnumMap = {
   AiCapability.productDetect: 'ProductDetect',
   AiCapability.structuredExtraction: 'StructuredExtraction',
   AiCapability.caption: 'Caption',
+  AiCapability.imageGeneration: 'ImageGeneration',
+  AiCapability.videoGeneration: 'VideoGeneration',
 };

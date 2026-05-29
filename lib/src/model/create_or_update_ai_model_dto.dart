@@ -19,6 +19,8 @@ class CreateOrUpdateAiModelDto {
   /// Returns a new [CreateOrUpdateAiModelDto] instance.
   CreateOrUpdateAiModelDto({
 
+     this.routeName,
+
      this.name,
 
      this.displayName,
@@ -33,7 +35,19 @@ class CreateOrUpdateAiModelDto {
   });
 
   @JsonKey(
-    
+
+    name: r'route_name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? routeName;
+
+
+
+  @JsonKey(
+
     name: r'name',
     required: false,
     includeIfNull: false,
@@ -108,6 +122,7 @@ class CreateOrUpdateAiModelDto {
 
     @override
     bool operator ==(Object other) => identical(this, other) || other is CreateOrUpdateAiModelDto &&
+      other.routeName == routeName &&
       other.name == name &&
       other.displayName == displayName &&
       other.capabilities == capabilities &&
@@ -117,6 +132,7 @@ class CreateOrUpdateAiModelDto {
 
     @override
     int get hashCode =>
+        (routeName == null ? 0 : routeName.hashCode) +
         (name == null ? 0 : name.hashCode) +
         (displayName == null ? 0 : displayName.hashCode) +
         (capabilities == null ? 0 : capabilities.hashCode) +
@@ -134,4 +150,3 @@ class CreateOrUpdateAiModelDto {
   }
 
 }
-

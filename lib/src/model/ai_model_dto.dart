@@ -37,6 +37,8 @@ class AiModelDto {
 
      this.providerId,
 
+     this.routeName,
+
      this.name,
 
      this.displayName,
@@ -51,7 +53,7 @@ class AiModelDto {
   });
 
   @JsonKey(
-    
+
     name: r'id',
     required: false,
     includeIfNull: false,
@@ -160,6 +162,18 @@ class AiModelDto {
 
   @JsonKey(
     
+    name: r'route_name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
+  String? routeName;
+
+
+
+  @JsonKey(
+
     name: r'name',
     required: false,
     includeIfNull: false,
@@ -243,6 +257,7 @@ class AiModelDto {
       other.deleterId == deleterId &&
       other.deletionTime == deletionTime &&
       other.providerId == providerId &&
+      other.routeName == routeName &&
       other.name == name &&
       other.displayName == displayName &&
       other.capabilities == capabilities &&
@@ -261,6 +276,7 @@ class AiModelDto {
         (deleterId == null ? 0 : deleterId.hashCode) +
         (deletionTime == null ? 0 : deletionTime.hashCode) +
         providerId.hashCode +
+        (routeName == null ? 0 : routeName.hashCode) +
         (name == null ? 0 : name.hashCode) +
         (displayName == null ? 0 : displayName.hashCode) +
         (capabilities == null ? 0 : capabilities.hashCode) +
@@ -278,4 +294,3 @@ class AiModelDto {
   }
 
 }
-

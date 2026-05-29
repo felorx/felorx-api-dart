@@ -90,4 +90,6 @@ const _$AiCapabilityEnumMap = {
   AiCapability.productDetect: 'ProductDetect',
   AiCapability.structuredExtraction: 'StructuredExtraction',
   AiCapability.caption: 'Caption',
+  AiCapability.imageGeneration: 'ImageGeneration',
+  AiCapability.videoGeneration: 'VideoGeneration',
 };

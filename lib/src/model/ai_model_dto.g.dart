@@ -29,6 +29,7 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
         (v) => v == null ? null : DateTime.parse(v as String),
       ),
       providerId: $checkedConvert('provider_id', (v) => v as String?),
+      routeName: $checkedConvert('route_name', (v) => v as String?),
       name: $checkedConvert('name', (v) => v as String?),
       displayName: $checkedConvert('display_name', (v) => v as String?),
       capabilities: $checkedConvert(
@@ -50,6 +51,7 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
   },
   fieldKeyMap: const {
     'providerId': 'provider_id',
+    'routeName': 'route_name',
     'displayName': 'display_name',
     'isDefault': 'is_default',
     'defaultParameters': 'default_parameters',
@@ -71,6 +73,7 @@ Map<String, dynamic> _$AiModelDtoToJson(
   if (instance.deletionTime?.toIso8601String() case final value?)
     'deletionTime': value,
   if (instance.providerId case final value?) 'provider_id': value,
+  if (instance.routeName case final value?) 'route_name': value,
   if (instance.name case final value?) 'name': value,
   if (instance.displayName case final value?) 'display_name': value,
   if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
@@ -89,4 +92,6 @@ const _$AiCapabilityEnumMap = {
   AiCapability.productDetect: 'ProductDetect',
   AiCapability.structuredExtraction: 'StructuredExtraction',
   AiCapability.caption: 'Caption',
+  AiCapability.imageGeneration: 'ImageGeneration',
+  AiCapability.videoGeneration: 'VideoGeneration',
 };
