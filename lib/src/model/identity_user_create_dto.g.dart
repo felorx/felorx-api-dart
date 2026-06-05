@@ -35,14 +35,14 @@ IdentityUserCreateDto _$IdentityUserCreateDtoFromJson(
 Map<String, dynamic> _$IdentityUserCreateDtoToJson(
   IdentityUserCreateDto instance,
 ) => <String, dynamic>{
-  if (instance.extraProperties case final value?) 'extraProperties': value,
+  'extraProperties': ?instance.extraProperties,
   'userName': instance.userName,
-  if (instance.name case final value?) 'name': value,
-  if (instance.surname case final value?) 'surname': value,
+  'name': ?instance.name,
+  'surname': ?instance.surname,
   'email': instance.email,
-  if (instance.phoneNumber case final value?) 'phoneNumber': value,
-  if (instance.isActive case final value?) 'isActive': value,
-  if (instance.lockoutEnabled case final value?) 'lockoutEnabled': value,
-  if (instance.roleNames case final value?) 'roleNames': value,
+  'phoneNumber': ?instance.phoneNumber,
+  'isActive': ?instance.isActive,
+  'lockoutEnabled': ?instance.lockoutEnabled,
+  'roleNames': ?instance.roleNames,
   'password': instance.password,
 };

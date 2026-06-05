@@ -20,10 +20,9 @@ ApiKeyCreateDto _$ApiKeyCreateDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$ApiKeyCreateDtoToJson(
-  ApiKeyCreateDto instance,
-) => <String, dynamic>{
-  'name': instance.name,
-  if (instance.active case final value?) 'active': value,
-  if (instance.expireAt?.toIso8601String() case final value?) 'expireAt': value,
-};
+Map<String, dynamic> _$ApiKeyCreateDtoToJson(ApiKeyCreateDto instance) =>
+    <String, dynamic>{
+      'name': instance.name,
+      'active': ?instance.active,
+      'expireAt': ?instance.expireAt?.toIso8601String(),
+    };

@@ -27,9 +27,9 @@ IdentityRoleUpdateDto _$IdentityRoleUpdateDtoFromJson(
 Map<String, dynamic> _$IdentityRoleUpdateDtoToJson(
   IdentityRoleUpdateDto instance,
 ) => <String, dynamic>{
-  if (instance.extraProperties case final value?) 'extraProperties': value,
+  'extraProperties': ?instance.extraProperties,
   'name': instance.name,
-  if (instance.isDefault case final value?) 'isDefault': value,
-  if (instance.isPublic case final value?) 'isPublic': value,
-  if (instance.concurrencyStamp case final value?) 'concurrencyStamp': value,
+  'isDefault': ?instance.isDefault,
+  'isPublic': ?instance.isPublic,
+  'concurrencyStamp': ?instance.concurrencyStamp,
 };

@@ -29,10 +29,9 @@ MessageSourceDto _$MessageSourceDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MessageSourceDtoToJson(MessageSourceDto instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.description case final value?) 'description': value,
-      if (instance.isPublished case final value?) 'isPublished': value,
-      if (instance.iconUrl case final value?) 'iconUrl': value,
-      if (instance.routes?.map((e) => e.toJson()).toList() case final value?)
-        'routes': value,
+      'name': ?instance.name,
+      'description': ?instance.description,
+      'isPublished': ?instance.isPublished,
+      'iconUrl': ?instance.iconUrl,
+      'routes': ?instance.routes?.map((e) => e.toJson()).toList(),
     };

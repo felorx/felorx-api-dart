@@ -33,16 +33,13 @@ EmailSettingsDto _$EmailSettingsDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$EmailSettingsDtoToJson(EmailSettingsDto instance) =>
     <String, dynamic>{
-      if (instance.smtpHost case final value?) 'smtpHost': value,
-      if (instance.smtpPort case final value?) 'smtpPort': value,
-      if (instance.smtpUserName case final value?) 'smtpUserName': value,
-      if (instance.smtpPassword case final value?) 'smtpPassword': value,
-      if (instance.smtpDomain case final value?) 'smtpDomain': value,
-      if (instance.smtpEnableSsl case final value?) 'smtpEnableSsl': value,
-      if (instance.smtpUseDefaultCredentials case final value?)
-        'smtpUseDefaultCredentials': value,
-      if (instance.defaultFromAddress case final value?)
-        'defaultFromAddress': value,
-      if (instance.defaultFromDisplayName case final value?)
-        'defaultFromDisplayName': value,
+      'smtpHost': ?instance.smtpHost,
+      'smtpPort': ?instance.smtpPort,
+      'smtpUserName': ?instance.smtpUserName,
+      'smtpPassword': ?instance.smtpPassword,
+      'smtpDomain': ?instance.smtpDomain,
+      'smtpEnableSsl': ?instance.smtpEnableSsl,
+      'smtpUseDefaultCredentials': ?instance.smtpUseDefaultCredentials,
+      'defaultFromAddress': ?instance.defaultFromAddress,
+      'defaultFromDisplayName': ?instance.defaultFromDisplayName,
     };

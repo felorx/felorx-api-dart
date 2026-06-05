@@ -48,24 +48,20 @@ MessageTemplateReleaseDto _$MessageTemplateReleaseDtoFromJson(
 Map<String, dynamic> _$MessageTemplateReleaseDtoToJson(
   MessageTemplateReleaseDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.templateName case final value?) 'templateName': value,
-  if (instance.version case final value?) 'version': value,
-  if (instance.content case final value?) 'content': value,
-  if (instance.schemaVersion case final value?) 'schemaVersion': value,
-  if (instance.contentHash case final value?) 'contentHash': value,
-  if (instance.status case final value?) 'status': value,
-  if (instance.publishedAt?.toIso8601String() case final value?)
-    'publishedAt': value,
-  if (instance.templateId case final value?) 'templateId': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'templateName': ?instance.templateName,
+  'version': ?instance.version,
+  'content': ?instance.content,
+  'schemaVersion': ?instance.schemaVersion,
+  'contentHash': ?instance.contentHash,
+  'status': ?instance.status,
+  'publishedAt': ?instance.publishedAt?.toIso8601String(),
+  'templateId': ?instance.templateId,
 };

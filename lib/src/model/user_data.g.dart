@@ -33,16 +33,15 @@ UserData _$UserDataFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$UserDataToJson(UserData instance) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.tenantId case final value?) 'tenantId': value,
-  if (instance.userName case final value?) 'userName': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.surname case final value?) 'surname': value,
-  if (instance.isActive case final value?) 'isActive': value,
-  if (instance.email case final value?) 'email': value,
-  if (instance.emailConfirmed case final value?) 'emailConfirmed': value,
-  if (instance.phoneNumber case final value?) 'phoneNumber': value,
-  if (instance.phoneNumberConfirmed case final value?)
-    'phoneNumberConfirmed': value,
-  if (instance.extraProperties case final value?) 'extraProperties': value,
+  'id': ?instance.id,
+  'tenantId': ?instance.tenantId,
+  'userName': ?instance.userName,
+  'name': ?instance.name,
+  'surname': ?instance.surname,
+  'isActive': ?instance.isActive,
+  'email': ?instance.email,
+  'emailConfirmed': ?instance.emailConfirmed,
+  'phoneNumber': ?instance.phoneNumber,
+  'phoneNumberConfirmed': ?instance.phoneNumberConfirmed,
+  'extraProperties': ?instance.extraProperties,
 };

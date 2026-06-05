@@ -22,7 +22,6 @@ CapturePayPalOrderDto _$CapturePayPalOrderDtoFromJson(
 Map<String, dynamic> _$CapturePayPalOrderDtoToJson(
   CapturePayPalOrderDto instance,
 ) => <String, dynamic>{
-  if (instance.payPalOrderId case final value?) 'payPalOrderId': value,
-  if (instance.payPalSubscriptionId case final value?)
-    'payPalSubscriptionId': value,
+  'payPalOrderId': ?instance.payPalOrderId,
+  'payPalSubscriptionId': ?instance.payPalSubscriptionId,
 };

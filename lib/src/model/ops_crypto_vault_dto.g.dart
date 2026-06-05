@@ -26,13 +26,10 @@ OpsCryptoVaultDto _$OpsCryptoVaultDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$OpsCryptoVaultDtoToJson(
-  OpsCryptoVaultDto instance,
-) => <String, dynamic>{
-  if (instance.saltBase64 case final value?) 'saltBase64': value,
-  if (instance.wrappedUserKeyJson case final value?)
-    'wrappedUserKeyJson': value,
-  if (instance.publicKeyJwkJson case final value?) 'publicKeyJwkJson': value,
-  if (instance.wrappedRsaPrivateJson case final value?)
-    'wrappedRsaPrivateJson': value,
-};
+Map<String, dynamic> _$OpsCryptoVaultDtoToJson(OpsCryptoVaultDto instance) =>
+    <String, dynamic>{
+      'saltBase64': ?instance.saltBase64,
+      'wrappedUserKeyJson': ?instance.wrappedUserKeyJson,
+      'publicKeyJwkJson': ?instance.publicKeyJwkJson,
+      'wrappedRsaPrivateJson': ?instance.wrappedRsaPrivateJson,
+    };

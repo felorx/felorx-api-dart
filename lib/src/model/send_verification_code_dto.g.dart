@@ -20,7 +20,7 @@ SendVerificationCodeDto _$SendVerificationCodeDtoFromJson(
 Map<String, dynamic> _$SendVerificationCodeDtoToJson(
   SendVerificationCodeDto instance,
 ) => <String, dynamic>{
-  if (instance.codeSender case final value?) 'codeSender': value,
-  if (instance.account case final value?) 'account': value,
-  if (instance.purpose case final value?) 'purpose': value,
+  'codeSender': ?instance.codeSender,
+  'account': ?instance.account,
+  'purpose': ?instance.purpose,
 };

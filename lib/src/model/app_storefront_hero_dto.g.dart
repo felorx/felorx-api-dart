@@ -19,6 +19,6 @@ AppStorefrontHeroDto _$AppStorefrontHeroDtoFromJson(
 Map<String, dynamic> _$AppStorefrontHeroDtoToJson(
   AppStorefrontHeroDto instance,
 ) => <String, dynamic>{
-  if (instance.phoneUrl case final value?) 'phoneUrl': value,
-  if (instance.tabletUrl case final value?) 'tabletUrl': value,
+  'phoneUrl': ?instance.phoneUrl,
+  'tabletUrl': ?instance.tabletUrl,
 };

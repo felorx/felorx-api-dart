@@ -22,11 +22,11 @@ UserProfileDto _$UserProfileDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$UserProfileDtoToJson(UserProfileDto instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.name case final value?) 'name': value,
-      if (instance.userName case final value?) 'userName': value,
-      if (instance.avatarUrl case final value?) 'avatarUrl': value,
-      if (instance.email case final value?) 'email': value,
-      if (instance.phoneNumber case final value?) 'phoneNumber': value,
-      if (instance.hasPassword case final value?) 'hasPassword': value,
+      'id': ?instance.id,
+      'name': ?instance.name,
+      'userName': ?instance.userName,
+      'avatarUrl': ?instance.avatarUrl,
+      'email': ?instance.email,
+      'phoneNumber': ?instance.phoneNumber,
+      'hasPassword': ?instance.hasPassword,
     };

@@ -47,15 +47,15 @@ AppleVerifyReceiptResult _$AppleVerifyReceiptResultFromJson(
 Map<String, dynamic> _$AppleVerifyReceiptResultToJson(
   AppleVerifyReceiptResult instance,
 ) => <String, dynamic>{
-  if (instance.environment case final value?) 'environment': value,
-  if (instance.isRetryable case final value?) 'is_retryable': value,
-  if (instance.status case final value?) 'status': value,
-  if (instance.latestReceiptInfo?.map((e) => e.toJson()).toList()
-      case final value?)
-    'latest_receipt_info': value,
-  if (instance.latestReceipt case final value?) 'latest_receipt': value,
-  if (instance.pendingRenewalInfo?.map((e) => e.toJson()).toList()
-      case final value?)
-    'pending_renewal_info': value,
-  if (instance.receipt?.toJson() case final value?) 'receipt': value,
+  'environment': ?instance.environment,
+  'is_retryable': ?instance.isRetryable,
+  'status': ?instance.status,
+  'latest_receipt_info': ?instance.latestReceiptInfo
+      ?.map((e) => e.toJson())
+      .toList(),
+  'latest_receipt': ?instance.latestReceipt,
+  'pending_renewal_info': ?instance.pendingRenewalInfo
+      ?.map((e) => e.toJson())
+      .toList(),
+  'receipt': ?instance.receipt?.toJson(),
 };

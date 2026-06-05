@@ -18,7 +18,7 @@ IdentityUserRole _$IdentityUserRoleFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$IdentityUserRoleToJson(IdentityUserRole instance) =>
     <String, dynamic>{
-      if (instance.tenantId case final value?) 'tenantId': value,
-      if (instance.userId case final value?) 'userId': value,
-      if (instance.roleId case final value?) 'roleId': value,
+      'tenantId': ?instance.tenantId,
+      'userId': ?instance.userId,
+      'roleId': ?instance.roleId,
     };

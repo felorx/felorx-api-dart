@@ -25,14 +25,13 @@ IdentityRoleDto _$IdentityRoleDtoFromJson(
   return val;
 });
 
-Map<String, dynamic> _$IdentityRoleDtoToJson(
-  IdentityRoleDto instance,
-) => <String, dynamic>{
-  if (instance.extraProperties case final value?) 'extraProperties': value,
-  if (instance.id case final value?) 'id': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.isDefault case final value?) 'isDefault': value,
-  if (instance.isStatic case final value?) 'isStatic': value,
-  if (instance.isPublic case final value?) 'isPublic': value,
-  if (instance.concurrencyStamp case final value?) 'concurrencyStamp': value,
-};
+Map<String, dynamic> _$IdentityRoleDtoToJson(IdentityRoleDto instance) =>
+    <String, dynamic>{
+      'extraProperties': ?instance.extraProperties,
+      'id': ?instance.id,
+      'name': ?instance.name,
+      'isDefault': ?instance.isDefault,
+      'isStatic': ?instance.isStatic,
+      'isPublic': ?instance.isPublic,
+      'concurrencyStamp': ?instance.concurrencyStamp,
+    };

@@ -23,10 +23,10 @@ CreateAlipayOrderDto _$CreateAlipayOrderDtoFromJson(
 Map<String, dynamic> _$CreateAlipayOrderDtoToJson(
   CreateAlipayOrderDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planType case final value?) 'planType': value,
-  if (instance.checkoutMode case final value?) 'checkoutMode': value,
-  if (instance.returnUrl case final value?) 'returnUrl': value,
-  if (instance.quitUrl case final value?) 'quitUrl': value,
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'planType': ?instance.planType,
+  'checkoutMode': ?instance.checkoutMode,
+  'returnUrl': ?instance.returnUrl,
+  'quitUrl': ?instance.quitUrl,
 };

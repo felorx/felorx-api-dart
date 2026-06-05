@@ -26,9 +26,9 @@ Map<String, dynamic> _$UpdateDeployRecordDtoToJson(
   UpdateDeployRecordDto instance,
 ) => <String, dynamic>{
   'status': _$DeployStatusEnumMap[instance.status]!,
-  if (instance.logs case final value?) 'logs': value,
-  if (instance.errorMessage case final value?) 'errorMessage': value,
-  if (instance.deployUrl case final value?) 'deployUrl': value,
+  'logs': ?instance.logs,
+  'errorMessage': ?instance.errorMessage,
+  'deployUrl': ?instance.deployUrl,
 };
 
 const _$DeployStatusEnumMap = {

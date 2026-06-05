@@ -36,9 +36,9 @@ InterfaceMethodApiDescriptionModel _$InterfaceMethodApiDescriptionModelFromJson(
 Map<String, dynamic> _$InterfaceMethodApiDescriptionModelToJson(
   InterfaceMethodApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.parametersOnMethod?.map((e) => e.toJson()).toList()
-      case final value?)
-    'parametersOnMethod': value,
-  if (instance.returnValue?.toJson() case final value?) 'returnValue': value,
+  'name': ?instance.name,
+  'parametersOnMethod': ?instance.parametersOnMethod
+      ?.map((e) => e.toJson())
+      .toList(),
+  'returnValue': ?instance.returnValue?.toJson(),
 };

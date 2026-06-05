@@ -18,7 +18,7 @@ CdnDomainDto _$CdnDomainDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CdnDomainDtoToJson(CdnDomainDto instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.description case final value?) 'description': value,
-      if (instance.cdnDomain case final value?) 'cdnDomain': value,
+      'name': ?instance.name,
+      'description': ?instance.description,
+      'cdnDomain': ?instance.cdnDomain,
     };

@@ -87,32 +87,22 @@ Receipt _$ReceiptFromJson(Map<String, dynamic> json) => $checkedCreate(
 );
 
 Map<String, dynamic> _$ReceiptToJson(Receipt instance) => <String, dynamic>{
-  if (instance.receiptType case final value?) 'receipt_type': value,
-  if (instance.adamId case final value?) 'adam_id': value,
-  if (instance.appItemId case final value?) 'app_item_id': value,
-  if (instance.bundleId case final value?) 'bundle_id': value,
-  if (instance.applicationVersion case final value?)
-    'application_version': value,
-  if (instance.downloadId case final value?) 'download_id': value,
-  if (instance.versionExternalIdentifier case final value?)
-    'version_external_identifier': value,
-  if (instance.receiptCreationDate case final value?)
-    'receipt_creation_date': value,
-  if (instance.receiptCreationDateMs case final value?)
-    'receipt_creation_date_ms': value,
-  if (instance.receiptCreationDatePst case final value?)
-    'receipt_creation_date_pst': value,
-  if (instance.requestDate case final value?) 'request_date': value,
-  if (instance.requestDateMs case final value?) 'request_date_ms': value,
-  if (instance.requestDatePst case final value?) 'request_date_pst': value,
-  if (instance.originalPurchaseDate case final value?)
-    'original_purchase_date': value,
-  if (instance.originalPurchaseDateMs case final value?)
-    'original_purchase_date_ms': value,
-  if (instance.originalPurchaseDatePst case final value?)
-    'original_purchase_date_pst': value,
-  if (instance.originalApplicationVersion case final value?)
-    'original_application_version': value,
-  if (instance.inApp?.map((e) => e.toJson()).toList() case final value?)
-    'in_app': value,
+  'receipt_type': ?instance.receiptType,
+  'adam_id': ?instance.adamId,
+  'app_item_id': ?instance.appItemId,
+  'bundle_id': ?instance.bundleId,
+  'application_version': ?instance.applicationVersion,
+  'download_id': ?instance.downloadId,
+  'version_external_identifier': ?instance.versionExternalIdentifier,
+  'receipt_creation_date': ?instance.receiptCreationDate,
+  'receipt_creation_date_ms': ?instance.receiptCreationDateMs,
+  'receipt_creation_date_pst': ?instance.receiptCreationDatePst,
+  'request_date': ?instance.requestDate,
+  'request_date_ms': ?instance.requestDateMs,
+  'request_date_pst': ?instance.requestDatePst,
+  'original_purchase_date': ?instance.originalPurchaseDate,
+  'original_purchase_date_ms': ?instance.originalPurchaseDateMs,
+  'original_purchase_date_pst': ?instance.originalPurchaseDatePst,
+  'original_application_version': ?instance.originalApplicationVersion,
+  'in_app': ?instance.inApp?.map((e) => e.toJson()).toList(),
 };

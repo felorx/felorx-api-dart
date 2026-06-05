@@ -19,7 +19,7 @@ ResetPasswordDto _$ResetPasswordDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ResetPasswordDtoToJson(ResetPasswordDto instance) =>
     <String, dynamic>{
-      if (instance.userId case final value?) 'userId': value,
+      'userId': ?instance.userId,
       'resetToken': instance.resetToken,
       'password': instance.password,
     };

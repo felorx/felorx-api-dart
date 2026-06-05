@@ -19,8 +19,8 @@ UserStorageItemDto _$UserStorageItemDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$UserStorageItemDtoToJson(UserStorageItemDto instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.title case final value?) 'title': value,
-      if (instance.count case final value?) 'count': value,
-      if (instance.size case final value?) 'size': value,
+      'name': ?instance.name,
+      'title': ?instance.title,
+      'count': ?instance.count,
+      'size': ?instance.size,
     };

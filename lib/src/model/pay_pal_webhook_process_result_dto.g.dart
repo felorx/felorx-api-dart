@@ -20,7 +20,7 @@ PayPalWebhookProcessResultDto _$PayPalWebhookProcessResultDtoFromJson(
 Map<String, dynamic> _$PayPalWebhookProcessResultDtoToJson(
   PayPalWebhookProcessResultDto instance,
 ) => <String, dynamic>{
-  if (instance.eventType case final value?) 'eventType': value,
-  if (instance.resourceId case final value?) 'resourceId': value,
-  if (instance.processed case final value?) 'processed': value,
+  'eventType': ?instance.eventType,
+  'resourceId': ?instance.resourceId,
+  'processed': ?instance.processed,
 };

@@ -18,6 +18,6 @@ UpdatePermissionDto _$UpdatePermissionDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$UpdatePermissionDtoToJson(
   UpdatePermissionDto instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.isGranted case final value?) 'isGranted': value,
+  'name': ?instance.name,
+  'isGranted': ?instance.isGranted,
 };

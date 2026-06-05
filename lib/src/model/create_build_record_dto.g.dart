@@ -52,14 +52,13 @@ Map<String, dynamic> _$CreateBuildRecordDtoToJson(
   'version': instance.version,
   'branch': instance.branch,
   'commitHash': instance.commitHash,
-  if (_$BuildTriggerEnumMap[instance.trigger] case final value?)
-    'trigger': value,
+  'trigger': ?_$BuildTriggerEnumMap[instance.trigger],
   'platform': _$AppPlatformEnumMap[instance.platform]!,
   'artifactType': _$ArtifactTypeEnumMap[instance.artifactType]!,
-  if (instance.environment case final value?) 'environment': value,
-  if (instance.ciSystem case final value?) 'ciSystem': value,
-  if (instance.ciBuildId case final value?) 'ciBuildId': value,
-  if (instance.ciBuildUrl case final value?) 'ciBuildUrl': value,
+  'environment': ?instance.environment,
+  'ciSystem': ?instance.ciSystem,
+  'ciBuildId': ?instance.ciBuildId,
+  'ciBuildUrl': ?instance.ciBuildUrl,
 };
 
 const _$BuildTriggerEnumMap = {

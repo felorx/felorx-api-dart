@@ -22,7 +22,4 @@ _$ApplicationGlobalFeatureConfigurationDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ApplicationGlobalFeatureConfigurationDtoToJson(
   ApplicationGlobalFeatureConfigurationDto instance,
-) => <String, dynamic>{
-  if (instance.enabledFeatures?.toList() case final value?)
-    'enabledFeatures': value,
-};
+) => <String, dynamic>{'enabledFeatures': ?instance.enabledFeatures?.toList()};

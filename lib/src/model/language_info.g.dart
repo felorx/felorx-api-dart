@@ -23,10 +23,9 @@ LanguageInfo _$LanguageInfoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$LanguageInfoToJson(LanguageInfo instance) =>
     <String, dynamic>{
-      if (instance.cultureName case final value?) 'cultureName': value,
-      if (instance.uiCultureName case final value?) 'uiCultureName': value,
-      if (instance.displayName case final value?) 'displayName': value,
-      if (instance.twoLetterISOLanguageName case final value?)
-        'twoLetterISOLanguageName': value,
-      if (instance.flagIcon case final value?) 'flagIcon': value,
+      'cultureName': ?instance.cultureName,
+      'uiCultureName': ?instance.uiCultureName,
+      'displayName': ?instance.displayName,
+      'twoLetterISOLanguageName': ?instance.twoLetterISOLanguageName,
+      'flagIcon': ?instance.flagIcon,
     };

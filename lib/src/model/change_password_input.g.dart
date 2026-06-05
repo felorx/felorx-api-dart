@@ -22,6 +22,6 @@ ChangePasswordInput _$ChangePasswordInputFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ChangePasswordInputToJson(
   ChangePasswordInput instance,
 ) => <String, dynamic>{
-  if (instance.currentPassword case final value?) 'currentPassword': value,
+  'currentPassword': ?instance.currentPassword,
   'newPassword': instance.newPassword,
 };

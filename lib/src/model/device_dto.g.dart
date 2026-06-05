@@ -43,24 +43,20 @@ DeviceDto _$DeviceDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
 );
 
 Map<String, dynamic> _$DeviceDtoToJson(DeviceDto instance) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.token case final value?) 'token': value,
-  if (instance.isPhysicalDevice case final value?) 'isPhysicalDevice': value,
-  if (instance.name case final value?) 'name': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (instance.brand case final value?) 'brand': value,
-  if (instance.systemVersion case final value?) 'systemVersion': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'token': ?instance.token,
+  'isPhysicalDevice': ?instance.isPhysicalDevice,
+  'name': ?instance.name,
+  'platform': ?_$AppPlatformEnumMap[instance.platform],
+  'brand': ?instance.brand,
+  'systemVersion': ?instance.systemVersion,
 };
 
 const _$AppPlatformEnumMap = {

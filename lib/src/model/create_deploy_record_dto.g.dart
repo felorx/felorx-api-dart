@@ -46,12 +46,12 @@ Map<String, dynamic> _$CreateDeployRecordDtoToJson(
   'version': instance.version,
   'platform': _$AppPlatformEnumMap[instance.platform]!,
   'environment': instance.environment,
-  if (instance.deployUrl case final value?) 'deployUrl': value,
-  if (instance.deployTarget case final value?) 'deployTarget': value,
-  if (instance.deployChannel case final value?) 'deployChannel': value,
-  if (instance.ciSystem case final value?) 'ciSystem': value,
-  if (instance.ciDeployId case final value?) 'ciDeployId': value,
-  if (instance.ciDeployUrl case final value?) 'ciDeployUrl': value,
+  'deployUrl': ?instance.deployUrl,
+  'deployTarget': ?instance.deployTarget,
+  'deployChannel': ?instance.deployChannel,
+  'ciSystem': ?instance.ciSystem,
+  'ciDeployId': ?instance.ciDeployId,
+  'ciDeployUrl': ?instance.ciDeployUrl,
 };
 
 const _$AppPlatformEnumMap = {

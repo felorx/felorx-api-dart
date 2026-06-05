@@ -74,24 +74,15 @@ _$ApplicationLocalizationConfigurationDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ApplicationLocalizationConfigurationDtoToJson(
   ApplicationLocalizationConfigurationDto instance,
 ) => <String, dynamic>{
-  if (instance.values case final value?) 'values': value,
-  if (instance.resources?.map((k, e) => MapEntry(k, e.toJson()))
-      case final value?)
-    'resources': value,
-  if (instance.languages?.map((e) => e.toJson()).toList() case final value?)
-    'languages': value,
-  if (instance.currentCulture?.toJson() case final value?)
-    'currentCulture': value,
-  if (instance.defaultResourceName case final value?)
-    'defaultResourceName': value,
-  if (instance.languagesMap?.map(
-        (k, e) => MapEntry(k, e.map((e) => e.toJson()).toList()),
-      )
-      case final value?)
-    'languagesMap': value,
-  if (instance.languageFilesMap?.map(
-        (k, e) => MapEntry(k, e.map((e) => e.toJson()).toList()),
-      )
-      case final value?)
-    'languageFilesMap': value,
+  'values': ?instance.values,
+  'resources': ?instance.resources?.map((k, e) => MapEntry(k, e.toJson())),
+  'languages': ?instance.languages?.map((e) => e.toJson()).toList(),
+  'currentCulture': ?instance.currentCulture?.toJson(),
+  'defaultResourceName': ?instance.defaultResourceName,
+  'languagesMap': ?instance.languagesMap?.map(
+    (k, e) => MapEntry(k, e.map((e) => e.toJson()).toList()),
+  ),
+  'languageFilesMap': ?instance.languageFilesMap?.map(
+    (k, e) => MapEntry(k, e.map((e) => e.toJson()).toList()),
+  ),
 };

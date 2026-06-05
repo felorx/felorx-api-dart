@@ -48,17 +48,12 @@ ControllerApiDescriptionModel _$ControllerApiDescriptionModelFromJson(
 Map<String, dynamic> _$ControllerApiDescriptionModelToJson(
   ControllerApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.controllerName case final value?) 'controllerName': value,
-  if (instance.controllerGroupName case final value?)
-    'controllerGroupName': value,
-  if (instance.isRemoteService case final value?) 'isRemoteService': value,
-  if (instance.isIntegrationService case final value?)
-    'isIntegrationService': value,
-  if (instance.apiVersion case final value?) 'apiVersion': value,
-  if (instance.type case final value?) 'type': value,
-  if (instance.interfaces?.map((e) => e.toJson()).toList() case final value?)
-    'interfaces': value,
-  if (instance.actions?.map((k, e) => MapEntry(k, e.toJson()))
-      case final value?)
-    'actions': value,
+  'controllerName': ?instance.controllerName,
+  'controllerGroupName': ?instance.controllerGroupName,
+  'isRemoteService': ?instance.isRemoteService,
+  'isIntegrationService': ?instance.isIntegrationService,
+  'apiVersion': ?instance.apiVersion,
+  'type': ?instance.type,
+  'interfaces': ?instance.interfaces?.map((e) => e.toJson()).toList(),
+  'actions': ?instance.actions?.map((k, e) => MapEntry(k, e.toJson())),
 };

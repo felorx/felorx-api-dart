@@ -64,33 +64,28 @@ AppPlanPriceDto _$AppPlanPriceDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AppPlanPriceDtoToJson(AppPlanPriceDto instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.creationTime?.toIso8601String() case final value?)
-        'creationTime': value,
-      if (instance.creatorId case final value?) 'creatorId': value,
-      if (instance.lastModificationTime?.toIso8601String() case final value?)
-        'lastModificationTime': value,
-      if (instance.lastModifierId case final value?) 'lastModifierId': value,
-      if (instance.isDeleted case final value?) 'isDeleted': value,
-      if (instance.deleterId case final value?) 'deleterId': value,
-      if (instance.deletionTime?.toIso8601String() case final value?)
-        'deletionTime': value,
-      if (instance.appId case final value?) 'appId': value,
-      if (instance.pricingId case final value?) 'pricingId': value,
-      if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
-        'period': value,
-      if (_$BillingModeEnumMap[instance.mode] case final value?) 'mode': value,
-      if (_$BillingMarketEnumMap[instance.market] case final value?)
-        'market': value,
-      if (instance.currency case final value?) 'currency': value,
-      if (instance.amount case final value?) 'amount': value,
-      if (instance.discountAmount case final value?) 'discountAmount': value,
-      if (instance.effectiveAmount case final value?) 'effectiveAmount': value,
-      if (instance.durationDays case final value?) 'durationDays': value,
-      if (instance.isEnabled case final value?) 'isEnabled': value,
-      if (instance.sortIndex case final value?) 'sortIndex': value,
-      if (instance.displayName case final value?) 'displayName': value,
-      if (instance.description case final value?) 'description': value,
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'appId': ?instance.appId,
+      'pricingId': ?instance.pricingId,
+      'period': ?_$SubBillingPeriodEnumMap[instance.period],
+      'mode': ?_$BillingModeEnumMap[instance.mode],
+      'market': ?_$BillingMarketEnumMap[instance.market],
+      'currency': ?instance.currency,
+      'amount': ?instance.amount,
+      'discountAmount': ?instance.discountAmount,
+      'effectiveAmount': ?instance.effectiveAmount,
+      'durationDays': ?instance.durationDays,
+      'isEnabled': ?instance.isEnabled,
+      'sortIndex': ?instance.sortIndex,
+      'displayName': ?instance.displayName,
+      'description': ?instance.description,
     };
 
 const _$SubBillingPeriodEnumMap = {

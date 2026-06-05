@@ -28,7 +28,7 @@ IStringValueType _$IStringValueTypeFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$IStringValueTypeToJson(IStringValueType instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.properties case final value?) 'properties': value,
-      if (instance.validator?.toJson() case final value?) 'validator': value,
+      'name': ?instance.name,
+      'properties': ?instance.properties,
+      'validator': ?instance.validator?.toJson(),
     };

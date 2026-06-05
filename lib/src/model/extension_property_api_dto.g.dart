@@ -35,7 +35,7 @@ ExtensionPropertyApiDto _$ExtensionPropertyApiDtoFromJson(
 Map<String, dynamic> _$ExtensionPropertyApiDtoToJson(
   ExtensionPropertyApiDto instance,
 ) => <String, dynamic>{
-  if (instance.onGet?.toJson() case final value?) 'onGet': value,
-  if (instance.onCreate?.toJson() case final value?) 'onCreate': value,
-  if (instance.onUpdate?.toJson() case final value?) 'onUpdate': value,
+  'onGet': ?instance.onGet?.toJson(),
+  'onCreate': ?instance.onCreate?.toJson(),
+  'onUpdate': ?instance.onUpdate?.toJson(),
 };

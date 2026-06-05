@@ -91,19 +91,16 @@ ApplicationConfigurationDto _$ApplicationConfigurationDtoFromJson(
 Map<String, dynamic> _$ApplicationConfigurationDtoToJson(
   ApplicationConfigurationDto instance,
 ) => <String, dynamic>{
-  if (instance.localization?.toJson() case final value?) 'localization': value,
-  if (instance.auth?.toJson() case final value?) 'auth': value,
-  if (instance.setting?.toJson() case final value?) 'setting': value,
-  if (instance.currentUser?.toJson() case final value?) 'currentUser': value,
-  if (instance.features?.toJson() case final value?) 'features': value,
-  if (instance.globalFeatures?.toJson() case final value?)
-    'globalFeatures': value,
-  if (instance.multiTenancy?.toJson() case final value?) 'multiTenancy': value,
-  if (instance.currentTenant?.toJson() case final value?)
-    'currentTenant': value,
-  if (instance.timing?.toJson() case final value?) 'timing': value,
-  if (instance.clock?.toJson() case final value?) 'clock': value,
-  if (instance.objectExtensions?.toJson() case final value?)
-    'objectExtensions': value,
-  if (instance.extraProperties case final value?) 'extraProperties': value,
+  'localization': ?instance.localization?.toJson(),
+  'auth': ?instance.auth?.toJson(),
+  'setting': ?instance.setting?.toJson(),
+  'currentUser': ?instance.currentUser?.toJson(),
+  'features': ?instance.features?.toJson(),
+  'globalFeatures': ?instance.globalFeatures?.toJson(),
+  'multiTenancy': ?instance.multiTenancy?.toJson(),
+  'currentTenant': ?instance.currentTenant?.toJson(),
+  'timing': ?instance.timing?.toJson(),
+  'clock': ?instance.clock?.toJson(),
+  'objectExtensions': ?instance.objectExtensions?.toJson(),
+  'extraProperties': ?instance.extraProperties,
 };

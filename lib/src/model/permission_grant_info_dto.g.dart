@@ -31,12 +31,12 @@ PermissionGrantInfoDto _$PermissionGrantInfoDtoFromJson(
 Map<String, dynamic> _$PermissionGrantInfoDtoToJson(
   PermissionGrantInfoDto instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.parentName case final value?) 'parentName': value,
-  if (instance.isGranted case final value?) 'isGranted': value,
-  if (instance.allowedProviders case final value?) 'allowedProviders': value,
-  if (instance.grantedProviders?.map((e) => e.toJson()).toList()
-      case final value?)
-    'grantedProviders': value,
+  'name': ?instance.name,
+  'displayName': ?instance.displayName,
+  'parentName': ?instance.parentName,
+  'isGranted': ?instance.isGranted,
+  'allowedProviders': ?instance.allowedProviders,
+  'grantedProviders': ?instance.grantedProviders
+      ?.map((e) => e.toJson())
+      .toList(),
 };

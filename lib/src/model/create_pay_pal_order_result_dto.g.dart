@@ -25,10 +25,9 @@ CreatePayPalOrderResultDto _$CreatePayPalOrderResultDtoFromJson(
 Map<String, dynamic> _$CreatePayPalOrderResultDtoToJson(
   CreatePayPalOrderResultDto instance,
 ) => <String, dynamic>{
-  if (instance.orderId case final value?) 'orderId': value,
-  if (instance.payPalOrderId case final value?) 'payPalOrderId': value,
-  if (instance.payPalSubscriptionId case final value?)
-    'payPalSubscriptionId': value,
-  if (instance.approvalUrl case final value?) 'approvalUrl': value,
-  if (instance.checkoutKind case final value?) 'checkoutKind': value,
+  'orderId': ?instance.orderId,
+  'payPalOrderId': ?instance.payPalOrderId,
+  'payPalSubscriptionId': ?instance.payPalSubscriptionId,
+  'approvalUrl': ?instance.approvalUrl,
+  'checkoutKind': ?instance.checkoutKind,
 };

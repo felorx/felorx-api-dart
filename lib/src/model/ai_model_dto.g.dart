@@ -58,31 +58,27 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
   },
 );
 
-Map<String, dynamic> _$AiModelDtoToJson(
-  AiModelDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.providerId case final value?) 'provider_id': value,
-  if (instance.routeName case final value?) 'route_name': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'display_name': value,
-  if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
-      case final value?)
-    'capabilities': value,
-  if (instance.enabled case final value?) 'enabled': value,
-  if (instance.isDefault case final value?) 'is_default': value,
-  if (instance.defaultParameters case final value?) 'default_parameters': value,
-};
+Map<String, dynamic> _$AiModelDtoToJson(AiModelDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'provider_id': ?instance.providerId,
+      'route_name': ?instance.routeName,
+      'name': ?instance.name,
+      'display_name': ?instance.displayName,
+      'capabilities': ?instance.capabilities
+          ?.map((e) => _$AiCapabilityEnumMap[e]!)
+          .toList(),
+      'enabled': ?instance.enabled,
+      'is_default': ?instance.isDefault,
+      'default_parameters': ?instance.defaultParameters,
+    };
 
 const _$AiCapabilityEnumMap = {
   AiCapability.chat: 'Chat',

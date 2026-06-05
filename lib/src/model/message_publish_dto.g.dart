@@ -25,9 +25,9 @@ MessagePublishDto _$MessagePublishDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MessagePublishDtoToJson(MessagePublishDto instance) =>
     <String, dynamic>{
-      if (instance.title case final value?) 'title': value,
-      if (instance.description case final value?) 'description': value,
-      if (instance.appId case final value?) 'appId': value,
-      if (instance.template case final value?) 'template': value,
-      if (instance.data case final value?) 'data': value,
+      'title': ?instance.title,
+      'description': ?instance.description,
+      'appId': ?instance.appId,
+      'template': ?instance.template,
+      'data': ?instance.data,
     };

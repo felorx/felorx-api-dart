@@ -28,6 +28,6 @@ ApplicationLocalizationResourceDto _$ApplicationLocalizationResourceDtoFromJson(
 Map<String, dynamic> _$ApplicationLocalizationResourceDtoToJson(
   ApplicationLocalizationResourceDto instance,
 ) => <String, dynamic>{
-  if (instance.texts case final value?) 'texts': value,
-  if (instance.baseResources case final value?) 'baseResources': value,
+  'texts': ?instance.texts,
+  'baseResources': ?instance.baseResources,
 };

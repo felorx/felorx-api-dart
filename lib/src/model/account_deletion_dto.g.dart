@@ -15,4 +15,4 @@ AccountDeletionDto _$AccountDeletionDtoFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$AccountDeletionDtoToJson(AccountDeletionDto instance) =>
-    <String, dynamic>{if (instance.code case final value?) 'code': value};
+    <String, dynamic>{'code': ?instance.code};

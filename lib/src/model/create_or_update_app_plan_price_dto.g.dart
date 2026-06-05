@@ -42,21 +42,19 @@ CreateOrUpdateAppPlanPriceDto _$CreateOrUpdateAppPlanPriceDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppPlanPriceDtoToJson(
   CreateOrUpdateAppPlanPriceDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
-    'period': value,
-  if (_$BillingModeEnumMap[instance.mode] case final value?) 'mode': value,
-  if (_$BillingMarketEnumMap[instance.market] case final value?)
-    'market': value,
-  if (instance.currency case final value?) 'currency': value,
-  if (instance.amount case final value?) 'amount': value,
-  if (instance.discountAmount case final value?) 'discountAmount': value,
-  if (instance.durationDays case final value?) 'durationDays': value,
-  if (instance.isEnabled case final value?) 'isEnabled': value,
-  if (instance.sortIndex case final value?) 'sortIndex': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.description case final value?) 'description': value,
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'period': ?_$SubBillingPeriodEnumMap[instance.period],
+  'mode': ?_$BillingModeEnumMap[instance.mode],
+  'market': ?_$BillingMarketEnumMap[instance.market],
+  'currency': ?instance.currency,
+  'amount': ?instance.amount,
+  'discountAmount': ?instance.discountAmount,
+  'durationDays': ?instance.durationDays,
+  'isEnabled': ?instance.isEnabled,
+  'sortIndex': ?instance.sortIndex,
+  'displayName': ?instance.displayName,
+  'description': ?instance.description,
 };
 
 const _$SubBillingPeriodEnumMap = {

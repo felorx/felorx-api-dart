@@ -13,5 +13,5 @@ ClockDto _$ClockDtoFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$ClockDtoToJson(ClockDto instance) => <String, dynamic>{
-  if (instance.kind case final value?) 'kind': value,
+  'kind': ?instance.kind,
 };

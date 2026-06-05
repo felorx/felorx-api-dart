@@ -47,32 +47,28 @@ AppRunRecordDto _$AppRunRecordDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$AppRunRecordDtoToJson(
-  AppRunRecordDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.appName case final value?) 'appName': value,
-  if (instance.args case final value?) 'args': value,
-  if (instance.envs case final value?) 'envs': value,
-  if (_$AppRunStatusEnumMap[instance.status] case final value?) 'status': value,
-  if (instance.result case final value?) 'result': value,
-  if (instance.error case final value?) 'error': value,
-  if (instance.finishAt?.toIso8601String() case final value?) 'finishAt': value,
-  if (instance.output case final value?) 'output': value,
-  if (instance.workerId case final value?) 'workerId': value,
-  if (instance.workerName case final value?) 'workerName': value,
-};
+Map<String, dynamic> _$AppRunRecordDtoToJson(AppRunRecordDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'appId': ?instance.appId,
+      'appName': ?instance.appName,
+      'args': ?instance.args,
+      'envs': ?instance.envs,
+      'status': ?_$AppRunStatusEnumMap[instance.status],
+      'result': ?instance.result,
+      'error': ?instance.error,
+      'finishAt': ?instance.finishAt?.toIso8601String(),
+      'output': ?instance.output,
+      'workerId': ?instance.workerId,
+      'workerName': ?instance.workerName,
+    };
 
 const _$AppRunStatusEnumMap = {
   AppRunStatus.pending: 'Pending',

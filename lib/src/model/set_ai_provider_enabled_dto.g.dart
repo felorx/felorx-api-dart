@@ -17,6 +17,4 @@ SetAiProviderEnabledDto _$SetAiProviderEnabledDtoFromJson(
 
 Map<String, dynamic> _$SetAiProviderEnabledDtoToJson(
   SetAiProviderEnabledDto instance,
-) => <String, dynamic>{
-  if (instance.enabled case final value?) 'enabled': value,
-};
+) => <String, dynamic>{'enabled': ?instance.enabled};

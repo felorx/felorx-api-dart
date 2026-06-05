@@ -16,6 +16,6 @@ NameValue _$NameValueFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$NameValueToJson(NameValue instance) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.value case final value?) 'value': value,
+  'name': ?instance.name,
+  'value': ?instance.value,
 };

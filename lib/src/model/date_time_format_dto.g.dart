@@ -30,17 +30,13 @@ DateTimeFormatDto _$DateTimeFormatDtoFromJson(
   return val;
 });
 
-Map<String, dynamic> _$DateTimeFormatDtoToJson(
-  DateTimeFormatDto instance,
-) => <String, dynamic>{
-  if (instance.calendarAlgorithmType case final value?)
-    'calendarAlgorithmType': value,
-  if (instance.dateTimeFormatLong case final value?)
-    'dateTimeFormatLong': value,
-  if (instance.shortDatePattern case final value?) 'shortDatePattern': value,
-  if (instance.fullDateTimePattern case final value?)
-    'fullDateTimePattern': value,
-  if (instance.dateSeparator case final value?) 'dateSeparator': value,
-  if (instance.shortTimePattern case final value?) 'shortTimePattern': value,
-  if (instance.longTimePattern case final value?) 'longTimePattern': value,
-};
+Map<String, dynamic> _$DateTimeFormatDtoToJson(DateTimeFormatDto instance) =>
+    <String, dynamic>{
+      'calendarAlgorithmType': ?instance.calendarAlgorithmType,
+      'dateTimeFormatLong': ?instance.dateTimeFormatLong,
+      'shortDatePattern': ?instance.shortDatePattern,
+      'fullDateTimePattern': ?instance.fullDateTimePattern,
+      'dateSeparator': ?instance.dateSeparator,
+      'shortTimePattern': ?instance.shortTimePattern,
+      'longTimePattern': ?instance.longTimePattern,
+    };

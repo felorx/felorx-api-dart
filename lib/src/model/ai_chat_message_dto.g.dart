@@ -18,7 +18,7 @@ AiChatMessageDto _$AiChatMessageDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AiChatMessageDtoToJson(AiChatMessageDto instance) =>
     <String, dynamic>{
-      if (instance.role case final value?) 'role': value,
-      if (instance.content case final value?) 'content': value,
-      if (instance.name case final value?) 'name': value,
+      'role': ?instance.role,
+      'content': ?instance.content,
+      'name': ?instance.name,
     };

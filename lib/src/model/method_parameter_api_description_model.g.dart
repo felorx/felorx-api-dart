@@ -25,10 +25,10 @@ MethodParameterApiDescriptionModel _$MethodParameterApiDescriptionModelFromJson(
 Map<String, dynamic> _$MethodParameterApiDescriptionModelToJson(
   MethodParameterApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.typeAsString case final value?) 'typeAsString': value,
-  if (instance.type case final value?) 'type': value,
-  if (instance.typeSimple case final value?) 'typeSimple': value,
-  if (instance.isOptional case final value?) 'isOptional': value,
-  if (instance.defaultValue case final value?) 'defaultValue': value,
+  'name': ?instance.name,
+  'typeAsString': ?instance.typeAsString,
+  'type': ?instance.type,
+  'typeSimple': ?instance.typeSimple,
+  'isOptional': ?instance.isOptional,
+  'defaultValue': ?instance.defaultValue,
 };

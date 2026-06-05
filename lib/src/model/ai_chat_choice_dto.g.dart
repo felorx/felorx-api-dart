@@ -23,7 +23,7 @@ AiChatChoiceDto _$AiChatChoiceDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AiChatChoiceDtoToJson(AiChatChoiceDto instance) =>
     <String, dynamic>{
-      if (instance.index case final value?) 'index': value,
-      if (instance.message?.toJson() case final value?) 'message': value,
-      if (instance.finishReason case final value?) 'finish_reason': value,
+      'index': ?instance.index,
+      'message': ?instance.message?.toJson(),
+      'finish_reason': ?instance.finishReason,
     };

@@ -31,11 +31,10 @@ AiChatCompletionDto _$AiChatCompletionDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$AiChatCompletionDtoToJson(
   AiChatCompletionDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.object case final value?) 'object': value,
-  if (instance.created case final value?) 'created': value,
-  if (instance.model case final value?) 'model': value,
-  if (instance.choices?.map((e) => e.toJson()).toList() case final value?)
-    'choices': value,
-  if (instance.usage?.toJson() case final value?) 'usage': value,
+  'id': ?instance.id,
+  'object': ?instance.object,
+  'created': ?instance.created,
+  'model': ?instance.model,
+  'choices': ?instance.choices?.map((e) => e.toJson()).toList(),
+  'usage': ?instance.usage?.toJson(),
 };

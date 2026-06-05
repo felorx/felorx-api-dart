@@ -25,17 +25,15 @@ BindDeviceDto _$BindDeviceDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$BindDeviceDtoToJson(
-  BindDeviceDto instance,
-) => <String, dynamic>{
-  if (instance.token case final value?) 'token': value,
-  if (instance.isPhysicalDevice case final value?) 'isPhysicalDevice': value,
-  if (instance.name case final value?) 'name': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (instance.brand case final value?) 'brand': value,
-  if (instance.systemVersion case final value?) 'systemVersion': value,
-};
+Map<String, dynamic> _$BindDeviceDtoToJson(BindDeviceDto instance) =>
+    <String, dynamic>{
+      'token': ?instance.token,
+      'isPhysicalDevice': ?instance.isPhysicalDevice,
+      'name': ?instance.name,
+      'platform': ?_$AppPlatformEnumMap[instance.platform],
+      'brand': ?instance.brand,
+      'systemVersion': ?instance.systemVersion,
+    };
 
 const _$AppPlatformEnumMap = {
   AppPlatform.none: 'None',

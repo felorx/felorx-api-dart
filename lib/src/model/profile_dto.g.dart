@@ -27,16 +27,15 @@ ProfileDto _$ProfileDtoFromJson(
   return val;
 });
 
-Map<String, dynamic> _$ProfileDtoToJson(
-  ProfileDto instance,
-) => <String, dynamic>{
-  if (instance.extraProperties case final value?) 'extraProperties': value,
-  if (instance.userName case final value?) 'userName': value,
-  if (instance.email case final value?) 'email': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.surname case final value?) 'surname': value,
-  if (instance.phoneNumber case final value?) 'phoneNumber': value,
-  if (instance.isExternal case final value?) 'isExternal': value,
-  if (instance.hasPassword case final value?) 'hasPassword': value,
-  if (instance.concurrencyStamp case final value?) 'concurrencyStamp': value,
-};
+Map<String, dynamic> _$ProfileDtoToJson(ProfileDto instance) =>
+    <String, dynamic>{
+      'extraProperties': ?instance.extraProperties,
+      'userName': ?instance.userName,
+      'email': ?instance.email,
+      'name': ?instance.name,
+      'surname': ?instance.surname,
+      'phoneNumber': ?instance.phoneNumber,
+      'isExternal': ?instance.isExternal,
+      'hasPassword': ?instance.hasPassword,
+      'concurrencyStamp': ?instance.concurrencyStamp,
+    };

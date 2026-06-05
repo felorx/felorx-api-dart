@@ -17,4 +17,4 @@ MessageUnsubscribeDto _$MessageUnsubscribeDtoFromJson(
 
 Map<String, dynamic> _$MessageUnsubscribeDtoToJson(
   MessageUnsubscribeDto instance,
-) => <String, dynamic>{if (instance.appId case final value?) 'appId': value};
+) => <String, dynamic>{'appId': ?instance.appId};

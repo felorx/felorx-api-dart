@@ -30,10 +30,9 @@ AiUsageDto _$AiUsageDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
   },
 );
 
-Map<String, dynamic> _$AiUsageDtoToJson(
-  AiUsageDto instance,
-) => <String, dynamic>{
-  if (instance.promptTokens case final value?) 'prompt_tokens': value,
-  if (instance.completionTokens case final value?) 'completion_tokens': value,
-  if (instance.totalTokens case final value?) 'total_tokens': value,
-};
+Map<String, dynamic> _$AiUsageDtoToJson(AiUsageDto instance) =>
+    <String, dynamic>{
+      'prompt_tokens': ?instance.promptTokens,
+      'completion_tokens': ?instance.completionTokens,
+      'total_tokens': ?instance.totalTokens,
+    };

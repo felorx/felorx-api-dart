@@ -17,6 +17,6 @@ ProviderInfoDto _$ProviderInfoDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$ProviderInfoDtoToJson(ProviderInfoDto instance) =>
     <String, dynamic>{
-      if (instance.providerName case final value?) 'providerName': value,
-      if (instance.providerKey case final value?) 'providerKey': value,
+      'providerName': ?instance.providerName,
+      'providerKey': ?instance.providerKey,
     };

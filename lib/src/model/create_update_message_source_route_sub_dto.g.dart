@@ -22,7 +22,7 @@ _$CreateUpdateMessageSourceRouteSubDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$CreateUpdateMessageSourceRouteSubDtoToJson(
   CreateUpdateMessageSourceRouteSubDto instance,
 ) => <String, dynamic>{
-  if (instance.routeId case final value?) 'routeId': value,
-  if (instance.path case final value?) 'path': value,
-  if (instance.values case final value?) 'values': value,
+  'routeId': ?instance.routeId,
+  'path': ?instance.path,
+  'values': ?instance.values,
 };

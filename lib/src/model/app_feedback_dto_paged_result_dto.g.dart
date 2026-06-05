@@ -24,7 +24,6 @@ AppFeedbackDtoPagedResultDto _$AppFeedbackDtoPagedResultDtoFromJson(
 Map<String, dynamic> _$AppFeedbackDtoPagedResultDtoToJson(
   AppFeedbackDtoPagedResultDto instance,
 ) => <String, dynamic>{
-  if (instance.items?.map((e) => e.toJson()).toList() case final value?)
-    'items': value,
-  if (instance.totalCount case final value?) 'totalCount': value,
+  'items': ?instance.items?.map((e) => e.toJson()).toList(),
+  'totalCount': ?instance.totalCount,
 };

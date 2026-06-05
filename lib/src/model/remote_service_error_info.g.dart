@@ -35,11 +35,11 @@ RemoteServiceErrorInfo _$RemoteServiceErrorInfoFromJson(
 Map<String, dynamic> _$RemoteServiceErrorInfoToJson(
   RemoteServiceErrorInfo instance,
 ) => <String, dynamic>{
-  if (instance.code case final value?) 'code': value,
-  if (instance.message case final value?) 'message': value,
-  if (instance.details case final value?) 'details': value,
-  if (instance.data case final value?) 'data': value,
-  if (instance.validationErrors?.map((e) => e.toJson()).toList()
-      case final value?)
-    'validationErrors': value,
+  'code': ?instance.code,
+  'message': ?instance.message,
+  'details': ?instance.details,
+  'data': ?instance.data,
+  'validationErrors': ?instance.validationErrors
+      ?.map((e) => e.toJson())
+      .toList(),
 };

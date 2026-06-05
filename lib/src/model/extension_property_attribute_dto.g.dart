@@ -23,6 +23,6 @@ ExtensionPropertyAttributeDto _$ExtensionPropertyAttributeDtoFromJson(
 Map<String, dynamic> _$ExtensionPropertyAttributeDtoToJson(
   ExtensionPropertyAttributeDto instance,
 ) => <String, dynamic>{
-  if (instance.typeSimple case final value?) 'typeSimple': value,
-  if (instance.config case final value?) 'config': value,
+  'typeSimple': ?instance.typeSimple,
+  'config': ?instance.config,
 };

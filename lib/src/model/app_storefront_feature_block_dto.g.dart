@@ -23,10 +23,10 @@ AppStorefrontFeatureBlockDto _$AppStorefrontFeatureBlockDtoFromJson(
 Map<String, dynamic> _$AppStorefrontFeatureBlockDtoToJson(
   AppStorefrontFeatureBlockDto instance,
 ) => <String, dynamic>{
-  if (instance.featureId case final value?) 'featureId': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.phoneUrl case final value?) 'phoneUrl': value,
-  if (instance.tabletUrl case final value?) 'tabletUrl': value,
+  'featureId': ?instance.featureId,
+  'name': ?instance.name,
+  'displayName': ?instance.displayName,
+  'description': ?instance.description,
+  'phoneUrl': ?instance.phoneUrl,
+  'tabletUrl': ?instance.tabletUrl,
 };

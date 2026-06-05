@@ -72,29 +72,22 @@ LatestReceiptInfo _$LatestReceiptInfoFromJson(
   },
 );
 
-Map<String, dynamic> _$LatestReceiptInfoToJson(
-  LatestReceiptInfo instance,
-) => <String, dynamic>{
-  if (instance.quantity case final value?) 'quantity': value,
-  if (instance.productId case final value?) 'product_id': value,
-  if (instance.transactionId case final value?) 'transaction_id': value,
-  if (instance.originalTransactionId case final value?)
-    'original_transaction_id': value,
-  if (instance.purchaseDate case final value?) 'purchase_date': value,
-  if (instance.purchaseDateMs case final value?) 'purchase_date_ms': value,
-  if (instance.purchaseDatePst case final value?) 'purchase_date_pst': value,
-  if (instance.originalPurchaseDate case final value?)
-    'original_purchase_date': value,
-  if (instance.originalPurchaseDateMs case final value?)
-    'original_purchase_date_ms': value,
-  if (instance.originalPurchaseDatePst case final value?)
-    'original_purchase_date_pst': value,
-  if (instance.expiresDate case final value?) 'expires_date': value,
-  if (instance.expiresDateMs case final value?) 'expires_date_ms': value,
-  if (instance.expiresDatePst case final value?) 'expires_date_pst': value,
-  if (instance.webOrderLineItemId case final value?)
-    'web_order_line_item_id': value,
-  if (instance.isTrialPeriod case final value?) 'is_trial_period': value,
-  if (instance.isInIntroOfferPeriod case final value?)
-    'is_in_intro_offer_period': value,
-};
+Map<String, dynamic> _$LatestReceiptInfoToJson(LatestReceiptInfo instance) =>
+    <String, dynamic>{
+      'quantity': ?instance.quantity,
+      'product_id': ?instance.productId,
+      'transaction_id': ?instance.transactionId,
+      'original_transaction_id': ?instance.originalTransactionId,
+      'purchase_date': ?instance.purchaseDate,
+      'purchase_date_ms': ?instance.purchaseDateMs,
+      'purchase_date_pst': ?instance.purchaseDatePst,
+      'original_purchase_date': ?instance.originalPurchaseDate,
+      'original_purchase_date_ms': ?instance.originalPurchaseDateMs,
+      'original_purchase_date_pst': ?instance.originalPurchaseDatePst,
+      'expires_date': ?instance.expiresDate,
+      'expires_date_ms': ?instance.expiresDateMs,
+      'expires_date_pst': ?instance.expiresDatePst,
+      'web_order_line_item_id': ?instance.webOrderLineItemId,
+      'is_trial_period': ?instance.isTrialPeriod,
+      'is_in_intro_offer_period': ?instance.isInIntroOfferPeriod,
+    };

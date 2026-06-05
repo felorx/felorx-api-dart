@@ -22,9 +22,8 @@ SetDefaultAiModelDto _$SetDefaultAiModelDtoFromJson(
 Map<String, dynamic> _$SetDefaultAiModelDtoToJson(
   SetDefaultAiModelDto instance,
 ) => <String, dynamic>{
-  if (instance.modelId case final value?) 'model_id': value,
-  if (_$AiCapabilityEnumMap[instance.capability] case final value?)
-    'capability': value,
+  'model_id': ?instance.modelId,
+  'capability': ?_$AiCapabilityEnumMap[instance.capability],
 };
 
 const _$AiCapabilityEnumMap = {

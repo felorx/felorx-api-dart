@@ -22,6 +22,6 @@ IValueValidator _$IValueValidatorFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$IValueValidatorToJson(IValueValidator instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.properties case final value?) 'properties': value,
+      'name': ?instance.name,
+      'properties': ?instance.properties,
     };

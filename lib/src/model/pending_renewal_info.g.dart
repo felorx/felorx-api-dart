@@ -66,24 +66,16 @@ PendingRenewalInfo _$PendingRenewalInfoFromJson(Map<String, dynamic> json) =>
       },
     );
 
-Map<String, dynamic> _$PendingRenewalInfoToJson(
-  PendingRenewalInfo instance,
-) => <String, dynamic>{
-  if (instance.autoRenewProductId case final value?)
-    'auto_renew_product_id': value,
-  if (instance.autoRenewStatus case final value?) 'auto_renew_status': value,
-  if (instance.isInBillingRetryPeriod case final value?)
-    'is_in_billing_retry_period': value,
-  if (instance.originalTransactionId case final value?)
-    'original_transaction_id': value,
-  if (instance.productId case final value?) 'product_id': value,
-  if (instance.expirationIntent case final value?) 'expiration_intent': value,
-  if (instance.priceConsentStatus case final value?)
-    'price_consent_status': value,
-  if (instance.gracePeriodExpiresDate case final value?)
-    'grace_period_expires_date': value,
-  if (instance.gracePeriodExpiresDateMs case final value?)
-    'grace_period_expires_date_ms': value,
-  if (instance.gracePeriodExpiresDatePst case final value?)
-    'grace_period_expires_date_pst': value,
-};
+Map<String, dynamic> _$PendingRenewalInfoToJson(PendingRenewalInfo instance) =>
+    <String, dynamic>{
+      'auto_renew_product_id': ?instance.autoRenewProductId,
+      'auto_renew_status': ?instance.autoRenewStatus,
+      'is_in_billing_retry_period': ?instance.isInBillingRetryPeriod,
+      'original_transaction_id': ?instance.originalTransactionId,
+      'product_id': ?instance.productId,
+      'expiration_intent': ?instance.expirationIntent,
+      'price_consent_status': ?instance.priceConsentStatus,
+      'grace_period_expires_date': ?instance.gracePeriodExpiresDate,
+      'grace_period_expires_date_ms': ?instance.gracePeriodExpiresDateMs,
+      'grace_period_expires_date_pst': ?instance.gracePeriodExpiresDatePst,
+    };

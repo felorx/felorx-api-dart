@@ -18,7 +18,7 @@ CurrentTenantDto _$CurrentTenantDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$CurrentTenantDtoToJson(CurrentTenantDto instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.name case final value?) 'name': value,
-      if (instance.isAvailable case final value?) 'isAvailable': value,
+      'id': ?instance.id,
+      'name': ?instance.name,
+      'isAvailable': ?instance.isAvailable,
     };

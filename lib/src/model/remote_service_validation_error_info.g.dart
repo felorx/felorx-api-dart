@@ -23,6 +23,6 @@ RemoteServiceValidationErrorInfo _$RemoteServiceValidationErrorInfoFromJson(
 Map<String, dynamic> _$RemoteServiceValidationErrorInfoToJson(
   RemoteServiceValidationErrorInfo instance,
 ) => <String, dynamic>{
-  if (instance.message case final value?) 'message': value,
-  if (instance.members case final value?) 'members': value,
+  'message': ?instance.message,
+  'members': ?instance.members,
 };

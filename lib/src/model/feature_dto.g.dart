@@ -33,12 +33,12 @@ FeatureDto _$FeatureDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$FeatureDtoToJson(FeatureDto instance) =>
     <String, dynamic>{
-      if (instance.name case final value?) 'name': value,
-      if (instance.displayName case final value?) 'displayName': value,
-      if (instance.value case final value?) 'value': value,
-      if (instance.provider?.toJson() case final value?) 'provider': value,
-      if (instance.description case final value?) 'description': value,
-      if (instance.valueType?.toJson() case final value?) 'valueType': value,
-      if (instance.depth case final value?) 'depth': value,
-      if (instance.parentName case final value?) 'parentName': value,
+      'name': ?instance.name,
+      'displayName': ?instance.displayName,
+      'value': ?instance.value,
+      'provider': ?instance.provider?.toJson(),
+      'description': ?instance.description,
+      'valueType': ?instance.valueType?.toJson(),
+      'depth': ?instance.depth,
+      'parentName': ?instance.parentName,
     };

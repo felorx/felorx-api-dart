@@ -66,40 +66,29 @@ SubscriptionDto _$SubscriptionDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$SubscriptionDtoToJson(
-  SubscriptionDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.expireAt?.toIso8601String() case final value?) 'expireAt': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (_$AppPriceNamingEnumMap[instance.priceNaming] case final value?)
-    'priceNaming': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planPriceId case final value?) 'planPriceId': value,
-  if (_$BillingProviderEnumMap[instance.provider] case final value?)
-    'provider': value,
-  if (_$SubBillingPeriodEnumMap[instance.billingPeriod] case final value?)
-    'billingPeriod': value,
-  if (_$BillingModeEnumMap[instance.billingMode] case final value?)
-    'billingMode': value,
-  if (_$SubscriptionEntitlementStatusEnumMap[instance.status] case final value?)
-    'status': value,
-  if (instance.isLifetime case final value?) 'isLifetime': value,
-  if (instance.externalSubscriptionId case final value?)
-    'externalSubscriptionId': value,
-  if (instance.lastVerifiedAt?.toIso8601String() case final value?)
-    'lastVerifiedAt': value,
-};
+Map<String, dynamic> _$SubscriptionDtoToJson(SubscriptionDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'expireAt': ?instance.expireAt?.toIso8601String(),
+      'appId': ?instance.appId,
+      'priceNaming': ?_$AppPriceNamingEnumMap[instance.priceNaming],
+      'pricingId': ?instance.pricingId,
+      'planPriceId': ?instance.planPriceId,
+      'provider': ?_$BillingProviderEnumMap[instance.provider],
+      'billingPeriod': ?_$SubBillingPeriodEnumMap[instance.billingPeriod],
+      'billingMode': ?_$BillingModeEnumMap[instance.billingMode],
+      'status': ?_$SubscriptionEntitlementStatusEnumMap[instance.status],
+      'isLifetime': ?instance.isLifetime,
+      'externalSubscriptionId': ?instance.externalSubscriptionId,
+      'lastVerifiedAt': ?instance.lastVerifiedAt?.toIso8601String(),
+    };
 
 const _$AppPriceNamingEnumMap = {
   AppPriceNaming.free: 'Free',

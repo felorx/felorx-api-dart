@@ -45,26 +45,21 @@ AppAssetDto _$AppAssetDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AppAssetDtoToJson(AppAssetDto instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.creationTime?.toIso8601String() case final value?)
-        'creationTime': value,
-      if (instance.creatorId case final value?) 'creatorId': value,
-      if (instance.lastModificationTime?.toIso8601String() case final value?)
-        'lastModificationTime': value,
-      if (instance.lastModifierId case final value?) 'lastModifierId': value,
-      if (instance.isDeleted case final value?) 'isDeleted': value,
-      if (instance.deleterId case final value?) 'deleterId': value,
-      if (instance.deletionTime?.toIso8601String() case final value?)
-        'deletionTime': value,
-      if (instance.appId case final value?) 'appId': value,
-      if (instance.appLocaleId case final value?) 'appLocaleId': value,
-      if (instance.appFeatureId case final value?) 'appFeatureId': value,
-      if (_$AppAssetTypeEnumMap[instance.assetType] case final value?)
-        'assetType': value,
-      if (_$AppAssetDeviceTypeEnumMap[instance.deviceType] case final value?)
-        'deviceType': value,
-      if (instance.url case final value?) 'url': value,
-      if (instance.sort case final value?) 'sort': value,
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'appId': ?instance.appId,
+      'appLocaleId': ?instance.appLocaleId,
+      'appFeatureId': ?instance.appFeatureId,
+      'assetType': ?_$AppAssetTypeEnumMap[instance.assetType],
+      'deviceType': ?_$AppAssetDeviceTypeEnumMap[instance.deviceType],
+      'url': ?instance.url,
+      'sort': ?instance.sort,
     };
 
 const _$AppAssetTypeEnumMap = {

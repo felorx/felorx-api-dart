@@ -42,20 +42,17 @@ _$CreateOrUpdateStoreProductMappingDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$CreateOrUpdateStoreProductMappingDtoToJson(
   CreateOrUpdateStoreProductMappingDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planPriceId case final value?) 'planPriceId': value,
-  if (_$BillingProviderEnumMap[instance.provider] case final value?)
-    'provider': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
-    'period': value,
-  if (instance.storeProductId case final value?) 'storeProductId': value,
-  if (instance.externalProductId case final value?) 'externalProductId': value,
-  if (instance.environment case final value?) 'environment': value,
-  if (instance.isEnabled case final value?) 'isEnabled': value,
+  'id': ?instance.id,
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'planPriceId': ?instance.planPriceId,
+  'provider': ?_$BillingProviderEnumMap[instance.provider],
+  'platform': ?_$AppPlatformEnumMap[instance.platform],
+  'period': ?_$SubBillingPeriodEnumMap[instance.period],
+  'storeProductId': ?instance.storeProductId,
+  'externalProductId': ?instance.externalProductId,
+  'environment': ?instance.environment,
+  'isEnabled': ?instance.isEnabled,
 };
 
 const _$BillingProviderEnumMap = {

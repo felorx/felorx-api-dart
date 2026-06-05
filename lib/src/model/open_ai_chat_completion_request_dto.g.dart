@@ -43,13 +43,12 @@ OpenAiChatCompletionRequestDto _$OpenAiChatCompletionRequestDtoFromJson(
 Map<String, dynamic> _$OpenAiChatCompletionRequestDtoToJson(
   OpenAiChatCompletionRequestDto instance,
 ) => <String, dynamic>{
-  if (instance.model case final value?) 'model': value,
-  if (instance.provider case final value?) 'provider': value,
-  if (instance.messages?.map((e) => e.toJson()).toList() case final value?)
-    'messages': value,
-  if (instance.temperature case final value?) 'temperature': value,
-  if (instance.topP case final value?) 'top_p': value,
-  if (instance.maxTokens case final value?) 'max_tokens': value,
-  if (instance.stream case final value?) 'stream': value,
-  if (instance.metadata case final value?) 'metadata': value,
+  'model': ?instance.model,
+  'provider': ?instance.provider,
+  'messages': ?instance.messages?.map((e) => e.toJson()).toList(),
+  'temperature': ?instance.temperature,
+  'top_p': ?instance.topP,
+  'max_tokens': ?instance.maxTokens,
+  'stream': ?instance.stream,
+  'metadata': ?instance.metadata,
 };

@@ -30,15 +30,13 @@ CreateOrUpdateAppAssetDto _$CreateOrUpdateAppAssetDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppAssetDtoToJson(
   CreateOrUpdateAppAssetDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.appLocaleId case final value?) 'appLocaleId': value,
-  if (instance.appFeatureId case final value?) 'appFeatureId': value,
-  if (_$AppAssetTypeEnumMap[instance.assetType] case final value?)
-    'assetType': value,
-  if (_$AppAssetDeviceTypeEnumMap[instance.deviceType] case final value?)
-    'deviceType': value,
-  if (instance.url case final value?) 'url': value,
-  if (instance.sort case final value?) 'sort': value,
+  'appId': ?instance.appId,
+  'appLocaleId': ?instance.appLocaleId,
+  'appFeatureId': ?instance.appFeatureId,
+  'assetType': ?_$AppAssetTypeEnumMap[instance.assetType],
+  'deviceType': ?_$AppAssetDeviceTypeEnumMap[instance.deviceType],
+  'url': ?instance.url,
+  'sort': ?instance.sort,
 };
 
 const _$AppAssetTypeEnumMap = {

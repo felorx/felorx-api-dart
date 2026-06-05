@@ -22,6 +22,4 @@ RemoteServiceErrorResponse _$RemoteServiceErrorResponseFromJson(
 
 Map<String, dynamic> _$RemoteServiceErrorResponseToJson(
   RemoteServiceErrorResponse instance,
-) => <String, dynamic>{
-  if (instance.error?.toJson() case final value?) 'error': value,
-};
+) => <String, dynamic>{'error': ?instance.error?.toJson()};

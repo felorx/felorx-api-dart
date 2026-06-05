@@ -21,10 +21,9 @@ TestAiProviderDto _$TestAiProviderDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$TestAiProviderDtoToJson(TestAiProviderDto instance) =>
     <String, dynamic>{
-      if (_$AiCapabilityEnumMap[instance.capability] case final value?)
-        'capability': value,
-      if (instance.prompt case final value?) 'prompt': value,
-      if (instance.imageUrl case final value?) 'image_url': value,
+      'capability': ?_$AiCapabilityEnumMap[instance.capability],
+      'prompt': ?instance.prompt,
+      'image_url': ?instance.imageUrl,
     };
 
 const _$AiCapabilityEnumMap = {

@@ -67,32 +67,27 @@ VerifyReceiptResult _$VerifyReceiptResultFromJson(
 Map<String, dynamic> _$VerifyReceiptResultToJson(
   VerifyReceiptResult instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.deleter?.toJson() case final value?) 'deleter': value,
-  if (instance.creator?.toJson() case final value?) 'creator': value,
-  if (instance.lastModifier?.toJson() case final value?) 'lastModifier': value,
-  if (instance.orderId case final value?) 'orderId': value,
-  if (instance.receiptData case final value?) 'receiptData': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (instance.deviceToken case final value?) 'deviceToken': value,
-  if (instance.ok case final value?) 'ok': value,
-  if (instance.statusCode case final value?) 'statusCode': value,
-  if (instance.message case final value?) 'message': value,
-  if (instance.resultData case final value?) 'resultData': value,
-  if (instance.recordId case final value?) 'recordId': value,
-  if (instance.appleVerifyReceiptResult?.toJson() case final value?)
-    'appleVerifyReceiptResult': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'deleter': ?instance.deleter?.toJson(),
+  'creator': ?instance.creator?.toJson(),
+  'lastModifier': ?instance.lastModifier?.toJson(),
+  'orderId': ?instance.orderId,
+  'receiptData': ?instance.receiptData,
+  'platform': ?_$AppPlatformEnumMap[instance.platform],
+  'deviceToken': ?instance.deviceToken,
+  'ok': ?instance.ok,
+  'statusCode': ?instance.statusCode,
+  'message': ?instance.message,
+  'resultData': ?instance.resultData,
+  'recordId': ?instance.recordId,
+  'appleVerifyReceiptResult': ?instance.appleVerifyReceiptResult?.toJson(),
 };
 
 const _$AppPlatformEnumMap = {

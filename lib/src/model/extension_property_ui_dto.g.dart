@@ -41,8 +41,8 @@ ExtensionPropertyUiDto _$ExtensionPropertyUiDtoFromJson(
 Map<String, dynamic> _$ExtensionPropertyUiDtoToJson(
   ExtensionPropertyUiDto instance,
 ) => <String, dynamic>{
-  if (instance.onTable?.toJson() case final value?) 'onTable': value,
-  if (instance.onCreateForm?.toJson() case final value?) 'onCreateForm': value,
-  if (instance.onEditForm?.toJson() case final value?) 'onEditForm': value,
-  if (instance.lookup?.toJson() case final value?) 'lookup': value,
+  'onTable': ?instance.onTable?.toJson(),
+  'onCreateForm': ?instance.onCreateForm?.toJson(),
+  'onEditForm': ?instance.onEditForm?.toJson(),
+  'lookup': ?instance.lookup?.toJson(),
 };

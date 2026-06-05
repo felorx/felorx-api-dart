@@ -68,30 +68,23 @@ CreateOrUpdateAppPricingDto _$CreateOrUpdateAppPricingDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppPricingDtoToJson(
   CreateOrUpdateAppPricingDto instance,
 ) => <String, dynamic>{
-  if (_$AppPriceNamingEnumMap[instance.naming] case final value?)
-    'naming': value,
-  if (instance.monthProductId case final value?) 'monthProductId': value,
-  if (instance.yearProductId case final value?) 'yearProductId': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.monthPrice case final value?) 'monthPrice': value,
-  if (instance.monthDiscount case final value?) 'monthDiscount': value,
-  if (instance.monthDiscountPrice case final value?)
-    'monthDiscountPrice': value,
-  if (instance.monthDiscountStartAt?.toIso8601String() case final value?)
-    'monthDiscountStartAt': value,
-  if (instance.monthDiscountEndAt?.toIso8601String() case final value?)
-    'monthDiscountEndAt': value,
-  if (instance.yearPrice case final value?) 'yearPrice': value,
-  if (instance.yearDiscount case final value?) 'yearDiscount': value,
-  if (instance.yearDiscountPrice case final value?) 'yearDiscountPrice': value,
-  if (instance.yearDiscountStartAt?.toIso8601String() case final value?)
-    'yearDiscountStartAt': value,
-  if (instance.yearDiscountEndAt?.toIso8601String() case final value?)
-    'yearDiscountEndAt': value,
-  if (instance.sortIndex case final value?) 'sortIndex': value,
-  if (instance.items?.map((e) => e.toJson()).toList() case final value?)
-    'items': value,
+  'naming': ?_$AppPriceNamingEnumMap[instance.naming],
+  'monthProductId': ?instance.monthProductId,
+  'yearProductId': ?instance.yearProductId,
+  'description': ?instance.description,
+  'appId': ?instance.appId,
+  'monthPrice': ?instance.monthPrice,
+  'monthDiscount': ?instance.monthDiscount,
+  'monthDiscountPrice': ?instance.monthDiscountPrice,
+  'monthDiscountStartAt': ?instance.monthDiscountStartAt?.toIso8601String(),
+  'monthDiscountEndAt': ?instance.monthDiscountEndAt?.toIso8601String(),
+  'yearPrice': ?instance.yearPrice,
+  'yearDiscount': ?instance.yearDiscount,
+  'yearDiscountPrice': ?instance.yearDiscountPrice,
+  'yearDiscountStartAt': ?instance.yearDiscountStartAt?.toIso8601String(),
+  'yearDiscountEndAt': ?instance.yearDiscountEndAt?.toIso8601String(),
+  'sortIndex': ?instance.sortIndex,
+  'items': ?instance.items?.map((e) => e.toJson()).toList(),
 };
 
 const _$AppPriceNamingEnumMap = {

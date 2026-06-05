@@ -28,7 +28,7 @@ TenantCreateDto _$TenantCreateDtoFromJson(
 
 Map<String, dynamic> _$TenantCreateDtoToJson(TenantCreateDto instance) =>
     <String, dynamic>{
-      if (instance.extraProperties case final value?) 'extraProperties': value,
+      'extraProperties': ?instance.extraProperties,
       'name': instance.name,
       'adminEmailAddress': instance.adminEmailAddress,
       'adminPassword': instance.adminPassword,

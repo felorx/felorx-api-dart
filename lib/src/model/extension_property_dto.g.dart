@@ -53,13 +53,12 @@ ExtensionPropertyDto _$ExtensionPropertyDtoFromJson(
 Map<String, dynamic> _$ExtensionPropertyDtoToJson(
   ExtensionPropertyDto instance,
 ) => <String, dynamic>{
-  if (instance.type case final value?) 'type': value,
-  if (instance.typeSimple case final value?) 'typeSimple': value,
-  if (instance.displayName?.toJson() case final value?) 'displayName': value,
-  if (instance.api?.toJson() case final value?) 'api': value,
-  if (instance.ui?.toJson() case final value?) 'ui': value,
-  if (instance.attributes?.map((e) => e.toJson()).toList() case final value?)
-    'attributes': value,
-  if (instance.configuration case final value?) 'configuration': value,
-  if (instance.defaultValue case final value?) 'defaultValue': value,
+  'type': ?instance.type,
+  'typeSimple': ?instance.typeSimple,
+  'displayName': ?instance.displayName?.toJson(),
+  'api': ?instance.api?.toJson(),
+  'ui': ?instance.ui?.toJson(),
+  'attributes': ?instance.attributes?.map((e) => e.toJson()).toList(),
+  'configuration': ?instance.configuration,
+  'defaultValue': ?instance.defaultValue,
 };

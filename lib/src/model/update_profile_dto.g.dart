@@ -25,14 +25,13 @@ UpdateProfileDto _$UpdateProfileDtoFromJson(
   return val;
 });
 
-Map<String, dynamic> _$UpdateProfileDtoToJson(
-  UpdateProfileDto instance,
-) => <String, dynamic>{
-  if (instance.extraProperties case final value?) 'extraProperties': value,
-  if (instance.userName case final value?) 'userName': value,
-  if (instance.email case final value?) 'email': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.surname case final value?) 'surname': value,
-  if (instance.phoneNumber case final value?) 'phoneNumber': value,
-  if (instance.concurrencyStamp case final value?) 'concurrencyStamp': value,
-};
+Map<String, dynamic> _$UpdateProfileDtoToJson(UpdateProfileDto instance) =>
+    <String, dynamic>{
+      'extraProperties': ?instance.extraProperties,
+      'userName': ?instance.userName,
+      'email': ?instance.email,
+      'name': ?instance.name,
+      'surname': ?instance.surname,
+      'phoneNumber': ?instance.phoneNumber,
+      'concurrencyStamp': ?instance.concurrencyStamp,
+    };

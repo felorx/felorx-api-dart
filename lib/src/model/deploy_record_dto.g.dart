@@ -63,43 +63,35 @@ DeployRecordDto _$DeployRecordDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$DeployRecordDtoToJson(
-  DeployRecordDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.appName case final value?) 'appName': value,
-  if (instance.buildRecordId case final value?) 'buildRecordId': value,
-  if (instance.buildRecordVersion case final value?)
-    'buildRecordVersion': value,
-  if (instance.version case final value?) 'version': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (instance.environment case final value?) 'environment': value,
-  if (_$DeployStatusEnumMap[instance.status] case final value?) 'status': value,
-  if (instance.startedAt?.toIso8601String() case final value?)
-    'startedAt': value,
-  if (instance.completedAt?.toIso8601String() case final value?)
-    'completedAt': value,
-  if (instance.errorMessage case final value?) 'errorMessage': value,
-  if (instance.deployUrl case final value?) 'deployUrl': value,
-  if (instance.deployTarget case final value?) 'deployTarget': value,
-  if (instance.deployChannel case final value?) 'deployChannel': value,
-  if (instance.ciSystem case final value?) 'ciSystem': value,
-  if (instance.ciDeployId case final value?) 'ciDeployId': value,
-  if (instance.ciDeployUrl case final value?) 'ciDeployUrl': value,
-  if (instance.duration case final value?) 'duration': value,
-};
+Map<String, dynamic> _$DeployRecordDtoToJson(DeployRecordDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'appId': ?instance.appId,
+      'appName': ?instance.appName,
+      'buildRecordId': ?instance.buildRecordId,
+      'buildRecordVersion': ?instance.buildRecordVersion,
+      'version': ?instance.version,
+      'platform': ?_$AppPlatformEnumMap[instance.platform],
+      'environment': ?instance.environment,
+      'status': ?_$DeployStatusEnumMap[instance.status],
+      'startedAt': ?instance.startedAt?.toIso8601String(),
+      'completedAt': ?instance.completedAt?.toIso8601String(),
+      'errorMessage': ?instance.errorMessage,
+      'deployUrl': ?instance.deployUrl,
+      'deployTarget': ?instance.deployTarget,
+      'deployChannel': ?instance.deployChannel,
+      'ciSystem': ?instance.ciSystem,
+      'ciDeployId': ?instance.ciDeployId,
+      'ciDeployUrl': ?instance.ciDeployUrl,
+      'duration': ?instance.duration,
+    };
 
 const _$AppPlatformEnumMap = {
   AppPlatform.none: 'None',

@@ -19,4 +19,4 @@ SetAppLinkedSdksDto _$SetAppLinkedSdksDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$SetAppLinkedSdksDtoToJson(
   SetAppLinkedSdksDto instance,
-) => <String, dynamic>{if (instance.sdkIds case final value?) 'sdkIds': value};
+) => <String, dynamic>{'sdkIds': ?instance.sdkIds};

@@ -53,17 +53,16 @@ ActionApiDescriptionModel _$ActionApiDescriptionModelFromJson(
 Map<String, dynamic> _$ActionApiDescriptionModelToJson(
   ActionApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.uniqueName case final value?) 'uniqueName': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.httpMethod case final value?) 'httpMethod': value,
-  if (instance.url case final value?) 'url': value,
-  if (instance.supportedVersions case final value?) 'supportedVersions': value,
-  if (instance.parametersOnMethod?.map((e) => e.toJson()).toList()
-      case final value?)
-    'parametersOnMethod': value,
-  if (instance.parameters?.map((e) => e.toJson()).toList() case final value?)
-    'parameters': value,
-  if (instance.returnValue?.toJson() case final value?) 'returnValue': value,
-  if (instance.allowAnonymous case final value?) 'allowAnonymous': value,
-  if (instance.implementFrom case final value?) 'implementFrom': value,
+  'uniqueName': ?instance.uniqueName,
+  'name': ?instance.name,
+  'httpMethod': ?instance.httpMethod,
+  'url': ?instance.url,
+  'supportedVersions': ?instance.supportedVersions,
+  'parametersOnMethod': ?instance.parametersOnMethod
+      ?.map((e) => e.toJson())
+      .toList(),
+  'parameters': ?instance.parameters?.map((e) => e.toJson()).toList(),
+  'returnValue': ?instance.returnValue?.toJson(),
+  'allowAnonymous': ?instance.allowAnonymous,
+  'implementFrom': ?instance.implementFrom,
 };

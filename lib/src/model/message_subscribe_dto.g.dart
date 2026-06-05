@@ -16,4 +16,4 @@ MessageSubscribeDto _$MessageSubscribeDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MessageSubscribeDtoToJson(
   MessageSubscribeDto instance,
-) => <String, dynamic>{if (instance.appId case final value?) 'appId': value};
+) => <String, dynamic>{'appId': ?instance.appId};

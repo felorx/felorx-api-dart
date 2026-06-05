@@ -29,14 +29,11 @@ PermissionGroupDto _$PermissionGroupDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$PermissionGroupDtoToJson(
-  PermissionGroupDto instance,
-) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.displayNameKey case final value?) 'displayNameKey': value,
-  if (instance.displayNameResource case final value?)
-    'displayNameResource': value,
-  if (instance.permissions?.map((e) => e.toJson()).toList() case final value?)
-    'permissions': value,
-};
+Map<String, dynamic> _$PermissionGroupDtoToJson(PermissionGroupDto instance) =>
+    <String, dynamic>{
+      'name': ?instance.name,
+      'displayName': ?instance.displayName,
+      'displayNameKey': ?instance.displayNameKey,
+      'displayNameResource': ?instance.displayNameResource,
+      'permissions': ?instance.permissions?.map((e) => e.toJson()).toList(),
+    };

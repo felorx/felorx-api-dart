@@ -22,9 +22,9 @@ ApiKeyDto _$ApiKeyDtoFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$ApiKeyDtoToJson(ApiKeyDto instance) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.key case final value?) 'key': value,
-  if (instance.active case final value?) 'active': value,
-  if (instance.expireAt?.toIso8601String() case final value?) 'expireAt': value,
+  'id': ?instance.id,
+  'name': ?instance.name,
+  'key': ?instance.key,
+  'active': ?instance.active,
+  'expireAt': ?instance.expireAt?.toIso8601String(),
 };

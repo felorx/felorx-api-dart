@@ -44,15 +44,15 @@ CreateOrUpdateAiModelDto _$CreateOrUpdateAiModelDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAiModelDtoToJson(
   CreateOrUpdateAiModelDto instance,
 ) => <String, dynamic>{
-  if (instance.routeName case final value?) 'route_name': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'display_name': value,
-  if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
-      case final value?)
-    'capabilities': value,
-  if (instance.enabled case final value?) 'enabled': value,
-  if (instance.isDefault case final value?) 'is_default': value,
-  if (instance.defaultParameters case final value?) 'default_parameters': value,
+  'route_name': ?instance.routeName,
+  'name': ?instance.name,
+  'display_name': ?instance.displayName,
+  'capabilities': ?instance.capabilities
+      ?.map((e) => _$AiCapabilityEnumMap[e]!)
+      .toList(),
+  'enabled': ?instance.enabled,
+  'is_default': ?instance.isDefault,
+  'default_parameters': ?instance.defaultParameters,
 };
 
 const _$AiCapabilityEnumMap = {

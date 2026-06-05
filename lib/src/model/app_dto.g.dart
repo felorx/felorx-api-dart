@@ -81,46 +81,36 @@ AppDto _$AppDtoFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$AppDtoToJson(AppDto instance) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (_$AppFrameworkEnumMap[instance.framework] case final value?)
-    'framework': value,
-  if (_$AppTypeEnumMap[instance.appType] case final value?) 'appType': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.icon case final value?) 'icon': value,
-  if (instance.homePage case final value?) 'homePage': value,
-  if (instance.sortIndex case final value?) 'sortIndex': value,
-  if (instance.gitRepository case final value?) 'gitRepository': value,
-  if (_$GitRepositoryTypeEnumMap[instance.gitRepositoryType] case final value?)
-    'gitRepositoryType': value,
-  if (instance.isEnabled case final value?) 'isEnabled': value,
-  if (instance.isPublished case final value?) 'isPublished': value,
-  if (instance.webhookUrl case final value?) 'webhookUrl': value,
-  if (instance.businessDomain case final value?) 'businessDomain': value,
-  if (instance.businessUrl case final value?) 'businessUrl': value,
-  if (instance.subscriptionPlatforms case final value?)
-    'subscriptionPlatforms': value,
-  if (instance.freePlatforms case final value?) 'freePlatforms': value,
-  if (instance.specJsonSchema case final value?) 'specJsonSchema': value,
-  if (instance.defaultStorageSize case final value?)
-    'defaultStorageSize': value,
-  if (instance.defaultSingleFileMaxSize case final value?)
-    'defaultSingleFileMaxSize': value,
-  if (instance.latestReleases?.map((e) => e.toJson()).toList()
-      case final value?)
-    'latestReleases': value,
-  if (instance.creator?.toJson() case final value?) 'creator': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'name': ?instance.name,
+  'displayName': ?instance.displayName,
+  'framework': ?_$AppFrameworkEnumMap[instance.framework],
+  'appType': ?_$AppTypeEnumMap[instance.appType],
+  'description': ?instance.description,
+  'icon': ?instance.icon,
+  'homePage': ?instance.homePage,
+  'sortIndex': ?instance.sortIndex,
+  'gitRepository': ?instance.gitRepository,
+  'gitRepositoryType': ?_$GitRepositoryTypeEnumMap[instance.gitRepositoryType],
+  'isEnabled': ?instance.isEnabled,
+  'isPublished': ?instance.isPublished,
+  'webhookUrl': ?instance.webhookUrl,
+  'businessDomain': ?instance.businessDomain,
+  'businessUrl': ?instance.businessUrl,
+  'subscriptionPlatforms': ?instance.subscriptionPlatforms,
+  'freePlatforms': ?instance.freePlatforms,
+  'specJsonSchema': ?instance.specJsonSchema,
+  'defaultStorageSize': ?instance.defaultStorageSize,
+  'defaultSingleFileMaxSize': ?instance.defaultSingleFileMaxSize,
+  'latestReleases': ?instance.latestReleases?.map((e) => e.toJson()).toList(),
+  'creator': ?instance.creator?.toJson(),
 };
 
 const _$AppFrameworkEnumMap = {

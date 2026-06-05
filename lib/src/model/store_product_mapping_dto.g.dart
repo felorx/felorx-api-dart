@@ -56,30 +56,24 @@ StoreProductMappingDto _$StoreProductMappingDtoFromJson(
 Map<String, dynamic> _$StoreProductMappingDtoToJson(
   StoreProductMappingDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planPriceId case final value?) 'planPriceId': value,
-  if (_$BillingProviderEnumMap[instance.provider] case final value?)
-    'provider': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (_$SubBillingPeriodEnumMap[instance.period] case final value?)
-    'period': value,
-  if (instance.storeProductId case final value?) 'storeProductId': value,
-  if (instance.externalProductId case final value?) 'externalProductId': value,
-  if (instance.environment case final value?) 'environment': value,
-  if (instance.isEnabled case final value?) 'isEnabled': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'planPriceId': ?instance.planPriceId,
+  'provider': ?_$BillingProviderEnumMap[instance.provider],
+  'platform': ?_$AppPlatformEnumMap[instance.platform],
+  'period': ?_$SubBillingPeriodEnumMap[instance.period],
+  'storeProductId': ?instance.storeProductId,
+  'externalProductId': ?instance.externalProductId,
+  'environment': ?instance.environment,
+  'isEnabled': ?instance.isEnabled,
 };
 
 const _$BillingProviderEnumMap = {

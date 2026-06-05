@@ -18,7 +18,4 @@ MessageSourceCategoryDto _$MessageSourceCategoryDtoFromJson(
 
 Map<String, dynamic> _$MessageSourceCategoryDtoToJson(
   MessageSourceCategoryDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.title case final value?) 'title': value,
-};
+) => <String, dynamic>{'id': ?instance.id, 'title': ?instance.title};

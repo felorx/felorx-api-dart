@@ -23,4 +23,4 @@ ApplicationSettingConfigurationDto _$ApplicationSettingConfigurationDtoFromJson(
 
 Map<String, dynamic> _$ApplicationSettingConfigurationDtoToJson(
   ApplicationSettingConfigurationDto instance,
-) => <String, dynamic>{if (instance.values case final value?) 'values': value};
+) => <String, dynamic>{'values': ?instance.values};

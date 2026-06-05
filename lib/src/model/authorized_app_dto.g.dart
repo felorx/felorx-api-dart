@@ -27,16 +27,15 @@ AuthorizedAppDto _$AuthorizedAppDtoFromJson(Map<String, dynamic> json) =>
       return val;
     });
 
-Map<String, dynamic> _$AuthorizedAppDtoToJson(AuthorizedAppDto instance) =>
-    <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.clientId case final value?) 'clientId': value,
-      if (instance.displayName case final value?) 'displayName': value,
-      if (instance.clientUri case final value?) 'clientUri': value,
-      if (instance.logoUri case final value?) 'logoUri': value,
-      if (instance.scopes case final value?) 'scopes': value,
-      if (instance.creationTime?.toIso8601String() case final value?)
-        'creationTime': value,
-      if (instance.lastAuthorizationTime?.toIso8601String() case final value?)
-        'lastAuthorizationTime': value,
-    };
+Map<String, dynamic> _$AuthorizedAppDtoToJson(
+  AuthorizedAppDto instance,
+) => <String, dynamic>{
+  'id': ?instance.id,
+  'clientId': ?instance.clientId,
+  'displayName': ?instance.displayName,
+  'clientUri': ?instance.clientUri,
+  'logoUri': ?instance.logoUri,
+  'scopes': ?instance.scopes,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'lastAuthorizationTime': ?instance.lastAuthorizationTime?.toIso8601String(),
+};

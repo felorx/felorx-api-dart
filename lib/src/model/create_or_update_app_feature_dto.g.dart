@@ -30,10 +30,8 @@ CreateOrUpdateAppFeatureDto _$CreateOrUpdateAppFeatureDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppFeatureDtoToJson(
   CreateOrUpdateAppFeatureDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.sort case final value?) 'sort': value,
-  if (instance.featureLocales?.map((e) => e.toJson()).toList()
-      case final value?)
-    'featureLocales': value,
+  'appId': ?instance.appId,
+  'name': ?instance.name,
+  'sort': ?instance.sort,
+  'featureLocales': ?instance.featureLocales?.map((e) => e.toJson()).toList(),
 };

@@ -63,37 +63,30 @@ AppReleaseDto _$AppReleaseDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$AppReleaseDtoToJson(AppReleaseDto instance) =>
     <String, dynamic>{
-      if (instance.id case final value?) 'id': value,
-      if (instance.creationTime?.toIso8601String() case final value?)
-        'creationTime': value,
-      if (instance.creatorId case final value?) 'creatorId': value,
-      if (instance.lastModificationTime?.toIso8601String() case final value?)
-        'lastModificationTime': value,
-      if (instance.lastModifierId case final value?) 'lastModifierId': value,
-      if (instance.isDeleted case final value?) 'isDeleted': value,
-      if (instance.deleterId case final value?) 'deleterId': value,
-      if (instance.deletionTime?.toIso8601String() case final value?)
-        'deletionTime': value,
-      if (instance.version case final value?) 'version': value,
-      if (instance.versionName case final value?) 'versionName': value,
-      if (instance.versionCode case final value?) 'versionCode': value,
-      if (instance.notes case final value?) 'notes': value,
-      if (_$AppPlatformEnumMap[instance.platform] case final value?)
-        'platform': value,
-      if (instance.key case final value?) 'key': value,
-      if (instance.rapidCode case final value?) 'rapidCode': value,
-      if (instance.size case final value?) 'size': value,
-      if (instance.hash case final value?) 'hash': value,
-      if (instance.downloadUrl case final value?) 'downloadUrl': value,
-      if (_$ArtifactTypeEnumMap[instance.artifactType] case final value?)
-        'artifactType': value,
-      if (_$AppPublisherEnumMap[instance.publisher] case final value?)
-        'publisher': value,
-      if (instance.isForceUpdate case final value?) 'isForceUpdate': value,
-      if (instance.appId case final value?) 'appId': value,
-      if (instance.isEnabled case final value?) 'isEnabled': value,
-      if (_$ReleaseChannelEnumMap[instance.channel] case final value?)
-        'channel': value,
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'version': ?instance.version,
+      'versionName': ?instance.versionName,
+      'versionCode': ?instance.versionCode,
+      'notes': ?instance.notes,
+      'platform': ?_$AppPlatformEnumMap[instance.platform],
+      'key': ?instance.key,
+      'rapidCode': ?instance.rapidCode,
+      'size': ?instance.size,
+      'hash': ?instance.hash,
+      'downloadUrl': ?instance.downloadUrl,
+      'artifactType': ?_$ArtifactTypeEnumMap[instance.artifactType],
+      'publisher': ?_$AppPublisherEnumMap[instance.publisher],
+      'isForceUpdate': ?instance.isForceUpdate,
+      'appId': ?instance.appId,
+      'isEnabled': ?instance.isEnabled,
+      'channel': ?_$ReleaseChannelEnumMap[instance.channel],
     };
 
 const _$AppPlatformEnumMap = {

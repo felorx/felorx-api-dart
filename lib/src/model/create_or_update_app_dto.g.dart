@@ -58,29 +58,24 @@ CreateOrUpdateAppDto _$CreateOrUpdateAppDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppDtoToJson(
   CreateOrUpdateAppDto instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (_$AppFrameworkEnumMap[instance.framework] case final value?)
-    'framework': value,
-  if (_$AppTypeEnumMap[instance.appType] case final value?) 'appType': value,
-  if (instance.homePage case final value?) 'homePage': value,
-  if (instance.sortIndex case final value?) 'sortIndex': value,
-  if (instance.gitRepository case final value?) 'gitRepository': value,
-  if (_$GitRepositoryTypeEnumMap[instance.gitRepositoryType] case final value?)
-    'gitRepositoryType': value,
-  if (instance.isEnabled case final value?) 'isEnabled': value,
-  if (instance.webhookUrl case final value?) 'webhookUrl': value,
-  if (instance.businessDomain case final value?) 'businessDomain': value,
-  if (instance.businessUrl case final value?) 'businessUrl': value,
-  if (instance.subscriptionPlatforms case final value?)
-    'subscriptionPlatforms': value,
-  if (instance.freePlatforms case final value?) 'freePlatforms': value,
-  if (instance.specJsonSchema case final value?) 'specJsonSchema': value,
-  if (instance.defaultStorageSize case final value?)
-    'defaultStorageSize': value,
-  if (instance.defaultSingleFileMaxSize case final value?)
-    'defaultSingleFileMaxSize': value,
-  if (instance.isPublished case final value?) 'isPublished': value,
-  if (instance.openClient?.toJson() case final value?) 'openClient': value,
+  'name': ?instance.name,
+  'framework': ?_$AppFrameworkEnumMap[instance.framework],
+  'appType': ?_$AppTypeEnumMap[instance.appType],
+  'homePage': ?instance.homePage,
+  'sortIndex': ?instance.sortIndex,
+  'gitRepository': ?instance.gitRepository,
+  'gitRepositoryType': ?_$GitRepositoryTypeEnumMap[instance.gitRepositoryType],
+  'isEnabled': ?instance.isEnabled,
+  'webhookUrl': ?instance.webhookUrl,
+  'businessDomain': ?instance.businessDomain,
+  'businessUrl': ?instance.businessUrl,
+  'subscriptionPlatforms': ?instance.subscriptionPlatforms,
+  'freePlatforms': ?instance.freePlatforms,
+  'specJsonSchema': ?instance.specJsonSchema,
+  'defaultStorageSize': ?instance.defaultStorageSize,
+  'defaultSingleFileMaxSize': ?instance.defaultSingleFileMaxSize,
+  'isPublished': ?instance.isPublished,
+  'openClient': ?instance.openClient?.toJson(),
 };
 
 const _$AppFrameworkEnumMap = {

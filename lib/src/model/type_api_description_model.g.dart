@@ -40,11 +40,10 @@ TypeApiDescriptionModel _$TypeApiDescriptionModelFromJson(
 Map<String, dynamic> _$TypeApiDescriptionModelToJson(
   TypeApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.baseType case final value?) 'baseType': value,
-  if (instance.isEnum case final value?) 'isEnum': value,
-  if (instance.enumNames case final value?) 'enumNames': value,
-  if (instance.enumValues case final value?) 'enumValues': value,
-  if (instance.genericArguments case final value?) 'genericArguments': value,
-  if (instance.properties?.map((e) => e.toJson()).toList() case final value?)
-    'properties': value,
+  'baseType': ?instance.baseType,
+  'isEnum': ?instance.isEnum,
+  'enumNames': ?instance.enumNames,
+  'enumValues': ?instance.enumValues,
+  'genericArguments': ?instance.genericArguments,
+  'properties': ?instance.properties?.map((e) => e.toJson()).toList(),
 };

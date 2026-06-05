@@ -61,34 +61,26 @@ SubscriptionOrderDto _$SubscriptionOrderDtoFromJson(
 Map<String, dynamic> _$SubscriptionOrderDtoToJson(
   SubscriptionOrderDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (_$SubscriptionOrderTypeEnumMap[instance.type] case final value?)
-    'type': value,
-  if (_$SubscriptionOrderStatusEnumMap[instance.status] case final value?)
-    'status': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planPriceId case final value?) 'planPriceId': value,
-  if (instance.productId case final value?) 'productId': value,
-  if (_$BillingProviderEnumMap[instance.provider] case final value?)
-    'provider': value,
-  if (_$SubBillingPeriodEnumMap[instance.billingPeriod] case final value?)
-    'billingPeriod': value,
-  if (_$BillingModeEnumMap[instance.billingMode] case final value?)
-    'billingMode': value,
-  if (instance.amount case final value?) 'amount': value,
-  if (instance.currency case final value?) 'currency': value,
-  if (instance.approvalUrl case final value?) 'approvalUrl': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'type': ?_$SubscriptionOrderTypeEnumMap[instance.type],
+  'status': ?_$SubscriptionOrderStatusEnumMap[instance.status],
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'planPriceId': ?instance.planPriceId,
+  'productId': ?instance.productId,
+  'provider': ?_$BillingProviderEnumMap[instance.provider],
+  'billingPeriod': ?_$SubBillingPeriodEnumMap[instance.billingPeriod],
+  'billingMode': ?_$BillingModeEnumMap[instance.billingMode],
+  'amount': ?instance.amount,
+  'currency': ?instance.currency,
+  'approvalUrl': ?instance.approvalUrl,
 };
 
 const _$SubscriptionOrderTypeEnumMap = {

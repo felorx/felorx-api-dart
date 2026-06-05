@@ -15,6 +15,4 @@ IanaTimeZone _$IanaTimeZoneFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$IanaTimeZoneToJson(IanaTimeZone instance) =>
-    <String, dynamic>{
-      if (instance.timeZoneName case final value?) 'timeZoneName': value,
-    };
+    <String, dynamic>{'timeZoneName': ?instance.timeZoneName};

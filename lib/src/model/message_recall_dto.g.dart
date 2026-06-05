@@ -15,6 +15,4 @@ MessageRecallDto _$MessageRecallDtoFromJson(Map<String, dynamic> json) =>
     });
 
 Map<String, dynamic> _$MessageRecallDtoToJson(MessageRecallDto instance) =>
-    <String, dynamic>{
-      if (instance.puupeeId case final value?) 'puupeeId': value,
-    };
+    <String, dynamic>{'puupeeId': ?instance.puupeeId};

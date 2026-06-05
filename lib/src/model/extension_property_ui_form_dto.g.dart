@@ -17,6 +17,4 @@ ExtensionPropertyUiFormDto _$ExtensionPropertyUiFormDtoFromJson(
 
 Map<String, dynamic> _$ExtensionPropertyUiFormDtoToJson(
   ExtensionPropertyUiFormDto instance,
-) => <String, dynamic>{
-  if (instance.isVisible case final value?) 'isVisible': value,
-};
+) => <String, dynamic>{'isVisible': ?instance.isVisible};

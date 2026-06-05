@@ -24,8 +24,8 @@ CreateMessageTemplateReleaseDto _$CreateMessageTemplateReleaseDtoFromJson(
 Map<String, dynamic> _$CreateMessageTemplateReleaseDtoToJson(
   CreateMessageTemplateReleaseDto instance,
 ) => <String, dynamic>{
-  if (instance.content case final value?) 'content': value,
-  if (instance.schemaVersion case final value?) 'schemaVersion': value,
-  if (instance.status case final value?) 'status': value,
-  if (instance.templateId case final value?) 'templateId': value,
+  'content': ?instance.content,
+  'schemaVersion': ?instance.schemaVersion,
+  'status': ?instance.status,
+  'templateId': ?instance.templateId,
 };

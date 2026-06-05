@@ -27,7 +27,6 @@ GetPermissionListResultDto _$GetPermissionListResultDtoFromJson(
 Map<String, dynamic> _$GetPermissionListResultDtoToJson(
   GetPermissionListResultDto instance,
 ) => <String, dynamic>{
-  if (instance.entityDisplayName case final value?) 'entityDisplayName': value,
-  if (instance.groups?.map((e) => e.toJson()).toList() case final value?)
-    'groups': value,
+  'entityDisplayName': ?instance.entityDisplayName,
+  'groups': ?instance.groups?.map((e) => e.toJson()).toList(),
 };

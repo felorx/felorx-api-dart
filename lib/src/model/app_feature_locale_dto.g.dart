@@ -39,21 +39,18 @@ AppFeatureLocaleDto _$AppFeatureLocaleDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$AppFeatureLocaleDtoToJson(
   AppFeatureLocaleDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.appFeatureId case final value?) 'appFeatureId': value,
-  if (instance.appLocaleId case final value?) 'appLocaleId': value,
-  if (instance.langCode case final value?) 'langCode': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.details case final value?) 'details': value,
+  'id': ?instance.id,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+  'lastModifierId': ?instance.lastModifierId,
+  'isDeleted': ?instance.isDeleted,
+  'deleterId': ?instance.deleterId,
+  'deletionTime': ?instance.deletionTime?.toIso8601String(),
+  'appFeatureId': ?instance.appFeatureId,
+  'appLocaleId': ?instance.appLocaleId,
+  'langCode': ?instance.langCode,
+  'displayName': ?instance.displayName,
+  'description': ?instance.description,
+  'details': ?instance.details,
 };

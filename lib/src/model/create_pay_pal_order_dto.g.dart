@@ -22,9 +22,9 @@ CreatePayPalOrderDto _$CreatePayPalOrderDtoFromJson(
 Map<String, dynamic> _$CreatePayPalOrderDtoToJson(
   CreatePayPalOrderDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.pricingId case final value?) 'pricingId': value,
-  if (instance.planType case final value?) 'planType': value,
-  if (instance.returnUrl case final value?) 'returnUrl': value,
-  if (instance.cancelUrl case final value?) 'cancelUrl': value,
+  'appId': ?instance.appId,
+  'pricingId': ?instance.pricingId,
+  'planType': ?instance.planType,
+  'returnUrl': ?instance.returnUrl,
+  'cancelUrl': ?instance.cancelUrl,
 };

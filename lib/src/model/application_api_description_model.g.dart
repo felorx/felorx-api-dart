@@ -35,9 +35,6 @@ ApplicationApiDescriptionModel _$ApplicationApiDescriptionModelFromJson(
 Map<String, dynamic> _$ApplicationApiDescriptionModelToJson(
   ApplicationApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.modules?.map((k, e) => MapEntry(k, e.toJson()))
-      case final value?)
-    'modules': value,
-  if (instance.types?.map((k, e) => MapEntry(k, e.toJson())) case final value?)
-    'types': value,
+  'modules': ?instance.modules?.map((k, e) => MapEntry(k, e.toJson())),
+  'types': ?instance.types?.map((k, e) => MapEntry(k, e.toJson())),
 };

@@ -27,10 +27,10 @@ Map<String, dynamic> _$UpdateBuildRecordDtoToJson(
   UpdateBuildRecordDto instance,
 ) => <String, dynamic>{
   'status': _$BuildStatusEnumMap[instance.status]!,
-  if (instance.logs case final value?) 'logs': value,
-  if (instance.errorMessage case final value?) 'errorMessage': value,
-  if (instance.artifactUrl case final value?) 'artifactUrl': value,
-  if (instance.artifactSize case final value?) 'artifactSize': value,
+  'logs': ?instance.logs,
+  'errorMessage': ?instance.errorMessage,
+  'artifactUrl': ?instance.artifactUrl,
+  'artifactSize': ?instance.artifactSize,
 };
 
 const _$BuildStatusEnumMap = {

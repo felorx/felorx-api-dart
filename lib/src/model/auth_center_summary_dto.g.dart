@@ -28,8 +28,7 @@ AuthCenterSummaryDto _$AuthCenterSummaryDtoFromJson(
 Map<String, dynamic> _$AuthCenterSummaryDtoToJson(
   AuthCenterSummaryDto instance,
 ) => <String, dynamic>{
-  if (instance.account?.toJson() case final value?) 'account': value,
-  if (instance.deviceCount case final value?) 'deviceCount': value,
-  if (instance.authorizedAppCount case final value?)
-    'authorizedAppCount': value,
+  'account': ?instance.account?.toJson(),
+  'deviceCount': ?instance.deviceCount,
+  'authorizedAppCount': ?instance.authorizedAppCount,
 };

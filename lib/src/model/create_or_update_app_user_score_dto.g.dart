@@ -20,7 +20,7 @@ CreateOrUpdateAppUserScoreDto _$CreateOrUpdateAppUserScoreDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppUserScoreDtoToJson(
   CreateOrUpdateAppUserScoreDto instance,
 ) => <String, dynamic>{
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.score case final value?) 'score': value,
-  if (instance.comment case final value?) 'comment': value,
+  'appId': ?instance.appId,
+  'score': ?instance.score,
+  'comment': ?instance.comment,
 };

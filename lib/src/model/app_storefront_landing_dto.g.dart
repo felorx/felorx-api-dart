@@ -33,7 +33,6 @@ AppStorefrontLandingDto _$AppStorefrontLandingDtoFromJson(
 Map<String, dynamic> _$AppStorefrontLandingDtoToJson(
   AppStorefrontLandingDto instance,
 ) => <String, dynamic>{
-  if (instance.hero?.toJson() case final value?) 'hero': value,
-  if (instance.features?.map((e) => e.toJson()).toList() case final value?)
-    'features': value,
+  'hero': ?instance.hero?.toJson(),
+  'features': ?instance.features?.map((e) => e.toJson()).toList(),
 };

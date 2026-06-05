@@ -20,9 +20,9 @@ IdentityUserToken _$IdentityUserTokenFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$IdentityUserTokenToJson(IdentityUserToken instance) =>
     <String, dynamic>{
-      if (instance.tenantId case final value?) 'tenantId': value,
-      if (instance.userId case final value?) 'userId': value,
-      if (instance.loginProvider case final value?) 'loginProvider': value,
-      if (instance.name case final value?) 'name': value,
-      if (instance.value case final value?) 'value': value,
+      'tenantId': ?instance.tenantId,
+      'userId': ?instance.userId,
+      'loginProvider': ?instance.loginProvider,
+      'name': ?instance.name,
+      'value': ?instance.value,
     };

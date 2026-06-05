@@ -69,35 +69,29 @@ AiProviderDto _$AiProviderDtoFromJson(
   },
 );
 
-Map<String, dynamic> _$AiProviderDtoToJson(
-  AiProviderDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'display_name': value,
-  if (_$AiProviderTypeEnumMap[instance.providerType] case final value?)
-    'provider_type': value,
-  if (instance.baseUrl case final value?) 'base_url': value,
-  if (instance.region case final value?) 'region': value,
-  if (instance.enabled case final value?) 'enabled': value,
-  if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
-      case final value?)
-    'capabilities': value,
-  if (instance.secretConfigured case final value?) 'secret_configured': value,
-  if (instance.metadata case final value?) 'metadata': value,
-  if (instance.models?.map((e) => e.toJson()).toList() case final value?)
-    'models': value,
-};
+Map<String, dynamic> _$AiProviderDtoToJson(AiProviderDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'name': ?instance.name,
+      'display_name': ?instance.displayName,
+      'provider_type': ?_$AiProviderTypeEnumMap[instance.providerType],
+      'base_url': ?instance.baseUrl,
+      'region': ?instance.region,
+      'enabled': ?instance.enabled,
+      'capabilities': ?instance.capabilities
+          ?.map((e) => _$AiCapabilityEnumMap[e]!)
+          .toList(),
+      'secret_configured': ?instance.secretConfigured,
+      'metadata': ?instance.metadata,
+      'models': ?instance.models?.map((e) => e.toJson()).toList(),
+    };
 
 const _$AiProviderTypeEnumMap = {
   AiProviderType.mock: 'Mock',

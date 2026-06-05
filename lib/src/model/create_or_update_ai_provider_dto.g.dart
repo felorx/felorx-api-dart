@@ -59,21 +59,19 @@ CreateOrUpdateAiProviderDto _$CreateOrUpdateAiProviderDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAiProviderDtoToJson(
   CreateOrUpdateAiProviderDto instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.displayName case final value?) 'display_name': value,
-  if (_$AiProviderTypeEnumMap[instance.providerType] case final value?)
-    'provider_type': value,
-  if (instance.baseUrl case final value?) 'base_url': value,
-  if (instance.region case final value?) 'region': value,
-  if (instance.enabled case final value?) 'enabled': value,
-  if (instance.capabilities?.map((e) => _$AiCapabilityEnumMap[e]!).toList()
-      case final value?)
-    'capabilities': value,
-  if (instance.secret case final value?) 'secret': value,
-  if (instance.clearSecret case final value?) 'clear_secret': value,
-  if (instance.metadata case final value?) 'metadata': value,
-  if (instance.models?.map((e) => e.toJson()).toList() case final value?)
-    'models': value,
+  'name': ?instance.name,
+  'display_name': ?instance.displayName,
+  'provider_type': ?_$AiProviderTypeEnumMap[instance.providerType],
+  'base_url': ?instance.baseUrl,
+  'region': ?instance.region,
+  'enabled': ?instance.enabled,
+  'capabilities': ?instance.capabilities
+      ?.map((e) => _$AiCapabilityEnumMap[e]!)
+      .toList(),
+  'secret': ?instance.secret,
+  'clear_secret': ?instance.clearSecret,
+  'metadata': ?instance.metadata,
+  'models': ?instance.models?.map((e) => e.toJson()).toList(),
 };
 
 const _$AiProviderTypeEnumMap = {

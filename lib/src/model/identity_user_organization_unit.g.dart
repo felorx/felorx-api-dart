@@ -28,11 +28,9 @@ IdentityUserOrganizationUnit _$IdentityUserOrganizationUnitFromJson(
 Map<String, dynamic> _$IdentityUserOrganizationUnitToJson(
   IdentityUserOrganizationUnit instance,
 ) => <String, dynamic>{
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.tenantId case final value?) 'tenantId': value,
-  if (instance.userId case final value?) 'userId': value,
-  if (instance.organizationUnitId case final value?)
-    'organizationUnitId': value,
+  'creationTime': ?instance.creationTime?.toIso8601String(),
+  'creatorId': ?instance.creatorId,
+  'tenantId': ?instance.tenantId,
+  'userId': ?instance.userId,
+  'organizationUnitId': ?instance.organizationUnitId,
 };

@@ -24,9 +24,9 @@ CreateOrUpdateAppFeatureLocaleDto _$CreateOrUpdateAppFeatureLocaleDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppFeatureLocaleDtoToJson(
   CreateOrUpdateAppFeatureLocaleDto instance,
 ) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.appLocaleId case final value?) 'appLocaleId': value,
-  if (instance.displayName case final value?) 'displayName': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.details case final value?) 'details': value,
+  'id': ?instance.id,
+  'appLocaleId': ?instance.appLocaleId,
+  'displayName': ?instance.displayName,
+  'description': ?instance.description,
+  'details': ?instance.details,
 };

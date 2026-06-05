@@ -31,8 +31,7 @@ _$ControllerInterfaceApiDescriptionModelFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$ControllerInterfaceApiDescriptionModelToJson(
   ControllerInterfaceApiDescriptionModel instance,
 ) => <String, dynamic>{
-  if (instance.type case final value?) 'type': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.methods?.map((e) => e.toJson()).toList() case final value?)
-    'methods': value,
+  'type': ?instance.type,
+  'name': ?instance.name,
+  'methods': ?instance.methods?.map((e) => e.toJson()).toList(),
 };

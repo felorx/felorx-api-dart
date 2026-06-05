@@ -20,6 +20,6 @@ VerifyPasswordResetTokenInput _$VerifyPasswordResetTokenInputFromJson(
 Map<String, dynamic> _$VerifyPasswordResetTokenInputToJson(
   VerifyPasswordResetTokenInput instance,
 ) => <String, dynamic>{
-  if (instance.userId case final value?) 'userId': value,
+  'userId': ?instance.userId,
   'resetToken': instance.resetToken,
 };

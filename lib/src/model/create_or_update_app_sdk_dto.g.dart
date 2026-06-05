@@ -22,9 +22,9 @@ CreateOrUpdateAppSdkDto _$CreateOrUpdateAppSdkDtoFromJson(
 Map<String, dynamic> _$CreateOrUpdateAppSdkDtoToJson(
   CreateOrUpdateAppSdkDto instance,
 ) => <String, dynamic>{
-  if (instance.name case final value?) 'name': value,
-  if (instance.description case final value?) 'description': value,
-  if (instance.privacy case final value?) 'privacy': value,
-  if (instance.privacyUrl case final value?) 'privacyUrl': value,
-  if (instance.homePage case final value?) 'homePage': value,
+  'name': ?instance.name,
+  'description': ?instance.description,
+  'privacy': ?instance.privacy,
+  'privacyUrl': ?instance.privacyUrl,
+  'homePage': ?instance.homePage,
 };

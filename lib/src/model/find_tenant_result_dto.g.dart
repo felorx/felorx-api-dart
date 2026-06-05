@@ -21,9 +21,9 @@ FindTenantResultDto _$FindTenantResultDtoFromJson(Map<String, dynamic> json) =>
 Map<String, dynamic> _$FindTenantResultDtoToJson(
   FindTenantResultDto instance,
 ) => <String, dynamic>{
-  if (instance.success case final value?) 'success': value,
-  if (instance.tenantId case final value?) 'tenantId': value,
-  if (instance.name case final value?) 'name': value,
-  if (instance.normalizedName case final value?) 'normalizedName': value,
-  if (instance.isActive case final value?) 'isActive': value,
+  'success': ?instance.success,
+  'tenantId': ?instance.tenantId,
+  'name': ?instance.name,
+  'normalizedName': ?instance.normalizedName,
+  'isActive': ?instance.isActive,
 };

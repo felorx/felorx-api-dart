@@ -28,6 +28,6 @@ TimeZone _$TimeZoneFromJson(Map<String, dynamic> json) => $checkedCreate(
 );
 
 Map<String, dynamic> _$TimeZoneToJson(TimeZone instance) => <String, dynamic>{
-  if (instance.iana?.toJson() case final value?) 'iana': value,
-  if (instance.windows?.toJson() case final value?) 'windows': value,
+  'iana': ?instance.iana?.toJson(),
+  'windows': ?instance.windows?.toJson(),
 };

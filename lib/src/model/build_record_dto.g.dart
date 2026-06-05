@@ -69,46 +69,37 @@ BuildRecordDto _$BuildRecordDtoFromJson(
   return val;
 });
 
-Map<String, dynamic> _$BuildRecordDtoToJson(
-  BuildRecordDto instance,
-) => <String, dynamic>{
-  if (instance.id case final value?) 'id': value,
-  if (instance.creationTime?.toIso8601String() case final value?)
-    'creationTime': value,
-  if (instance.creatorId case final value?) 'creatorId': value,
-  if (instance.lastModificationTime?.toIso8601String() case final value?)
-    'lastModificationTime': value,
-  if (instance.lastModifierId case final value?) 'lastModifierId': value,
-  if (instance.isDeleted case final value?) 'isDeleted': value,
-  if (instance.deleterId case final value?) 'deleterId': value,
-  if (instance.deletionTime?.toIso8601String() case final value?)
-    'deletionTime': value,
-  if (instance.appId case final value?) 'appId': value,
-  if (instance.appName case final value?) 'appName': value,
-  if (instance.version case final value?) 'version': value,
-  if (instance.branch case final value?) 'branch': value,
-  if (instance.commitHash case final value?) 'commitHash': value,
-  if (_$BuildTriggerEnumMap[instance.trigger] case final value?)
-    'trigger': value,
-  if (_$AppPlatformEnumMap[instance.platform] case final value?)
-    'platform': value,
-  if (_$ArtifactTypeEnumMap[instance.artifactType] case final value?)
-    'artifactType': value,
-  if (instance.environment case final value?) 'environment': value,
-  if (instance.buildNumber case final value?) 'buildNumber': value,
-  if (_$BuildStatusEnumMap[instance.status] case final value?) 'status': value,
-  if (instance.startedAt?.toIso8601String() case final value?)
-    'startedAt': value,
-  if (instance.completedAt?.toIso8601String() case final value?)
-    'completedAt': value,
-  if (instance.errorMessage case final value?) 'errorMessage': value,
-  if (instance.artifactUrl case final value?) 'artifactUrl': value,
-  if (instance.artifactSize case final value?) 'artifactSize': value,
-  if (instance.ciSystem case final value?) 'ciSystem': value,
-  if (instance.ciBuildId case final value?) 'ciBuildId': value,
-  if (instance.ciBuildUrl case final value?) 'ciBuildUrl': value,
-  if (instance.duration case final value?) 'duration': value,
-};
+Map<String, dynamic> _$BuildRecordDtoToJson(BuildRecordDto instance) =>
+    <String, dynamic>{
+      'id': ?instance.id,
+      'creationTime': ?instance.creationTime?.toIso8601String(),
+      'creatorId': ?instance.creatorId,
+      'lastModificationTime': ?instance.lastModificationTime?.toIso8601String(),
+      'lastModifierId': ?instance.lastModifierId,
+      'isDeleted': ?instance.isDeleted,
+      'deleterId': ?instance.deleterId,
+      'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'appId': ?instance.appId,
+      'appName': ?instance.appName,
+      'version': ?instance.version,
+      'branch': ?instance.branch,
+      'commitHash': ?instance.commitHash,
+      'trigger': ?_$BuildTriggerEnumMap[instance.trigger],
+      'platform': ?_$AppPlatformEnumMap[instance.platform],
+      'artifactType': ?_$ArtifactTypeEnumMap[instance.artifactType],
+      'environment': ?instance.environment,
+      'buildNumber': ?instance.buildNumber,
+      'status': ?_$BuildStatusEnumMap[instance.status],
+      'startedAt': ?instance.startedAt?.toIso8601String(),
+      'completedAt': ?instance.completedAt?.toIso8601String(),
+      'errorMessage': ?instance.errorMessage,
+      'artifactUrl': ?instance.artifactUrl,
+      'artifactSize': ?instance.artifactSize,
+      'ciSystem': ?instance.ciSystem,
+      'ciBuildId': ?instance.ciBuildId,
+      'ciBuildUrl': ?instance.ciBuildUrl,
+      'duration': ?instance.duration,
+    };
 
 const _$BuildTriggerEnumMap = {
   BuildTrigger.manual: 'Manual',
