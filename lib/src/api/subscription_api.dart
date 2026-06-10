@@ -53,7 +53,7 @@ class SubscriptionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/alipay-notify';
+    final _path = r'/api/app/alipay/notify';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -771,7 +771,7 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/paypal-return';
+    final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -822,7 +822,7 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/paypal-webhook';
+    final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
