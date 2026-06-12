@@ -8,7 +8,7 @@ import 'package:puupee_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**routeName** | **String** |  | [optional]
+**routeName** | **String** |  | [optional] 
 **name** | **String** |  | [optional] 
 **displayName** | **String** |  | [optional] 
 **capabilities** | [**List&lt;AiCapability&gt;**](AiCapability.md) |  | [optional] 
@@ -17,4 +17,5 @@ Name | Type | Description | Notes
 **defaultParameters** | **Map&lt;String, String&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

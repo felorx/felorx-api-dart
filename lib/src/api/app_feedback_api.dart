@@ -55,7 +55,12 @@ class AppFeedbackApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -145,7 +150,12 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -192,7 +202,12 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -274,7 +289,12 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -356,7 +376,12 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDtoPagedResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -430,7 +455,12 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',

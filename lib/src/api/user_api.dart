@@ -55,7 +55,12 @@ class UserApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -145,7 +150,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -192,7 +202,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -264,7 +279,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -334,7 +354,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -406,7 +431,12 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -484,7 +514,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -564,7 +599,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -638,7 +678,12 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -730,7 +775,12 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',

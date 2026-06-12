@@ -48,7 +48,12 @@ class TimeZoneSettingsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -118,7 +123,12 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -190,7 +200,12 @@ _responseData = rawData == null ? null : deserialize<List<NameValue>, NameValue>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,

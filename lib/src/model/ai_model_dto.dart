@@ -53,7 +53,7 @@ class AiModelDto {
   });
 
   @JsonKey(
-
+    
     name: r'id',
     required: false,
     includeIfNull: false,
@@ -173,7 +173,7 @@ class AiModelDto {
 
 
   @JsonKey(
-
+    
     name: r'name',
     required: false,
     includeIfNull: false,
@@ -294,3 +294,4 @@ class AiModelDto {
   }
 
 }
+

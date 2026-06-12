@@ -51,7 +51,12 @@ class UserLookupApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -123,7 +128,12 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -195,7 +205,12 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -278,7 +293,12 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,

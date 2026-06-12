@@ -35,7 +35,7 @@ class CreateOrUpdateAiModelDto {
   });
 
   @JsonKey(
-
+    
     name: r'route_name',
     required: false,
     includeIfNull: false,
@@ -47,7 +47,7 @@ class CreateOrUpdateAiModelDto {
 
 
   @JsonKey(
-
+    
     name: r'name',
     required: false,
     includeIfNull: false,
@@ -150,3 +150,4 @@ class CreateOrUpdateAiModelDto {
   }
 
 }
+

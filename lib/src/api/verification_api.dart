@@ -50,7 +50,12 @@ class VerificationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -115,7 +120,12 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',

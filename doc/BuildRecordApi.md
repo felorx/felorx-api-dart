@@ -30,6 +30,8 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final CreateBuildRecordDto createBuildRecordDto = ; // CreateBuildRecordDto | 
@@ -54,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -71,6 +73,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -94,7 +98,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -111,6 +115,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -135,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -152,6 +158,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 应用ID
@@ -192,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -209,6 +217,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String ciBuildId = ciBuildId_example; // String | 
@@ -233,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -250,6 +260,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -278,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -295,6 +307,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -319,7 +333,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -336,6 +350,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -360,7 +376,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -377,6 +393,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -403,7 +421,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -420,6 +438,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -448,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 
@@ -465,6 +485,8 @@ No authorization required
 ### Example
 ```dart
 import 'package:puupee_api_client/api.dart';
+// TODO Configure OAuth2 access token for authorization: oauth2
+//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = PuupeeApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -491,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2](../README.md#oauth2)
 
 ### HTTP request headers
 

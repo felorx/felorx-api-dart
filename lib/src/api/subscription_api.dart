@@ -53,14 +53,19 @@ class SubscriptionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/alipay/notify';
+    final _path = r'/api/app/subscription/alipay-notify';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -132,7 +137,12 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -197,7 +207,12 @@ _bodyData=jsonEncode(appleNotificaionDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -287,7 +302,12 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -377,7 +397,12 @@ _responseData = rawData == null ? null : deserialize<CreateAlipayOrderResultDto,
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -467,7 +492,12 @@ _responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, Subsc
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -557,7 +587,12 @@ _responseData = rawData == null ? null : deserialize<CreatePayPalOrderResultDto,
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -629,7 +664,12 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -704,7 +744,12 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -771,14 +816,19 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/paypal/notify';
+    final _path = r'/api/app/subscription/paypal-return';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -822,14 +872,19 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/paypal/notify';
+    final _path = r'/api/app/subscription/paypal-webhook';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -901,7 +956,12 @@ _responseData = rawData == null ? null : deserialize<PayPalWebhookProcessResultD
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'oauth2',
+            'name': 'oauth2',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
