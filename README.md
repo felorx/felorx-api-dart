@@ -570,7 +570,7 @@ Authentication schemes defined for the API:
 
 - **Type**: OAuth
 - **Flow**: accessCode
-- **Authorization URL**: https://dev.auth.puupee.com/connect/authorize
+- **Authorization URL**: https://dev.auth.felorx.com/connect/authorize
 - **Scopes**: 
  - **Puupees**: Puupees API
 
