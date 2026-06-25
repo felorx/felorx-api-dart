@@ -26,11 +26,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final CreateOrUpdateAppReleaseDto createOrUpdateAppReleaseDto = ; // CreateOrUpdateAppReleaseDto | 
+final CreateOrUpdateAppReleaseDto createOrUpdateAppReleaseDto = ; // CreateOrUpdateAppReleaseDto |
 
 try {
     final response = api.createAppRelease(createOrUpdateAppReleaseDto);
@@ -44,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppReleaseDto** | [**CreateOrUpdateAppReleaseDto**](CreateOrUpdateAppReleaseDto.md)|  | [optional] 
+ **createOrUpdateAppReleaseDto** | [**CreateOrUpdateAppReleaseDto**](CreateOrUpdateAppReleaseDto.md)|  | [optional]
 
 ### Return type
 
@@ -52,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -69,11 +67,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppReleaseById(id);
@@ -86,7 +82,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -94,7 +90,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,11 +107,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getAppReleaseById(id);
@@ -129,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -137,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -154,17 +148,15 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final ReleaseChannel channel = ; // ReleaseChannel | 
-final String platform = platform_example; // String | 
-final String publisher = publisher_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final ReleaseChannel channel = ; // ReleaseChannel |
+final String platform = platform_example; // String |
+final String publisher = publisher_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getAppReleaseList(appId, channel, platform, publisher, sorting, skipCount, maxResultCount);
@@ -178,13 +170,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [optional] 
- **channel** | [**ReleaseChannel**](.md)|  | [optional] 
- **platform** | **String**|  | [optional] 
- **publisher** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **appId** | **String**|  | [optional]
+ **channel** | [**ReleaseChannel**](.md)|  | [optional]
+ **platform** | **String**|  | [optional]
+ **publisher** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -192,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -209,14 +201,12 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String appName = appName_example; // String | 
-final String platform = platform_example; // String | 
-final String artifactType = artifactType_example; // String | 
-final String publisher = publisher_example; // String | 
+final String appName = appName_example; // String |
+final String platform = platform_example; // String |
+final String artifactType = artifactType_example; // String |
+final String publisher = publisher_example; // String |
 
 try {
     final response = api.getLatest(appName, platform, artifactType, publisher);
@@ -230,10 +220,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appName** | **String**|  | [optional] 
- **platform** | **String**|  | [optional] 
- **artifactType** | **String**|  | [optional] 
- **publisher** | **String**|  | [optional] 
+ **appName** | **String**|  | [optional]
+ **platform** | **String**|  | [optional]
+ **artifactType** | **String**|  | [optional]
+ **publisher** | **String**|  | [optional]
 
 ### Return type
 
@@ -241,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -258,17 +248,15 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final ReleaseChannel channel = ; // ReleaseChannel | 
-final String platform = platform_example; // String | 
-final String publisher = publisher_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final ReleaseChannel channel = ; // ReleaseChannel |
+final String platform = platform_example; // String |
+final String publisher = publisher_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getListByDeveloper(appId, channel, platform, publisher, sorting, skipCount, maxResultCount);
@@ -282,13 +270,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [optional] 
- **channel** | [**ReleaseChannel**](.md)|  | [optional] 
- **platform** | **String**|  | [optional] 
- **publisher** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **appId** | **String**|  | [optional]
+ **channel** | [**ReleaseChannel**](.md)|  | [optional]
+ **platform** | **String**|  | [optional]
+ **publisher** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -296,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -313,12 +301,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppReleaseApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppReleaseDto createOrUpdateAppReleaseDto = ; // CreateOrUpdateAppReleaseDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppReleaseDto createOrUpdateAppReleaseDto = ; // CreateOrUpdateAppReleaseDto |
 
 try {
     final response = api.updateAppRelease(id, createOrUpdateAppReleaseDto);
@@ -332,8 +318,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppReleaseDto** | [**CreateOrUpdateAppReleaseDto**](CreateOrUpdateAppReleaseDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppReleaseDto** | [**CreateOrUpdateAppReleaseDto**](CreateOrUpdateAppReleaseDto.md)|  | [optional]
 
 ### Return type
 
@@ -341,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

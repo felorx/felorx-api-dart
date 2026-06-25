@@ -22,10 +22,10 @@ class AppLocaleApi {
   const AppLocaleApi(this._dio);
 
   /// createAppLocale
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppLocaleDto] 
+  /// * [createOrUpdateAppLocaleDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class AppLocaleApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppLocaleDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppLocaleDto>> createAppLocale({ 
+  Future<Response<AppLocaleDto>> createAppLocale({
     CreateOrUpdateAppLocaleDto? createOrUpdateAppLocaleDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class AppLocaleApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -117,10 +112,10 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
   }
 
   /// deleteAppLocaleById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -130,7 +125,7 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppLocaleById({ 
+  Future<Response<void>> deleteAppLocaleById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -146,12 +141,7 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -169,10 +159,10 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
   }
 
   /// getListByAppId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
+  /// * [appId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -182,7 +172,7 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppLocaleDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppLocaleDto>>> getListByAppId({ 
+  Future<Response<List<AppLocaleDto>>> getListByAppId({
     required String appId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -198,12 +188,7 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -246,11 +231,11 @@ _responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLoca
   }
 
   /// updateAppLocale
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppLocaleDto] 
+  /// * [id]
+  /// * [createOrUpdateAppLocaleDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -260,7 +245,7 @@ _responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLoca
   ///
   /// Returns a [Future] containing a [Response] with a [AppLocaleDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppLocaleDto>> updateAppLocale({ 
+  Future<Response<AppLocaleDto>> updateAppLocale({
     required String id,
     CreateOrUpdateAppLocaleDto? createOrUpdateAppLocaleDto,
     CancelToken? cancelToken,
@@ -277,12 +262,7 @@ _responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLoca
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAppPricingItem**](AppPricingItemApi.md#createapppricingitem) | **POST** /api/app/app-pricing-item | 
-[**deleteAppPricingItemById**](AppPricingItemApi.md#deleteapppricingitembyid) | **DELETE** /api/app/app-pricing-item/{id} | 
-[**getAppPricingItemById**](AppPricingItemApi.md#getapppricingitembyid) | **GET** /api/app/app-pricing-item/{id} | 
-[**getAppPricingItemList**](AppPricingItemApi.md#getapppricingitemlist) | **GET** /api/app/app-pricing-item | 
-[**updateAppPricingItem**](AppPricingItemApi.md#updateapppricingitem) | **PUT** /api/app/app-pricing-item/{id} | 
+[**createAppPricingItem**](AppPricingItemApi.md#createapppricingitem) | **POST** /api/app/app-pricing-item |
+[**deleteAppPricingItemById**](AppPricingItemApi.md#deleteapppricingitembyid) | **DELETE** /api/app/app-pricing-item/{id} |
+[**getAppPricingItemById**](AppPricingItemApi.md#getapppricingitembyid) | **GET** /api/app/app-pricing-item/{id} |
+[**getAppPricingItemList**](AppPricingItemApi.md#getapppricingitemlist) | **GET** /api/app/app-pricing-item |
+[**updateAppPricingItem**](AppPricingItemApi.md#updateapppricingitem) | **PUT** /api/app/app-pricing-item/{id} |
 
 
 # **createAppPricingItem**
@@ -24,11 +24,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppPricingItemApi();
-final CreateOrUpdateAppPricingItemDto createOrUpdateAppPricingItemDto = ; // CreateOrUpdateAppPricingItemDto | 
+final CreateOrUpdateAppPricingItemDto createOrUpdateAppPricingItemDto = ; // CreateOrUpdateAppPricingItemDto |
 
 try {
     final response = api.createAppPricingItem(createOrUpdateAppPricingItemDto);
@@ -42,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md)|  | [optional] 
+ **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md)|  | [optional]
 
 ### Return type
 
@@ -50,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -67,11 +65,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppPricingItemApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppPricingItemById(id);
@@ -84,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -92,7 +88,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,11 +105,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppPricingItemApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getAppPricingItemById(id);
@@ -127,7 +121,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -135,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -152,8 +146,6 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppPricingItemApi();
 
@@ -174,7 +166,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -191,12 +183,10 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppPricingItemApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppPricingItemDto createOrUpdateAppPricingItemDto = ; // CreateOrUpdateAppPricingItemDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppPricingItemDto createOrUpdateAppPricingItemDto = ; // CreateOrUpdateAppPricingItemDto |
 
 try {
     final response = api.updateAppPricingItem(id, createOrUpdateAppPricingItemDto);
@@ -210,8 +200,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppPricingItemDto** | [**CreateOrUpdateAppPricingItemDto**](CreateOrUpdateAppPricingItemDto.md)|  | [optional]
 
 ### Return type
 
@@ -219,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

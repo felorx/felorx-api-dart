@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteFeatures**](FeaturesApi.md#deletefeatures) | **DELETE** /api/feature-management/features | 
-[**getFeatures**](FeaturesApi.md#getfeatures) | **GET** /api/feature-management/features | 
-[**updateFeatures**](FeaturesApi.md#updatefeatures) | **PUT** /api/feature-management/features | 
+[**deleteFeatures**](FeaturesApi.md#deletefeatures) | **DELETE** /api/feature-management/features |
+[**getFeatures**](FeaturesApi.md#getfeatures) | **GET** /api/feature-management/features |
+[**updateFeatures**](FeaturesApi.md#updatefeatures) | **PUT** /api/feature-management/features |
 
 
 # **deleteFeatures**
@@ -22,12 +22,10 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getFeaturesApi();
-final String providerName = providerName_example; // String | 
-final String providerKey = providerKey_example; // String | 
+final String providerName = providerName_example; // String |
+final String providerKey = providerKey_example; // String |
 
 try {
     api.deleteFeatures(providerName, providerKey);
@@ -40,8 +38,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **String**|  | [optional] 
- **providerKey** | **String**|  | [optional] 
+ **providerName** | **String**|  | [optional]
+ **providerKey** | **String**|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,12 +64,10 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getFeaturesApi();
-final String providerName = providerName_example; // String | 
-final String providerKey = providerKey_example; // String | 
+final String providerName = providerName_example; // String |
+final String providerKey = providerKey_example; // String |
 
 try {
     final response = api.getFeatures(providerName, providerKey);
@@ -85,8 +81,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **String**|  | [optional] 
- **providerKey** | **String**|  | [optional] 
+ **providerName** | **String**|  | [optional]
+ **providerKey** | **String**|  | [optional]
 
 ### Return type
 
@@ -94,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,13 +107,11 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getFeaturesApi();
-final UpdateFeaturesDto updateFeaturesDto = ; // UpdateFeaturesDto | 
-final String providerName = providerName_example; // String | 
-final String providerKey = providerKey_example; // String | 
+final UpdateFeaturesDto updateFeaturesDto = ; // UpdateFeaturesDto |
+final String providerName = providerName_example; // String |
+final String providerKey = providerKey_example; // String |
 
 try {
     api.updateFeatures(updateFeaturesDto, providerName, providerKey);
@@ -130,9 +124,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateFeaturesDto** | [**UpdateFeaturesDto**](UpdateFeaturesDto.md)|  | [optional] 
- **providerName** | **String**|  | [optional] 
- **providerKey** | **String**|  | [optional] 
+ **updateFeaturesDto** | [**UpdateFeaturesDto**](UpdateFeaturesDto.md)|  | [optional]
+ **providerName** | **String**|  | [optional]
+ **providerKey** | **String**|  | [optional]
 
 ### Return type
 
@@ -140,7 +134,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

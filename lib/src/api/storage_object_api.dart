@@ -23,7 +23,7 @@ class StorageObjectApi {
   const StorageObjectApi(this._dio);
 
   /// 获取所有 CDN Domain 配置
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -35,7 +35,7 @@ class StorageObjectApi {
   ///
   /// Returns a [Future] containing a [Response] with a [List<CdnDomainDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<CdnDomainDto>>> getCdnDomains({ 
+  Future<Response<List<CdnDomainDto>>> getCdnDomains({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -50,12 +50,7 @@ class StorageObjectApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -98,13 +93,13 @@ _responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDoma
   }
 
   /// getFileCredential
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [userTotalSize] 
-  /// * [rapidCode] 
-  /// * [usage] 
-  /// * [key] 
+  /// * [userTotalSize]
+  /// * [rapidCode]
+  /// * [usage]
+  /// * [key]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -114,7 +109,7 @@ _responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDoma
   ///
   /// Returns a [Future] containing a [Response] with a [StorageObjectCredentials] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<StorageObjectCredentials>> getFileCredential({ 
+  Future<Response<StorageObjectCredentials>> getFileCredential({
     int? userTotalSize,
     String? rapidCode,
     String? usage,
@@ -133,12 +128,7 @@ _responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDoma
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -189,7 +179,7 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
   }
 
   /// getUserStorages
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -201,7 +191,7 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
   ///
   /// Returns a [Future] containing a [Response] with a [List<UserStorageDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<UserStorageDto>>> getUserStorages({ 
+  Future<Response<List<UserStorageDto>>> getUserStorages({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -216,12 +206,7 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -264,11 +249,11 @@ _responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserS
   }
 
   /// preSignUrl
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [bucket] 
-  /// * [key] 
+  /// * [bucket]
+  /// * [key]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -278,7 +263,7 @@ _responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserS
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<String>> preSignUrl({ 
+  Future<Response<String>> preSignUrl({
     String? bucket,
     String? key,
     CancelToken? cancelToken,
@@ -295,12 +280,7 @@ _responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserS
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

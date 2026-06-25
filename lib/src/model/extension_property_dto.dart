@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/extension_property_ui_dto.dart';
-import 'package:felorx_api_client/src/model/extension_property_api_dto.dart';
 import 'package:felorx_api_client/src/model/localizable_string_dto.dart';
+import 'package:felorx_api_client/src/model/extension_property_api_dto.dart';
+import 'package:felorx_api_client/src/model/extension_property_ui_dto.dart';
 import 'package:felorx_api_client/src/model/extension_property_attribute_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 

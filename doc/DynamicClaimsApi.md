@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**refresh**](DynamicClaimsApi.md#refresh) | **POST** /api/account/dynamic-claims/refresh | 
+[**refresh**](DynamicClaimsApi.md#refresh) | **POST** /api/account/dynamic-claims/refresh |
 
 
 # **refresh**
@@ -20,8 +20,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDynamicClaimsApi();
 
@@ -41,7 +39,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

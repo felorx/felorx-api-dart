@@ -29,6 +29,7 @@ import 'package:felorx_api_client/src/api/app_user_score_api.dart';
 import 'package:felorx_api_client/src/api/auth_center_api.dart';
 import 'package:felorx_api_client/src/api/avatar_api.dart';
 import 'package:felorx_api_client/src/api/build_record_api.dart';
+import 'package:felorx_api_client/src/api/credit_api.dart';
 import 'package:felorx_api_client/src/api/deploy_record_api.dart';
 import 'package:felorx_api_client/src/api/device_api.dart';
 import 'package:felorx_api_client/src/api/dynamic_claims_api.dart';
@@ -64,15 +65,13 @@ class FelorxApiClient {
     Dio? dio,
     String? basePathOverride,
     List<Interceptor>? interceptors,
-  }) : this.dio =
-           dio ??
-           Dio(
-             BaseOptions(
-               baseUrl: basePathOverride ?? basePath,
-               connectTimeout: const Duration(milliseconds: 5000),
-               receiveTimeout: const Duration(milliseconds: 3000),
-             ),
-           ) {
+  })  :
+        this.dio = dio ??
+            Dio(BaseOptions(
+              baseUrl: basePathOverride ?? basePath,
+              connectTimeout: const Duration(milliseconds: 5000),
+              receiveTimeout: const Duration(milliseconds: 3000),
+            )) {
     if (interceptors == null) {
       this.dio.interceptors.addAll([
         OAuthInterceptor(),
@@ -87,41 +86,25 @@ class FelorxApiClient {
 
   void setOAuthToken(String name, String token) {
     if (this.dio.interceptors.any((i) => i is OAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor)
-                  as OAuthInterceptor)
-              .tokens[name] =
-          token;
+      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor) as OAuthInterceptor).tokens[name] = token;
     }
   }
 
   void setBearerAuth(String name, String token) {
     if (this.dio.interceptors.any((i) => i is BearerAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor)
-                  as BearerAuthInterceptor)
-              .tokens[name] =
-          token;
+      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor) as BearerAuthInterceptor).tokens[name] = token;
     }
   }
 
   void setBasicAuth(String name, String username, String password) {
     if (this.dio.interceptors.any((i) => i is BasicAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor)
-              as BasicAuthInterceptor)
-          .authInfo[name] = BasicAuthInfo(
-        username,
-        password,
-      );
+      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor) as BasicAuthInterceptor).authInfo[name] = BasicAuthInfo(username, password);
     }
   }
 
   void setApiKey(String name, String apiKey) {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere(
-                    (element) => element is ApiKeyAuthInterceptor,
-                  )
-                  as ApiKeyAuthInterceptor)
-              .apiKeys[name] =
-          apiKey;
+      (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
   }
 
@@ -255,6 +238,12 @@ class FelorxApiClient {
   /// by doing that all interceptors will not be executed
   BuildRecordApi getBuildRecordApi() {
     return BuildRecordApi(dio);
+  }
+
+  /// Get CreditApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CreditApi getCreditApi() {
+    return CreditApi(dio);
   }
 
   /// Get DeployRecordApi instance, base route and serializer can be overridden by a given but be careful,
@@ -413,5 +402,3 @@ class FelorxApiClient {
     return VerificationApi(dio);
   }
 }
-
-typedef PuupeeApiClient = FelorxApiClient;

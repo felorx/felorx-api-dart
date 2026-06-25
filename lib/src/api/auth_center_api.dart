@@ -22,7 +22,7 @@ class AuthCenterApi {
   const AuthCenterApi(this._dio);
 
   /// getAuthorizedApps
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -34,7 +34,7 @@ class AuthCenterApi {
   ///
   /// Returns a [Future] containing a [Response] with a [List<AuthorizedAppDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AuthorizedAppDto>>> getAuthorizedApps({ 
+  Future<Response<List<AuthorizedAppDto>>> getAuthorizedApps({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -49,12 +49,7 @@ class AuthCenterApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -97,7 +92,7 @@ _responseData = rawData == null ? null : deserialize<List<AuthorizedAppDto>, Aut
   }
 
   /// getSummary
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -109,7 +104,7 @@ _responseData = rawData == null ? null : deserialize<List<AuthorizedAppDto>, Aut
   ///
   /// Returns a [Future] containing a [Response] with a [AuthCenterSummaryDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AuthCenterSummaryDto>> getSummary({ 
+  Future<Response<AuthCenterSummaryDto>> getSummary({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -124,12 +119,7 @@ _responseData = rawData == null ? null : deserialize<List<AuthorizedAppDto>, Aut
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -172,10 +162,10 @@ _responseData = rawData == null ? null : deserialize<AuthCenterSummaryDto, AuthC
   }
 
   /// revokeAuthorizedApp
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [clientId] 
+  /// * [clientId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -185,7 +175,7 @@ _responseData = rawData == null ? null : deserialize<AuthCenterSummaryDto, AuthC
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> revokeAuthorizedApp({ 
+  Future<Response<void>> revokeAuthorizedApp({
     required String clientId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -201,12 +191,7 @@ _responseData = rawData == null ? null : deserialize<AuthCenterSummaryDto, AuthC
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

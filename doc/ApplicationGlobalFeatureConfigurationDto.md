@@ -8,7 +8,7 @@ import 'package:felorx_api_client/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enabledFeatures** | **Set&lt;String&gt;** |  | [optional] 
+**enabledFeatures** | **Set&lt;String&gt;** |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

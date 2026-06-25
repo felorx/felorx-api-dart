@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAppLocale**](AppLocaleApi.md#createapplocale) | **POST** /api/app/app-locale | 
-[**deleteAppLocaleById**](AppLocaleApi.md#deleteapplocalebyid) | **DELETE** /api/app/app-locale/{id} | 
-[**getListByAppId**](AppLocaleApi.md#getlistbyappid) | **GET** /api/app/app-locale/by-app-id/{appId} | 
-[**updateAppLocale**](AppLocaleApi.md#updateapplocale) | **PUT** /api/app/app-locale/{id} | 
+[**createAppLocale**](AppLocaleApi.md#createapplocale) | **POST** /api/app/app-locale |
+[**deleteAppLocaleById**](AppLocaleApi.md#deleteapplocalebyid) | **DELETE** /api/app/app-locale/{id} |
+[**getListByAppId**](AppLocaleApi.md#getlistbyappid) | **GET** /api/app/app-locale/by-app-id/{appId} |
+[**updateAppLocale**](AppLocaleApi.md#updateapplocale) | **PUT** /api/app/app-locale/{id} |
 
 
 # **createAppLocale**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppLocaleApi();
-final CreateOrUpdateAppLocaleDto createOrUpdateAppLocaleDto = ; // CreateOrUpdateAppLocaleDto | 
+final CreateOrUpdateAppLocaleDto createOrUpdateAppLocaleDto = ; // CreateOrUpdateAppLocaleDto |
 
 try {
     final response = api.createAppLocale(createOrUpdateAppLocaleDto);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md)|  | [optional] 
+ **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md)|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,11 +64,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppLocaleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppLocaleById(id);
@@ -83,7 +79,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -91,7 +87,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,11 +104,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppLocaleApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getListByAppId(appId);
@@ -126,7 +120,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -134,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -151,12 +145,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppLocaleApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppLocaleDto createOrUpdateAppLocaleDto = ; // CreateOrUpdateAppLocaleDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppLocaleDto createOrUpdateAppLocaleDto = ; // CreateOrUpdateAppLocaleDto |
 
 try {
     final response = api.updateAppLocale(id, createOrUpdateAppLocaleDto);
@@ -170,8 +162,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppLocaleDto** | [**CreateOrUpdateAppLocaleDto**](CreateOrUpdateAppLocaleDto.md)|  | [optional]
 
 ### Return type
 
@@ -179,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

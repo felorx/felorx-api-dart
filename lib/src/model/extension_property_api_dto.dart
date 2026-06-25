@@ -4,8 +4,8 @@
 
 // ignore_for_file: unused_element
 import 'package:felorx_api_client/src/model/extension_property_api_update_dto.dart';
-import 'package:felorx_api_client/src/model/extension_property_api_get_dto.dart';
 import 'package:felorx_api_client/src/model/extension_property_api_create_dto.dart';
+import 'package:felorx_api_client/src/model/extension_property_api_get_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_property_api_dto.g.dart';

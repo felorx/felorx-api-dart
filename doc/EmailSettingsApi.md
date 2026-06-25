@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getEmailSettings**](EmailSettingsApi.md#getemailsettings) | **GET** /api/setting-management/emailing | 
-[**sendTestEmail**](EmailSettingsApi.md#sendtestemail) | **POST** /api/setting-management/emailing/send-test-email | 
-[**updateEmailSettings**](EmailSettingsApi.md#updateemailsettings) | **POST** /api/setting-management/emailing | 
+[**getEmailSettings**](EmailSettingsApi.md#getemailsettings) | **GET** /api/setting-management/emailing |
+[**sendTestEmail**](EmailSettingsApi.md#sendtestemail) | **POST** /api/setting-management/emailing/send-test-email |
+[**updateEmailSettings**](EmailSettingsApi.md#updateemailsettings) | **POST** /api/setting-management/emailing |
 
 
 # **getEmailSettings**
@@ -22,8 +22,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getEmailSettingsApi();
 
@@ -44,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -61,11 +59,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getEmailSettingsApi();
-final SendTestEmailInput sendTestEmailInput = ; // SendTestEmailInput | 
+final SendTestEmailInput sendTestEmailInput = ; // SendTestEmailInput |
 
 try {
     api.sendTestEmail(sendTestEmailInput);
@@ -78,7 +74,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendTestEmailInput** | [**SendTestEmailInput**](SendTestEmailInput.md)|  | [optional] 
+ **sendTestEmailInput** | [**SendTestEmailInput**](SendTestEmailInput.md)|  | [optional]
 
 ### Return type
 
@@ -86,7 +82,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -103,11 +99,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getEmailSettingsApi();
-final UpdateEmailSettingsDto updateEmailSettingsDto = ; // UpdateEmailSettingsDto | 
+final UpdateEmailSettingsDto updateEmailSettingsDto = ; // UpdateEmailSettingsDto |
 
 try {
     api.updateEmailSettings(updateEmailSettingsDto);
@@ -120,7 +114,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateEmailSettingsDto** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md)|  | [optional] 
+ **updateEmailSettingsDto** | [**UpdateEmailSettingsDto**](UpdateEmailSettingsDto.md)|  | [optional]
 
 ### Return type
 
@@ -128,7 +122,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

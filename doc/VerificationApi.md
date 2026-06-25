@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**sendCode**](VerificationApi.md#sendcode) | **POST** /api/app/verification/send-code | 
-[**sendCodeAnonymous**](VerificationApi.md#sendcodeanonymous) | **POST** /api/app/verification/send-code-anonymous | 
+[**sendCode**](VerificationApi.md#sendcode) | **POST** /api/app/verification/send-code |
+[**sendCodeAnonymous**](VerificationApi.md#sendcodeanonymous) | **POST** /api/app/verification/send-code-anonymous |
 
 
 # **sendCode**
@@ -21,11 +21,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getVerificationApi();
-final SendVerificationCodeDto sendVerificationCodeDto = ; // SendVerificationCodeDto | 
+final SendVerificationCodeDto sendVerificationCodeDto = ; // SendVerificationCodeDto |
 
 try {
     api.sendCode(sendVerificationCodeDto);
@@ -38,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md)|  | [optional] 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md)|  | [optional]
 
 ### Return type
 
@@ -46,7 +44,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -63,11 +61,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getVerificationApi();
-final SendVerificationCodeDto sendVerificationCodeDto = ; // SendVerificationCodeDto | 
+final SendVerificationCodeDto sendVerificationCodeDto = ; // SendVerificationCodeDto |
 
 try {
     api.sendCodeAnonymous(sendVerificationCodeDto);
@@ -80,7 +76,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md)|  | [optional] 
+ **sendVerificationCodeDto** | [**SendVerificationCodeDto**](SendVerificationCodeDto.md)|  | [optional]
 
 ### Return type
 
@@ -88,7 +84,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

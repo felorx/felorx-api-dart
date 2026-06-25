@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for MessageSourceRouteSubDto
 void main() {
-  final MessageSourceRouteSubDto? instance = /* MessageSourceRouteSubDto(...) */
-      null;
+  final MessageSourceRouteSubDto? instance = /* MessageSourceRouteSubDto(...) */ null;
   // TODO add properties to the entity
 
   group(MessageSourceRouteSubDto, () {
@@ -22,5 +21,6 @@ void main() {
     test('to test the property `values`', () async {
       // TODO
     });
+
   });
 }

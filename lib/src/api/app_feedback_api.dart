@@ -26,10 +26,10 @@ class AppFeedbackApi {
   const AppFeedbackApi(this._dio);
 
   /// 创建反馈（允许匿名用户提交）
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createAppFeedbackDto] 
+  /// * [createAppFeedbackDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,7 +39,7 @@ class AppFeedbackApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeedbackDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeedbackDto>> createAppFeedback({ 
+  Future<Response<AppFeedbackDto>> createAppFeedback({
     CreateAppFeedbackDto? createAppFeedbackDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -55,12 +55,7 @@ class AppFeedbackApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -121,10 +116,10 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   }
 
   /// deleteAppFeedbackById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -134,7 +129,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppFeedbackById({ 
+  Future<Response<void>> deleteAppFeedbackById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -150,12 +145,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -173,10 +163,10 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   }
 
   /// getAppFeedbackById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +176,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeedbackDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeedbackDto>> getAppFeedbackById({ 
+  Future<Response<AppFeedbackDto>> getAppFeedbackById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -202,12 +192,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -250,15 +235,15 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   }
 
   /// getAppFeedbackList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [appId] - 应用ID（必填，只有应用创建者可以查看）
   /// * [type] - 反馈类型
   /// * [status] - 反馈状态
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -268,7 +253,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeedbackDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeedbackDtoPagedResultDto>> getAppFeedbackList({ 
+  Future<Response<AppFeedbackDtoPagedResultDto>> getAppFeedbackList({
     String? appId,
     AppFeedbackType? type,
     AppFeedbackStatus? status,
@@ -289,12 +274,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -347,10 +327,10 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDtoPagedResultDt
   }
 
   /// markAsProcessed
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -360,7 +340,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDtoPagedResultDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeedbackDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeedbackDto>> markAsProcessed({ 
+  Future<Response<AppFeedbackDto>> markAsProcessed({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -376,12 +356,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDtoPagedResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -424,11 +399,11 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   }
 
   /// reply
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [replyAppFeedbackDto] 
+  /// * [id]
+  /// * [replyAppFeedbackDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -438,7 +413,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeedbackDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeedbackDto>> reply({ 
+  Future<Response<AppFeedbackDto>> reply({
     required String id,
     ReplyAppFeedbackDto? replyAppFeedbackDto,
     CancelToken? cancelToken,
@@ -455,12 +430,7 @@ _responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedback
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

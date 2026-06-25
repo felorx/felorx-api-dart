@@ -9,10 +9,10 @@ part of 'message_recall_dto.dart';
 MessageRecallDto _$MessageRecallDtoFromJson(Map<String, dynamic> json) =>
     $checkedCreate('MessageRecallDto', json, ($checkedConvert) {
       final val = MessageRecallDto(
-        puupeeId: $checkedConvert('puupeeId', (v) => v as String?),
+        felorxId: $checkedConvert('felorxId', (v) => v as String?),
       );
       return val;
     });
 
 Map<String, dynamic> _$MessageRecallDtoToJson(MessageRecallDto instance) =>
-    <String, dynamic>{'puupeeId': ?instance.puupeeId};
+    <String, dynamic>{'felorxId': ?instance.felorxId};

@@ -145,7 +145,7 @@ class AppPricingItemDto {
 
 
 
-      /// 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxPuupeeCount, 见 AppPricingItemKeys.cs
+      /// 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxFelorxCount, 见 AppPricingItemKeys.cs
   @JsonKey(
     
     name: r'key',

@@ -22,11 +22,11 @@ class FeaturesApi {
   const FeaturesApi(this._dio);
 
   /// deleteFeatures
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [providerName] 
-  /// * [providerKey] 
+  /// * [providerName]
+  /// * [providerKey]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class FeaturesApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteFeatures({ 
+  Future<Response<void>> deleteFeatures({
     String? providerName,
     String? providerKey,
     CancelToken? cancelToken,
@@ -53,12 +53,7 @@ class FeaturesApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -82,11 +77,11 @@ class FeaturesApi {
   }
 
   /// getFeatures
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [providerName] 
-  /// * [providerKey] 
+  /// * [providerName]
+  /// * [providerKey]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -96,7 +91,7 @@ class FeaturesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetFeatureListResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<GetFeatureListResultDto>> getFeatures({ 
+  Future<Response<GetFeatureListResultDto>> getFeatures({
     String? providerName,
     String? providerKey,
     CancelToken? cancelToken,
@@ -113,12 +108,7 @@ class FeaturesApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -167,12 +157,12 @@ _responseData = rawData == null ? null : deserialize<GetFeatureListResultDto, Ge
   }
 
   /// updateFeatures
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [updateFeaturesDto] 
-  /// * [providerName] 
-  /// * [providerKey] 
+  /// * [updateFeaturesDto]
+  /// * [providerName]
+  /// * [providerKey]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -182,7 +172,7 @@ _responseData = rawData == null ? null : deserialize<GetFeatureListResultDto, Ge
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateFeatures({ 
+  Future<Response<void>> updateFeatures({
     UpdateFeaturesDto? updateFeaturesDto,
     String? providerName,
     String? providerKey,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<GetFeatureListResultDto, Ge
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

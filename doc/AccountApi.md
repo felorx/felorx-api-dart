@@ -9,14 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**changeAccountPassword**](AccountApi.md#changeaccountpassword) | **POST** /api/app/account/change-password | 
+[**changeAccountPassword**](AccountApi.md#changeaccountpassword) | **POST** /api/app/account/change-password |
 [**checkSyncAuth**](AccountApi.md#checksyncauth) | **POST** /api/app/account/check-sync-auth | 检查同步认证
-[**destroyAccount**](AccountApi.md#destroyaccount) | **POST** /api/app/account/destroy-account | 
-[**getAccount**](AccountApi.md#getaccount) | **GET** /api/app/account | 
-[**register**](AccountApi.md#register) | **POST** /api/account/register | 
-[**resetPassword**](AccountApi.md#resetpassword) | **POST** /api/account/reset-password | 
-[**sendPasswordResetCode**](AccountApi.md#sendpasswordresetcode) | **POST** /api/account/send-password-reset-code | 
-[**verifyPasswordResetToken**](AccountApi.md#verifypasswordresettoken) | **POST** /api/account/verify-password-reset-token | 
+[**destroyAccount**](AccountApi.md#destroyaccount) | **POST** /api/app/account/destroy-account |
+[**getAccount**](AccountApi.md#getaccount) | **GET** /api/app/account |
+[**register**](AccountApi.md#register) | **POST** /api/account/register |
+[**resetPassword**](AccountApi.md#resetpassword) | **POST** /api/account/reset-password |
+[**sendPasswordResetCode**](AccountApi.md#sendpasswordresetcode) | **POST** /api/account/send-password-reset-code |
+[**verifyPasswordResetToken**](AccountApi.md#verifypasswordresettoken) | **POST** /api/account/verify-password-reset-token |
 
 
 # **changeAccountPassword**
@@ -27,11 +27,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final ChangePasswordDto changePasswordDto = ; // ChangePasswordDto | 
+final ChangePasswordDto changePasswordDto = ; // ChangePasswordDto |
 
 try {
     api.changeAccountPassword(changePasswordDto);
@@ -44,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md)|  | [optional] 
+ **changePasswordDto** | [**ChangePasswordDto**](ChangePasswordDto.md)|  | [optional]
 
 ### Return type
 
@@ -52,7 +50,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -69,8 +67,6 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
 
@@ -91,7 +87,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,11 +104,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final AccountDeletionDto accountDeletionDto = ; // AccountDeletionDto | 
+final AccountDeletionDto accountDeletionDto = ; // AccountDeletionDto |
 
 try {
     api.destroyAccount(accountDeletionDto);
@@ -125,7 +119,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md)|  | [optional] 
+ **accountDeletionDto** | [**AccountDeletionDto**](AccountDeletionDto.md)|  | [optional]
 
 ### Return type
 
@@ -133,7 +127,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -150,8 +144,6 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
 
@@ -172,7 +164,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -189,11 +181,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final RegisterDto registerDto = ; // RegisterDto | 
+final RegisterDto registerDto = ; // RegisterDto |
 
 try {
     final response = api.register(registerDto);
@@ -207,7 +197,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **registerDto** | [**RegisterDto**](RegisterDto.md)|  | [optional] 
+ **registerDto** | [**RegisterDto**](RegisterDto.md)|  | [optional]
 
 ### Return type
 
@@ -215,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -232,11 +222,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final ResetPasswordDto resetPasswordDto = ; // ResetPasswordDto | 
+final ResetPasswordDto resetPasswordDto = ; // ResetPasswordDto |
 
 try {
     api.resetPassword(resetPasswordDto);
@@ -249,7 +237,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md)|  | [optional] 
+ **resetPasswordDto** | [**ResetPasswordDto**](ResetPasswordDto.md)|  | [optional]
 
 ### Return type
 
@@ -257,7 +245,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -274,11 +262,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final SendPasswordResetCodeDto sendPasswordResetCodeDto = ; // SendPasswordResetCodeDto | 
+final SendPasswordResetCodeDto sendPasswordResetCodeDto = ; // SendPasswordResetCodeDto |
 
 try {
     api.sendPasswordResetCode(sendPasswordResetCodeDto);
@@ -291,7 +277,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md)|  | [optional] 
+ **sendPasswordResetCodeDto** | [**SendPasswordResetCodeDto**](SendPasswordResetCodeDto.md)|  | [optional]
 
 ### Return type
 
@@ -299,7 +285,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -316,11 +302,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAccountApi();
-final VerifyPasswordResetTokenInput verifyPasswordResetTokenInput = ; // VerifyPasswordResetTokenInput | 
+final VerifyPasswordResetTokenInput verifyPasswordResetTokenInput = ; // VerifyPasswordResetTokenInput |
 
 try {
     final response = api.verifyPasswordResetToken(verifyPasswordResetTokenInput);
@@ -334,7 +318,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md)|  | [optional] 
+ **verifyPasswordResetTokenInput** | [**VerifyPasswordResetTokenInput**](VerifyPasswordResetTokenInput.md)|  | [optional]
 
 ### Return type
 
@@ -342,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

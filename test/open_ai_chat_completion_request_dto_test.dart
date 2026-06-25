@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for OpenAiChatCompletionRequestDto
 void main() {
-  final OpenAiChatCompletionRequestDto?
-  instance = /* OpenAiChatCompletionRequestDto(...) */ null;
+  final OpenAiChatCompletionRequestDto? instance = /* OpenAiChatCompletionRequestDto(...) */ null;
   // TODO add properties to the entity
 
   group(OpenAiChatCompletionRequestDto, () {
@@ -47,5 +46,6 @@ void main() {
     test('to test the property `metadata`', () async {
       // TODO
     });
+
   });
 }

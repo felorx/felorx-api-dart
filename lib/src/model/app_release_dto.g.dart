@@ -138,7 +138,6 @@ const _$AppPublisherEnumMap = {
   AppPublisher.qiniu: 'Qiniu',
   AppPublisher.vercel: 'Vercel',
   AppPublisher.felorx: 'Felorx',
-  AppPublisher.puupee: 'Puupee',
   AppPublisher.other: 'Other',
 };
 

@@ -21,7 +21,7 @@ class OpsCryptoApi {
   const OpsCryptoApi(this._dio);
 
   /// getVault
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -33,7 +33,7 @@ class OpsCryptoApi {
   ///
   /// Returns a [Future] containing a [Response] with a [OpsCryptoVaultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<OpsCryptoVaultDto>> getVault({ 
+  Future<Response<OpsCryptoVaultDto>> getVault({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -48,12 +48,7 @@ class OpsCryptoApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -96,10 +91,10 @@ _responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCrypt
   }
 
   /// putVault
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [opsCryptoVaultDto] 
+  /// * [opsCryptoVaultDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -109,7 +104,7 @@ _responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCrypt
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> putVault({ 
+  Future<Response<void>> putVault({
     OpsCryptoVaultDto? opsCryptoVaultDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -125,12 +120,7 @@ _responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCrypt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

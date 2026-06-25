@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMessageTemplateRelease**](MessageTemplateReleaseApi.md#createmessagetemplaterelease) | **POST** /api/app/message-template-release | 
-[**getByTemplateNameAndVersion**](MessageTemplateReleaseApi.md#getbytemplatenameandversion) | **GET** /by-template | 
-[**getMessageTemplateReleaseById**](MessageTemplateReleaseApi.md#getmessagetemplatereleasebyid) | **GET** /api/app/message-template-release/{id} | 
-[**getMessageTemplateReleaseList**](MessageTemplateReleaseApi.md#getmessagetemplatereleaselist) | **GET** /api/app/message-template-release | 
+[**createMessageTemplateRelease**](MessageTemplateReleaseApi.md#createmessagetemplaterelease) | **POST** /api/app/message-template-release |
+[**getByTemplateNameAndVersion**](MessageTemplateReleaseApi.md#getbytemplatenameandversion) | **GET** /by-template |
+[**getMessageTemplateReleaseById**](MessageTemplateReleaseApi.md#getmessagetemplatereleasebyid) | **GET** /api/app/message-template-release/{id} |
+[**getMessageTemplateReleaseList**](MessageTemplateReleaseApi.md#getmessagetemplatereleaselist) | **GET** /api/app/message-template-release |
 
 
 # **createMessageTemplateRelease**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageTemplateReleaseApi();
-final CreateMessageTemplateReleaseDto createMessageTemplateReleaseDto = ; // CreateMessageTemplateReleaseDto | 
+final CreateMessageTemplateReleaseDto createMessageTemplateReleaseDto = ; // CreateMessageTemplateReleaseDto |
 
 try {
     final response = api.createMessageTemplateRelease(createMessageTemplateReleaseDto);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md)|  | [optional] 
+ **createMessageTemplateReleaseDto** | [**CreateMessageTemplateReleaseDto**](CreateMessageTemplateReleaseDto.md)|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,12 +64,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageTemplateReleaseApi();
-final String templateName = templateName_example; // String | 
-final int version = 56; // int | 
+final String templateName = templateName_example; // String |
+final int version = 56; // int |
 
 try {
     final response = api.getByTemplateNameAndVersion(templateName, version);
@@ -85,8 +81,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateName** | **String**|  | [optional] 
- **version** | **int**|  | [optional] 
+ **templateName** | **String**|  | [optional]
+ **version** | **int**|  | [optional]
 
 ### Return type
 
@@ -94,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,11 +107,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageTemplateReleaseApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getMessageTemplateReleaseById(id);
@@ -129,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -137,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -154,11 +148,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageTemplateReleaseApi();
-final String templateId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String templateId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getMessageTemplateReleaseList(templateId);
@@ -172,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **templateId** | **String**|  | [optional] 
+ **templateId** | **String**|  | [optional]
 
 ### Return type
 
@@ -180,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

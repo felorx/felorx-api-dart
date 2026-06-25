@@ -22,10 +22,10 @@ class MessageSourceApi {
   const MessageSourceApi(this._dio);
 
   /// createMessageSource
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createUpdateMessageSourceDto] 
+  /// * [createUpdateMessageSourceDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class MessageSourceApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CreateUpdateMessageSourceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateUpdateMessageSourceDto>> createMessageSource({ 
+  Future<Response<CreateUpdateMessageSourceDto>> createMessageSource({
     CreateUpdateMessageSourceDto? createUpdateMessageSourceDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class MessageSourceApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -117,10 +112,10 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
   }
 
   /// deleteMessageSourceById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -130,7 +125,7 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteMessageSourceById({ 
+  Future<Response<void>> deleteMessageSourceById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -146,12 +141,7 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -169,10 +159,10 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
   }
 
   /// getMessageSourceById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -182,7 +172,7 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
   ///
   /// Returns a [Future] containing a [Response] with a [MessageSourceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<MessageSourceDto>> getMessageSourceById({ 
+  Future<Response<MessageSourceDto>> getMessageSourceById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -198,12 +188,7 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -246,10 +231,10 @@ _responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSo
   }
 
   /// getMessageSourceList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [categoryId] 
+  /// * [categoryId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -259,7 +244,7 @@ _responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSo
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageSourceDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageSourceDto>>> getMessageSourceList({ 
+  Future<Response<List<MessageSourceDto>>> getMessageSourceList({
     String? categoryId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -275,12 +260,7 @@ _responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSo
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -328,11 +308,11 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, Mes
   }
 
   /// updateMessageSource
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createUpdateMessageSourceDto] 
+  /// * [id]
+  /// * [createUpdateMessageSourceDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -342,7 +322,7 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, Mes
   ///
   /// Returns a [Future] containing a [Response] with a [CreateUpdateMessageSourceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateUpdateMessageSourceDto>> updateMessageSource({ 
+  Future<Response<CreateUpdateMessageSourceDto>> updateMessageSource({
     required String id,
     CreateUpdateMessageSourceDto? createUpdateMessageSourceDto,
     CancelToken? cancelToken,
@@ -359,12 +339,7 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, Mes
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

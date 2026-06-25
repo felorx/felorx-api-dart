@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrGetSubscriptionOrderDto
 void main() {
-  final CreateOrGetSubscriptionOrderDto?
-  instance = /* CreateOrGetSubscriptionOrderDto(...) */ null;
+  final CreateOrGetSubscriptionOrderDto? instance = /* CreateOrGetSubscriptionOrderDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrGetSubscriptionOrderDto, () {
@@ -67,5 +66,6 @@ void main() {
     test('to test the property `productId`', () async {
       // TODO
     });
+
   });
 }

@@ -1,11 +1,17 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for BuildRecordApi
 void main() {
   final instance = FelorxApiClient().getBuildRecordApi();
 
   group(BuildRecordApi, () {
+    //Future<BuildRecordDto> buildRecordGetLatest(String appId, { AppPlatform platform, String environment }) async
+    test('test buildRecordGetLatest', () async {
+      // TODO
+    });
+
     //Future<BuildRecordDto> createBuildRecord({ CreateBuildRecordDto createBuildRecordDto }) async
     test('test createBuildRecord', () async {
       // TODO
@@ -28,11 +34,6 @@ void main() {
 
     //Future<BuildRecordDto> getByCiBuildId(String ciBuildId) async
     test('test getByCiBuildId', () async {
-      // TODO
-    });
-
-    //Future<BuildRecordDto> getLatest(String appId, { AppPlatform platform, String environment }) async
-    test('test getLatest', () async {
       // TODO
     });
 
@@ -60,5 +61,6 @@ void main() {
     test('test updateBuildRecord', () async {
       // TODO
     });
+
   });
 }

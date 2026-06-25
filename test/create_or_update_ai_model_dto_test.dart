@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAiModelDto
 void main() {
-  final CreateOrUpdateAiModelDto? instance = /* CreateOrUpdateAiModelDto(...) */
-      null;
+  final CreateOrUpdateAiModelDto? instance = /* CreateOrUpdateAiModelDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAiModelDto, () {
@@ -42,5 +41,6 @@ void main() {
     test('to test the property `defaultParameters`', () async {
       // TODO
     });
+
   });
 }

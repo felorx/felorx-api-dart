@@ -22,7 +22,7 @@ class NotificationApi {
   const NotificationApi(this._dio);
 
   /// Bark 推送，兼容 Bark 推送协议  TODO: 验证 API KEY 功能, 添加[个人访问令牌]功能
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [apiKey] - Bark apiKey, 需要申请，注意不要泄露，泄露后产生安全问题请及时移除或禁用 apiKey
@@ -43,7 +43,7 @@ class NotificationApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> bark({ 
+  Future<Response<void>> bark({
     required String apiKey,
     required String message,
     int? automaticallyCopy = 0,
@@ -67,12 +67,7 @@ class NotificationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -101,12 +96,12 @@ class NotificationApi {
   }
 
   /// getNotificationList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -116,7 +111,7 @@ class NotificationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [NotificationInfoDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<NotificationInfoDtoPagedResultDto>> getNotificationList({ 
+  Future<Response<NotificationInfoDtoPagedResultDto>> getNotificationList({
     String? sorting,
     int? skipCount,
     int? maxResultCount,
@@ -134,12 +129,7 @@ class NotificationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -189,10 +179,10 @@ _responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedRes
   }
 
   /// push
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createPushNotificationDto] 
+  /// * [createPushNotificationDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -202,7 +192,7 @@ _responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedRes
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> push({ 
+  Future<Response<void>> push({
     CreatePushNotificationDto? createPushNotificationDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -218,12 +208,7 @@ _responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedRes
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

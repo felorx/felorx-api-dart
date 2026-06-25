@@ -25,11 +25,13 @@ class BuildRecordApi {
 
   const BuildRecordApi(this._dio);
 
-  /// createBuildRecord
-  /// 
+  /// buildRecordGetLatest
+  ///
   ///
   /// Parameters:
-  /// * [createBuildRecordDto] 
+  /// * [appId]
+  /// * [platform]
+  /// * [environment]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,7 +41,87 @@ class BuildRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> createBuildRecord({ 
+  Future<Response<BuildRecordDto>> buildRecordGetLatest({
+    required String appId,
+    AppPlatform? platform,
+    String? environment,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/build-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (platform != null) r'platform': platform,
+      if (environment != null) r'environment': environment,
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuildRecordDto? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuildRecordDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// createBuildRecord
+  ///
+  ///
+  /// Parameters:
+  /// * [createBuildRecordDto]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<BuildRecordDto>> createBuildRecord({
     CreateBuildRecordDto? createBuildRecordDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -55,12 +137,7 @@ class BuildRecordApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -121,10 +198,10 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// deleteBuildRecordById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -134,7 +211,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteBuildRecordById({ 
+  Future<Response<void>> deleteBuildRecordById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -150,12 +227,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -173,10 +245,10 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// getBuildRecordById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +258,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> getBuildRecordById({ 
+  Future<Response<BuildRecordDto>> getBuildRecordById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -202,12 +274,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -250,7 +317,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// getBuildRecordList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [appId] - 应用ID
@@ -259,9 +326,9 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   /// * [environment] - 环境
   /// * [version] - 版本号
   /// * [branch] - 分支名称
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -271,7 +338,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDtoPagedResultDto>> getBuildRecordList({ 
+  Future<Response<BuildRecordDtoPagedResultDto>> getBuildRecordList({
     String? appId,
     BuildStatus? status,
     AppPlatform? platform,
@@ -295,12 +362,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -356,10 +418,10 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDtoPagedResultDt
   }
 
   /// getByCiBuildId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [ciBuildId] 
+  /// * [ciBuildId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -369,7 +431,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDtoPagedResultDt
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> getByCiBuildId({ 
+  Future<Response<BuildRecordDto>> getByCiBuildId({
     required String ciBuildId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -385,12 +447,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDtoPagedResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -399,93 +456,6 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDtoPagedResultDt
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuildRecordDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<BuildRecordDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// getLatest
-  /// 
-  ///
-  /// Parameters:
-  /// * [appId] 
-  /// * [platform] 
-  /// * [environment] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> getLatest({ 
-    required String appId,
-    AppPlatform? platform,
-    String? environment,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/build-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (platform != null) r'platform': platform,
-      if (environment != null) r'environment': environment,
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -520,10 +490,10 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// markAsBuilding
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -533,7 +503,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> markAsBuilding({ 
+  Future<Response<BuildRecordDto>> markAsBuilding({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -549,12 +519,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -597,10 +562,10 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// markAsCanceled
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -610,7 +575,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> markAsCanceled({ 
+  Future<Response<BuildRecordDto>> markAsCanceled({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -626,12 +591,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -674,11 +634,11 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// markAsFailed
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [errorMessage] 
+  /// * [id]
+  /// * [errorMessage]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -688,7 +648,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> markAsFailed({ 
+  Future<Response<BuildRecordDto>> markAsFailed({
     required String id,
     String? errorMessage,
     CancelToken? cancelToken,
@@ -705,12 +665,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -758,12 +713,12 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// markAsSucceeded
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [artifactUrl] 
-  /// * [artifactSize] 
+  /// * [id]
+  /// * [artifactUrl]
+  /// * [artifactSize]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -773,7 +728,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> markAsSucceeded({ 
+  Future<Response<BuildRecordDto>> markAsSucceeded({
     required String id,
     String? artifactUrl,
     int? artifactSize,
@@ -791,12 +746,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -845,11 +795,11 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   }
 
   /// updateBuildRecord
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [updateBuildRecordDto] 
+  /// * [id]
+  /// * [updateBuildRecordDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -859,7 +809,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>> updateBuildRecord({ 
+  Future<Response<BuildRecordDto>> updateBuildRecord({
     required String id,
     UpdateBuildRecordDto? updateBuildRecordDto,
     CancelToken? cancelToken,
@@ -876,12 +826,7 @@ _responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecord
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

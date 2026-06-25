@@ -22,11 +22,11 @@ class PermissionsApi {
   const PermissionsApi(this._dio);
 
   /// getPermissions
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [providerName] 
-  /// * [providerKey] 
+  /// * [providerName]
+  /// * [providerKey]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class PermissionsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [GetPermissionListResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<GetPermissionListResultDto>> getPermissions({ 
+  Future<Response<GetPermissionListResultDto>> getPermissions({
     String? providerName,
     String? providerKey,
     CancelToken? cancelToken,
@@ -53,12 +53,7 @@ class PermissionsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -107,12 +102,12 @@ _responseData = rawData == null ? null : deserialize<GetPermissionListResultDto,
   }
 
   /// updatePermissions
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [updatePermissionsDto] 
-  /// * [providerName] 
-  /// * [providerKey] 
+  /// * [updatePermissionsDto]
+  /// * [providerName]
+  /// * [providerKey]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -122,7 +117,7 @@ _responseData = rawData == null ? null : deserialize<GetPermissionListResultDto,
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updatePermissions({ 
+  Future<Response<void>> updatePermissions({
     UpdatePermissionsDto? updatePermissionsDto,
     String? providerName,
     String? providerKey,
@@ -140,12 +135,7 @@ _responseData = rawData == null ? null : deserialize<GetPermissionListResultDto,
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

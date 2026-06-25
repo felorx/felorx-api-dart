@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getVault**](OpsCryptoApi.md#getvault) | **GET** /api/app/ops-crypto/vault | 
-[**putVault**](OpsCryptoApi.md#putvault) | **PUT** /api/app/ops-crypto/vault | 
+[**getVault**](OpsCryptoApi.md#getvault) | **GET** /api/app/ops-crypto/vault |
+[**putVault**](OpsCryptoApi.md#putvault) | **PUT** /api/app/ops-crypto/vault |
 
 
 # **getVault**
@@ -21,8 +21,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getOpsCryptoApi();
 
@@ -43,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -60,11 +58,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getOpsCryptoApi();
-final OpsCryptoVaultDto opsCryptoVaultDto = ; // OpsCryptoVaultDto | 
+final OpsCryptoVaultDto opsCryptoVaultDto = ; // OpsCryptoVaultDto |
 
 try {
     api.putVault(opsCryptoVaultDto);
@@ -77,7 +73,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **opsCryptoVaultDto** | [**OpsCryptoVaultDto**](OpsCryptoVaultDto.md)|  | [optional] 
+ **opsCryptoVaultDto** | [**OpsCryptoVaultDto**](OpsCryptoVaultDto.md)|  | [optional]
 
 ### Return type
 
@@ -85,7 +81,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

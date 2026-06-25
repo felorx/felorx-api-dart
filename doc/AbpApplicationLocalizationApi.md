@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAbpApplicationLocalization**](AbpApplicationLocalizationApi.md#getabpapplicationlocalization) | **GET** /api/abp/application-localization | 
+[**getAbpApplicationLocalization**](AbpApplicationLocalizationApi.md#getabpapplicationlocalization) | **GET** /api/abp/application-localization |
 
 
 # **getAbpApplicationLocalization**
@@ -20,12 +20,10 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAbpApplicationLocalizationApi();
-final String cultureName = cultureName_example; // String | 
-final bool onlyDynamics = true; // bool | 
+final String cultureName = cultureName_example; // String |
+final bool onlyDynamics = true; // bool |
 
 try {
     final response = api.getAbpApplicationLocalization(cultureName, onlyDynamics);
@@ -39,8 +37,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cultureName** | **String**|  | 
- **onlyDynamics** | **bool**|  | [optional] 
+ **cultureName** | **String**|  |
+ **onlyDynamics** | **bool**|  | [optional]
 
 ### Return type
 
@@ -48,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

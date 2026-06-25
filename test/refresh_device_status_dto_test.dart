@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for RefreshDeviceStatusDto
 void main() {
-  final RefreshDeviceStatusDto? instance = /* RefreshDeviceStatusDto(...) */
-      null;
+  final RefreshDeviceStatusDto? instance = /* RefreshDeviceStatusDto(...) */ null;
   // TODO add properties to the entity
 
   group(RefreshDeviceStatusDto, () {
@@ -17,5 +16,6 @@ void main() {
     test('to test the property `status`', () async {
       // TODO
     });
+
   });
 }

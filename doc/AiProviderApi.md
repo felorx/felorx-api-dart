@@ -9,14 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAiProvider**](AiProviderApi.md#createaiprovider) | **POST** /api/app/ai-provider | 
-[**deleteAiProviderById**](AiProviderApi.md#deleteaiproviderbyid) | **DELETE** /api/app/ai-provider/{id} | 
-[**getAiProviderById**](AiProviderApi.md#getaiproviderbyid) | **GET** /api/app/ai-provider/{id} | 
-[**getAiProviderList**](AiProviderApi.md#getaiproviderlist) | **GET** /api/app/ai-provider | 
-[**setDefaultModel**](AiProviderApi.md#setdefaultmodel) | **POST** /api/app/ai-provider/set-default-model | 
-[**setEnabled**](AiProviderApi.md#setenabled) | **POST** /api/app/ai-provider/{id}/set-enabled | 
-[**test**](AiProviderApi.md#test) | **POST** /api/app/ai-provider/{id}/test | 
-[**updateAiProvider**](AiProviderApi.md#updateaiprovider) | **PUT** /api/app/ai-provider/{id} | 
+[**createAiProvider**](AiProviderApi.md#createaiprovider) | **POST** /api/app/ai-provider |
+[**deleteAiProviderById**](AiProviderApi.md#deleteaiproviderbyid) | **DELETE** /api/app/ai-provider/{id} |
+[**getAiProviderById**](AiProviderApi.md#getaiproviderbyid) | **GET** /api/app/ai-provider/{id} |
+[**getAiProviderList**](AiProviderApi.md#getaiproviderlist) | **GET** /api/app/ai-provider |
+[**setDefaultModel**](AiProviderApi.md#setdefaultmodel) | **POST** /api/app/ai-provider/set-default-model |
+[**setEnabled**](AiProviderApi.md#setenabled) | **POST** /api/app/ai-provider/{id}/set-enabled |
+[**test**](AiProviderApi.md#test) | **POST** /api/app/ai-provider/{id}/test |
+[**updateAiProvider**](AiProviderApi.md#updateaiprovider) | **PUT** /api/app/ai-provider/{id} |
 
 
 # **createAiProvider**
@@ -27,11 +27,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto = ; // CreateOrUpdateAiProviderDto | 
+final CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto = ; // CreateOrUpdateAiProviderDto |
 
 try {
     final response = api.createAiProvider(createOrUpdateAiProviderDto);
@@ -45,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md)|  | [optional] 
+ **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md)|  | [optional]
 
 ### Return type
 
@@ -53,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -70,11 +68,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAiProviderById(id);
@@ -87,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -95,7 +91,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -112,11 +108,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getAiProviderById(id);
@@ -130,7 +124,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -138,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -155,17 +149,15 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String filter = filter_example; // String | 
-final AiProviderType providerType = ; // AiProviderType | 
-final AiCapability capability = ; // AiCapability | 
-final bool enabled = true; // bool | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String filter = filter_example; // String |
+final AiProviderType providerType = ; // AiProviderType |
+final AiCapability capability = ; // AiCapability |
+final bool enabled = true; // bool |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getAiProviderList(filter, providerType, capability, enabled, sorting, skipCount, maxResultCount);
@@ -179,13 +171,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional] 
- **providerType** | [**AiProviderType**](.md)|  | [optional] 
- **capability** | [**AiCapability**](.md)|  | [optional] 
- **enabled** | **bool**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **filter** | **String**|  | [optional]
+ **providerType** | [**AiProviderType**](.md)|  | [optional]
+ **capability** | [**AiCapability**](.md)|  | [optional]
+ **enabled** | **bool**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -193,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -210,11 +202,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final SetDefaultAiModelDto setDefaultAiModelDto = ; // SetDefaultAiModelDto | 
+final SetDefaultAiModelDto setDefaultAiModelDto = ; // SetDefaultAiModelDto |
 
 try {
     final response = api.setDefaultModel(setDefaultAiModelDto);
@@ -228,7 +218,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md)|  | [optional] 
+ **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md)|  | [optional]
 
 ### Return type
 
@@ -236,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -253,12 +243,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final SetAiProviderEnabledDto setAiProviderEnabledDto = ; // SetAiProviderEnabledDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final SetAiProviderEnabledDto setAiProviderEnabledDto = ; // SetAiProviderEnabledDto |
 
 try {
     final response = api.setEnabled(id, setAiProviderEnabledDto);
@@ -272,8 +260,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md)|  | [optional]
 
 ### Return type
 
@@ -281,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -298,12 +286,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final TestAiProviderDto testAiProviderDto = ; // TestAiProviderDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final TestAiProviderDto testAiProviderDto = ; // TestAiProviderDto |
 
 try {
     final response = api.test(id, testAiProviderDto);
@@ -317,8 +303,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md)|  | [optional]
 
 ### Return type
 
@@ -326,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -343,12 +329,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAiProviderApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto = ; // CreateOrUpdateAiProviderDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto = ; // CreateOrUpdateAiProviderDto |
 
 try {
     final response = api.updateAiProvider(id, createOrUpdateAiProviderDto);
@@ -362,8 +346,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAiProviderDto** | [**CreateOrUpdateAiProviderDto**](CreateOrUpdateAiProviderDto.md)|  | [optional]
 
 ### Return type
 
@@ -371,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

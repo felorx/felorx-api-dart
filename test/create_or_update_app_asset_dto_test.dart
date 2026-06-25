@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppAssetDto
 void main() {
-  final CreateOrUpdateAppAssetDto?
-  instance = /* CreateOrUpdateAppAssetDto(...) */ null;
+  final CreateOrUpdateAppAssetDto? instance = /* CreateOrUpdateAppAssetDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppAssetDto, () {
@@ -42,5 +41,6 @@ void main() {
     test('to test the property `sort`', () async {
       // TODO
     });
+
   });
 }

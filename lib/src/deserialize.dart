@@ -1,5 +1,7 @@
 import 'package:felorx_api_client/src/model/account_deletion_dto.dart';
 import 'package:felorx_api_client/src/model/action_api_description_model.dart';
+import 'package:felorx_api_client/src/model/adjust_credits_dto.dart';
+import 'package:felorx_api_client/src/model/adjust_credits_result_dto.dart';
 import 'package:felorx_api_client/src/model/ai_chat_choice_dto.dart';
 import 'package:felorx_api_client/src/model/ai_chat_completion_dto.dart';
 import 'package:felorx_api_client/src/model/ai_chat_message_dto.dart';
@@ -70,6 +72,10 @@ import 'package:felorx_api_client/src/model/create_alipay_order_result_dto.dart'
 import 'package:felorx_api_client/src/model/create_app_feedback_dto.dart';
 import 'package:felorx_api_client/src/model/create_avatar_dto.dart';
 import 'package:felorx_api_client/src/model/create_build_record_dto.dart';
+import 'package:felorx_api_client/src/model/create_credit_alipay_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_credit_alipay_order_result_dto.dart';
+import 'package:felorx_api_client/src/model/create_credit_pay_pal_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_credit_pay_pal_order_result_dto.dart';
 import 'package:felorx_api_client/src/model/create_deploy_record_dto.dart';
 import 'package:felorx_api_client/src/model/create_message_template_release_dto.dart';
 import 'package:felorx_api_client/src/model/create_open_iddict_application_dto.dart';
@@ -96,6 +102,9 @@ import 'package:felorx_api_client/src/model/create_update_app_tester_dto.dart';
 import 'package:felorx_api_client/src/model/create_update_message_source_dto.dart';
 import 'package:felorx_api_client/src/model/create_update_message_source_route_dto.dart';
 import 'package:felorx_api_client/src/model/create_update_message_source_route_sub_dto.dart';
+import 'package:felorx_api_client/src/model/credit_account_dto.dart';
+import 'package:felorx_api_client/src/model/credit_ledger_entry_dto.dart';
+import 'package:felorx_api_client/src/model/credit_package_dto.dart';
 import 'package:felorx_api_client/src/model/current_culture_dto.dart';
 import 'package:felorx_api_client/src/model/current_tenant_dto.dart';
 import 'package:felorx_api_client/src/model/current_user_dto.dart';
@@ -244,6 +253,10 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return AccountDeletionDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'ActionApiDescriptionModel':
           return ActionApiDescriptionModel.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'AdjustCreditsDto':
+          return AdjustCreditsDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'AdjustCreditsResultDto':
+          return AdjustCreditsResultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'AiCapability':
           
           
@@ -438,6 +451,14 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return CreateAvatarDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateBuildRecordDto':
           return CreateBuildRecordDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreateCreditAlipayOrderDto':
+          return CreateCreditAlipayOrderDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreateCreditAlipayOrderResultDto':
+          return CreateCreditAlipayOrderResultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreateCreditPayPalOrderDto':
+          return CreateCreditPayPalOrderDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreateCreditPayPalOrderResultDto':
+          return CreateCreditPayPalOrderResultDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateDeployRecordDto':
           return CreateDeployRecordDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateMessageTemplateReleaseDto':
@@ -490,6 +511,12 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return CreateUpdateMessageSourceRouteDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CreateUpdateMessageSourceRouteSubDto':
           return CreateUpdateMessageSourceRouteSubDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreditAccountDto':
+          return CreditAccountDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreditLedgerEntryDto':
+          return CreditLedgerEntryDto.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CreditPackageDto':
+          return CreditPackageDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CurrentCultureDto':
           return CurrentCultureDto.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CurrentTenantDto':

@@ -22,10 +22,10 @@ class MessageTemplateReleaseApi {
   const MessageTemplateReleaseApi(this._dio);
 
   /// createMessageTemplateRelease
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createMessageTemplateReleaseDto] 
+  /// * [createMessageTemplateReleaseDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class MessageTemplateReleaseApi {
   ///
   /// Returns a [Future] containing a [Response] with a [MessageTemplateReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<MessageTemplateReleaseDto>> createMessageTemplateRelease({ 
+  Future<Response<MessageTemplateReleaseDto>> createMessageTemplateRelease({
     CreateMessageTemplateReleaseDto? createMessageTemplateReleaseDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class MessageTemplateReleaseApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -117,11 +112,11 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   }
 
   /// getByTemplateNameAndVersion
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [templateName] 
-  /// * [version] 
+  /// * [templateName]
+  /// * [version]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -131,7 +126,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   ///
   /// Returns a [Future] containing a [Response] with a [MessageTemplateReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<MessageTemplateReleaseDto>> getByTemplateNameAndVersion({ 
+  Future<Response<MessageTemplateReleaseDto>> getByTemplateNameAndVersion({
     String? templateName,
     int? version,
     CancelToken? cancelToken,
@@ -148,12 +143,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -202,10 +192,10 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   }
 
   /// getMessageTemplateReleaseById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -215,7 +205,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   ///
   /// Returns a [Future] containing a [Response] with a [MessageTemplateReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<MessageTemplateReleaseDto>> getMessageTemplateReleaseById({ 
+  Future<Response<MessageTemplateReleaseDto>> getMessageTemplateReleaseById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -231,12 +221,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -279,10 +264,10 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   }
 
   /// getMessageTemplateReleaseList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [templateId] 
+  /// * [templateId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -292,7 +277,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageTemplateReleaseDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageTemplateReleaseDto>>> getMessageTemplateReleaseList({ 
+  Future<Response<List<MessageTemplateReleaseDto>>> getMessageTemplateReleaseList({
     String? templateId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -308,12 +293,7 @@ _responseData = rawData == null ? null : deserialize<MessageTemplateReleaseDto, 
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

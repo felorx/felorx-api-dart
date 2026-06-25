@@ -21,7 +21,7 @@ class TimeZoneSettingsApi {
   const TimeZoneSettingsApi(this._dio);
 
   /// getTimeZoneSettings
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -33,7 +33,7 @@ class TimeZoneSettingsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<String>> getTimeZoneSettings({ 
+  Future<Response<String>> getTimeZoneSettings({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -48,12 +48,7 @@ class TimeZoneSettingsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -96,7 +91,7 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
   }
 
   /// getTimezones
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -108,7 +103,7 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
   ///
   /// Returns a [Future] containing a [Response] with a [List<NameValue>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<NameValue>>> getTimezones({ 
+  Future<Response<List<NameValue>>> getTimezones({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -123,12 +118,7 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -171,10 +161,10 @@ _responseData = rawData == null ? null : deserialize<List<NameValue>, NameValue>
   }
 
   /// updateTimeZoneSettings
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [timezone] 
+  /// * [timezone]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -184,7 +174,7 @@ _responseData = rawData == null ? null : deserialize<List<NameValue>, NameValue>
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateTimeZoneSettings({ 
+  Future<Response<void>> updateTimeZoneSettings({
     String? timezone,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<List<NameValue>, NameValue>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

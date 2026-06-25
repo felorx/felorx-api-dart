@@ -47,7 +47,7 @@ void main() {
       // TODO
     });
 
-    // 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxPuupeeCount, 见 AppPricingItemKeys.cs
+    // 键值, 例如: Seat, SingleFileMaxSize, UserStorageSize, MaxFelorxCount, 见 AppPricingItemKeys.cs
     // String key
     test('to test the property `key`', () async {
       // TODO
@@ -88,5 +88,6 @@ void main() {
     test('to test the property `sortIndex`', () async {
       // TODO
     });
+
   });
 }

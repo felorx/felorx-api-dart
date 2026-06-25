@@ -9,28 +9,26 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](OpenAiCompatibleChatApi.md#create) | **POST** /api/ai/v1/chat/completions | 
+[**openAiCompatibleChatCreate**](OpenAiCompatibleChatApi.md#openaicompatiblechatcreate) | **POST** /api/ai/v1/chat/completions |
 
 
-# **create**
-> AiChatCompletionDto create(openAiChatCompletionRequestDto)
+# **openAiCompatibleChatCreate**
+> AiChatCompletionDto openAiCompatibleChatCreate(openAiChatCompletionRequestDto)
 
 
 
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getOpenAiCompatibleChatApi();
-final OpenAiChatCompletionRequestDto openAiChatCompletionRequestDto = ; // OpenAiChatCompletionRequestDto | 
+final OpenAiChatCompletionRequestDto openAiChatCompletionRequestDto = ; // OpenAiChatCompletionRequestDto |
 
 try {
-    final response = api.create(openAiChatCompletionRequestDto);
+    final response = api.openAiCompatibleChatCreate(openAiChatCompletionRequestDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling OpenAiCompatibleChatApi->create: $e\n');
+    print('Exception when calling OpenAiCompatibleChatApi->openAiCompatibleChatCreate: $e\n');
 }
 ```
 
@@ -38,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **openAiChatCompletionRequestDto** | [**OpenAiChatCompletionRequestDto**](OpenAiChatCompletionRequestDto.md)|  | [optional] 
+ **openAiChatCompletionRequestDto** | [**OpenAiChatCompletionRequestDto**](OpenAiChatCompletionRequestDto.md)|  | [optional]
 
 ### Return type
 
@@ -46,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

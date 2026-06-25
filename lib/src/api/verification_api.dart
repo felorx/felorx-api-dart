@@ -21,10 +21,10 @@ class VerificationApi {
   const VerificationApi(this._dio);
 
   /// sendCode
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sendVerificationCodeDto] 
+  /// * [sendVerificationCodeDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -34,7 +34,7 @@ class VerificationApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> sendCode({ 
+  Future<Response<void>> sendCode({
     SendVerificationCodeDto? sendVerificationCodeDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -50,12 +50,7 @@ class VerificationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -91,10 +86,10 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
   }
 
   /// sendCodeAnonymous
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sendVerificationCodeDto] 
+  /// * [sendVerificationCodeDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -104,7 +99,7 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> sendCodeAnonymous({ 
+  Future<Response<void>> sendCodeAnonymous({
     SendVerificationCodeDto? sendVerificationCodeDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -120,12 +115,7 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

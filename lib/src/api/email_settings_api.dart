@@ -23,7 +23,7 @@ class EmailSettingsApi {
   const EmailSettingsApi(this._dio);
 
   /// getEmailSettings
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -35,7 +35,7 @@ class EmailSettingsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [EmailSettingsDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<EmailSettingsDto>> getEmailSettings({ 
+  Future<Response<EmailSettingsDto>> getEmailSettings({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -50,12 +50,7 @@ class EmailSettingsApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -98,10 +93,10 @@ _responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSett
   }
 
   /// sendTestEmail
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sendTestEmailInput] 
+  /// * [sendTestEmailInput]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -111,7 +106,7 @@ _responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSett
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> sendTestEmail({ 
+  Future<Response<void>> sendTestEmail({
     SendTestEmailInput? sendTestEmailInput,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -127,12 +122,7 @@ _responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSett
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -168,10 +158,10 @@ _bodyData=jsonEncode(sendTestEmailInput);
   }
 
   /// updateEmailSettings
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [updateEmailSettingsDto] 
+  /// * [updateEmailSettingsDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -181,7 +171,7 @@ _bodyData=jsonEncode(sendTestEmailInput);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateEmailSettings({ 
+  Future<Response<void>> updateEmailSettings({
     UpdateEmailSettingsDto? updateEmailSettingsDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -197,12 +187,7 @@ _bodyData=jsonEncode(sendTestEmailInput);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

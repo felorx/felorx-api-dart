@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppPricingDto
 void main() {
-  final CreateOrUpdateAppPricingDto?
-  instance = /* CreateOrUpdateAppPricingDto(...) */ null;
+  final CreateOrUpdateAppPricingDto? instance = /* CreateOrUpdateAppPricingDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppPricingDto, () {
@@ -108,5 +107,6 @@ void main() {
     test('to test the property `items`', () async {
       // TODO
     });
+
   });
 }

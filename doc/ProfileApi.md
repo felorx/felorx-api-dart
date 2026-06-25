@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**changePassword**](ProfileApi.md#changepassword) | **POST** /api/account/my-profile/change-password | 
-[**getProfile**](ProfileApi.md#getprofile) | **GET** /api/account/my-profile | 
-[**updateProfile**](ProfileApi.md#updateprofile) | **PUT** /api/account/my-profile | 
+[**changePassword**](ProfileApi.md#changepassword) | **POST** /api/account/my-profile/change-password |
+[**getProfile**](ProfileApi.md#getprofile) | **GET** /api/account/my-profile |
+[**updateProfile**](ProfileApi.md#updateprofile) | **PUT** /api/account/my-profile |
 
 
 # **changePassword**
@@ -22,11 +22,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getProfileApi();
-final ChangePasswordInput changePasswordInput = ; // ChangePasswordInput | 
+final ChangePasswordInput changePasswordInput = ; // ChangePasswordInput |
 
 try {
     api.changePassword(changePasswordInput);
@@ -39,7 +37,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **changePasswordInput** | [**ChangePasswordInput**](ChangePasswordInput.md)|  | [optional] 
+ **changePasswordInput** | [**ChangePasswordInput**](ChangePasswordInput.md)|  | [optional]
 
 ### Return type
 
@@ -47,7 +45,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -64,8 +62,6 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getProfileApi();
 
@@ -86,7 +82,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -103,11 +99,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getProfileApi();
-final UpdateProfileDto updateProfileDto = ; // UpdateProfileDto | 
+final UpdateProfileDto updateProfileDto = ; // UpdateProfileDto |
 
 try {
     final response = api.updateProfile(updateProfileDto);
@@ -121,7 +115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updateProfileDto** | [**UpdateProfileDto**](UpdateProfileDto.md)|  | [optional] 
+ **updateProfileDto** | [**UpdateProfileDto**](UpdateProfileDto.md)|  | [optional]
 
 ### Return type
 
@@ -129,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

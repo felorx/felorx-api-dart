@@ -22,10 +22,10 @@ class UserLookupApi {
   const UserLookupApi(this._dio);
 
   /// findById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class UserLookupApi {
   ///
   /// Returns a [Future] containing a [Response] with a [UserData] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserData>> findById({ 
+  Future<Response<UserData>> findById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class UserLookupApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -99,10 +94,10 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
   }
 
   /// findByUserName
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [userName] 
+  /// * [userName]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -112,7 +107,7 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
   ///
   /// Returns a [Future] containing a [Response] with a [UserData] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserData>> findByUserName({ 
+  Future<Response<UserData>> findByUserName({
     required String userName,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -128,12 +123,7 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -176,10 +166,10 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
   }
 
   /// getCount
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [filter] 
+  /// * [filter]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -189,7 +179,7 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
   ///
   /// Returns a [Future] containing a [Response] with a [int] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<int>> getCount({ 
+  Future<Response<int>> getCount({
     String? filter,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -205,12 +195,7 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -258,13 +243,13 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
   }
 
   /// search
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [filter] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [filter]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -274,7 +259,7 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
   ///
   /// Returns a [Future] containing a [Response] with a [UserDataListResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserDataListResultDto>> search({ 
+  Future<Response<UserDataListResultDto>> search({
     String? filter,
     String? sorting,
     int? skipCount,
@@ -293,12 +278,7 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

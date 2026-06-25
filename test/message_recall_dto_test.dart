@@ -7,9 +7,10 @@ void main() {
   // TODO add properties to the entity
 
   group(MessageRecallDto, () {
-    // String puupeeId
-    test('to test the property `puupeeId`', () async {
+    // String felorxId
+    test('to test the property `felorxId`', () async {
       // TODO
     });
+
   });
 }

@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for DeployRecordApi
 void main() {
   final instance = FelorxApiClient().getDeployRecordApi();
@@ -13,6 +14,26 @@ void main() {
 
     //Future deleteDeployRecordById(String id) async
     test('test deleteDeployRecordById', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> deployRecordGetLatest(String appId, { AppPlatform platform, String environment }) async
+    test('test deployRecordGetLatest', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> deployRecordMarkAsCanceled(String id) async
+    test('test deployRecordMarkAsCanceled', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> deployRecordMarkAsFailed(String id, { String errorMessage }) async
+    test('test deployRecordMarkAsFailed', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> deployRecordMarkAsSucceeded(String id, { String deployUrl }) async
+    test('test deployRecordMarkAsSucceeded', () async {
       // TODO
     });
 
@@ -31,18 +52,8 @@ void main() {
       // TODO
     });
 
-    //Future<DeployRecordDto> getLatest(String appId, { AppPlatform platform, String environment }) async
-    test('test getLatest', () async {
-      // TODO
-    });
-
     //Future<List<DeployRecordDto>> getListByBuildRecordId(String buildRecordId) async
     test('test getListByBuildRecordId', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> markAsCanceled(String id) async
-    test('test markAsCanceled', () async {
       // TODO
     });
 
@@ -51,19 +62,10 @@ void main() {
       // TODO
     });
 
-    //Future<DeployRecordDto> markAsFailed(String id, { String errorMessage }) async
-    test('test markAsFailed', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> markAsSucceeded(String id, { String deployUrl }) async
-    test('test markAsSucceeded', () async {
-      // TODO
-    });
-
     //Future<DeployRecordDto> updateDeployRecord(String id, { UpdateDeployRecordDto updateDeployRecordDto }) async
     test('test updateDeployRecord', () async {
       // TODO
     });
+
   });
 }

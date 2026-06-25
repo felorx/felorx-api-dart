@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for SubscriptionApi
 void main() {
   final instance = FelorxApiClient().getSubscriptionApi();
@@ -27,22 +28,8 @@ void main() {
       // TODO
     });
 
-    // 创建支付宝一次性支付订单
-    //
-    //Future<CreateAlipayOrderResultDto> createAlipayOrder({ CreateAlipayOrderDto createAlipayOrderDto }) async
-    test('test createAlipayOrder', () async {
-      // TODO
-    });
-
     //Future<SubscriptionOrderDto> createOrder({ CreateOrGetSubscriptionOrderDto createOrGetSubscriptionOrderDto }) async
     test('test createOrder', () async {
-      // TODO
-    });
-
-    // 创建 PayPal 订单
-    //
-    //Future<CreatePayPalOrderResultDto> createPayPalOrder({ CreatePayPalOrderDto createPayPalOrderDto }) async
-    test('test createPayPalOrder', () async {
       // TODO
     });
 
@@ -79,9 +66,24 @@ void main() {
       // TODO
     });
 
+    // 创建支付宝一次性支付订单
+    //
+    //Future<CreateAlipayOrderResultDto> subscriptionCreateAlipayOrder({ CreateAlipayOrderDto createAlipayOrderDto }) async
+    test('test subscriptionCreateAlipayOrder', () async {
+      // TODO
+    });
+
+    // 创建 PayPal 订单
+    //
+    //Future<CreatePayPalOrderResultDto> subscriptionCreatePayPalOrder({ CreatePayPalOrderDto createPayPalOrderDto }) async
+    test('test subscriptionCreatePayPalOrder', () async {
+      // TODO
+    });
+
     //Future<VerifyReceiptResult> verifyReceipt({ VerifyReceiptDto verifyReceiptDto }) async
     test('test verifyReceipt', () async {
       // TODO
     });
+
   });
 }

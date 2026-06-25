@@ -152,5 +152,6 @@ void main() {
     test('to test the property `duration`', () async {
       // TODO
     });
+
   });
 }

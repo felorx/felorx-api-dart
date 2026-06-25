@@ -9,16 +9,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createPlanPrice**](SubscriptionBillingAdminApi.md#createplanprice) | **POST** /api/app/subscription-billing-admin/plan-prices | 
-[**deletePlanPrice**](SubscriptionBillingAdminApi.md#deleteplanprice) | **DELETE** /api/app/subscription-billing-admin/plan-prices/{id} | 
-[**deleteStoreMapping**](SubscriptionBillingAdminApi.md#deletestoremapping) | **DELETE** /api/app/subscription-billing-admin/store-mappings/{id} | 
-[**getPlanPrice**](SubscriptionBillingAdminApi.md#getplanprice) | **GET** /api/app/subscription-billing-admin/plan-prices/{id} | 
-[**getPlanPricesByAppId**](SubscriptionBillingAdminApi.md#getplanpricesbyappid) | **GET** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} | 
-[**getPlanPricesByPricingId**](SubscriptionBillingAdminApi.md#getplanpricesbypricingid) | **GET** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} | 
-[**getStoreMappingsByAppId**](SubscriptionBillingAdminApi.md#getstoremappingsbyappid) | **GET** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} | 
-[**getStoreMappingsByPlanPriceId**](SubscriptionBillingAdminApi.md#getstoremappingsbyplanpriceid) | **GET** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} | 
-[**updatePlanPrice**](SubscriptionBillingAdminApi.md#updateplanprice) | **PUT** /api/app/subscription-billing-admin/plan-prices/{id} | 
-[**upsertStoreMapping**](SubscriptionBillingAdminApi.md#upsertstoremapping) | **POST** /api/app/subscription-billing-admin/store-mappings/upsert | 
+[**createPlanPrice**](SubscriptionBillingAdminApi.md#createplanprice) | **POST** /api/app/subscription-billing-admin/plan-prices |
+[**deletePlanPrice**](SubscriptionBillingAdminApi.md#deleteplanprice) | **DELETE** /api/app/subscription-billing-admin/plan-prices/{id} |
+[**deleteStoreMapping**](SubscriptionBillingAdminApi.md#deletestoremapping) | **DELETE** /api/app/subscription-billing-admin/store-mappings/{id} |
+[**getPlanPrice**](SubscriptionBillingAdminApi.md#getplanprice) | **GET** /api/app/subscription-billing-admin/plan-prices/{id} |
+[**getPlanPricesByAppId**](SubscriptionBillingAdminApi.md#getplanpricesbyappid) | **GET** /api/app/subscription-billing-admin/plan-prices/by-app-id/{appId} |
+[**getPlanPricesByPricingId**](SubscriptionBillingAdminApi.md#getplanpricesbypricingid) | **GET** /api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId} |
+[**getStoreMappingsByAppId**](SubscriptionBillingAdminApi.md#getstoremappingsbyappid) | **GET** /api/app/subscription-billing-admin/store-mappings/by-app-id/{appId} |
+[**getStoreMappingsByPlanPriceId**](SubscriptionBillingAdminApi.md#getstoremappingsbyplanpriceid) | **GET** /api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId} |
+[**updatePlanPrice**](SubscriptionBillingAdminApi.md#updateplanprice) | **PUT** /api/app/subscription-billing-admin/plan-prices/{id} |
+[**upsertStoreMapping**](SubscriptionBillingAdminApi.md#upsertstoremapping) | **POST** /api/app/subscription-billing-admin/store-mappings/upsert |
 
 
 # **createPlanPrice**
@@ -29,11 +29,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final CreateOrUpdateAppPlanPriceDto createOrUpdateAppPlanPriceDto = ; // CreateOrUpdateAppPlanPriceDto | 
+final CreateOrUpdateAppPlanPriceDto createOrUpdateAppPlanPriceDto = ; // CreateOrUpdateAppPlanPriceDto |
 
 try {
     final response = api.createPlanPrice(createOrUpdateAppPlanPriceDto);
@@ -47,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md)|  | [optional] 
+ **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md)|  | [optional]
 
 ### Return type
 
@@ -55,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -72,11 +70,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deletePlanPrice(id);
@@ -89,7 +85,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -97,7 +93,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -114,11 +110,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteStoreMapping(id);
@@ -131,7 +125,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -139,7 +133,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -156,11 +150,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getPlanPrice(id);
@@ -174,7 +166,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -182,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -199,11 +191,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getPlanPricesByAppId(appId);
@@ -217,7 +207,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -225,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -242,11 +232,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String pricingId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String pricingId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getPlanPricesByPricingId(pricingId);
@@ -260,7 +248,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pricingId** | **String**|  | 
+ **pricingId** | **String**|  |
 
 ### Return type
 
@@ -268,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -285,11 +273,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getStoreMappingsByAppId(appId);
@@ -303,7 +289,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -311,7 +297,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -328,11 +314,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String planPriceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String planPriceId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getStoreMappingsByPlanPriceId(planPriceId);
@@ -346,7 +330,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **planPriceId** | **String**|  | 
+ **planPriceId** | **String**|  |
 
 ### Return type
 
@@ -354,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -371,12 +355,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppPlanPriceDto createOrUpdateAppPlanPriceDto = ; // CreateOrUpdateAppPlanPriceDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppPlanPriceDto createOrUpdateAppPlanPriceDto = ; // CreateOrUpdateAppPlanPriceDto |
 
 try {
     final response = api.updatePlanPrice(id, createOrUpdateAppPlanPriceDto);
@@ -390,8 +372,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppPlanPriceDto** | [**CreateOrUpdateAppPlanPriceDto**](CreateOrUpdateAppPlanPriceDto.md)|  | [optional]
 
 ### Return type
 
@@ -399,7 +381,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -416,11 +398,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getSubscriptionBillingAdminApi();
-final CreateOrUpdateStoreProductMappingDto createOrUpdateStoreProductMappingDto = ; // CreateOrUpdateStoreProductMappingDto | 
+final CreateOrUpdateStoreProductMappingDto createOrUpdateStoreProductMappingDto = ; // CreateOrUpdateStoreProductMappingDto |
 
 try {
     final response = api.upsertStoreMapping(createOrUpdateStoreProductMappingDto);
@@ -434,7 +414,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateStoreProductMappingDto** | [**CreateOrUpdateStoreProductMappingDto**](CreateOrUpdateStoreProductMappingDto.md)|  | [optional] 
+ **createOrUpdateStoreProductMappingDto** | [**CreateOrUpdateStoreProductMappingDto**](CreateOrUpdateStoreProductMappingDto.md)|  | [optional]
 
 ### Return type
 
@@ -442,7 +422,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

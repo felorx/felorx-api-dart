@@ -21,10 +21,10 @@ class AbpApplicationConfigurationApi {
   const AbpApplicationConfigurationApi(this._dio);
 
   /// getAbpApplicationConfiguration
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [includeLocalizationResources] 
+  /// * [includeLocalizationResources]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -34,7 +34,7 @@ class AbpApplicationConfigurationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [ApplicationConfigurationDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApplicationConfigurationDto>> getAbpApplicationConfiguration({ 
+  Future<Response<ApplicationConfigurationDto>> getAbpApplicationConfiguration({
     bool? includeLocalizationResources,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -50,12 +50,7 @@ class AbpApplicationConfigurationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

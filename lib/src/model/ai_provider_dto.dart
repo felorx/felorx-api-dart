@@ -4,8 +4,8 @@
 
 // ignore_for_file: unused_element
 import 'package:felorx_api_client/src/model/ai_provider_type.dart';
-import 'package:felorx_api_client/src/model/ai_capability.dart';
 import 'package:felorx_api_client/src/model/ai_model_dto.dart';
+import 'package:felorx_api_client/src/model/ai_capability.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'ai_provider_dto.g.dart';

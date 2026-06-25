@@ -20,11 +20,11 @@ class OpenAiCompatibleChatApi {
 
   const OpenAiCompatibleChatApi(this._dio);
 
-  /// create
-  /// 
+  /// openAiCompatibleChatCreate
+  ///
   ///
   /// Parameters:
-  /// * [openAiChatCompletionRequestDto] 
+  /// * [openAiChatCompletionRequestDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -34,7 +34,7 @@ class OpenAiCompatibleChatApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AiChatCompletionDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiChatCompletionDto>> create({ 
+  Future<Response<AiChatCompletionDto>> openAiCompatibleChatCreate({
     OpenAiChatCompletionRequestDto? openAiChatCompletionRequestDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -50,12 +50,7 @@ class OpenAiCompatibleChatApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

@@ -8,6 +8,7 @@ export 'package:felorx_api_client/src/auth/basic_auth.dart';
 export 'package:felorx_api_client/src/auth/bearer_auth.dart';
 export 'package:felorx_api_client/src/auth/oauth.dart';
 
+
 export 'package:felorx_api_client/src/api/abp_api_definition_api.dart';
 export 'package:felorx_api_client/src/api/abp_application_configuration_api.dart';
 export 'package:felorx_api_client/src/api/abp_application_localization_api.dart';
@@ -30,6 +31,7 @@ export 'package:felorx_api_client/src/api/app_user_score_api.dart';
 export 'package:felorx_api_client/src/api/auth_center_api.dart';
 export 'package:felorx_api_client/src/api/avatar_api.dart';
 export 'package:felorx_api_client/src/api/build_record_api.dart';
+export 'package:felorx_api_client/src/api/credit_api.dart';
 export 'package:felorx_api_client/src/api/deploy_record_api.dart';
 export 'package:felorx_api_client/src/api/device_api.dart';
 export 'package:felorx_api_client/src/api/dynamic_claims_api.dart';
@@ -59,6 +61,8 @@ export 'package:felorx_api_client/src/api/verification_api.dart';
 
 export 'package:felorx_api_client/src/model/account_deletion_dto.dart';
 export 'package:felorx_api_client/src/model/action_api_description_model.dart';
+export 'package:felorx_api_client/src/model/adjust_credits_dto.dart';
+export 'package:felorx_api_client/src/model/adjust_credits_result_dto.dart';
 export 'package:felorx_api_client/src/model/ai_capability.dart';
 export 'package:felorx_api_client/src/model/ai_chat_choice_dto.dart';
 export 'package:felorx_api_client/src/model/ai_chat_completion_dto.dart';
@@ -147,6 +151,10 @@ export 'package:felorx_api_client/src/model/create_alipay_order_result_dto.dart'
 export 'package:felorx_api_client/src/model/create_app_feedback_dto.dart';
 export 'package:felorx_api_client/src/model/create_avatar_dto.dart';
 export 'package:felorx_api_client/src/model/create_build_record_dto.dart';
+export 'package:felorx_api_client/src/model/create_credit_alipay_order_dto.dart';
+export 'package:felorx_api_client/src/model/create_credit_alipay_order_result_dto.dart';
+export 'package:felorx_api_client/src/model/create_credit_pay_pal_order_dto.dart';
+export 'package:felorx_api_client/src/model/create_credit_pay_pal_order_result_dto.dart';
 export 'package:felorx_api_client/src/model/create_deploy_record_dto.dart';
 export 'package:felorx_api_client/src/model/create_message_template_release_dto.dart';
 export 'package:felorx_api_client/src/model/create_open_iddict_application_dto.dart';
@@ -173,6 +181,9 @@ export 'package:felorx_api_client/src/model/create_update_app_tester_dto.dart';
 export 'package:felorx_api_client/src/model/create_update_message_source_dto.dart';
 export 'package:felorx_api_client/src/model/create_update_message_source_route_dto.dart';
 export 'package:felorx_api_client/src/model/create_update_message_source_route_sub_dto.dart';
+export 'package:felorx_api_client/src/model/credit_account_dto.dart';
+export 'package:felorx_api_client/src/model/credit_ledger_entry_dto.dart';
+export 'package:felorx_api_client/src/model/credit_package_dto.dart';
 export 'package:felorx_api_client/src/model/current_culture_dto.dart';
 export 'package:felorx_api_client/src/model/current_tenant_dto.dart';
 export 'package:felorx_api_client/src/model/current_user_dto.dart';

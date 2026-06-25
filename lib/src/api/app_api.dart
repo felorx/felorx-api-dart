@@ -33,10 +33,10 @@ class AppApi {
   const AppApi(this._dio);
 
   /// createApp
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppDto] 
+  /// * [createOrUpdateAppDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -46,7 +46,7 @@ class AppApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDto>> createApp({ 
+  Future<Response<AppDto>> createApp({
     CreateOrUpdateAppDto? createOrUpdateAppDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -62,12 +62,7 @@ class AppApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -128,10 +123,10 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   }
 
   /// deleteAppById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -141,7 +136,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppById({ 
+  Future<Response<void>> deleteAppById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -157,12 +152,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -180,10 +170,10 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   }
 
   /// getAppById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -193,7 +183,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   ///
   /// Returns a [Future] containing a [Response] with a [AppDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDto>> getAppById({ 
+  Future<Response<AppDto>> getAppById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -209,12 +199,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -257,13 +242,13 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   }
 
   /// getAppList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [creatorId] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [creatorId]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -273,7 +258,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   ///
   /// Returns a [Future] containing a [Response] with a [AppDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDtoPagedResultDto>> getAppList({ 
+  Future<Response<AppDtoPagedResultDto>> getAppList({
     String? creatorId,
     String? sorting,
     int? skipCount,
@@ -292,12 +277,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -348,10 +328,10 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   }
 
   /// getByName
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [name] 
+  /// * [name]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -361,7 +341,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDto>> getByName({ 
+  Future<Response<AppDto>> getByName({
     String? name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -377,12 +357,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -430,11 +405,11 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   }
 
   /// getFeatureList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [env] 
+  /// * [appId]
+  /// * [env]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -444,7 +419,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppFeatureDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppFeatureDto>>> getFeatureList({ 
+  Future<Response<List<AppFeatureDto>>> getFeatureList({
     required String appId,
     String? env,
     CancelToken? cancelToken,
@@ -461,12 +436,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -514,10 +484,10 @@ _responseData = rawData == null ? null : deserialize<List<AppFeatureDto>, AppFea
   }
 
   /// getListByDeveloperAll
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [developerAccount] 
+  /// * [developerAccount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -527,7 +497,7 @@ _responseData = rawData == null ? null : deserialize<List<AppFeatureDto>, AppFea
   ///
   /// Returns a [Future] containing a [Response] with a [AppDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDtoPagedResultDto>> getListByDeveloperAll({ 
+  Future<Response<AppDtoPagedResultDto>> getListByDeveloperAll({
     String? developerAccount,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -543,12 +513,7 @@ _responseData = rawData == null ? null : deserialize<List<AppFeatureDto>, AppFea
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -596,12 +561,12 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   }
 
   /// getListPublic
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [type] 
-  /// * [developerAccount] 
-  /// * [currentAppName] 
+  /// * [type]
+  /// * [developerAccount]
+  /// * [currentAppName]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -611,7 +576,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDtoPagedResultDto>> getListPublic({ 
+  Future<Response<AppDtoPagedResultDto>> getListPublic({
     String? type,
     String? developerAccount,
     String? currentAppName,
@@ -629,12 +594,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -684,14 +644,14 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   }
 
   /// getListWithUser
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [type] 
-  /// * [searchKey] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [type]
+  /// * [searchKey]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -701,7 +661,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppWithUserDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppWithUserDtoPagedResultDto>> getListWithUser({ 
+  Future<Response<AppWithUserDtoPagedResultDto>> getListWithUser({
     String? type,
     String? searchKey,
     String? sorting,
@@ -721,12 +681,7 @@ _responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -778,11 +733,11 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDtoPagedResultDt
   }
 
   /// getSdksById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [env] 
+  /// * [appId]
+  /// * [env]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -792,7 +747,7 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDtoPagedResultDt
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppSdkDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppSdkDto>>> getSdksById({ 
+  Future<Response<List<AppSdkDto>>> getSdksById({
     required String appId,
     String? env,
     CancelToken? cancelToken,
@@ -809,12 +764,7 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDtoPagedResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -862,10 +812,10 @@ _responseData = rawData == null ? null : deserialize<List<AppSdkDto>, AppSdkDto>
   }
 
   /// getStorefrontLanding
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
+  /// * [appId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -875,7 +825,7 @@ _responseData = rawData == null ? null : deserialize<List<AppSdkDto>, AppSdkDto>
   ///
   /// Returns a [Future] containing a [Response] with a [AppStorefrontLandingDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppStorefrontLandingDto>> getStorefrontLanding({ 
+  Future<Response<AppStorefrontLandingDto>> getStorefrontLanding({
     required String appId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -891,12 +841,7 @@ _responseData = rawData == null ? null : deserialize<List<AppSdkDto>, AppSdkDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -939,10 +884,10 @@ _responseData = rawData == null ? null : deserialize<AppStorefrontLandingDto, Ap
   }
 
   /// getUploadCredentials
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [key] 
+  /// * [key]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -952,7 +897,7 @@ _responseData = rawData == null ? null : deserialize<AppStorefrontLandingDto, Ap
   ///
   /// Returns a [Future] containing a [Response] with a [StorageObjectCredentials] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<StorageObjectCredentials>> getUploadCredentials({ 
+  Future<Response<StorageObjectCredentials>> getUploadCredentials({
     String? key,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -968,12 +913,7 @@ _responseData = rawData == null ? null : deserialize<AppStorefrontLandingDto, Ap
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -1021,10 +961,10 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
   }
 
   /// getWithUser
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1034,7 +974,7 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
   ///
   /// Returns a [Future] containing a [Response] with a [AppWithUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppWithUserDto>> getWithUser({ 
+  Future<Response<AppWithUserDto>> getWithUser({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1050,12 +990,7 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -1098,10 +1033,10 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDto, AppWithUser
   }
 
   /// run
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appRunDto] 
+  /// * [appRunDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1111,7 +1046,7 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDto, AppWithUser
   ///
   /// Returns a [Future] containing a [Response] with a [AppRunRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppRunRecordDto>> run({ 
+  Future<Response<AppRunRecordDto>> run({
     AppRunDto? appRunDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -1127,12 +1062,7 @@ _responseData = rawData == null ? null : deserialize<AppWithUserDto, AppWithUser
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -1193,11 +1123,11 @@ _responseData = rawData == null ? null : deserialize<AppRunRecordDto, AppRunReco
   }
 
   /// setLinkedSdks
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [setAppLinkedSdksDto] 
+  /// * [appId]
+  /// * [setAppLinkedSdksDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1207,7 +1137,7 @@ _responseData = rawData == null ? null : deserialize<AppRunRecordDto, AppRunReco
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> setLinkedSdks({ 
+  Future<Response<void>> setLinkedSdks({
     required String appId,
     SetAppLinkedSdksDto? setAppLinkedSdksDto,
     CancelToken? cancelToken,
@@ -1224,12 +1154,7 @@ _responseData = rawData == null ? null : deserialize<AppRunRecordDto, AppRunReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -1265,11 +1190,11 @@ _bodyData=jsonEncode(setAppLinkedSdksDto);
   }
 
   /// updateApp
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppDto] 
+  /// * [id]
+  /// * [createOrUpdateAppDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1279,7 +1204,7 @@ _bodyData=jsonEncode(setAppLinkedSdksDto);
   ///
   /// Returns a [Future] containing a [Response] with a [AppDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppDto>> updateApp({ 
+  Future<Response<AppDto>> updateApp({
     required String id,
     CreateOrUpdateAppDto? createOrUpdateAppDto,
     CancelToken? cancelToken,
@@ -1296,12 +1221,7 @@ _bodyData=jsonEncode(setAppLinkedSdksDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -1362,11 +1282,11 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   }
 
   /// updateRunState
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [appRunRecordUpdateDto] 
+  /// * [id]
+  /// * [appRunRecordUpdateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1376,7 +1296,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
   ///
   /// Returns a [Future] containing a [Response] with a [AppRunRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppRunRecordDto>> updateRunState({ 
+  Future<Response<AppRunRecordDto>> updateRunState({
     required String id,
     AppRunRecordUpdateDto? appRunRecordUpdateDto,
     CancelToken? cancelToken,
@@ -1393,12 +1313,7 @@ _responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'A
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

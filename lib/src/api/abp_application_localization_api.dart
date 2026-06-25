@@ -21,11 +21,11 @@ class AbpApplicationLocalizationApi {
   const AbpApplicationLocalizationApi(this._dio);
 
   /// getAbpApplicationLocalization
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [cultureName] 
-  /// * [onlyDynamics] 
+  /// * [cultureName]
+  /// * [onlyDynamics]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class AbpApplicationLocalizationApi {
   ///
   /// Returns a [Future] containing a [Response] with a [ApplicationLocalizationDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApplicationLocalizationDto>> getAbpApplicationLocalization({ 
+  Future<Response<ApplicationLocalizationDto>> getAbpApplicationLocalization({
     required String cultureName,
     bool? onlyDynamics,
     CancelToken? cancelToken,
@@ -52,12 +52,7 @@ class AbpApplicationLocalizationApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

@@ -21,10 +21,10 @@ class AbpTenantApi {
   const AbpTenantApi(this._dio);
 
   /// findTenantById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -34,7 +34,7 @@ class AbpTenantApi {
   ///
   /// Returns a [Future] containing a [Response] with a [FindTenantResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<FindTenantResultDto>> findTenantById({ 
+  Future<Response<FindTenantResultDto>> findTenantById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -50,12 +50,7 @@ class AbpTenantApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -98,10 +93,10 @@ _responseData = rawData == null ? null : deserialize<FindTenantResultDto, FindTe
   }
 
   /// findTenantByName
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [name] 
+  /// * [name]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -111,7 +106,7 @@ _responseData = rawData == null ? null : deserialize<FindTenantResultDto, FindTe
   ///
   /// Returns a [Future] containing a [Response] with a [FindTenantResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<FindTenantResultDto>> findTenantByName({ 
+  Future<Response<FindTenantResultDto>> findTenantByName({
     required String name,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -127,12 +122,7 @@ _responseData = rawData == null ? null : deserialize<FindTenantResultDto, FindTe
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

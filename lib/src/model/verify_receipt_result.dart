@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/app_platform.dart';
 import 'package:felorx_api_client/src/model/identity_user.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
 import 'package:felorx_api_client/src/model/apple_verify_receipt_result.dart';
 import 'package:json_annotation/json_annotation.dart';
 

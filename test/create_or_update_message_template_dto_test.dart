@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateMessageTemplateDto
 void main() {
-  final CreateOrUpdateMessageTemplateDto?
-  instance = /* CreateOrUpdateMessageTemplateDto(...) */ null;
+  final CreateOrUpdateMessageTemplateDto? instance = /* CreateOrUpdateMessageTemplateDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateMessageTemplateDto, () {
@@ -22,5 +21,6 @@ void main() {
     test('to test the property `description`', () async {
       // TODO
     });
+
   });
 }

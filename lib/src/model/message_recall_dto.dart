@@ -18,18 +18,18 @@ class MessageRecallDto {
   /// Returns a new [MessageRecallDto] instance.
   MessageRecallDto({
 
-     this.puupeeId,
+     this.felorxId,
   });
 
   @JsonKey(
     
-    name: r'puupeeId',
+    name: r'felorxId',
     required: false,
     includeIfNull: false,
   )
 
 
-  String? puupeeId;
+  String? felorxId;
 
 
 
@@ -37,11 +37,11 @@ class MessageRecallDto {
 
     @override
     bool operator ==(Object other) => identical(this, other) || other is MessageRecallDto &&
-      other.puupeeId == puupeeId;
+      other.felorxId == felorxId;
 
     @override
     int get hashCode =>
-        puupeeId.hashCode;
+        felorxId.hashCode;
 
   factory MessageRecallDto.fromJson(Map<String, dynamic> json) => _$MessageRecallDtoFromJson(json);
 

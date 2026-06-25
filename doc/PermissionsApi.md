@@ -9,8 +9,8 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getPermissions**](PermissionsApi.md#getpermissions) | **GET** /api/permission-management/permissions | 
-[**updatePermissions**](PermissionsApi.md#updatepermissions) | **PUT** /api/permission-management/permissions | 
+[**getPermissions**](PermissionsApi.md#getpermissions) | **GET** /api/permission-management/permissions |
+[**updatePermissions**](PermissionsApi.md#updatepermissions) | **PUT** /api/permission-management/permissions |
 
 
 # **getPermissions**
@@ -21,12 +21,10 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getPermissionsApi();
-final String providerName = providerName_example; // String | 
-final String providerKey = providerKey_example; // String | 
+final String providerName = providerName_example; // String |
+final String providerKey = providerKey_example; // String |
 
 try {
     final response = api.getPermissions(providerName, providerKey);
@@ -40,8 +38,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerName** | **String**|  | [optional] 
- **providerKey** | **String**|  | [optional] 
+ **providerName** | **String**|  | [optional]
+ **providerKey** | **String**|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,13 +64,11 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getPermissionsApi();
-final UpdatePermissionsDto updatePermissionsDto = ; // UpdatePermissionsDto | 
-final String providerName = providerName_example; // String | 
-final String providerKey = providerKey_example; // String | 
+final UpdatePermissionsDto updatePermissionsDto = ; // UpdatePermissionsDto |
+final String providerName = providerName_example; // String |
+final String providerKey = providerKey_example; // String |
 
 try {
     api.updatePermissions(updatePermissionsDto, providerName, providerKey);
@@ -85,9 +81,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **updatePermissionsDto** | [**UpdatePermissionsDto**](UpdatePermissionsDto.md)|  | [optional] 
- **providerName** | **String**|  | [optional] 
- **providerKey** | **String**|  | [optional] 
+ **updatePermissionsDto** | [**UpdatePermissionsDto**](UpdatePermissionsDto.md)|  | [optional]
+ **providerName** | **String**|  | [optional]
+ **providerKey** | **String**|  | [optional]
 
 ### Return type
 
@@ -95,7 +91,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

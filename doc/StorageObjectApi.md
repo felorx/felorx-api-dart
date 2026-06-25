@@ -10,9 +10,9 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCdnDomains**](StorageObjectApi.md#getcdndomains) | **GET** /api/app/storage-object/cdn-domains | 获取所有 CDN Domain 配置
-[**getFileCredential**](StorageObjectApi.md#getfilecredential) | **GET** /api/app/storage-object/file-credential | 
-[**getUserStorages**](StorageObjectApi.md#getuserstorages) | **GET** /api/app/storage-object/user-storages | 
-[**preSignUrl**](StorageObjectApi.md#presignurl) | **POST** /api/app/storage-object/pre-sign-url | 
+[**getFileCredential**](StorageObjectApi.md#getfilecredential) | **GET** /api/app/storage-object/file-credential |
+[**getUserStorages**](StorageObjectApi.md#getuserstorages) | **GET** /api/app/storage-object/user-storages |
+[**preSignUrl**](StorageObjectApi.md#presignurl) | **POST** /api/app/storage-object/pre-sign-url |
 
 
 # **getCdnDomains**
@@ -23,8 +23,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getStorageObjectApi();
 
@@ -45,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -62,14 +60,12 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getStorageObjectApi();
-final int userTotalSize = 789; // int | 
-final String rapidCode = rapidCode_example; // String | 
-final String usage = usage_example; // String | 
-final String key = key_example; // String | 
+final int userTotalSize = 789; // int |
+final String rapidCode = rapidCode_example; // String |
+final String usage = usage_example; // String |
+final String key = key_example; // String |
 
 try {
     final response = api.getFileCredential(userTotalSize, rapidCode, usage, key);
@@ -83,10 +79,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userTotalSize** | **int**|  | [optional] 
- **rapidCode** | **String**|  | [optional] 
- **usage** | **String**|  | [optional] 
- **key** | **String**|  | [optional] 
+ **userTotalSize** | **int**|  | [optional]
+ **rapidCode** | **String**|  | [optional]
+ **usage** | **String**|  | [optional]
+ **key** | **String**|  | [optional]
 
 ### Return type
 
@@ -94,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,8 +107,6 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getStorageObjectApi();
 
@@ -133,7 +127,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -150,12 +144,10 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getStorageObjectApi();
-final String bucket = bucket_example; // String | 
-final String key = key_example; // String | 
+final String bucket = bucket_example; // String |
+final String key = key_example; // String |
 
 try {
     final response = api.preSignUrl(bucket, key);
@@ -169,8 +161,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bucket** | **String**|  | [optional] 
- **key** | **String**|  | [optional] 
+ **bucket** | **String**|  | [optional]
+ **key** | **String**|  | [optional]
 
 ### Return type
 
@@ -178,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

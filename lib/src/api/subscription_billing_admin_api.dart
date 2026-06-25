@@ -24,10 +24,10 @@ class SubscriptionBillingAdminApi {
   const SubscriptionBillingAdminApi(this._dio);
 
   /// createPlanPrice
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppPlanPriceDto] 
+  /// * [createOrUpdateAppPlanPriceDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class SubscriptionBillingAdminApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppPlanPriceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppPlanPriceDto>> createPlanPrice({ 
+  Future<Response<AppPlanPriceDto>> createPlanPrice({
     CreateOrUpdateAppPlanPriceDto? createOrUpdateAppPlanPriceDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class SubscriptionBillingAdminApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -119,10 +114,10 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   }
 
   /// deletePlanPrice
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -132,7 +127,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deletePlanPrice({ 
+  Future<Response<void>> deletePlanPrice({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -148,12 +143,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -171,10 +161,10 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   }
 
   /// deleteStoreMapping
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -184,7 +174,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteStoreMapping({ 
+  Future<Response<void>> deleteStoreMapping({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -223,10 +208,10 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   }
 
   /// getPlanPrice
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -236,7 +221,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   ///
   /// Returns a [Future] containing a [Response] with a [AppPlanPriceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppPlanPriceDto>> getPlanPrice({ 
+  Future<Response<AppPlanPriceDto>> getPlanPrice({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -252,12 +237,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -300,10 +280,10 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   }
 
   /// getPlanPricesByAppId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
+  /// * [appId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -313,7 +293,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppPlanPriceDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppPlanPriceDto>>> getPlanPricesByAppId({ 
+  Future<Response<List<AppPlanPriceDto>>> getPlanPricesByAppId({
     required String appId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -329,12 +309,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -377,10 +352,10 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
   }
 
   /// getPlanPricesByPricingId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [pricingId] 
+  /// * [pricingId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -390,7 +365,7 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppPlanPriceDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppPlanPriceDto>>> getPlanPricesByPricingId({ 
+  Future<Response<List<AppPlanPriceDto>>> getPlanPricesByPricingId({
     required String pricingId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -406,12 +381,7 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -454,10 +424,10 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
   }
 
   /// getStoreMappingsByAppId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
+  /// * [appId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -467,7 +437,7 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
   ///
   /// Returns a [Future] containing a [Response] with a [List<StoreProductMappingDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<StoreProductMappingDto>>> getStoreMappingsByAppId({ 
+  Future<Response<List<StoreProductMappingDto>>> getStoreMappingsByAppId({
     required String appId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -483,12 +453,7 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -531,10 +496,10 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
   }
 
   /// getStoreMappingsByPlanPriceId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [planPriceId] 
+  /// * [planPriceId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -544,7 +509,7 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
   ///
   /// Returns a [Future] containing a [Response] with a [List<StoreProductMappingDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<StoreProductMappingDto>>> getStoreMappingsByPlanPriceId({ 
+  Future<Response<List<StoreProductMappingDto>>> getStoreMappingsByPlanPriceId({
     required String planPriceId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -560,12 +525,7 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -608,11 +568,11 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
   }
 
   /// updatePlanPrice
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppPlanPriceDto] 
+  /// * [id]
+  /// * [createOrUpdateAppPlanPriceDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -622,7 +582,7 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
   ///
   /// Returns a [Future] containing a [Response] with a [AppPlanPriceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppPlanPriceDto>> updatePlanPrice({ 
+  Future<Response<AppPlanPriceDto>> updatePlanPrice({
     required String id,
     CreateOrUpdateAppPlanPriceDto? createOrUpdateAppPlanPriceDto,
     CancelToken? cancelToken,
@@ -639,12 +599,7 @@ _responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -705,10 +660,10 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   }
 
   /// upsertStoreMapping
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateStoreProductMappingDto] 
+  /// * [createOrUpdateStoreProductMappingDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -718,7 +673,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
   ///
   /// Returns a [Future] containing a [Response] with a [StoreProductMappingDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<StoreProductMappingDto>> upsertStoreMapping({ 
+  Future<Response<StoreProductMappingDto>> upsertStoreMapping({
     CreateOrUpdateStoreProductMappingDto? createOrUpdateStoreProductMappingDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -734,12 +689,7 @@ _responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPri
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

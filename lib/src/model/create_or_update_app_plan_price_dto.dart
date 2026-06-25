@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/sub_billing_period.dart';
-import 'package:felorx_api_client/src/model/billing_market.dart';
 import 'package:felorx_api_client/src/model/billing_mode.dart';
+import 'package:felorx_api_client/src/model/billing_market.dart';
+import 'package:felorx_api_client/src/model/sub_billing_period.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_update_app_plan_price_dto.g.dart';

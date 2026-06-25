@@ -128,5 +128,6 @@ void main() {
     test('to test the property `channel`', () async {
       // TODO
     });
+
   });
 }

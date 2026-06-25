@@ -23,10 +23,10 @@ class AppSdkApi {
   const AppSdkApi(this._dio);
 
   /// createAppSdk
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppSdkDto] 
+  /// * [createOrUpdateAppSdkDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class AppSdkApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppSdkDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppSdkDto>> createAppSdk({ 
+  Future<Response<AppSdkDto>> createAppSdk({
     CreateOrUpdateAppSdkDto? createOrUpdateAppSdkDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -52,12 +52,7 @@ class AppSdkApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -118,10 +113,10 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
   }
 
   /// deleteAppSdkById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -131,7 +126,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppSdkById({ 
+  Future<Response<void>> deleteAppSdkById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -147,12 +142,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -170,13 +160,13 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
   }
 
   /// getAppSdkList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [filter] - 关键词：匹配名称、描述、隐私说明、主页等字段（包含匹配）。
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +176,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [AppSdkDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppSdkDtoPagedResultDto>> getAppSdkList({ 
+  Future<Response<AppSdkDtoPagedResultDto>> getAppSdkList({
     String? filter,
     String? sorting,
     int? skipCount,
@@ -205,12 +195,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -261,11 +246,11 @@ _responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, Ap
   }
 
   /// updateAppSdk
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppSdkDto] 
+  /// * [id]
+  /// * [createOrUpdateAppSdkDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -275,7 +260,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, Ap
   ///
   /// Returns a [Future] containing a [Response] with a [AppSdkDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppSdkDto>> updateAppSdk({ 
+  Future<Response<AppSdkDto>> updateAppSdk({
     required String id,
     CreateOrUpdateAppSdkDto? createOrUpdateAppSdkDto,
     CancelToken? cancelToken,
@@ -292,12 +277,7 @@ _responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, Ap
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

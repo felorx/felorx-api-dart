@@ -3,5 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for AiCapability
 void main() {
-  group(AiCapability, () {});
+
+  group(AiCapability, () {
+  });
 }

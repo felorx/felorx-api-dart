@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for TenantDtoPagedResultDto
 void main() {
-  final TenantDtoPagedResultDto? instance = /* TenantDtoPagedResultDto(...) */
-      null;
+  final TenantDtoPagedResultDto? instance = /* TenantDtoPagedResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(TenantDtoPagedResultDto, () {
@@ -17,5 +16,6 @@ void main() {
     test('to test the property `totalCount`', () async {
       // TODO
     });
+
   });
 }

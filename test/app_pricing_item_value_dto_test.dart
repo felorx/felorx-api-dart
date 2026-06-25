@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for AppPricingItemValueDto
 void main() {
-  final AppPricingItemValueDto? instance = /* AppPricingItemValueDto(...) */
-      null;
+  final AppPricingItemValueDto? instance = /* AppPricingItemValueDto(...) */ null;
   // TODO add properties to the entity
 
   group(AppPricingItemValueDto, () {
@@ -86,5 +85,6 @@ void main() {
     test('to test the property `intValueType`', () async {
       // TODO
     });
+
   });
 }

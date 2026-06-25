@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for MessageTemplateReleaseDto
 void main() {
-  final MessageTemplateReleaseDto?
-  instance = /* MessageTemplateReleaseDto(...) */ null;
+  final MessageTemplateReleaseDto? instance = /* MessageTemplateReleaseDto(...) */ null;
   // TODO add properties to the entity
 
   group(MessageTemplateReleaseDto, () {
@@ -87,5 +86,6 @@ void main() {
     test('to test the property `templateId`', () async {
       // TODO
     });
+
   });
 }

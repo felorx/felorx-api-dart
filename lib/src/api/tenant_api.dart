@@ -24,10 +24,10 @@ class TenantApi {
   const TenantApi(this._dio);
 
   /// createTenant
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [tenantCreateDto] 
+  /// * [tenantCreateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class TenantApi {
   ///
   /// Returns a [Future] containing a [Response] with a [TenantDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TenantDto>> createTenant({ 
+  Future<Response<TenantDto>> createTenant({
     TenantCreateDto? tenantCreateDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class TenantApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -119,10 +114,10 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   }
 
   /// deleteDefaultConnectionString
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -132,7 +127,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteDefaultConnectionString({ 
+  Future<Response<void>> deleteDefaultConnectionString({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -148,12 +143,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -171,10 +161,10 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   }
 
   /// deleteTenantById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -184,7 +174,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteTenantById({ 
+  Future<Response<void>> deleteTenantById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -223,10 +208,10 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   }
 
   /// getDefaultConnectionString
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -236,7 +221,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [String] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<String>> getDefaultConnectionString({ 
+  Future<Response<String>> getDefaultConnectionString({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -252,12 +237,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -300,10 +280,10 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
   }
 
   /// getTenantById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -313,7 +293,7 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
   ///
   /// Returns a [Future] containing a [Response] with a [TenantDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TenantDto>> getTenantById({ 
+  Future<Response<TenantDto>> getTenantById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -329,12 +309,7 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -377,13 +352,13 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   }
 
   /// getTenantList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [filter] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [filter]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -393,7 +368,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [TenantDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TenantDtoPagedResultDto>> getTenantList({ 
+  Future<Response<TenantDtoPagedResultDto>> getTenantList({
     String? filter,
     String? sorting,
     int? skipCount,
@@ -412,12 +387,7 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -468,11 +438,11 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
   }
 
   /// updateDefaultConnectionString
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [defaultConnectionString] 
+  /// * [id]
+  /// * [defaultConnectionString]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -482,7 +452,7 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateDefaultConnectionString({ 
+  Future<Response<void>> updateDefaultConnectionString({
     required String id,
     String? defaultConnectionString,
     CancelToken? cancelToken,
@@ -499,12 +469,7 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -527,11 +492,11 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
   }
 
   /// updateTenant
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [tenantUpdateDto] 
+  /// * [id]
+  /// * [tenantUpdateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -541,7 +506,7 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
   ///
   /// Returns a [Future] containing a [Response] with a [TenantDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<TenantDto>> updateTenant({ 
+  Future<Response<TenantDto>> updateTenant({
     required String id,
     TenantUpdateDto? tenantUpdateDto,
     CancelToken? cancelToken,
@@ -558,12 +523,7 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

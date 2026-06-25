@@ -24,10 +24,10 @@ class MessageApi {
   const MessageApi(this._dio);
 
   /// publish
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [messagePublishDto] 
+  /// * [messagePublishDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class MessageApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> publish({ 
+  Future<Response<void>> publish({
     MessagePublishDto? messagePublishDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class MessageApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -94,10 +89,10 @@ _bodyData=jsonEncode(messagePublishDto);
   }
 
   /// recall
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [messageRecallDto] 
+  /// * [messageRecallDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -107,7 +102,7 @@ _bodyData=jsonEncode(messagePublishDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> recall({ 
+  Future<Response<void>> recall({
     MessageRecallDto? messageRecallDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -123,12 +118,7 @@ _bodyData=jsonEncode(messagePublishDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -164,10 +154,10 @@ _bodyData=jsonEncode(messageRecallDto);
   }
 
   /// subscribe
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [messageSubscribeDto] 
+  /// * [messageSubscribeDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -177,7 +167,7 @@ _bodyData=jsonEncode(messageRecallDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> subscribe({ 
+  Future<Response<void>> subscribe({
     MessageSubscribeDto? messageSubscribeDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -193,12 +183,7 @@ _bodyData=jsonEncode(messageRecallDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -234,10 +219,10 @@ _bodyData=jsonEncode(messageSubscribeDto);
   }
 
   /// unsubscribe
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [messageUnsubscribeDto] 
+  /// * [messageUnsubscribeDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -247,7 +232,7 @@ _bodyData=jsonEncode(messageSubscribeDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> unsubscribe({ 
+  Future<Response<void>> unsubscribe({
     MessageUnsubscribeDto? messageUnsubscribeDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -263,12 +248,7 @@ _bodyData=jsonEncode(messageSubscribeDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

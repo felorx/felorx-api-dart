@@ -9,16 +9,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createIdentityUser**](UserApi.md#createidentityuser) | **POST** /api/identity/users | 
-[**deleteIdentityUserById**](UserApi.md#deleteidentityuserbyid) | **DELETE** /api/identity/users/{id} | 
-[**findByEmail**](UserApi.md#findbyemail) | **GET** /api/identity/users/by-email/{email} | 
-[**findByUsername**](UserApi.md#findbyusername) | **GET** /api/identity/users/by-username/{userName} | 
-[**getAssignableRoles**](UserApi.md#getassignableroles) | **GET** /api/identity/users/assignable-roles | 
-[**getIdentityUserById**](UserApi.md#getidentityuserbyid) | **GET** /api/identity/users/{id} | 
-[**getIdentityUserList**](UserApi.md#getidentityuserlist) | **GET** /api/identity/users | 
-[**getRoles**](UserApi.md#getroles) | **GET** /api/identity/users/{id}/roles | 
-[**updateIdentityUser**](UserApi.md#updateidentityuser) | **PUT** /api/identity/users/{id} | 
-[**updateRoles**](UserApi.md#updateroles) | **PUT** /api/identity/users/{id}/roles | 
+[**createIdentityUser**](UserApi.md#createidentityuser) | **POST** /api/identity/users |
+[**deleteIdentityUserById**](UserApi.md#deleteidentityuserbyid) | **DELETE** /api/identity/users/{id} |
+[**findByEmail**](UserApi.md#findbyemail) | **GET** /api/identity/users/by-email/{email} |
+[**findByUsername**](UserApi.md#findbyusername) | **GET** /api/identity/users/by-username/{userName} |
+[**getAssignableRoles**](UserApi.md#getassignableroles) | **GET** /api/identity/users/assignable-roles |
+[**getIdentityUserById**](UserApi.md#getidentityuserbyid) | **GET** /api/identity/users/{id} |
+[**getIdentityUserList**](UserApi.md#getidentityuserlist) | **GET** /api/identity/users |
+[**getRoles**](UserApi.md#getroles) | **GET** /api/identity/users/{id}/roles |
+[**updateIdentityUser**](UserApi.md#updateidentityuser) | **PUT** /api/identity/users/{id} |
+[**updateRoles**](UserApi.md#updateroles) | **PUT** /api/identity/users/{id}/roles |
 
 
 # **createIdentityUser**
@@ -29,11 +29,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final IdentityUserCreateDto identityUserCreateDto = ; // IdentityUserCreateDto | 
+final IdentityUserCreateDto identityUserCreateDto = ; // IdentityUserCreateDto |
 
 try {
     final response = api.createIdentityUser(identityUserCreateDto);
@@ -47,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **identityUserCreateDto** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md)|  | [optional] 
+ **identityUserCreateDto** | [**IdentityUserCreateDto**](IdentityUserCreateDto.md)|  | [optional]
 
 ### Return type
 
@@ -55,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -72,11 +70,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteIdentityUserById(id);
@@ -89,7 +85,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -97,7 +93,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -114,11 +110,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String email = email_example; // String | 
+final String email = email_example; // String |
 
 try {
     final response = api.findByEmail(email);
@@ -132,7 +126,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **email** | **String**|  | 
+ **email** | **String**|  |
 
 ### Return type
 
@@ -140,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -157,11 +151,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String userName = userName_example; // String | 
+final String userName = userName_example; // String |
 
 try {
     final response = api.findByUsername(userName);
@@ -175,7 +167,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userName** | **String**|  | 
+ **userName** | **String**|  |
 
 ### Return type
 
@@ -183,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -200,8 +192,6 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
 
@@ -222,7 +212,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -239,11 +229,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getIdentityUserById(id);
@@ -257,7 +245,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -265,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -282,14 +270,12 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String filter = filter_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String filter = filter_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getIdentityUserList(filter, sorting, skipCount, maxResultCount);
@@ -303,10 +289,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **filter** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -314,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -331,11 +317,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getRoles(id);
@@ -349,7 +333,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -357,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -374,12 +358,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final IdentityUserUpdateDto identityUserUpdateDto = ; // IdentityUserUpdateDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final IdentityUserUpdateDto identityUserUpdateDto = ; // IdentityUserUpdateDto |
 
 try {
     final response = api.updateIdentityUser(id, identityUserUpdateDto);
@@ -393,8 +375,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **identityUserUpdateDto** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **identityUserUpdateDto** | [**IdentityUserUpdateDto**](IdentityUserUpdateDto.md)|  | [optional]
 
 ### Return type
 
@@ -402,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -419,12 +401,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final IdentityUserUpdateRolesDto identityUserUpdateRolesDto = ; // IdentityUserUpdateRolesDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final IdentityUserUpdateRolesDto identityUserUpdateRolesDto = ; // IdentityUserUpdateRolesDto |
 
 try {
     api.updateRoles(id, identityUserUpdateRolesDto);
@@ -437,8 +417,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **identityUserUpdateRolesDto** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **identityUserUpdateRolesDto** | [**IdentityUserUpdateRolesDto**](IdentityUserUpdateRolesDto.md)|  | [optional]
 
 ### Return type
 
@@ -446,7 +426,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

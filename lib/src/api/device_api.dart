@@ -24,10 +24,10 @@ class DeviceApi {
   const DeviceApi(this._dio);
 
   /// bind
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [bindDeviceDto] 
+  /// * [bindDeviceDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class DeviceApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> bind({ 
+  Future<Response<void>> bind({
     BindDeviceDto? bindDeviceDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class DeviceApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -94,10 +89,10 @@ _bodyData=jsonEncode(bindDeviceDto);
   }
 
   /// getByToken
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [token] 
+  /// * [token]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -107,7 +102,7 @@ _bodyData=jsonEncode(bindDeviceDto);
   ///
   /// Returns a [Future] containing a [Response] with a [DeviceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeviceDto>> getByToken({ 
+  Future<Response<DeviceDto>> getByToken({
     String? token,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -123,12 +118,7 @@ _bodyData=jsonEncode(bindDeviceDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -176,10 +166,10 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
   }
 
   /// getDeviceById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -189,7 +179,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [DeviceDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeviceDto>> getDeviceById({ 
+  Future<Response<DeviceDto>> getDeviceById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -205,12 +195,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -253,12 +238,12 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
   }
 
   /// getDeviceList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -268,7 +253,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [DeviceDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeviceDtoPagedResultDto>> getDeviceList({ 
+  Future<Response<DeviceDtoPagedResultDto>> getDeviceList({
     String? sorting,
     int? skipCount,
     int? maxResultCount,
@@ -286,12 +271,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -341,10 +321,10 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
   }
 
   /// logout
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [token] 
+  /// * [token]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -354,7 +334,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> logout({ 
+  Future<Response<void>> logout({
     String? token,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -370,12 +350,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -398,10 +373,10 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
   }
 
   /// refreshDevice
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [refreshDeviceStatusDto] 
+  /// * [refreshDeviceStatusDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -411,7 +386,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> refreshDevice({ 
+  Future<Response<void>> refreshDevice({
     RefreshDeviceStatusDto? refreshDeviceStatusDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -427,12 +402,7 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -468,10 +438,10 @@ _bodyData=jsonEncode(refreshDeviceStatusDto);
   }
 
   /// remove
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [token] 
+  /// * [token]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -481,7 +451,7 @@ _bodyData=jsonEncode(refreshDeviceStatusDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> remove({ 
+  Future<Response<void>> remove({
     String? token,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -497,12 +467,7 @@ _bodyData=jsonEncode(refreshDeviceStatusDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

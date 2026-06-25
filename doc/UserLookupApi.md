@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**findById**](UserLookupApi.md#findbyid) | **GET** /api/identity/users/lookup/{id} | 
-[**findByUserName**](UserLookupApi.md#findbyusername) | **GET** /api/identity/users/lookup/by-username/{userName} | 
-[**getCount**](UserLookupApi.md#getcount) | **GET** /api/identity/users/lookup/count | 
-[**search**](UserLookupApi.md#search) | **GET** /api/identity/users/lookup/search | 
+[**findById**](UserLookupApi.md#findbyid) | **GET** /api/identity/users/lookup/{id} |
+[**findByUserName**](UserLookupApi.md#findbyusername) | **GET** /api/identity/users/lookup/by-username/{userName} |
+[**getCount**](UserLookupApi.md#getcount) | **GET** /api/identity/users/lookup/count |
+[**search**](UserLookupApi.md#search) | **GET** /api/identity/users/lookup/search |
 
 
 # **findById**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserLookupApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.findById(id);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,11 +64,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserLookupApi();
-final String userName = userName_example; // String | 
+final String userName = userName_example; // String |
 
 try {
     final response = api.findByUserName(userName);
@@ -84,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userName** | **String**|  | 
+ **userName** | **String**|  |
 
 ### Return type
 
@@ -92,7 +88,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,11 +105,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserLookupApi();
-final String filter = filter_example; // String | 
+final String filter = filter_example; // String |
 
 try {
     final response = api.getCount(filter);
@@ -127,7 +121,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional] 
+ **filter** | **String**|  | [optional]
 
 ### Return type
 
@@ -135,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -152,14 +146,12 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getUserLookupApi();
-final String filter = filter_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String filter = filter_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.search(filter, sorting, skipCount, maxResultCount);
@@ -173,10 +165,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **filter** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -184,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

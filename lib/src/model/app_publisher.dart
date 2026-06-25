@@ -53,10 +53,6 @@ enum AppPublisher {
       @JsonValue(r'Felorx')
       felorx(r'Felorx'),
           /// Represents the publisher of an app.
-      @Deprecated('Use felorx.')
-      @JsonValue(r'Puupee')
-      puupee(r'Puupee'),
-          /// Represents the publisher of an app.
       @JsonValue(r'Other')
       other(r'Other');
 

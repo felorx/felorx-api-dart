@@ -1,11 +1,27 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for AiProvidersApi
 void main() {
   final instance = FelorxApiClient().getAiProvidersApi();
 
   group(AiProvidersApi, () {
+    //Future<AiProviderDto> aiProvidersSetDefaultModel({ SetDefaultAiModelDto setDefaultAiModelDto }) async
+    test('test aiProvidersSetDefaultModel', () async {
+      // TODO
+    });
+
+    //Future<AiProviderDto> aiProvidersSetEnabled(String id, { SetAiProviderEnabledDto setAiProviderEnabledDto }) async
+    test('test aiProvidersSetEnabled', () async {
+      // TODO
+    });
+
+    //Future<AiProviderDto> aiProvidersTest(String id, { TestAiProviderDto testAiProviderDto }) async
+    test('test aiProvidersTest', () async {
+      // TODO
+    });
+
     //Future<AiProviderDto> create({ CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
     test('test create', () async {
       // TODO
@@ -26,24 +42,10 @@ void main() {
       // TODO
     });
 
-    //Future<AiProviderDto> setDefaultModel({ SetDefaultAiModelDto setDefaultAiModelDto }) async
-    test('test setDefaultModel', () async {
-      // TODO
-    });
-
-    //Future<AiProviderDto> setEnabled(String id, { SetAiProviderEnabledDto setAiProviderEnabledDto }) async
-    test('test setEnabled', () async {
-      // TODO
-    });
-
-    //Future<AiProviderDto> test(String id, { TestAiProviderDto testAiProviderDto }) async
-    test('test test', () async {
-      // TODO
-    });
-
     //Future<AiProviderDto> update(String id, { CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
     test('test update', () async {
       // TODO
     });
+
   });
 }

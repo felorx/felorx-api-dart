@@ -26,10 +26,10 @@ class UserApi {
   const UserApi(this._dio);
 
   /// createIdentityUser
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [identityUserCreateDto] 
+  /// * [identityUserCreateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,7 +39,7 @@ class UserApi {
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> createIdentityUser({ 
+  Future<Response<IdentityUserDto>> createIdentityUser({
     IdentityUserCreateDto? identityUserCreateDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -55,12 +55,7 @@ class UserApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -121,10 +116,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// deleteIdentityUserById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -134,7 +129,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteIdentityUserById({ 
+  Future<Response<void>> deleteIdentityUserById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -150,12 +145,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -173,10 +163,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// findByEmail
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [email] 
+  /// * [email]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +176,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> findByEmail({ 
+  Future<Response<IdentityUserDto>> findByEmail({
     required String email,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -202,12 +192,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -250,10 +235,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// findByUsername
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [userName] 
+  /// * [userName]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -263,7 +248,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> findByUsername({ 
+  Future<Response<IdentityUserDto>> findByUsername({
     required String userName,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -279,12 +264,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -327,7 +307,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// getAssignableRoles
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -339,7 +319,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityRoleDtoListResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityRoleDtoListResultDto>> getAssignableRoles({ 
+  Future<Response<IdentityRoleDtoListResultDto>> getAssignableRoles({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -354,12 +334,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -402,10 +377,10 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
   }
 
   /// getIdentityUserById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -415,7 +390,7 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> getIdentityUserById({ 
+  Future<Response<IdentityUserDto>> getIdentityUserById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -431,12 +406,7 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -479,13 +449,13 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// getIdentityUserList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [filter] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [filter]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -495,7 +465,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDtoPagedResultDto>> getIdentityUserList({ 
+  Future<Response<IdentityUserDtoPagedResultDto>> getIdentityUserList({
     String? filter,
     String? sorting,
     int? skipCount,
@@ -514,12 +484,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -570,10 +535,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
   }
 
   /// getRoles
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -583,7 +548,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityRoleDtoListResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityRoleDtoListResultDto>> getRoles({ 
+  Future<Response<IdentityRoleDtoListResultDto>> getRoles({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -599,12 +564,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -647,11 +607,11 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
   }
 
   /// updateIdentityUser
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [identityUserUpdateDto] 
+  /// * [id]
+  /// * [identityUserUpdateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -661,7 +621,7 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> updateIdentityUser({ 
+  Future<Response<IdentityUserDto>> updateIdentityUser({
     required String id,
     IdentityUserUpdateDto? identityUserUpdateDto,
     CancelToken? cancelToken,
@@ -678,12 +638,7 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -744,11 +699,11 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// updateRoles
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [identityUserUpdateRolesDto] 
+  /// * [id]
+  /// * [identityUserUpdateRolesDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -758,7 +713,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateRoles({ 
+  Future<Response<void>> updateRoles({
     required String id,
     IdentityUserUpdateRolesDto? identityUserUpdateRolesDto,
     CancelToken? cancelToken,
@@ -775,12 +730,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

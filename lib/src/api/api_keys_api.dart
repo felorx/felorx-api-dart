@@ -24,10 +24,10 @@ class ApiKeysApi {
   const ApiKeysApi(this._dio);
 
   /// createApiKeys
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [apiKeyCreateDto] 
+  /// * [apiKeyCreateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class ApiKeysApi {
   ///
   /// Returns a [Future] containing a [Response] with a [ApiKeyDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApiKeyDto>> createApiKeys({ 
+  Future<Response<ApiKeyDto>> createApiKeys({
     ApiKeyCreateDto? apiKeyCreateDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class ApiKeysApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -119,10 +114,10 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   }
 
   /// deleteApiKeysById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -132,7 +127,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteApiKeysById({ 
+  Future<Response<void>> deleteApiKeysById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -148,12 +143,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -171,10 +161,10 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   }
 
   /// getApiKeysById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -184,7 +174,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [ApiKeyDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApiKeyDto>> getApiKeysById({ 
+  Future<Response<ApiKeyDto>> getApiKeysById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -248,12 +233,12 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   }
 
   /// getApiKeysList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -263,7 +248,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [ApiKeyDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApiKeyDtoPagedResultDto>> getApiKeysList({ 
+  Future<Response<ApiKeyDtoPagedResultDto>> getApiKeysList({
     String? sorting,
     int? skipCount,
     int? maxResultCount,
@@ -281,12 +266,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDto, ApiKeyDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -336,11 +316,11 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDtoPagedResultDto, Ap
   }
 
   /// updateApiKeys
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [apiKeyUpdateDto] 
+  /// * [id]
+  /// * [apiKeyUpdateDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -350,7 +330,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDtoPagedResultDto, Ap
   ///
   /// Returns a [Future] containing a [Response] with a [ApiKeyDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApiKeyDto>> updateApiKeys({ 
+  Future<Response<ApiKeyDto>> updateApiKeys({
     required String id,
     ApiKeyUpdateDto? apiKeyUpdateDto,
     CancelToken? cancelToken,
@@ -367,12 +347,7 @@ _responseData = rawData == null ? null : deserialize<ApiKeyDtoPagedResultDto, Ap
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

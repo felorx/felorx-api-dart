@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/app_price_naming.dart';
 import 'package:felorx_api_client/src/model/user_storage_item_dto.dart';
+import 'package:felorx_api_client/src/model/app_price_naming.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'user_storage_dto.g.dart';

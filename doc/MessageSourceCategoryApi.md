@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getMessageSourceCategoryList**](MessageSourceCategoryApi.md#getmessagesourcecategorylist) | **GET** /api/app/message-source-category | 
+[**getMessageSourceCategoryList**](MessageSourceCategoryApi.md#getmessagesourcecategorylist) | **GET** /api/app/message-source-category |
 
 
 # **getMessageSourceCategoryList**
@@ -20,8 +20,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceCategoryApi();
 
@@ -42,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

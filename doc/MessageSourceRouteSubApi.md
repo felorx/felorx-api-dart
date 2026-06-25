@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createMessageSourceRouteSub**](MessageSourceRouteSubApi.md#createmessagesourceroutesub) | **POST** /api/app/message-source-route-sub | 
-[**deleteMessageSourceRouteSubById**](MessageSourceRouteSubApi.md#deletemessagesourceroutesubbyid) | **DELETE** /api/app/message-source-route-sub/{id} | 
-[**getMessageSourceRouteSubById**](MessageSourceRouteSubApi.md#getmessagesourceroutesubbyid) | **GET** /api/app/message-source-route-sub/{id} | 
-[**getMessageSourceRouteSubList**](MessageSourceRouteSubApi.md#getmessagesourceroutesublist) | **GET** /api/app/message-source-route-sub | 
-[**updateMessageSourceRouteSub**](MessageSourceRouteSubApi.md#updatemessagesourceroutesub) | **PUT** /api/app/message-source-route-sub/{id} | 
+[**createMessageSourceRouteSub**](MessageSourceRouteSubApi.md#createmessagesourceroutesub) | **POST** /api/app/message-source-route-sub |
+[**deleteMessageSourceRouteSubById**](MessageSourceRouteSubApi.md#deletemessagesourceroutesubbyid) | **DELETE** /api/app/message-source-route-sub/{id} |
+[**getMessageSourceRouteSubById**](MessageSourceRouteSubApi.md#getmessagesourceroutesubbyid) | **GET** /api/app/message-source-route-sub/{id} |
+[**getMessageSourceRouteSubList**](MessageSourceRouteSubApi.md#getmessagesourceroutesublist) | **GET** /api/app/message-source-route-sub |
+[**updateMessageSourceRouteSub**](MessageSourceRouteSubApi.md#updatemessagesourceroutesub) | **PUT** /api/app/message-source-route-sub/{id} |
 
 
 # **createMessageSourceRouteSub**
@@ -24,11 +24,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceRouteSubApi();
-final CreateUpdateMessageSourceRouteSubDto createUpdateMessageSourceRouteSubDto = ; // CreateUpdateMessageSourceRouteSubDto | 
+final CreateUpdateMessageSourceRouteSubDto createUpdateMessageSourceRouteSubDto = ; // CreateUpdateMessageSourceRouteSubDto |
 
 try {
     api.createMessageSourceRouteSub(createUpdateMessageSourceRouteSubDto);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md)|  | [optional] 
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md)|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,11 +64,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceRouteSubApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteMessageSourceRouteSubById(id);
@@ -83,7 +79,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -91,7 +87,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,11 +104,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceRouteSubApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getMessageSourceRouteSubById(id);
@@ -126,7 +120,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -134,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -151,8 +145,6 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceRouteSubApi();
 
@@ -173,7 +165,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -190,12 +182,10 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageSourceRouteSubApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateUpdateMessageSourceRouteSubDto createUpdateMessageSourceRouteSubDto = ; // CreateUpdateMessageSourceRouteSubDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateUpdateMessageSourceRouteSubDto createUpdateMessageSourceRouteSubDto = ; // CreateUpdateMessageSourceRouteSubDto |
 
 try {
     api.updateMessageSourceRouteSub(id, createUpdateMessageSourceRouteSubDto);
@@ -208,8 +198,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createUpdateMessageSourceRouteSubDto** | [**CreateUpdateMessageSourceRouteSubDto**](CreateUpdateMessageSourceRouteSubDto.md)|  | [optional]
 
 ### Return type
 
@@ -217,7 +207,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

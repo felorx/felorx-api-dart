@@ -22,10 +22,10 @@ class AppAssetApi {
   const AppAssetApi(this._dio);
 
   /// createAppAsset
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppAssetDto] 
+  /// * [createOrUpdateAppAssetDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class AppAssetApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppAssetDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppAssetDto>> createAppAsset({ 
+  Future<Response<AppAssetDto>> createAppAsset({
     CreateOrUpdateAppAssetDto? createOrUpdateAppAssetDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class AppAssetApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -117,10 +112,10 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
   }
 
   /// deleteAppAssetById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -130,7 +125,7 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppAssetById({ 
+  Future<Response<void>> deleteAppAssetById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -146,12 +141,7 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -169,10 +159,10 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
   }
 
   /// getListByAppLocaleId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appLocaleId] 
+  /// * [appLocaleId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -182,7 +172,7 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppAssetDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppAssetDto>>> getListByAppLocaleId({ 
+  Future<Response<List<AppAssetDto>>> getListByAppLocaleId({
     required String appLocaleId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -198,12 +188,7 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -246,11 +231,11 @@ _responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAsset
   }
 
   /// updateAppAsset
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppAssetDto] 
+  /// * [id]
+  /// * [createOrUpdateAppAssetDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -260,7 +245,7 @@ _responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAsset
   ///
   /// Returns a [Future] containing a [Response] with a [AppAssetDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppAssetDto>> updateAppAsset({ 
+  Future<Response<AppAssetDto>> updateAppAsset({
     required String id,
     CreateOrUpdateAppAssetDto? createOrUpdateAppAssetDto,
     CancelToken? cancelToken,
@@ -277,12 +262,7 @@ _responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAsset
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

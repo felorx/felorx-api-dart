@@ -9,14 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createTenant**](TenantApi.md#createtenant) | **POST** /api/multi-tenancy/tenants | 
-[**deleteDefaultConnectionString**](TenantApi.md#deletedefaultconnectionstring) | **DELETE** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-[**deleteTenantById**](TenantApi.md#deletetenantbyid) | **DELETE** /api/multi-tenancy/tenants/{id} | 
-[**getDefaultConnectionString**](TenantApi.md#getdefaultconnectionstring) | **GET** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-[**getTenantById**](TenantApi.md#gettenantbyid) | **GET** /api/multi-tenancy/tenants/{id} | 
-[**getTenantList**](TenantApi.md#gettenantlist) | **GET** /api/multi-tenancy/tenants | 
-[**updateDefaultConnectionString**](TenantApi.md#updatedefaultconnectionstring) | **PUT** /api/multi-tenancy/tenants/{id}/default-connection-string | 
-[**updateTenant**](TenantApi.md#updatetenant) | **PUT** /api/multi-tenancy/tenants/{id} | 
+[**createTenant**](TenantApi.md#createtenant) | **POST** /api/multi-tenancy/tenants |
+[**deleteDefaultConnectionString**](TenantApi.md#deletedefaultconnectionstring) | **DELETE** /api/multi-tenancy/tenants/{id}/default-connection-string |
+[**deleteTenantById**](TenantApi.md#deletetenantbyid) | **DELETE** /api/multi-tenancy/tenants/{id} |
+[**getDefaultConnectionString**](TenantApi.md#getdefaultconnectionstring) | **GET** /api/multi-tenancy/tenants/{id}/default-connection-string |
+[**getTenantById**](TenantApi.md#gettenantbyid) | **GET** /api/multi-tenancy/tenants/{id} |
+[**getTenantList**](TenantApi.md#gettenantlist) | **GET** /api/multi-tenancy/tenants |
+[**updateDefaultConnectionString**](TenantApi.md#updatedefaultconnectionstring) | **PUT** /api/multi-tenancy/tenants/{id}/default-connection-string |
+[**updateTenant**](TenantApi.md#updatetenant) | **PUT** /api/multi-tenancy/tenants/{id} |
 
 
 # **createTenant**
@@ -27,11 +27,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final TenantCreateDto tenantCreateDto = ; // TenantCreateDto | 
+final TenantCreateDto tenantCreateDto = ; // TenantCreateDto |
 
 try {
     final response = api.createTenant(tenantCreateDto);
@@ -45,7 +43,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tenantCreateDto** | [**TenantCreateDto**](TenantCreateDto.md)|  | [optional] 
+ **tenantCreateDto** | [**TenantCreateDto**](TenantCreateDto.md)|  | [optional]
 
 ### Return type
 
@@ -53,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -70,11 +68,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteDefaultConnectionString(id);
@@ -87,7 +83,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -95,7 +91,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -112,11 +108,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteTenantById(id);
@@ -129,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -137,7 +131,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -154,11 +148,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getDefaultConnectionString(id);
@@ -172,7 +164,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -180,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -197,11 +189,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getTenantById(id);
@@ -215,7 +205,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -223,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -240,14 +230,12 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String filter = filter_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String filter = filter_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getTenantList(filter, sorting, skipCount, maxResultCount);
@@ -261,10 +249,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **filter** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **filter** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -272,7 +260,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -289,12 +277,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String defaultConnectionString = defaultConnectionString_example; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String defaultConnectionString = defaultConnectionString_example; // String |
 
 try {
     api.updateDefaultConnectionString(id, defaultConnectionString);
@@ -307,8 +293,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **defaultConnectionString** | **String**|  | [optional] 
+ **id** | **String**|  |
+ **defaultConnectionString** | **String**|  | [optional]
 
 ### Return type
 
@@ -316,7 +302,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -333,12 +319,10 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTenantApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final TenantUpdateDto tenantUpdateDto = ; // TenantUpdateDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final TenantUpdateDto tenantUpdateDto = ; // TenantUpdateDto |
 
 try {
     final response = api.updateTenant(id, tenantUpdateDto);
@@ -352,8 +336,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **tenantUpdateDto** | [**TenantUpdateDto**](TenantUpdateDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **tenantUpdateDto** | [**TenantUpdateDto**](TenantUpdateDto.md)|  | [optional]
 
 ### Return type
 
@@ -361,7 +345,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

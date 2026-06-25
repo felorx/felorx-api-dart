@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**publish**](MessageApi.md#publish) | **POST** /api/app/message/publish | 
-[**recall**](MessageApi.md#recall) | **POST** /api/app/message/recall | 
-[**subscribe**](MessageApi.md#subscribe) | **POST** /api/app/message/subscribe | 
-[**unsubscribe**](MessageApi.md#unsubscribe) | **POST** /api/app/message/unsubscribe | 
+[**publish**](MessageApi.md#publish) | **POST** /api/app/message/publish |
+[**recall**](MessageApi.md#recall) | **POST** /api/app/message/recall |
+[**subscribe**](MessageApi.md#subscribe) | **POST** /api/app/message/subscribe |
+[**unsubscribe**](MessageApi.md#unsubscribe) | **POST** /api/app/message/unsubscribe |
 
 
 # **publish**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageApi();
-final MessagePublishDto messagePublishDto = ; // MessagePublishDto | 
+final MessagePublishDto messagePublishDto = ; // MessagePublishDto |
 
 try {
     api.publish(messagePublishDto);
@@ -40,7 +38,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messagePublishDto** | [**MessagePublishDto**](MessagePublishDto.md)|  | [optional] 
+ **messagePublishDto** | [**MessagePublishDto**](MessagePublishDto.md)|  | [optional]
 
 ### Return type
 
@@ -48,7 +46,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -65,11 +63,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageApi();
-final MessageRecallDto messageRecallDto = ; // MessageRecallDto | 
+final MessageRecallDto messageRecallDto = ; // MessageRecallDto |
 
 try {
     api.recall(messageRecallDto);
@@ -82,7 +78,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageRecallDto** | [**MessageRecallDto**](MessageRecallDto.md)|  | [optional] 
+ **messageRecallDto** | [**MessageRecallDto**](MessageRecallDto.md)|  | [optional]
 
 ### Return type
 
@@ -90,7 +86,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -107,11 +103,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageApi();
-final MessageSubscribeDto messageSubscribeDto = ; // MessageSubscribeDto | 
+final MessageSubscribeDto messageSubscribeDto = ; // MessageSubscribeDto |
 
 try {
     api.subscribe(messageSubscribeDto);
@@ -124,7 +118,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageSubscribeDto** | [**MessageSubscribeDto**](MessageSubscribeDto.md)|  | [optional] 
+ **messageSubscribeDto** | [**MessageSubscribeDto**](MessageSubscribeDto.md)|  | [optional]
 
 ### Return type
 
@@ -132,7 +126,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -149,11 +143,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getMessageApi();
-final MessageUnsubscribeDto messageUnsubscribeDto = ; // MessageUnsubscribeDto | 
+final MessageUnsubscribeDto messageUnsubscribeDto = ; // MessageUnsubscribeDto |
 
 try {
     api.unsubscribe(messageUnsubscribeDto);
@@ -166,7 +158,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **messageUnsubscribeDto** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md)|  | [optional] 
+ **messageUnsubscribeDto** | [**MessageUnsubscribeDto**](MessageUnsubscribeDto.md)|  | [optional]
 
 ### Return type
 
@@ -174,7 +166,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -9,7 +9,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAbpApiDefinition**](AbpApiDefinitionApi.md#getabpapidefinition) | **GET** /api/abp/api-definition | 
+[**getAbpApiDefinition**](AbpApiDefinitionApi.md#getabpapidefinition) | **GET** /api/abp/api-definition |
 
 
 # **getAbpApiDefinition**
@@ -20,11 +20,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAbpApiDefinitionApi();
-final bool includeTypes = true; // bool | 
+final bool includeTypes = true; // bool |
 
 try {
     final response = api.getAbpApiDefinition(includeTypes);
@@ -38,7 +36,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeTypes** | **bool**|  | [optional] 
+ **includeTypes** | **bool**|  | [optional]
 
 ### Return type
 
@@ -46,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

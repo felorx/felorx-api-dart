@@ -21,7 +21,7 @@ class MessageSourceCategoryApi {
   const MessageSourceCategoryApi(this._dio);
 
   /// getMessageSourceCategoryList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -33,7 +33,7 @@ class MessageSourceCategoryApi {
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageSourceCategoryDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageSourceCategoryDto>>> getMessageSourceCategoryList({ 
+  Future<Response<List<MessageSourceCategoryDto>>> getMessageSourceCategoryList({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -48,12 +48,7 @@ class MessageSourceCategoryApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

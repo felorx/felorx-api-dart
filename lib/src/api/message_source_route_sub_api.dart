@@ -22,10 +22,10 @@ class MessageSourceRouteSubApi {
   const MessageSourceRouteSubApi(this._dio);
 
   /// createMessageSourceRouteSub
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createUpdateMessageSourceRouteSubDto] 
+  /// * [createUpdateMessageSourceRouteSubDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -35,7 +35,7 @@ class MessageSourceRouteSubApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> createMessageSourceRouteSub({ 
+  Future<Response<void>> createMessageSourceRouteSub({
     CreateUpdateMessageSourceRouteSubDto? createUpdateMessageSourceRouteSubDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -51,12 +51,7 @@ class MessageSourceRouteSubApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -92,10 +87,10 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
   }
 
   /// deleteMessageSourceRouteSubById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -105,7 +100,7 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteMessageSourceRouteSubById({ 
+  Future<Response<void>> deleteMessageSourceRouteSubById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -121,12 +116,7 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -144,10 +134,10 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
   }
 
   /// getMessageSourceRouteSubById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -157,7 +147,7 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
   ///
   /// Returns a [Future] containing a [Response] with a [MessageSourceRouteSubDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<MessageSourceRouteSubDto>> getMessageSourceRouteSubById({ 
+  Future<Response<MessageSourceRouteSubDto>> getMessageSourceRouteSubById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -173,12 +163,7 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -221,7 +206,7 @@ _responseData = rawData == null ? null : deserialize<MessageSourceRouteSubDto, M
   }
 
   /// getMessageSourceRouteSubList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -233,7 +218,7 @@ _responseData = rawData == null ? null : deserialize<MessageSourceRouteSubDto, M
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageSourceRouteSubDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageSourceRouteSubDto>>> getMessageSourceRouteSubList({ 
+  Future<Response<List<MessageSourceRouteSubDto>>> getMessageSourceRouteSubList({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -248,12 +233,7 @@ _responseData = rawData == null ? null : deserialize<MessageSourceRouteSubDto, M
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -296,11 +276,11 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceRouteSubD
   }
 
   /// updateMessageSourceRouteSub
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createUpdateMessageSourceRouteSubDto] 
+  /// * [id]
+  /// * [createUpdateMessageSourceRouteSubDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -310,7 +290,7 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceRouteSubD
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> updateMessageSourceRouteSub({ 
+  Future<Response<void>> updateMessageSourceRouteSub({
     required String id,
     CreateUpdateMessageSourceRouteSubDto? createUpdateMessageSourceRouteSubDto,
     CancelToken? cancelToken,
@@ -327,12 +307,7 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceRouteSubD
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

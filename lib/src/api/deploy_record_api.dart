@@ -26,10 +26,10 @@ class DeployRecordApi {
   const DeployRecordApi(this._dio);
 
   /// createDeployRecord
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createDeployRecordDto] 
+  /// * [createDeployRecordDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -39,7 +39,7 @@ class DeployRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> createDeployRecord({ 
+  Future<Response<DeployRecordDto>> createDeployRecord({
     CreateDeployRecordDto? createDeployRecordDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -55,12 +55,7 @@ class DeployRecordApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -121,10 +116,10 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   }
 
   /// deleteDeployRecordById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -134,7 +129,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteDeployRecordById({ 
+  Future<Response<void>> deleteDeployRecordById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -150,12 +145,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -172,11 +162,13 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
     return _response;
   }
 
-  /// getByCiDeployId
-  /// 
+  /// deployRecordGetLatest
+  ///
   ///
   /// Parameters:
-  /// * [ciDeployId] 
+  /// * [appId]
+  /// * [platform]
+  /// * [environment]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +178,317 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> getByCiDeployId({ 
+  Future<Response<DeployRecordDto>> deployRecordGetLatest({
+    required String appId,
+    AppPlatform? platform,
+    String? environment,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/deploy-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (platform != null) r'platform': platform,
+      if (environment != null) r'environment': environment,
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    DeployRecordDto? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<DeployRecordDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// deployRecordMarkAsCanceled
+  ///
+  ///
+  /// Parameters:
+  /// * [id]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<DeployRecordDto>> deployRecordMarkAsCanceled({
+    required String id,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/deploy-record/{id}/mark-as-canceled'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    DeployRecordDto? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<DeployRecordDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// deployRecordMarkAsFailed
+  ///
+  ///
+  /// Parameters:
+  /// * [id]
+  /// * [errorMessage]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<DeployRecordDto>> deployRecordMarkAsFailed({
+    required String id,
+    String? errorMessage,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/deploy-record/{id}/mark-as-failed'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (errorMessage != null) r'errorMessage': errorMessage,
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    DeployRecordDto? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<DeployRecordDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// deployRecordMarkAsSucceeded
+  ///
+  ///
+  /// Parameters:
+  /// * [id]
+  /// * [deployUrl]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<DeployRecordDto>> deployRecordMarkAsSucceeded({
+    required String id,
+    String? deployUrl,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/deploy-record/{id}/mark-as-succeeded'.replaceAll('{' r'id' '}', id.toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (deployUrl != null) r'deployUrl': deployUrl,
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    DeployRecordDto? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<DeployRecordDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// getByCiDeployId
+  ///
+  ///
+  /// Parameters:
+  /// * [ciDeployId]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<DeployRecordDto>> getByCiDeployId({
     required String ciDeployId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -202,12 +504,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -250,10 +547,10 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   }
 
   /// getDeployRecordById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -263,7 +560,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> getDeployRecordById({ 
+  Future<Response<DeployRecordDto>> getDeployRecordById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -279,12 +576,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -327,7 +619,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   }
 
   /// getDeployRecordList
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [appId] - 应用ID
@@ -336,9 +628,9 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   /// * [environment] - 部署环境
   /// * [version] - 版本号
   /// * [buildRecordId] - 构建记录ID
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -348,7 +640,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDtoPagedResultDto>> getDeployRecordList({ 
+  Future<Response<DeployRecordDtoPagedResultDto>> getDeployRecordList({
     String? appId,
     DeployStatus? status,
     AppPlatform? platform,
@@ -372,12 +664,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -432,98 +719,11 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDtoPagedResultD
     );
   }
 
-  /// getLatest
-  /// 
-  ///
-  /// Parameters:
-  /// * [appId] 
-  /// * [platform] 
-  /// * [environment] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> getLatest({ 
-    required String appId,
-    AppPlatform? platform,
-    String? environment,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/deploy-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (platform != null) r'platform': platform,
-      if (environment != null) r'environment': environment,
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    DeployRecordDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<DeployRecordDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// getListByBuildRecordId
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [buildRecordId] 
+  /// * [buildRecordId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -533,7 +733,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [List<DeployRecordDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<DeployRecordDto>>> getListByBuildRecordId({ 
+  Future<Response<List<DeployRecordDto>>> getListByBuildRecordId({
     required String buildRecordId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -549,12 +749,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -596,88 +791,11 @@ _responseData = rawData == null ? null : deserialize<List<DeployRecordDto>, Depl
     );
   }
 
-  /// markAsCanceled
-  /// 
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> markAsCanceled({ 
-    required String id,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-canceled'.replaceAll('{' r'id' '}', id.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    DeployRecordDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<DeployRecordDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// markAsDeploying
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -687,7 +805,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> markAsDeploying({ 
+  Future<Response<DeployRecordDto>> markAsDeploying({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -703,12 +821,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -717,174 +830,6 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
     final _response = await _dio.request<Object>(
       _path,
       options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    DeployRecordDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<DeployRecordDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// markAsFailed
-  /// 
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [errorMessage] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> markAsFailed({ 
-    required String id,
-    String? errorMessage,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-failed'.replaceAll('{' r'id' '}', id.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (errorMessage != null) r'errorMessage': errorMessage,
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    DeployRecordDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<DeployRecordDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// markAsSucceeded
-  /// 
-  ///
-  /// Parameters:
-  /// * [id] 
-  /// * [deployUrl] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> markAsSucceeded({ 
-    required String id,
-    String? deployUrl,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-succeeded'.replaceAll('{' r'id' '}', id.toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (deployUrl != null) r'deployUrl': deployUrl,
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
       cancelToken: cancelToken,
       onSendProgress: onSendProgress,
       onReceiveProgress: onReceiveProgress,
@@ -919,11 +864,11 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   }
 
   /// updateDeployRecord
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [updateDeployRecordDto] 
+  /// * [id]
+  /// * [updateDeployRecordDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -933,7 +878,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>> updateDeployRecord({ 
+  Future<Response<DeployRecordDto>> updateDeployRecord({
     required String id,
     UpdateDeployRecordDto? updateDeployRecordDto,
     CancelToken? cancelToken,
@@ -950,12 +895,7 @@ _responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployReco
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

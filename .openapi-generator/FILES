@@ -10,6 +10,8 @@ doc/AbpTenantApi.md
 doc/AccountApi.md
 doc/AccountDeletionDto.md
 doc/ActionApiDescriptionModel.md
+doc/AdjustCreditsDto.md
+doc/AdjustCreditsResultDto.md
 doc/AiCapability.md
 doc/AiChatChoiceDto.md
 doc/AiChatCompletionDto.md
@@ -115,6 +117,10 @@ doc/CreateAlipayOrderResultDto.md
 doc/CreateAppFeedbackDto.md
 doc/CreateAvatarDto.md
 doc/CreateBuildRecordDto.md
+doc/CreateCreditAlipayOrderDto.md
+doc/CreateCreditAlipayOrderResultDto.md
+doc/CreateCreditPayPalOrderDto.md
+doc/CreateCreditPayPalOrderResultDto.md
 doc/CreateDeployRecordDto.md
 doc/CreateMessageTemplateReleaseDto.md
 doc/CreateOpenIddictApplicationDto.md
@@ -141,6 +147,10 @@ doc/CreateUpdateAppTesterDto.md
 doc/CreateUpdateMessageSourceDto.md
 doc/CreateUpdateMessageSourceRouteDto.md
 doc/CreateUpdateMessageSourceRouteSubDto.md
+doc/CreditAccountDto.md
+doc/CreditApi.md
+doc/CreditLedgerEntryDto.md
+doc/CreditPackageDto.md
 doc/CurrentCultureDto.md
 doc/CurrentTenantDto.md
 doc/CurrentUserDto.md
@@ -324,6 +334,7 @@ lib/src/api/app_user_score_api.dart
 lib/src/api/auth_center_api.dart
 lib/src/api/avatar_api.dart
 lib/src/api/build_record_api.dart
+lib/src/api/credit_api.dart
 lib/src/api/deploy_record_api.dart
 lib/src/api/device_api.dart
 lib/src/api/dynamic_claims_api.dart
@@ -358,6 +369,8 @@ lib/src/auth/oauth.dart
 lib/src/deserialize.dart
 lib/src/model/account_deletion_dto.dart
 lib/src/model/action_api_description_model.dart
+lib/src/model/adjust_credits_dto.dart
+lib/src/model/adjust_credits_result_dto.dart
 lib/src/model/ai_capability.dart
 lib/src/model/ai_chat_choice_dto.dart
 lib/src/model/ai_chat_completion_dto.dart
@@ -446,6 +459,10 @@ lib/src/model/create_alipay_order_result_dto.dart
 lib/src/model/create_app_feedback_dto.dart
 lib/src/model/create_avatar_dto.dart
 lib/src/model/create_build_record_dto.dart
+lib/src/model/create_credit_alipay_order_dto.dart
+lib/src/model/create_credit_alipay_order_result_dto.dart
+lib/src/model/create_credit_pay_pal_order_dto.dart
+lib/src/model/create_credit_pay_pal_order_result_dto.dart
 lib/src/model/create_deploy_record_dto.dart
 lib/src/model/create_message_template_release_dto.dart
 lib/src/model/create_open_iddict_application_dto.dart
@@ -472,6 +489,9 @@ lib/src/model/create_update_app_tester_dto.dart
 lib/src/model/create_update_message_source_dto.dart
 lib/src/model/create_update_message_source_route_dto.dart
 lib/src/model/create_update_message_source_route_sub_dto.dart
+lib/src/model/credit_account_dto.dart
+lib/src/model/credit_ledger_entry_dto.dart
+lib/src/model/credit_package_dto.dart
 lib/src/model/current_culture_dto.dart
 lib/src/model/current_tenant_dto.dart
 lib/src/model/current_user_dto.dart
@@ -613,6 +633,8 @@ test/abp_tenant_api_test.dart
 test/account_api_test.dart
 test/account_deletion_dto_test.dart
 test/action_api_description_model_test.dart
+test/adjust_credits_dto_test.dart
+test/adjust_credits_result_dto_test.dart
 test/ai_capability_test.dart
 test/ai_chat_choice_dto_test.dart
 test/ai_chat_completion_dto_test.dart
@@ -718,6 +740,10 @@ test/create_alipay_order_result_dto_test.dart
 test/create_app_feedback_dto_test.dart
 test/create_avatar_dto_test.dart
 test/create_build_record_dto_test.dart
+test/create_credit_alipay_order_dto_test.dart
+test/create_credit_alipay_order_result_dto_test.dart
+test/create_credit_pay_pal_order_dto_test.dart
+test/create_credit_pay_pal_order_result_dto_test.dart
 test/create_deploy_record_dto_test.dart
 test/create_message_template_release_dto_test.dart
 test/create_open_iddict_application_dto_test.dart
@@ -744,6 +770,10 @@ test/create_update_app_tester_dto_test.dart
 test/create_update_message_source_dto_test.dart
 test/create_update_message_source_route_dto_test.dart
 test/create_update_message_source_route_sub_dto_test.dart
+test/credit_account_dto_test.dart
+test/credit_api_test.dart
+test/credit_ledger_entry_dto_test.dart
+test/credit_package_dto_test.dart
 test/current_culture_dto_test.dart
 test/current_tenant_dto_test.dart
 test/current_user_dto_test.dart

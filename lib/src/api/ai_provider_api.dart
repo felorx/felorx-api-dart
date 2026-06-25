@@ -28,10 +28,10 @@ class AiProviderApi {
   const AiProviderApi(this._dio);
 
   /// createAiProvider
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAiProviderDto] 
+  /// * [createOrUpdateAiProviderDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -41,7 +41,7 @@ class AiProviderApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> createAiProvider({ 
+  Future<Response<AiProviderDto>> createAiProvider({
     CreateOrUpdateAiProviderDto? createOrUpdateAiProviderDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -57,12 +57,7 @@ class AiProviderApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -123,10 +118,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// deleteAiProviderById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -136,7 +131,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAiProviderById({ 
+  Future<Response<void>> deleteAiProviderById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -152,12 +147,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -175,10 +165,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// getAiProviderById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -188,7 +178,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> getAiProviderById({ 
+  Future<Response<AiProviderDto>> getAiProviderById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -204,12 +194,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -252,16 +237,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// getAiProviderList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [filter] 
-  /// * [providerType] 
-  /// * [capability] 
-  /// * [enabled] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [filter]
+  /// * [providerType]
+  /// * [capability]
+  /// * [enabled]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -271,7 +256,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDtoPagedResultDto>> getAiProviderList({ 
+  Future<Response<AiProviderDtoPagedResultDto>> getAiProviderList({
     String? filter,
     AiProviderType? providerType,
     AiCapability? capability,
@@ -293,12 +278,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -352,10 +332,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
   }
 
   /// setDefaultModel
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [setDefaultAiModelDto] 
+  /// * [setDefaultAiModelDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -365,7 +345,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> setDefaultModel({ 
+  Future<Response<AiProviderDto>> setDefaultModel({
     SetDefaultAiModelDto? setDefaultAiModelDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -381,12 +361,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -447,11 +422,11 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// setEnabled
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [setAiProviderEnabledDto] 
+  /// * [id]
+  /// * [setAiProviderEnabledDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -461,7 +436,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> setEnabled({ 
+  Future<Response<AiProviderDto>> setEnabled({
     required String id,
     SetAiProviderEnabledDto? setAiProviderEnabledDto,
     CancelToken? cancelToken,
@@ -478,12 +453,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -544,11 +514,11 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// test
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [testAiProviderDto] 
+  /// * [id]
+  /// * [testAiProviderDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -558,7 +528,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> test({ 
+  Future<Response<AiProviderDto>> test({
     required String id,
     TestAiProviderDto? testAiProviderDto,
     CancelToken? cancelToken,
@@ -575,12 +545,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -641,11 +606,11 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   }
 
   /// updateAiProvider
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAiProviderDto] 
+  /// * [id]
+  /// * [createOrUpdateAiProviderDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -655,7 +620,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> updateAiProvider({ 
+  Future<Response<AiProviderDto>> updateAiProvider({
     required String id,
     CreateOrUpdateAiProviderDto? createOrUpdateAiProviderDto,
     CancelToken? cancelToken,
@@ -672,12 +637,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

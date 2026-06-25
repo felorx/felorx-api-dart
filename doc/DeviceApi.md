@@ -9,13 +9,13 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bind**](DeviceApi.md#bind) | **POST** /api/app/device/bind | 
-[**getByToken**](DeviceApi.md#getbytoken) | **GET** /api/app/device/by-token | 
-[**getDeviceById**](DeviceApi.md#getdevicebyid) | **GET** /api/app/device/{id} | 
-[**getDeviceList**](DeviceApi.md#getdevicelist) | **GET** /api/app/device | 
-[**logout**](DeviceApi.md#logout) | **POST** /api/app/device/logout | 
-[**refreshDevice**](DeviceApi.md#refreshdevice) | **POST** /api/app/device/refresh-device | 
-[**remove**](DeviceApi.md#remove) | **DELETE** /api/app/device | 
+[**bind**](DeviceApi.md#bind) | **POST** /api/app/device/bind |
+[**getByToken**](DeviceApi.md#getbytoken) | **GET** /api/app/device/by-token |
+[**getDeviceById**](DeviceApi.md#getdevicebyid) | **GET** /api/app/device/{id} |
+[**getDeviceList**](DeviceApi.md#getdevicelist) | **GET** /api/app/device |
+[**logout**](DeviceApi.md#logout) | **POST** /api/app/device/logout |
+[**refreshDevice**](DeviceApi.md#refreshdevice) | **POST** /api/app/device/refresh-device |
+[**remove**](DeviceApi.md#remove) | **DELETE** /api/app/device |
 
 
 # **bind**
@@ -26,11 +26,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final BindDeviceDto bindDeviceDto = ; // BindDeviceDto | 
+final BindDeviceDto bindDeviceDto = ; // BindDeviceDto |
 
 try {
     api.bind(bindDeviceDto);
@@ -43,7 +41,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bindDeviceDto** | [**BindDeviceDto**](BindDeviceDto.md)|  | [optional] 
+ **bindDeviceDto** | [**BindDeviceDto**](BindDeviceDto.md)|  | [optional]
 
 ### Return type
 
@@ -51,7 +49,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -68,11 +66,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final String token = token_example; // String | 
+final String token = token_example; // String |
 
 try {
     final response = api.getByToken(token);
@@ -86,7 +82,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**|  | [optional] 
+ **token** | **String**|  | [optional]
 
 ### Return type
 
@@ -94,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -111,11 +107,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getDeviceById(id);
@@ -129,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -137,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -154,13 +148,11 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getDeviceList(sorting, skipCount, maxResultCount);
@@ -174,9 +166,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -184,7 +176,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -201,11 +193,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final String token = token_example; // String | 
+final String token = token_example; // String |
 
 try {
     api.logout(token);
@@ -218,7 +208,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**|  | [optional] 
+ **token** | **String**|  | [optional]
 
 ### Return type
 
@@ -226,7 +216,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -243,11 +233,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final RefreshDeviceStatusDto refreshDeviceStatusDto = ; // RefreshDeviceStatusDto | 
+final RefreshDeviceStatusDto refreshDeviceStatusDto = ; // RefreshDeviceStatusDto |
 
 try {
     api.refreshDevice(refreshDeviceStatusDto);
@@ -260,7 +248,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **refreshDeviceStatusDto** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md)|  | [optional] 
+ **refreshDeviceStatusDto** | [**RefreshDeviceStatusDto**](RefreshDeviceStatusDto.md)|  | [optional]
 
 ### Return type
 
@@ -268,7 +256,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -285,11 +273,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getDeviceApi();
-final String token = token_example; // String | 
+final String token = token_example; // String |
 
 try {
     api.remove(token);
@@ -302,7 +288,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token** | **String**|  | [optional] 
+ **token** | **String**|  | [optional]
 
 ### Return type
 
@@ -310,7 +296,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

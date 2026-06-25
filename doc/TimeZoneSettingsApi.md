@@ -9,9 +9,9 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getTimeZoneSettings**](TimeZoneSettingsApi.md#gettimezonesettings) | **GET** /api/setting-management/timezone | 
-[**getTimezones**](TimeZoneSettingsApi.md#gettimezones) | **GET** /api/setting-management/timezone/timezones | 
-[**updateTimeZoneSettings**](TimeZoneSettingsApi.md#updatetimezonesettings) | **POST** /api/setting-management/timezone | 
+[**getTimeZoneSettings**](TimeZoneSettingsApi.md#gettimezonesettings) | **GET** /api/setting-management/timezone |
+[**getTimezones**](TimeZoneSettingsApi.md#gettimezones) | **GET** /api/setting-management/timezone/timezones |
+[**updateTimeZoneSettings**](TimeZoneSettingsApi.md#updatetimezonesettings) | **POST** /api/setting-management/timezone |
 
 
 # **getTimeZoneSettings**
@@ -22,8 +22,6 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTimeZoneSettingsApi();
 
@@ -44,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -61,8 +59,6 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTimeZoneSettingsApi();
 
@@ -83,7 +79,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -100,11 +96,9 @@ This endpoint does not need any parameter.
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getTimeZoneSettingsApi();
-final String timezone = timezone_example; // String | 
+final String timezone = timezone_example; // String |
 
 try {
     api.updateTimeZoneSettings(timezone);
@@ -117,7 +111,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **timezone** | **String**|  | [optional] 
+ **timezone** | **String**|  | [optional]
 
 ### Return type
 
@@ -125,7 +119,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

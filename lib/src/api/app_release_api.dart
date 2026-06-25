@@ -24,10 +24,10 @@ class AppReleaseApi {
   const AppReleaseApi(this._dio);
 
   /// 创建新版本
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppReleaseDto] - 
+  /// * [createOrUpdateAppReleaseDto] -
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class AppReleaseApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDto>> createAppRelease({ 
+  Future<Response<AppReleaseDto>> createAppRelease({
     CreateOrUpdateAppReleaseDto? createOrUpdateAppReleaseDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,12 +53,7 @@ class AppReleaseApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -119,10 +114,10 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   }
 
   /// 删除版本
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] - 
+  /// * [id] -
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -132,7 +127,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppReleaseById({ 
+  Future<Response<void>> deleteAppReleaseById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -148,12 +143,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -171,10 +161,10 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   }
 
   /// 获取版本
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] - 
+  /// * [id] -
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -184,7 +174,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDto>> getAppReleaseById({ 
+  Future<Response<AppReleaseDto>> getAppReleaseById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,12 +190,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -248,16 +233,16 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   }
 
   /// 获取版本列表
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [channel] 
-  /// * [platform] 
-  /// * [publisher] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [appId]
+  /// * [channel]
+  /// * [platform]
+  /// * [publisher]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -267,7 +252,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDtoPagedResultDto>> getAppReleaseList({ 
+  Future<Response<AppReleaseDtoPagedResultDto>> getAppReleaseList({
     String? appId,
     ReleaseChannel? channel,
     String? platform,
@@ -289,12 +274,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -348,13 +328,13 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
   }
 
   /// 获取最新版本
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appName] 
-  /// * [platform] 
-  /// * [artifactType] 
-  /// * [publisher] 
+  /// * [appName]
+  /// * [platform]
+  /// * [artifactType]
+  /// * [publisher]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -364,7 +344,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDto>> getLatest({ 
+  Future<Response<AppReleaseDto>> getLatest({
     String? appName,
     String? platform,
     String? artifactType,
@@ -383,12 +363,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -439,16 +414,16 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   }
 
   /// 开发者获取版本列表（版本的创建者为当前用户）
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [channel] 
-  /// * [platform] 
-  /// * [publisher] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [appId]
+  /// * [channel]
+  /// * [platform]
+  /// * [publisher]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -458,7 +433,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDtoPagedResultDto>> getListByDeveloper({ 
+  Future<Response<AppReleaseDtoPagedResultDto>> getListByDeveloper({
     String? appId,
     ReleaseChannel? channel,
     String? platform,
@@ -480,12 +455,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -539,11 +509,11 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
   }
 
   /// 更新版本
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] - 
-  /// * [createOrUpdateAppReleaseDto] - 
+  /// * [id] -
+  /// * [createOrUpdateAppReleaseDto] -
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -553,7 +523,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDto>> updateAppRelease({ 
+  Future<Response<AppReleaseDto>> updateAppRelease({
     required String id,
     CreateOrUpdateAppReleaseDto? createOrUpdateAppReleaseDto,
     CancelToken? cancelToken,
@@ -570,12 +540,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

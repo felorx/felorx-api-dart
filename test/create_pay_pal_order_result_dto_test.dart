@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreatePayPalOrderResultDto
 void main() {
-  final CreatePayPalOrderResultDto?
-  instance = /* CreatePayPalOrderResultDto(...) */ null;
+  final CreatePayPalOrderResultDto? instance = /* CreatePayPalOrderResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreatePayPalOrderResultDto, () {
@@ -37,5 +36,6 @@ void main() {
     test('to test the property `checkoutKind`', () async {
       // TODO
     });
+
   });
 }

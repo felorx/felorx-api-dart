@@ -21,10 +21,10 @@ class AbpApiDefinitionApi {
   const AbpApiDefinitionApi(this._dio);
 
   /// getAbpApiDefinition
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [includeTypes] 
+  /// * [includeTypes]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -34,7 +34,7 @@ class AbpApiDefinitionApi {
   ///
   /// Returns a [Future] containing a [Response] with a [ApplicationApiDescriptionModel] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ApplicationApiDescriptionModel>> getAbpApiDefinition({ 
+  Future<Response<ApplicationApiDescriptionModel>> getAbpApiDefinition({
     bool? includeTypes,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -50,12 +50,7 @@ class AbpApiDefinitionApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

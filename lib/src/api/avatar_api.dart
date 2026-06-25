@@ -23,10 +23,10 @@ class AvatarApi {
   const AvatarApi(this._dio);
 
   /// createAvatar
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createAvatarDto] 
+  /// * [createAvatarDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class AvatarApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AvatarDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AvatarDto>> createAvatar({ 
+  Future<Response<AvatarDto>> createAvatar({
     CreateAvatarDto? createAvatarDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -52,12 +52,7 @@ class AvatarApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -118,10 +113,10 @@ _responseData = rawData == null ? null : deserialize<AvatarDto, AvatarDto>(rawDa
   }
 
   /// getCredentials
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [key] 
+  /// * [key]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -131,7 +126,7 @@ _responseData = rawData == null ? null : deserialize<AvatarDto, AvatarDto>(rawDa
   ///
   /// Returns a [Future] containing a [Response] with a [StorageObjectCredentials] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<StorageObjectCredentials>> getCredentials({ 
+  Future<Response<StorageObjectCredentials>> getCredentials({
     String? key,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -147,12 +142,7 @@ _responseData = rawData == null ? null : deserialize<AvatarDto, AvatarDto>(rawDa
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,

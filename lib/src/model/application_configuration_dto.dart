@@ -3,17 +3,17 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/multi_tenancy_info_dto.dart';
-import 'package:felorx_api_client/src/model/current_user_dto.dart';
-import 'package:felorx_api_client/src/model/application_localization_configuration_dto.dart';
 import 'package:felorx_api_client/src/model/application_global_feature_configuration_dto.dart';
+import 'package:felorx_api_client/src/model/current_user_dto.dart';
 import 'package:felorx_api_client/src/model/object_extensions_dto.dart';
+import 'package:felorx_api_client/src/model/application_feature_configuration_dto.dart';
 import 'package:felorx_api_client/src/model/clock_dto.dart';
-import 'package:felorx_api_client/src/model/timing_dto.dart';
 import 'package:felorx_api_client/src/model/application_setting_configuration_dto.dart';
+import 'package:felorx_api_client/src/model/timing_dto.dart';
+import 'package:felorx_api_client/src/model/application_localization_configuration_dto.dart';
 import 'package:felorx_api_client/src/model/current_tenant_dto.dart';
 import 'package:felorx_api_client/src/model/application_auth_configuration_dto.dart';
-import 'package:felorx_api_client/src/model/application_feature_configuration_dto.dart';
+import 'package:felorx_api_client/src/model/multi_tenancy_info_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'application_configuration_dto.g.dart';

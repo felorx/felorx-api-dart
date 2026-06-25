@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/app_platform.dart';
 import 'package:felorx_api_client/src/model/deploy_status.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'deploy_record_dto.g.dart';

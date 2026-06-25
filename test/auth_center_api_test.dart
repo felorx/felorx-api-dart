@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for AuthCenterApi
 void main() {
   final instance = FelorxApiClient().getAuthCenterApi();
@@ -20,5 +21,6 @@ void main() {
     test('test revokeAuthorizedApp', () async {
       // TODO
     });
+
   });
 }

@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:felorx_api_client/src/model/latest_receipt_info.dart';
 import 'package:felorx_api_client/src/model/pending_renewal_info.dart';
 import 'package:felorx_api_client/src/model/receipt.dart';
-import 'package:felorx_api_client/src/model/latest_receipt_info.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'apple_verify_receipt_result.g.dart';

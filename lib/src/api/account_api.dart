@@ -29,10 +29,10 @@ class AccountApi {
   const AccountApi(this._dio);
 
   /// changeAccountPassword
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [changePasswordDto] 
+  /// * [changePasswordDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -42,7 +42,7 @@ class AccountApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> changeAccountPassword({ 
+  Future<Response<void>> changeAccountPassword({
     ChangePasswordDto? changePasswordDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -58,12 +58,7 @@ class AccountApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -99,7 +94,7 @@ _bodyData=jsonEncode(changePasswordDto);
   }
 
   /// 检查同步认证
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -111,7 +106,7 @@ _bodyData=jsonEncode(changePasswordDto);
   ///
   /// Returns a [Future] containing a [Response] with a [CheckSyncAuthResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CheckSyncAuthResultDto>> checkSyncAuth({ 
+  Future<Response<CheckSyncAuthResultDto>> checkSyncAuth({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -126,12 +121,7 @@ _bodyData=jsonEncode(changePasswordDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -174,10 +164,10 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
   }
 
   /// destroyAccount
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [accountDeletionDto] 
+  /// * [accountDeletionDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -187,7 +177,7 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> destroyAccount({ 
+  Future<Response<void>> destroyAccount({
     AccountDeletionDto? accountDeletionDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -203,12 +193,7 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -244,7 +229,7 @@ _bodyData=jsonEncode(accountDeletionDto);
   }
 
   /// getAccount
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -256,7 +241,7 @@ _bodyData=jsonEncode(accountDeletionDto);
   ///
   /// Returns a [Future] containing a [Response] with a [UserProfileDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserProfileDto>> getAccount({ 
+  Future<Response<UserProfileDto>> getAccount({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -271,12 +256,7 @@ _bodyData=jsonEncode(accountDeletionDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -319,10 +299,10 @@ _responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfile
   }
 
   /// register
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [registerDto] 
+  /// * [registerDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -332,7 +312,7 @@ _responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfile
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> register({ 
+  Future<Response<IdentityUserDto>> register({
     RegisterDto? registerDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -348,12 +328,7 @@ _responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfile
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -414,10 +389,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   }
 
   /// resetPassword
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [resetPasswordDto] 
+  /// * [resetPasswordDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -427,7 +402,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> resetPassword({ 
+  Future<Response<void>> resetPassword({
     ResetPasswordDto? resetPasswordDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -443,12 +418,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -484,10 +454,10 @@ _bodyData=jsonEncode(resetPasswordDto);
   }
 
   /// sendPasswordResetCode
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sendPasswordResetCodeDto] 
+  /// * [sendPasswordResetCodeDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -497,7 +467,7 @@ _bodyData=jsonEncode(resetPasswordDto);
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> sendPasswordResetCode({ 
+  Future<Response<void>> sendPasswordResetCode({
     SendPasswordResetCodeDto? sendPasswordResetCodeDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -513,12 +483,7 @@ _bodyData=jsonEncode(resetPasswordDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -554,10 +519,10 @@ _bodyData=jsonEncode(sendPasswordResetCodeDto);
   }
 
   /// verifyPasswordResetToken
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [verifyPasswordResetTokenInput] 
+  /// * [verifyPasswordResetTokenInput]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -567,7 +532,7 @@ _bodyData=jsonEncode(sendPasswordResetCodeDto);
   ///
   /// Returns a [Future] containing a [Response] with a [bool] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<bool>> verifyPasswordResetToken({ 
+  Future<Response<bool>> verifyPasswordResetToken({
     VerifyPasswordResetTokenInput? verifyPasswordResetTokenInput,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -583,12 +548,7 @@ _bodyData=jsonEncode(sendPasswordResetCodeDto);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

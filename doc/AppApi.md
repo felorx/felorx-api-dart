@@ -9,23 +9,23 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createApp**](AppApi.md#createapp) | **POST** /api/app/app | 
-[**deleteAppById**](AppApi.md#deleteappbyid) | **DELETE** /api/app/app/{id} | 
-[**getAppById**](AppApi.md#getappbyid) | **GET** /api/app/app/{id} | 
-[**getAppList**](AppApi.md#getapplist) | **GET** /api/app/app | 
-[**getByName**](AppApi.md#getbyname) | **GET** /api/app/app/by-name | 
-[**getFeatureList**](AppApi.md#getfeaturelist) | **GET** /api/app/app/feature-list/{appId} | 
-[**getListByDeveloperAll**](AppApi.md#getlistbydeveloperall) | **GET** /api/app/app/by-developer-all | 
-[**getListPublic**](AppApi.md#getlistpublic) | **GET** /api/app/app/public | 
-[**getListWithUser**](AppApi.md#getlistwithuser) | **GET** /api/app/app/with-user | 
-[**getSdksById**](AppApi.md#getsdksbyid) | **GET** /api/app/app/sdks-by-id/{appId} | 
-[**getStorefrontLanding**](AppApi.md#getstorefrontlanding) | **GET** /api/app/app/storefront-landing/{appId} | 
-[**getUploadCredentials**](AppApi.md#getuploadcredentials) | **GET** /api/app/app/upload-credentials | 
-[**getWithUser**](AppApi.md#getwithuser) | **GET** /api/app/app/{id}/with-user | 
-[**run**](AppApi.md#run) | **POST** /api/app/app/run | 
-[**setLinkedSdks**](AppApi.md#setlinkedsdks) | **POST** /api/app/app/set-linked-sdks/{appId} | 
-[**updateApp**](AppApi.md#updateapp) | **PUT** /api/app/app/{id} | 
-[**updateRunState**](AppApi.md#updaterunstate) | **PUT** /api/app/app/{id}/run-state | 
+[**createApp**](AppApi.md#createapp) | **POST** /api/app/app |
+[**deleteAppById**](AppApi.md#deleteappbyid) | **DELETE** /api/app/app/{id} |
+[**getAppById**](AppApi.md#getappbyid) | **GET** /api/app/app/{id} |
+[**getAppList**](AppApi.md#getapplist) | **GET** /api/app/app |
+[**getByName**](AppApi.md#getbyname) | **GET** /api/app/app/by-name |
+[**getFeatureList**](AppApi.md#getfeaturelist) | **GET** /api/app/app/feature-list/{appId} |
+[**getListByDeveloperAll**](AppApi.md#getlistbydeveloperall) | **GET** /api/app/app/by-developer-all |
+[**getListPublic**](AppApi.md#getlistpublic) | **GET** /api/app/app/public |
+[**getListWithUser**](AppApi.md#getlistwithuser) | **GET** /api/app/app/with-user |
+[**getSdksById**](AppApi.md#getsdksbyid) | **GET** /api/app/app/sdks-by-id/{appId} |
+[**getStorefrontLanding**](AppApi.md#getstorefrontlanding) | **GET** /api/app/app/storefront-landing/{appId} |
+[**getUploadCredentials**](AppApi.md#getuploadcredentials) | **GET** /api/app/app/upload-credentials |
+[**getWithUser**](AppApi.md#getwithuser) | **GET** /api/app/app/{id}/with-user |
+[**run**](AppApi.md#run) | **POST** /api/app/app/run |
+[**setLinkedSdks**](AppApi.md#setlinkedsdks) | **POST** /api/app/app/set-linked-sdks/{appId} |
+[**updateApp**](AppApi.md#updateapp) | **PUT** /api/app/app/{id} |
+[**updateRunState**](AppApi.md#updaterunstate) | **PUT** /api/app/app/{id}/run-state |
 
 
 # **createApp**
@@ -36,11 +36,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final CreateOrUpdateAppDto createOrUpdateAppDto = ; // CreateOrUpdateAppDto | 
+final CreateOrUpdateAppDto createOrUpdateAppDto = ; // CreateOrUpdateAppDto |
 
 try {
     final response = api.createApp(createOrUpdateAppDto);
@@ -54,7 +52,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md)|  | [optional] 
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md)|  | [optional]
 
 ### Return type
 
@@ -62,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -79,11 +77,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppById(id);
@@ -96,7 +92,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -104,7 +100,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -121,11 +117,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getAppById(id);
@@ -139,7 +133,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -147,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -164,14 +158,12 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String creatorId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String creatorId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getAppList(creatorId, sorting, skipCount, maxResultCount);
@@ -185,10 +177,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **creatorId** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **creatorId** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -196,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -213,11 +205,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String name = name_example; // String | 
+final String name = name_example; // String |
 
 try {
     final response = api.getByName(name);
@@ -231,7 +221,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **String**|  | [optional] 
+ **name** | **String**|  | [optional]
 
 ### Return type
 
@@ -239,7 +229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -256,12 +246,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String env = env_example; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String env = env_example; // String |
 
 try {
     final response = api.getFeatureList(appId, env);
@@ -275,8 +263,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
- **env** | **String**|  | [optional] 
+ **appId** | **String**|  |
+ **env** | **String**|  | [optional]
 
 ### Return type
 
@@ -284,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -301,11 +289,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String developerAccount = developerAccount_example; // String | 
+final String developerAccount = developerAccount_example; // String |
 
 try {
     final response = api.getListByDeveloperAll(developerAccount);
@@ -319,7 +305,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **developerAccount** | **String**|  | [optional] 
+ **developerAccount** | **String**|  | [optional]
 
 ### Return type
 
@@ -327,7 +313,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -344,13 +330,11 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String type = type_example; // String | 
-final String developerAccount = developerAccount_example; // String | 
-final String currentAppName = currentAppName_example; // String | 
+final String type = type_example; // String |
+final String developerAccount = developerAccount_example; // String |
+final String currentAppName = currentAppName_example; // String |
 
 try {
     final response = api.getListPublic(type, developerAccount, currentAppName);
@@ -364,9 +348,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**|  | [optional] 
- **developerAccount** | **String**|  | [optional] 
- **currentAppName** | **String**|  | [optional] 
+ **type** | **String**|  | [optional]
+ **developerAccount** | **String**|  | [optional]
+ **currentAppName** | **String**|  | [optional]
 
 ### Return type
 
@@ -374,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -391,15 +375,13 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String type = type_example; // String | 
-final String searchKey = searchKey_example; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String type = type_example; // String |
+final String searchKey = searchKey_example; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getListWithUser(type, searchKey, sorting, skipCount, maxResultCount);
@@ -413,11 +395,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type** | **String**|  | [optional] 
- **searchKey** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **type** | **String**|  | [optional]
+ **searchKey** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -425,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -442,12 +424,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String env = env_example; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String env = env_example; // String |
 
 try {
     final response = api.getSdksById(appId, env);
@@ -461,8 +441,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
- **env** | **String**|  | [optional] 
+ **appId** | **String**|  |
+ **env** | **String**|  | [optional]
 
 ### Return type
 
@@ -470,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -487,11 +467,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getStorefrontLanding(appId);
@@ -505,7 +483,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
+ **appId** | **String**|  |
 
 ### Return type
 
@@ -513,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -530,11 +508,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String key = key_example; // String | 
+final String key = key_example; // String |
 
 try {
     final response = api.getUploadCredentials(key);
@@ -548,7 +524,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **key** | **String**|  | [optional] 
+ **key** | **String**|  | [optional]
 
 ### Return type
 
@@ -556,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -573,11 +549,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getWithUser(id);
@@ -591,7 +565,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -599,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -616,11 +590,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final AppRunDto appRunDto = ; // AppRunDto | 
+final AppRunDto appRunDto = ; // AppRunDto |
 
 try {
     final response = api.run(appRunDto);
@@ -634,7 +606,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appRunDto** | [**AppRunDto**](AppRunDto.md)|  | [optional] 
+ **appRunDto** | [**AppRunDto**](AppRunDto.md)|  | [optional]
 
 ### Return type
 
@@ -642,7 +614,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -659,12 +631,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final SetAppLinkedSdksDto setAppLinkedSdksDto = ; // SetAppLinkedSdksDto | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final SetAppLinkedSdksDto setAppLinkedSdksDto = ; // SetAppLinkedSdksDto |
 
 try {
     api.setLinkedSdks(appId, setAppLinkedSdksDto);
@@ -677,8 +647,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | 
- **setAppLinkedSdksDto** | [**SetAppLinkedSdksDto**](SetAppLinkedSdksDto.md)|  | [optional] 
+ **appId** | **String**|  |
+ **setAppLinkedSdksDto** | [**SetAppLinkedSdksDto**](SetAppLinkedSdksDto.md)|  | [optional]
 
 ### Return type
 
@@ -686,7 +656,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -703,12 +673,10 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppDto createOrUpdateAppDto = ; // CreateOrUpdateAppDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppDto createOrUpdateAppDto = ; // CreateOrUpdateAppDto |
 
 try {
     final response = api.updateApp(id, createOrUpdateAppDto);
@@ -722,8 +690,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppDto** | [**CreateOrUpdateAppDto**](CreateOrUpdateAppDto.md)|  | [optional]
 
 ### Return type
 
@@ -731,7 +699,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -748,12 +716,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final AppRunRecordUpdateDto appRunRecordUpdateDto = ; // AppRunRecordUpdateDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final AppRunRecordUpdateDto appRunRecordUpdateDto = ; // AppRunRecordUpdateDto |
 
 try {
     final response = api.updateRunState(id, appRunRecordUpdateDto);
@@ -767,8 +733,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **appRunRecordUpdateDto** | [**AppRunRecordUpdateDto**](AppRunRecordUpdateDto.md)|  | [optional]
 
 ### Return type
 
@@ -776,7 +742,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

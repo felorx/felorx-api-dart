@@ -26,7 +26,7 @@ class CreatePushNotificationDto {
 
      this.url,
 
-     this.puupeeId,
+     this.felorxId,
 
      this.creatorId,
 
@@ -83,13 +83,13 @@ class CreatePushNotificationDto {
 
   @JsonKey(
     
-    name: r'puupeeId',
+    name: r'felorxId',
     required: false,
     includeIfNull: false,
   )
 
 
-  String? puupeeId;
+  String? felorxId;
 
 
 
@@ -125,7 +125,7 @@ class CreatePushNotificationDto {
       other.description == description &&
       other.body == body &&
       other.url == url &&
-      other.puupeeId == puupeeId &&
+      other.felorxId == felorxId &&
       other.creatorId == creatorId &&
       other.app == app;
 
@@ -135,7 +135,7 @@ class CreatePushNotificationDto {
         (description == null ? 0 : description.hashCode) +
         (body == null ? 0 : body.hashCode) +
         (url == null ? 0 : url.hashCode) +
-        (puupeeId == null ? 0 : puupeeId.hashCode) +
+        (felorxId == null ? 0 : felorxId.hashCode) +
         (creatorId == null ? 0 : creatorId.hashCode) +
         (app == null ? 0 : app.hashCode);
 

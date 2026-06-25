@@ -23,11 +23,11 @@ class AppTesterApi {
   const AppTesterApi(this._dio);
 
   /// 检查用户是否是内测用户
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [userId] 
+  /// * [appId]
+  /// * [userId]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -37,7 +37,7 @@ class AppTesterApi {
   ///
   /// Returns a [Future] containing a [Response] with a [bool] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<bool>> checkIsAppTester({ 
+  Future<Response<bool>> checkIsAppTester({
     String? appId,
     String? userId,
     CancelToken? cancelToken,
@@ -54,12 +54,7 @@ class AppTesterApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -108,10 +103,10 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
   }
 
   /// 创建内测用户
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createUpdateAppTesterDto] 
+  /// * [createUpdateAppTesterDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -121,7 +116,7 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
   ///
   /// Returns a [Future] containing a [Response] with a [AppTesterDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppTesterDto>> createAppTester({ 
+  Future<Response<AppTesterDto>> createAppTester({
     CreateUpdateAppTesterDto? createUpdateAppTesterDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -137,12 +132,7 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -203,10 +193,10 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   }
 
   /// 删除内测用户
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -216,7 +206,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppTesterById({ 
+  Future<Response<void>> deleteAppTesterById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -232,12 +222,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -255,10 +240,10 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   }
 
   /// 获取内测用户
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -268,7 +253,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   ///
   /// Returns a [Future] containing a [Response] with a [AppTesterDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppTesterDto>> getAppTesterById({ 
+  Future<Response<AppTesterDto>> getAppTesterById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -284,12 +269,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -332,12 +312,12 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   }
 
   /// 获取内测用户列表
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -347,7 +327,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
   ///
   /// Returns a [Future] containing a [Response] with a [AppTesterDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppTesterDtoPagedResultDto>> getAppTesterList({ 
+  Future<Response<AppTesterDtoPagedResultDto>> getAppTesterList({
     String? sorting,
     int? skipCount,
     int? maxResultCount,
@@ -365,12 +345,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -420,11 +395,11 @@ _responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto,
   }
 
   /// 更新内测用户
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createUpdateAppTesterDto] 
+  /// * [id]
+  /// * [createUpdateAppTesterDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -434,7 +409,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto,
   ///
   /// Returns a [Future] containing a [Response] with a [AppTesterDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppTesterDto>> updateAppTester({ 
+  Future<Response<AppTesterDto>> updateAppTester({
     required String id,
     CreateUpdateAppTesterDto? createUpdateAppTesterDto,
     CancelToken? cancelToken,
@@ -451,12 +426,7 @@ _responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto,
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

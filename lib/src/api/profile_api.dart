@@ -23,10 +23,10 @@ class ProfileApi {
   const ProfileApi(this._dio);
 
   /// changePassword
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [changePasswordInput] 
+  /// * [changePasswordInput]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class ProfileApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> changePassword({ 
+  Future<Response<void>> changePassword({
     ChangePasswordInput? changePasswordInput,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -52,12 +52,7 @@ class ProfileApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -93,7 +88,7 @@ _bodyData=jsonEncode(changePasswordInput);
   }
 
   /// getProfile
-  /// 
+  ///
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -105,7 +100,7 @@ _bodyData=jsonEncode(changePasswordInput);
   ///
   /// Returns a [Future] containing a [Response] with a [ProfileDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ProfileDto>> getProfile({ 
+  Future<Response<ProfileDto>> getProfile({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -120,12 +115,7 @@ _bodyData=jsonEncode(changePasswordInput);
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -168,10 +158,10 @@ _responseData = rawData == null ? null : deserialize<ProfileDto, ProfileDto>(raw
   }
 
   /// updateProfile
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [updateProfileDto] 
+  /// * [updateProfileDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -181,7 +171,7 @@ _responseData = rawData == null ? null : deserialize<ProfileDto, ProfileDto>(raw
   ///
   /// Returns a [Future] containing a [Response] with a [ProfileDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<ProfileDto>> updateProfile({ 
+  Future<Response<ProfileDto>> updateProfile({
     UpdateProfileDto? updateProfileDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -197,12 +187,7 @@ _responseData = rawData == null ? null : deserialize<ProfileDto, ProfileDto>(raw
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

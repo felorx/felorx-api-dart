@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createApiKeys**](ApiKeysApi.md#createapikeys) | **POST** /api/api-keys | 
-[**deleteApiKeysById**](ApiKeysApi.md#deleteapikeysbyid) | **DELETE** /api/api-keys/{id} | 
-[**getApiKeysById**](ApiKeysApi.md#getapikeysbyid) | **GET** /api/api-keys/{id} | 
-[**getApiKeysList**](ApiKeysApi.md#getapikeyslist) | **GET** /api/api-keys | 
-[**updateApiKeys**](ApiKeysApi.md#updateapikeys) | **PUT** /api/api-keys/{id} | 
+[**createApiKeys**](ApiKeysApi.md#createapikeys) | **POST** /api/api-keys |
+[**deleteApiKeysById**](ApiKeysApi.md#deleteapikeysbyid) | **DELETE** /api/api-keys/{id} |
+[**getApiKeysById**](ApiKeysApi.md#getapikeysbyid) | **GET** /api/api-keys/{id} |
+[**getApiKeysList**](ApiKeysApi.md#getapikeyslist) | **GET** /api/api-keys |
+[**updateApiKeys**](ApiKeysApi.md#updateapikeys) | **PUT** /api/api-keys/{id} |
 
 
 # **createApiKeys**
@@ -24,11 +24,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getApiKeysApi();
-final ApiKeyCreateDto apiKeyCreateDto = ; // ApiKeyCreateDto | 
+final ApiKeyCreateDto apiKeyCreateDto = ; // ApiKeyCreateDto |
 
 try {
     final response = api.createApiKeys(apiKeyCreateDto);
@@ -42,7 +40,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **apiKeyCreateDto** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md)|  | [optional] 
+ **apiKeyCreateDto** | [**ApiKeyCreateDto**](ApiKeyCreateDto.md)|  | [optional]
 
 ### Return type
 
@@ -50,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -67,11 +65,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getApiKeysApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteApiKeysById(id);
@@ -84,7 +80,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -92,7 +88,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -109,11 +105,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getApiKeysApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getApiKeysById(id);
@@ -127,7 +121,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -135,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -152,13 +146,11 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getApiKeysApi();
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getApiKeysList(sorting, skipCount, maxResultCount);
@@ -172,9 +164,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -182,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -199,12 +191,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getApiKeysApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final ApiKeyUpdateDto apiKeyUpdateDto = ; // ApiKeyUpdateDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final ApiKeyUpdateDto apiKeyUpdateDto = ; // ApiKeyUpdateDto |
 
 try {
     final response = api.updateApiKeys(id, apiKeyUpdateDto);
@@ -218,8 +208,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **apiKeyUpdateDto** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **apiKeyUpdateDto** | [**ApiKeyUpdateDto**](ApiKeyUpdateDto.md)|  | [optional]
 
 ### Return type
 
@@ -227,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

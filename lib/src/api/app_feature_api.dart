@@ -23,10 +23,10 @@ class AppFeatureApi {
   const AppFeatureApi(this._dio);
 
   /// createAppFeature
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [createOrUpdateAppFeatureDto] 
+  /// * [createOrUpdateAppFeatureDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -36,7 +36,7 @@ class AppFeatureApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeatureDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeatureDto>> createAppFeature({ 
+  Future<Response<AppFeatureDto>> createAppFeature({
     CreateOrUpdateAppFeatureDto? createOrUpdateAppFeatureDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -52,12 +52,7 @@ class AppFeatureApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',
@@ -118,10 +113,10 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
   }
 
   /// deleteAppFeatureById
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
+  /// * [id]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -131,7 +126,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> deleteAppFeatureById({ 
+  Future<Response<void>> deleteAppFeatureById({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -147,12 +142,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -170,13 +160,13 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
   }
 
   /// getAppFeatureList
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [appId] 
-  /// * [sorting] 
-  /// * [skipCount] 
-  /// * [maxResultCount] 
+  /// * [appId]
+  /// * [sorting]
+  /// * [skipCount]
+  /// * [maxResultCount]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -186,7 +176,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeatureDtoPagedResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeatureDtoPagedResultDto>> getAppFeatureList({ 
+  Future<Response<AppFeatureDtoPagedResultDto>> getAppFeatureList({
     String? appId,
     String? sorting,
     int? skipCount,
@@ -205,12 +195,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDto, AppFeatureDt
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -261,11 +246,11 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDtoPagedResultDto
   }
 
   /// updateAppFeature
-  /// 
+  ///
   ///
   /// Parameters:
-  /// * [id] 
-  /// * [createOrUpdateAppFeatureDto] 
+  /// * [id]
+  /// * [createOrUpdateAppFeatureDto]
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -275,7 +260,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AppFeatureDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppFeatureDto>> updateAppFeature({ 
+  Future<Response<AppFeatureDto>> updateAppFeature({
     required String id,
     CreateOrUpdateAppFeatureDto? createOrUpdateAppFeatureDto,
     CancelToken? cancelToken,
@@ -292,12 +277,7 @@ _responseData = rawData == null ? null : deserialize<AppFeatureDtoPagedResultDto
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'oauth2',
-            'name': 'oauth2',
-          },
-        ],
+        'secure': <Map<String, String>>[],
         ...?extra,
       },
       contentType: 'application/json',

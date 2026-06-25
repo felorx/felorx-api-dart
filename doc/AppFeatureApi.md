@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAppFeature**](AppFeatureApi.md#createappfeature) | **POST** /api/app/app-feature | 
-[**deleteAppFeatureById**](AppFeatureApi.md#deleteappfeaturebyid) | **DELETE** /api/app/app-feature/{id} | 
-[**getAppFeatureList**](AppFeatureApi.md#getappfeaturelist) | **GET** /api/app/app-feature | 
-[**updateAppFeature**](AppFeatureApi.md#updateappfeature) | **PUT** /api/app/app-feature/{id} | 
+[**createAppFeature**](AppFeatureApi.md#createappfeature) | **POST** /api/app/app-feature |
+[**deleteAppFeatureById**](AppFeatureApi.md#deleteappfeaturebyid) | **DELETE** /api/app/app-feature/{id} |
+[**getAppFeatureList**](AppFeatureApi.md#getappfeaturelist) | **GET** /api/app/app-feature |
+[**updateAppFeature**](AppFeatureApi.md#updateappfeature) | **PUT** /api/app/app-feature/{id} |
 
 
 # **createAppFeature**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppFeatureApi();
-final CreateOrUpdateAppFeatureDto createOrUpdateAppFeatureDto = ; // CreateOrUpdateAppFeatureDto | 
+final CreateOrUpdateAppFeatureDto createOrUpdateAppFeatureDto = ; // CreateOrUpdateAppFeatureDto |
 
 try {
     final response = api.createAppFeature(createOrUpdateAppFeatureDto);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md)|  | [optional] 
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md)|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,11 +64,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppFeatureApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppFeatureById(id);
@@ -83,7 +79,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -91,7 +87,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,14 +104,12 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppFeatureApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final String sorting = sorting_example; // String | 
-final int skipCount = 56; // int | 
-final int maxResultCount = 56; // int | 
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String sorting = sorting_example; // String |
+final int skipCount = 56; // int |
+final int maxResultCount = 56; // int |
 
 try {
     final response = api.getAppFeatureList(appId, sorting, skipCount, maxResultCount);
@@ -129,10 +123,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appId** | **String**|  | [optional] 
- **sorting** | **String**|  | [optional] 
- **skipCount** | **int**|  | [optional] 
- **maxResultCount** | **int**|  | [optional] 
+ **appId** | **String**|  | [optional]
+ **sorting** | **String**|  | [optional]
+ **skipCount** | **int**|  | [optional]
+ **maxResultCount** | **int**|  | [optional]
 
 ### Return type
 
@@ -140,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -157,12 +151,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppFeatureApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppFeatureDto createOrUpdateAppFeatureDto = ; // CreateOrUpdateAppFeatureDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppFeatureDto createOrUpdateAppFeatureDto = ; // CreateOrUpdateAppFeatureDto |
 
 try {
     final response = api.updateAppFeature(id, createOrUpdateAppFeatureDto);
@@ -176,8 +168,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppFeatureDto** | [**CreateOrUpdateAppFeatureDto**](CreateOrUpdateAppFeatureDto.md)|  | [optional]
 
 ### Return type
 
@@ -185,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 

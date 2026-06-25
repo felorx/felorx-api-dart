@@ -9,10 +9,10 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAppAsset**](AppAssetApi.md#createappasset) | **POST** /api/app/app-asset | 
-[**deleteAppAssetById**](AppAssetApi.md#deleteappassetbyid) | **DELETE** /api/app/app-asset/{id} | 
-[**getListByAppLocaleId**](AppAssetApi.md#getlistbyapplocaleid) | **GET** /api/app/app-asset/by-app-locale-id/{appLocaleId} | 
-[**updateAppAsset**](AppAssetApi.md#updateappasset) | **PUT** /api/app/app-asset/{id} | 
+[**createAppAsset**](AppAssetApi.md#createappasset) | **POST** /api/app/app-asset |
+[**deleteAppAssetById**](AppAssetApi.md#deleteappassetbyid) | **DELETE** /api/app/app-asset/{id} |
+[**getListByAppLocaleId**](AppAssetApi.md#getlistbyapplocaleid) | **GET** /api/app/app-asset/by-app-locale-id/{appLocaleId} |
+[**updateAppAsset**](AppAssetApi.md#updateappasset) | **PUT** /api/app/app-asset/{id} |
 
 
 # **createAppAsset**
@@ -23,11 +23,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppAssetApi();
-final CreateOrUpdateAppAssetDto createOrUpdateAppAssetDto = ; // CreateOrUpdateAppAssetDto | 
+final CreateOrUpdateAppAssetDto createOrUpdateAppAssetDto = ; // CreateOrUpdateAppAssetDto |
 
 try {
     final response = api.createAppAsset(createOrUpdateAppAssetDto);
@@ -41,7 +39,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrUpdateAppAssetDto** | [**CreateOrUpdateAppAssetDto**](CreateOrUpdateAppAssetDto.md)|  | [optional] 
+ **createOrUpdateAppAssetDto** | [**CreateOrUpdateAppAssetDto**](CreateOrUpdateAppAssetDto.md)|  | [optional]
 
 ### Return type
 
@@ -49,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -66,11 +64,9 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppAssetApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.deleteAppAssetById(id);
@@ -83,7 +79,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
+ **id** | **String**|  |
 
 ### Return type
 
@@ -91,7 +87,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -108,11 +104,9 @@ void (empty response body)
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppAssetApi();
-final String appLocaleId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+final String appLocaleId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     final response = api.getListByAppLocaleId(appLocaleId);
@@ -126,7 +120,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **appLocaleId** | **String**|  | 
+ **appLocaleId** | **String**|  |
 
 ### Return type
 
@@ -134,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -151,12 +145,10 @@ Name | Type | Description  | Notes
 ### Example
 ```dart
 import 'package:felorx_api_client/api.dart';
-// TODO Configure OAuth2 access token for authorization: oauth2
-//defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
 final api = FelorxApiClient().getAppAssetApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-final CreateOrUpdateAppAssetDto createOrUpdateAppAssetDto = ; // CreateOrUpdateAppAssetDto | 
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final CreateOrUpdateAppAssetDto createOrUpdateAppAssetDto = ; // CreateOrUpdateAppAssetDto |
 
 try {
     final response = api.updateAppAsset(id, createOrUpdateAppAssetDto);
@@ -170,8 +162,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **String**|  | 
- **createOrUpdateAppAssetDto** | [**CreateOrUpdateAppAssetDto**](CreateOrUpdateAppAssetDto.md)|  | [optional] 
+ **id** | **String**|  |
+ **createOrUpdateAppAssetDto** | [**CreateOrUpdateAppAssetDto**](CreateOrUpdateAppAssetDto.md)|  | [optional]
 
 ### Return type
 
@@ -179,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[oauth2](../README.md#oauth2)
+No authorization required
 
 ### HTTP request headers
 
