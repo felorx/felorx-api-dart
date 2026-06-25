@@ -572,7 +572,7 @@ Authentication schemes defined for the API:
 - **Flow**: accessCode
 - **Authorization URL**: https://dev.auth.felorx.com/connect/authorize
 - **Scopes**: 
- - **Puupees**: Puupees API
+ - **Puupees**: Felorx API
 
 
 ## Author
