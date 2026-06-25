@@ -111,6 +111,7 @@ const _$AppPublisherEnumMap = {
   AppPublisher.pgyer: 'Pgyer',
   AppPublisher.qiniu: 'Qiniu',
   AppPublisher.vercel: 'Vercel',
+  AppPublisher.felorx: 'Felorx',
   AppPublisher.puupee: 'Puupee',
   AppPublisher.other: 'Other',
 };
