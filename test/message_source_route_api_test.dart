@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for MessageSourceRouteApi
 void main() {
-  final instance = PuupeeApiClient().getMessageSourceRouteApi();
+  final instance = FelorxApiClient().getMessageSourceRouteApi();
 
   group(MessageSourceRouteApi, () {
     //Future createMessageSourceRoute({ CreateUpdateMessageSourceRouteDto createUpdateMessageSourceRouteDto }) async
@@ -31,6 +30,5 @@ void main() {
     test('test updateMessageSourceRoute', () async {
       // TODO
     });
-
   });
 }

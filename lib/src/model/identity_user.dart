@@ -3,11 +3,11 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/identity_user_token.dart';
-import 'package:puupee_api_client/src/model/identity_user_role.dart';
-import 'package:puupee_api_client/src/model/identity_user_login.dart';
-import 'package:puupee_api_client/src/model/identity_user_organization_unit.dart';
-import 'package:puupee_api_client/src/model/identity_user_claim.dart';
+import 'package:felorx_api_client/src/model/identity_user_token.dart';
+import 'package:felorx_api_client/src/model/identity_user_role.dart';
+import 'package:felorx_api_client/src/model/identity_user_login.dart';
+import 'package:felorx_api_client/src/model/identity_user_organization_unit.dart';
+import 'package:felorx_api_client/src/model/identity_user_claim.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'identity_user.g.dart';

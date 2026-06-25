@@ -7,24 +7,24 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/app_plan_price_dto.dart';
-import 'package:puupee_api_client/src/model/apple_notificaion_dto.dart';
-import 'package:puupee_api_client/src/model/capture_pay_pal_order_dto.dart';
-import 'package:puupee_api_client/src/model/create_alipay_order_dto.dart';
-import 'package:puupee_api_client/src/model/create_alipay_order_result_dto.dart';
-import 'package:puupee_api_client/src/model/create_or_get_subscription_order_dto.dart';
-import 'package:puupee_api_client/src/model/create_pay_pal_order_dto.dart';
-import 'package:puupee_api_client/src/model/create_pay_pal_order_result_dto.dart';
-import 'package:puupee_api_client/src/model/pay_pal_webhook_process_result_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
-import 'package:puupee_api_client/src/model/subscription_dto.dart';
-import 'package:puupee_api_client/src/model/subscription_order_dto.dart';
-import 'package:puupee_api_client/src/model/verify_receipt_dto.dart';
-import 'package:puupee_api_client/src/model/verify_receipt_result.dart';
+import 'package:felorx_api_client/src/model/app_plan_price_dto.dart';
+import 'package:felorx_api_client/src/model/apple_notificaion_dto.dart';
+import 'package:felorx_api_client/src/model/capture_pay_pal_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_alipay_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_alipay_order_result_dto.dart';
+import 'package:felorx_api_client/src/model/create_or_get_subscription_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_pay_pal_order_dto.dart';
+import 'package:felorx_api_client/src/model/create_pay_pal_order_result_dto.dart';
+import 'package:felorx_api_client/src/model/pay_pal_webhook_process_result_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/subscription_dto.dart';
+import 'package:felorx_api_client/src/model/subscription_order_dto.dart';
+import 'package:felorx_api_client/src/model/verify_receipt_dto.dart';
+import 'package:felorx_api_client/src/model/verify_receipt_result.dart';
 
 class SubscriptionApi {
 

@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/device_status.dart';
+import 'package:felorx_api_client/src/model/device_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'refresh_device_status_dto.g.dart';

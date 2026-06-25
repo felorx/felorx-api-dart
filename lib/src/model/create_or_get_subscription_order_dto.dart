@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/subscription_order_type.dart';
+import 'package:felorx_api_client/src/model/subscription_order_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_get_subscription_order_dto.g.dart';

@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for AppPricingItemApi
 void main() {
-  final instance = PuupeeApiClient().getAppPricingItemApi();
+  final instance = FelorxApiClient().getAppPricingItemApi();
 
   group(AppPricingItemApi, () {
     //Future<AppPricingItemDto> createAppPricingItem({ CreateOrUpdateAppPricingItemDto createOrUpdateAppPricingItemDto }) async
@@ -31,6 +30,5 @@ void main() {
     test('test updateAppPricingItem', () async {
       // TODO
     });
-
   });
 }

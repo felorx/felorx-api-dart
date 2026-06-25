@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/user_data.dart';
+import 'package:felorx_api_client/src/model/user_data.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'user_data_list_result_dto.g.dart';

@@ -1,8 +1,8 @@
-# puupee_api_client.model.SendVerificationCodeDto
+# felorx_api_client.model.SendVerificationCodeDto
 
 ## Load the model package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 ## Properties

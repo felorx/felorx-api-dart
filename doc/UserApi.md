@@ -1,8 +1,8 @@
-# puupee_api_client.api.UserApi
+# felorx_api_client.api.UserApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -28,11 +28,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final IdentityUserCreateDto identityUserCreateDto = ; // IdentityUserCreateDto | 
 
 try {
@@ -71,11 +71,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -113,11 +113,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String email = email_example; // String | 
 
 try {
@@ -156,11 +156,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String userName = userName_example; // String | 
 
 try {
@@ -199,11 +199,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 
 try {
     final response = api.getAssignableRoles();
@@ -238,11 +238,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -281,11 +281,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String filter = filter_example; // String | 
 final String sorting = sorting_example; // String | 
 final int skipCount = 56; // int | 
@@ -330,11 +330,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -373,11 +373,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final IdentityUserUpdateDto identityUserUpdateDto = ; // IdentityUserUpdateDto | 
 
@@ -418,11 +418,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getUserApi();
+final api = FelorxApiClient().getUserApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final IdentityUserUpdateRolesDto identityUserUpdateRolesDto = ; // IdentityUserUpdateRolesDto | 
 

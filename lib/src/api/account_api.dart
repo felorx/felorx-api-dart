@@ -7,20 +7,20 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/account_deletion_dto.dart';
-import 'package:puupee_api_client/src/model/change_password_dto.dart';
-import 'package:puupee_api_client/src/model/check_sync_auth_result_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_dto.dart';
-import 'package:puupee_api_client/src/model/register_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
-import 'package:puupee_api_client/src/model/reset_password_dto.dart';
-import 'package:puupee_api_client/src/model/send_password_reset_code_dto.dart';
-import 'package:puupee_api_client/src/model/user_profile_dto.dart';
-import 'package:puupee_api_client/src/model/verify_password_reset_token_input.dart';
+import 'package:felorx_api_client/src/model/account_deletion_dto.dart';
+import 'package:felorx_api_client/src/model/change_password_dto.dart';
+import 'package:felorx_api_client/src/model/check_sync_auth_result_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_dto.dart';
+import 'package:felorx_api_client/src/model/register_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/reset_password_dto.dart';
+import 'package:felorx_api_client/src/model/send_password_reset_code_dto.dart';
+import 'package:felorx_api_client/src/model/user_profile_dto.dart';
+import 'package:felorx_api_client/src/model/verify_password_reset_token_input.dart';
 
 class AccountApi {
 

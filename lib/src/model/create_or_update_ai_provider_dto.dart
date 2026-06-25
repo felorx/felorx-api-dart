@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/ai_provider_type.dart';
-import 'package:puupee_api_client/src/model/ai_capability.dart';
-import 'package:puupee_api_client/src/model/create_or_update_ai_model_dto.dart';
+import 'package:felorx_api_client/src/model/ai_provider_type.dart';
+import 'package:felorx_api_client/src/model/ai_capability.dart';
+import 'package:felorx_api_client/src/model/create_or_update_ai_model_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_update_ai_provider_dto.g.dart';

@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for AiProvidersApi
 void main() {
-  final instance = PuupeeApiClient().getAiProvidersApi();
+  final instance = FelorxApiClient().getAiProvidersApi();
 
   group(AiProvidersApi, () {
     //Future<AiProviderDto> create({ CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
@@ -46,6 +45,5 @@ void main() {
     test('test update', () async {
       // TODO
     });
-
   });
 }

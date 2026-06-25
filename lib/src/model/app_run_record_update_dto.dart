@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_run_status.dart';
+import 'package:felorx_api_client/src/model/app_run_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_run_record_update_dto.g.dart';

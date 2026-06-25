@@ -7,17 +7,17 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/app_platform.dart';
-import 'package:puupee_api_client/src/model/build_record_dto.dart';
-import 'package:puupee_api_client/src/model/build_record_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/build_status.dart';
-import 'package:puupee_api_client/src/model/create_build_record_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
-import 'package:puupee_api_client/src/model/update_build_record_dto.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
+import 'package:felorx_api_client/src/model/build_record_dto.dart';
+import 'package:felorx_api_client/src/model/build_record_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/build_status.dart';
+import 'package:felorx_api_client/src/model/create_build_record_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/update_build_record_dto.dart';
 
 class BuildRecordApi {
 

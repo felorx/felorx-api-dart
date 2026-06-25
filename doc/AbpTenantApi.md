@@ -1,8 +1,8 @@
-# puupee_api_client.api.AbpTenantApi
+# felorx_api_client.api.AbpTenantApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,11 +20,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAbpTenantApi();
+final api = FelorxApiClient().getAbpTenantApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -63,11 +63,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAbpTenantApi();
+final api = FelorxApiClient().getAbpTenantApi();
 final String name = name_example; // String | 
 
 try {

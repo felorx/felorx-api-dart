@@ -4,7 +4,7 @@
 
 
 import 'package:dio/dio.dart';
-import 'package:puupee_api_client/src/auth/auth.dart';
+import 'package:felorx_api_client/src/auth/auth.dart';
 
 class ApiKeyAuthInterceptor extends AuthInterceptor {
   final Map<String, String> apiKeys = {};

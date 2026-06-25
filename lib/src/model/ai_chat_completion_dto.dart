@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/ai_chat_choice_dto.dart';
-import 'package:puupee_api_client/src/model/ai_usage_dto.dart';
+import 'package:felorx_api_client/src/model/ai_chat_choice_dto.dart';
+import 'package:felorx_api_client/src/model/ai_usage_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'ai_chat_completion_dto.g.dart';

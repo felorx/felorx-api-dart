@@ -1,8 +1,8 @@
-# puupee_api_client.api.StorageObjectApi
+# felorx_api_client.api.StorageObjectApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,11 +22,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getStorageObjectApi();
+final api = FelorxApiClient().getStorageObjectApi();
 
 try {
     final response = api.getCdnDomains();
@@ -61,11 +61,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getStorageObjectApi();
+final api = FelorxApiClient().getStorageObjectApi();
 final int userTotalSize = 789; // int | 
 final String rapidCode = rapidCode_example; // String | 
 final String usage = usage_example; // String | 
@@ -110,11 +110,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getStorageObjectApi();
+final api = FelorxApiClient().getStorageObjectApi();
 
 try {
     final response = api.getUserStorages();
@@ -149,11 +149,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getStorageObjectApi();
+final api = FelorxApiClient().getStorageObjectApi();
 final String bucket = bucket_example; // String | 
 final String key = key_example; // String | 
 

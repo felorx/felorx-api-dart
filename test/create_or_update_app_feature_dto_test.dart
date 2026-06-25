@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppFeatureDto
 void main() {
-  final CreateOrUpdateAppFeatureDto? instance = /* CreateOrUpdateAppFeatureDto(...) */ null;
+  final CreateOrUpdateAppFeatureDto?
+  instance = /* CreateOrUpdateAppFeatureDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppFeatureDto, () {
@@ -26,6 +27,5 @@ void main() {
     test('to test the property `featureLocales`', () async {
       // TODO
     });
-
   });
 }

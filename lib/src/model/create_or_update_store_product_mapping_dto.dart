@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_platform.dart';
-import 'package:puupee_api_client/src/model/billing_provider.dart';
-import 'package:puupee_api_client/src/model/sub_billing_period.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
+import 'package:felorx_api_client/src/model/billing_provider.dart';
+import 'package:felorx_api_client/src/model/sub_billing_period.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_update_store_product_mapping_dto.g.dart';

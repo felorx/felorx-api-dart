@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for PayPalWebhookProcessResultDto
 void main() {
-  final PayPalWebhookProcessResultDto? instance = /* PayPalWebhookProcessResultDto(...) */ null;
+  final PayPalWebhookProcessResultDto?
+  instance = /* PayPalWebhookProcessResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(PayPalWebhookProcessResultDto, () {
@@ -21,6 +22,5 @@ void main() {
     test('to test the property `processed`', () async {
       // TODO
     });
-
   });
 }

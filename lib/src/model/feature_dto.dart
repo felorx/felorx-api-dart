@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/feature_provider_dto.dart';
-import 'package:puupee_api_client/src/model/i_string_value_type.dart';
+import 'package:felorx_api_client/src/model/feature_provider_dto.dart';
+import 'package:felorx_api_client/src/model/i_string_value_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'feature_dto.g.dart';

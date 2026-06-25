@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for IdentityUserUpdateRolesDto
 void main() {
-  final IdentityUserUpdateRolesDto? instance = /* IdentityUserUpdateRolesDto(...) */ null;
+  final IdentityUserUpdateRolesDto?
+  instance = /* IdentityUserUpdateRolesDto(...) */ null;
   // TODO add properties to the entity
 
   group(IdentityUserUpdateRolesDto, () {
@@ -11,6 +12,5 @@ void main() {
     test('to test the property `roleNames`', () async {
       // TODO
     });
-
   });
 }

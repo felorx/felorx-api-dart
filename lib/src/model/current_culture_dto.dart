@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/date_time_format_dto.dart';
+import 'package:felorx_api_client/src/model/date_time_format_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'current_culture_dto.g.dart';

@@ -7,19 +7,19 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/ai_capability.dart';
-import 'package:puupee_api_client/src/model/ai_provider_dto.dart';
-import 'package:puupee_api_client/src/model/ai_provider_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/ai_provider_type.dart';
-import 'package:puupee_api_client/src/model/create_or_update_ai_provider_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
-import 'package:puupee_api_client/src/model/set_ai_provider_enabled_dto.dart';
-import 'package:puupee_api_client/src/model/set_default_ai_model_dto.dart';
-import 'package:puupee_api_client/src/model/test_ai_provider_dto.dart';
+import 'package:felorx_api_client/src/model/ai_capability.dart';
+import 'package:felorx_api_client/src/model/ai_provider_dto.dart';
+import 'package:felorx_api_client/src/model/ai_provider_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/ai_provider_type.dart';
+import 'package:felorx_api_client/src/model/create_or_update_ai_provider_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/set_ai_provider_enabled_dto.dart';
+import 'package:felorx_api_client/src/model/set_default_ai_model_dto.dart';
+import 'package:felorx_api_client/src/model/test_ai_provider_dto.dart';
 
 class AiProviderApi {
 

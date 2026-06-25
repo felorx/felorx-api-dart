@@ -1,8 +1,8 @@
-# puupee_api_client.api.AppFeedbackApi
+# felorx_api_client.api.AppFeedbackApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -24,11 +24,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final CreateAppFeedbackDto createAppFeedbackDto = ; // CreateAppFeedbackDto | 
 
 try {
@@ -67,11 +67,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -109,11 +109,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -152,11 +152,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 应用ID（必填，只有应用创建者可以查看）
 final AppFeedbackType type = ; // AppFeedbackType | 反馈类型
 final AppFeedbackStatus status = ; // AppFeedbackStatus | 反馈状态
@@ -205,11 +205,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -248,11 +248,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getAppFeedbackApi();
+final api = FelorxApiClient().getAppFeedbackApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final ReplyAppFeedbackDto replyAppFeedbackDto = ; // ReplyAppFeedbackDto | 
 

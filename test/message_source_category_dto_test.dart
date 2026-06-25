@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for MessageSourceCategoryDto
 void main() {
-  final MessageSourceCategoryDto? instance = /* MessageSourceCategoryDto(...) */ null;
+  final MessageSourceCategoryDto? instance = /* MessageSourceCategoryDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(MessageSourceCategoryDto, () {
@@ -16,6 +17,5 @@ void main() {
     test('to test the property `title`', () async {
       // TODO
     });
-
   });
 }

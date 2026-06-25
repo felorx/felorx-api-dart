@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for UpdateEmailSettingsDto
 void main() {
-  final UpdateEmailSettingsDto? instance = /* UpdateEmailSettingsDto(...) */ null;
+  final UpdateEmailSettingsDto? instance = /* UpdateEmailSettingsDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(UpdateEmailSettingsDto, () {
@@ -51,6 +52,5 @@ void main() {
     test('to test the property `defaultFromDisplayName`', () async {
       // TODO
     });
-
   });
 }

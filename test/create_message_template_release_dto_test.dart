@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateMessageTemplateReleaseDto
 void main() {
-  final CreateMessageTemplateReleaseDto? instance = /* CreateMessageTemplateReleaseDto(...) */ null;
+  final CreateMessageTemplateReleaseDto?
+  instance = /* CreateMessageTemplateReleaseDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateMessageTemplateReleaseDto, () {
@@ -26,6 +27,5 @@ void main() {
     test('to test the property `templateId`', () async {
       // TODO
     });
-
   });
 }

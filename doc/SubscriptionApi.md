@@ -1,8 +1,8 @@
-# puupee_api_client.api.SubscriptionApi
+# felorx_api_client.api.SubscriptionApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -30,11 +30,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 
 try {
     final response = api.alipayNotify();
@@ -69,11 +69,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final AppleNotificaionDto appleNotificaionDto = ; // AppleNotificaionDto | 
 
 try {
@@ -111,11 +111,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final CapturePayPalOrderDto capturePayPalOrderDto = ; // CapturePayPalOrderDto | 
 
 try {
@@ -154,11 +154,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final CreateAlipayOrderDto createAlipayOrderDto = ; // CreateAlipayOrderDto | 
 
 try {
@@ -197,11 +197,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final CreateOrGetSubscriptionOrderDto createOrGetSubscriptionOrderDto = ; // CreateOrGetSubscriptionOrderDto | 
 
 try {
@@ -240,11 +240,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final CreatePayPalOrderDto createPayPalOrderDto = ; // CreatePayPalOrderDto | 
 
 try {
@@ -283,11 +283,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -326,11 +326,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -369,11 +369,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 
 try {
     final response = api.getSubscriptionList();
@@ -408,11 +408,11 @@ PayPal 浏览器审批后的返回入口。用于桌面/移动 App 跳转外部�
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final String token = token_example; // String | 
 final String subscriptionId = subscriptionId_example; // String | 
 
@@ -452,11 +452,11 @@ PayPal webhook. Configure PayPal:WebhookId to enable signature verification.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 
 try {
     final response = api.payPalWebhook();
@@ -491,11 +491,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getSubscriptionApi();
+final api = FelorxApiClient().getSubscriptionApi();
 final VerifyReceiptDto verifyReceiptDto = ; // VerifyReceiptDto | 
 
 try {

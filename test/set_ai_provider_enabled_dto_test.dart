@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for SetAiProviderEnabledDto
 void main() {
-  final SetAiProviderEnabledDto? instance = /* SetAiProviderEnabledDto(...) */ null;
+  final SetAiProviderEnabledDto? instance = /* SetAiProviderEnabledDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(SetAiProviderEnabledDto, () {
@@ -11,6 +12,5 @@ void main() {
     test('to test the property `enabled`', () async {
       // TODO
     });
-
   });
 }

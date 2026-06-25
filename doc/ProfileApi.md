@@ -1,8 +1,8 @@
-# puupee_api_client.api.ProfileApi
+# felorx_api_client.api.ProfileApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -21,11 +21,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getProfileApi();
+final api = FelorxApiClient().getProfileApi();
 final ChangePasswordInput changePasswordInput = ; // ChangePasswordInput | 
 
 try {
@@ -63,11 +63,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getProfileApi();
+final api = FelorxApiClient().getProfileApi();
 
 try {
     final response = api.getProfile();
@@ -102,11 +102,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getProfileApi();
+final api = FelorxApiClient().getProfileApi();
 final UpdateProfileDto updateProfileDto = ; // UpdateProfileDto | 
 
 try {

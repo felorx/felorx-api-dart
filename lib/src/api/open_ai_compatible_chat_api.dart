@@ -7,12 +7,12 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/ai_chat_completion_dto.dart';
-import 'package:puupee_api_client/src/model/open_ai_chat_completion_request_dto.dart';
+import 'package:felorx_api_client/src/model/ai_chat_completion_dto.dart';
+import 'package:felorx_api_client/src/model/open_ai_chat_completion_request_dto.dart';
 
 class OpenAiCompatibleChatApi {
 

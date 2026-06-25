@@ -7,17 +7,17 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/identity_role_dto_list_result_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_create_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_update_dto.dart';
-import 'package:puupee_api_client/src/model/identity_user_update_roles_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/identity_role_dto_list_result_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_create_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_update_dto.dart';
+import 'package:felorx_api_client/src/model/identity_user_update_roles_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class UserApi {
 

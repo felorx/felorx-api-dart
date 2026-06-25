@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/parameter_api_description_model.dart';
-import 'package:puupee_api_client/src/model/return_value_api_description_model.dart';
-import 'package:puupee_api_client/src/model/method_parameter_api_description_model.dart';
+import 'package:felorx_api_client/src/model/parameter_api_description_model.dart';
+import 'package:felorx_api_client/src/model/return_value_api_description_model.dart';
+import 'package:felorx_api_client/src/model/method_parameter_api_description_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'action_api_description_model.g.dart';

@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for EmailSettingsApi
 void main() {
-  final instance = PuupeeApiClient().getEmailSettingsApi();
+  final instance = FelorxApiClient().getEmailSettingsApi();
 
   group(EmailSettingsApi, () {
     //Future<EmailSettingsDto> getEmailSettings() async
@@ -21,6 +20,5 @@ void main() {
     test('test updateEmailSettings', () async {
       // TODO
     });
-
   });
 }

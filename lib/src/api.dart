@@ -3,74 +3,76 @@
 //
 
 import 'package:dio/dio.dart';
-import 'package:puupee_api_client/src/auth/api_key_auth.dart';
-import 'package:puupee_api_client/src/auth/basic_auth.dart';
-import 'package:puupee_api_client/src/auth/bearer_auth.dart';
-import 'package:puupee_api_client/src/auth/oauth.dart';
-import 'package:puupee_api_client/src/api/abp_api_definition_api.dart';
-import 'package:puupee_api_client/src/api/abp_application_configuration_api.dart';
-import 'package:puupee_api_client/src/api/abp_application_localization_api.dart';
-import 'package:puupee_api_client/src/api/abp_tenant_api.dart';
-import 'package:puupee_api_client/src/api/account_api.dart';
-import 'package:puupee_api_client/src/api/ai_provider_api.dart';
-import 'package:puupee_api_client/src/api/ai_providers_api.dart';
-import 'package:puupee_api_client/src/api/api_keys_api.dart';
-import 'package:puupee_api_client/src/api/app_api.dart';
-import 'package:puupee_api_client/src/api/app_asset_api.dart';
-import 'package:puupee_api_client/src/api/app_feature_api.dart';
-import 'package:puupee_api_client/src/api/app_feedback_api.dart';
-import 'package:puupee_api_client/src/api/app_locale_api.dart';
-import 'package:puupee_api_client/src/api/app_pricing_api.dart';
-import 'package:puupee_api_client/src/api/app_pricing_item_api.dart';
-import 'package:puupee_api_client/src/api/app_release_api.dart';
-import 'package:puupee_api_client/src/api/app_sdk_api.dart';
-import 'package:puupee_api_client/src/api/app_tester_api.dart';
-import 'package:puupee_api_client/src/api/app_user_score_api.dart';
-import 'package:puupee_api_client/src/api/auth_center_api.dart';
-import 'package:puupee_api_client/src/api/avatar_api.dart';
-import 'package:puupee_api_client/src/api/build_record_api.dart';
-import 'package:puupee_api_client/src/api/deploy_record_api.dart';
-import 'package:puupee_api_client/src/api/device_api.dart';
-import 'package:puupee_api_client/src/api/dynamic_claims_api.dart';
-import 'package:puupee_api_client/src/api/email_settings_api.dart';
-import 'package:puupee_api_client/src/api/features_api.dart';
-import 'package:puupee_api_client/src/api/message_api.dart';
-import 'package:puupee_api_client/src/api/message_source_api.dart';
-import 'package:puupee_api_client/src/api/message_source_category_api.dart';
-import 'package:puupee_api_client/src/api/message_source_route_api.dart';
-import 'package:puupee_api_client/src/api/message_source_route_sub_api.dart';
-import 'package:puupee_api_client/src/api/message_template_api.dart';
-import 'package:puupee_api_client/src/api/message_template_release_api.dart';
-import 'package:puupee_api_client/src/api/notification_api.dart';
-import 'package:puupee_api_client/src/api/open_ai_compatible_chat_api.dart';
-import 'package:puupee_api_client/src/api/ops_crypto_api.dart';
-import 'package:puupee_api_client/src/api/permissions_api.dart';
-import 'package:puupee_api_client/src/api/profile_api.dart';
-import 'package:puupee_api_client/src/api/role_api.dart';
-import 'package:puupee_api_client/src/api/storage_object_api.dart';
-import 'package:puupee_api_client/src/api/subscription_api.dart';
-import 'package:puupee_api_client/src/api/subscription_billing_admin_api.dart';
-import 'package:puupee_api_client/src/api/tenant_api.dart';
-import 'package:puupee_api_client/src/api/time_zone_settings_api.dart';
-import 'package:puupee_api_client/src/api/user_api.dart';
-import 'package:puupee_api_client/src/api/user_lookup_api.dart';
-import 'package:puupee_api_client/src/api/verification_api.dart';
+import 'package:felorx_api_client/src/auth/api_key_auth.dart';
+import 'package:felorx_api_client/src/auth/basic_auth.dart';
+import 'package:felorx_api_client/src/auth/bearer_auth.dart';
+import 'package:felorx_api_client/src/auth/oauth.dart';
+import 'package:felorx_api_client/src/api/abp_api_definition_api.dart';
+import 'package:felorx_api_client/src/api/abp_application_configuration_api.dart';
+import 'package:felorx_api_client/src/api/abp_application_localization_api.dart';
+import 'package:felorx_api_client/src/api/abp_tenant_api.dart';
+import 'package:felorx_api_client/src/api/account_api.dart';
+import 'package:felorx_api_client/src/api/ai_provider_api.dart';
+import 'package:felorx_api_client/src/api/ai_providers_api.dart';
+import 'package:felorx_api_client/src/api/api_keys_api.dart';
+import 'package:felorx_api_client/src/api/app_api.dart';
+import 'package:felorx_api_client/src/api/app_asset_api.dart';
+import 'package:felorx_api_client/src/api/app_feature_api.dart';
+import 'package:felorx_api_client/src/api/app_feedback_api.dart';
+import 'package:felorx_api_client/src/api/app_locale_api.dart';
+import 'package:felorx_api_client/src/api/app_pricing_api.dart';
+import 'package:felorx_api_client/src/api/app_pricing_item_api.dart';
+import 'package:felorx_api_client/src/api/app_release_api.dart';
+import 'package:felorx_api_client/src/api/app_sdk_api.dart';
+import 'package:felorx_api_client/src/api/app_tester_api.dart';
+import 'package:felorx_api_client/src/api/app_user_score_api.dart';
+import 'package:felorx_api_client/src/api/auth_center_api.dart';
+import 'package:felorx_api_client/src/api/avatar_api.dart';
+import 'package:felorx_api_client/src/api/build_record_api.dart';
+import 'package:felorx_api_client/src/api/deploy_record_api.dart';
+import 'package:felorx_api_client/src/api/device_api.dart';
+import 'package:felorx_api_client/src/api/dynamic_claims_api.dart';
+import 'package:felorx_api_client/src/api/email_settings_api.dart';
+import 'package:felorx_api_client/src/api/features_api.dart';
+import 'package:felorx_api_client/src/api/message_api.dart';
+import 'package:felorx_api_client/src/api/message_source_api.dart';
+import 'package:felorx_api_client/src/api/message_source_category_api.dart';
+import 'package:felorx_api_client/src/api/message_source_route_api.dart';
+import 'package:felorx_api_client/src/api/message_source_route_sub_api.dart';
+import 'package:felorx_api_client/src/api/message_template_api.dart';
+import 'package:felorx_api_client/src/api/message_template_release_api.dart';
+import 'package:felorx_api_client/src/api/notification_api.dart';
+import 'package:felorx_api_client/src/api/open_ai_compatible_chat_api.dart';
+import 'package:felorx_api_client/src/api/ops_crypto_api.dart';
+import 'package:felorx_api_client/src/api/permissions_api.dart';
+import 'package:felorx_api_client/src/api/profile_api.dart';
+import 'package:felorx_api_client/src/api/role_api.dart';
+import 'package:felorx_api_client/src/api/storage_object_api.dart';
+import 'package:felorx_api_client/src/api/subscription_api.dart';
+import 'package:felorx_api_client/src/api/subscription_billing_admin_api.dart';
+import 'package:felorx_api_client/src/api/tenant_api.dart';
+import 'package:felorx_api_client/src/api/time_zone_settings_api.dart';
+import 'package:felorx_api_client/src/api/user_api.dart';
+import 'package:felorx_api_client/src/api/user_lookup_api.dart';
+import 'package:felorx_api_client/src/api/verification_api.dart';
 
-class PuupeeApiClient {
+class FelorxApiClient {
   static const String basePath = r'http://localhost';
 
   final Dio dio;
-  PuupeeApiClient({
+  FelorxApiClient({
     Dio? dio,
     String? basePathOverride,
     List<Interceptor>? interceptors,
-  })  : 
-        this.dio = dio ??
-            Dio(BaseOptions(
-              baseUrl: basePathOverride ?? basePath,
-              connectTimeout: const Duration(milliseconds: 5000),
-              receiveTimeout: const Duration(milliseconds: 3000),
-            )) {
+  }) : this.dio =
+           dio ??
+           Dio(
+             BaseOptions(
+               baseUrl: basePathOverride ?? basePath,
+               connectTimeout: const Duration(milliseconds: 5000),
+               receiveTimeout: const Duration(milliseconds: 3000),
+             ),
+           ) {
     if (interceptors == null) {
       this.dio.interceptors.addAll([
         OAuthInterceptor(),
@@ -85,25 +87,41 @@ class PuupeeApiClient {
 
   void setOAuthToken(String name, String token) {
     if (this.dio.interceptors.any((i) => i is OAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor) as OAuthInterceptor).tokens[name] = token;
+      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor)
+                  as OAuthInterceptor)
+              .tokens[name] =
+          token;
     }
   }
 
   void setBearerAuth(String name, String token) {
     if (this.dio.interceptors.any((i) => i is BearerAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor) as BearerAuthInterceptor).tokens[name] = token;
+      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor)
+                  as BearerAuthInterceptor)
+              .tokens[name] =
+          token;
     }
   }
 
   void setBasicAuth(String name, String username, String password) {
     if (this.dio.interceptors.any((i) => i is BasicAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor) as BasicAuthInterceptor).authInfo[name] = BasicAuthInfo(username, password);
+      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor)
+              as BasicAuthInterceptor)
+          .authInfo[name] = BasicAuthInfo(
+        username,
+        password,
+      );
     }
   }
 
   void setApiKey(String name, String apiKey) {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
+      (this.dio.interceptors.firstWhere(
+                    (element) => element is ApiKeyAuthInterceptor,
+                  )
+                  as ApiKeyAuthInterceptor)
+              .apiKeys[name] =
+          apiKey;
     }
   }
 
@@ -395,3 +413,5 @@ class PuupeeApiClient {
     return VerificationApi(dio);
   }
 }
+
+typedef PuupeeApiClient = FelorxApiClient;

@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/application_localization_resource_dto.dart';
+import 'package:felorx_api_client/src/model/application_localization_resource_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'application_localization_dto.g.dart';

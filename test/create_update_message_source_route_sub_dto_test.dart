@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateUpdateMessageSourceRouteSubDto
 void main() {
-  final CreateUpdateMessageSourceRouteSubDto? instance = /* CreateUpdateMessageSourceRouteSubDto(...) */ null;
+  final CreateUpdateMessageSourceRouteSubDto?
+  instance = /* CreateUpdateMessageSourceRouteSubDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateUpdateMessageSourceRouteSubDto, () {
@@ -21,6 +22,5 @@ void main() {
     test('to test the property `values`', () async {
       // TODO
     });
-
   });
 }

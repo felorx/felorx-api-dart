@@ -1,8 +1,8 @@
-# puupee_api_client.api.OpsCryptoApi
+# felorx_api_client.api.OpsCryptoApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,11 +20,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getOpsCryptoApi();
+final api = FelorxApiClient().getOpsCryptoApi();
 
 try {
     final response = api.getVault();
@@ -59,11 +59,11 @@ This endpoint does not need any parameter.
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getOpsCryptoApi();
+final api = FelorxApiClient().getOpsCryptoApi();
 final OpsCryptoVaultDto opsCryptoVaultDto = ; // OpsCryptoVaultDto | 
 
 try {

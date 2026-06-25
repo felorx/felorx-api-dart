@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/action_api_description_model.dart';
-import 'package:puupee_api_client/src/model/controller_interface_api_description_model.dart';
+import 'package:felorx_api_client/src/model/action_api_description_model.dart';
+import 'package:felorx_api_client/src/model/controller_interface_api_description_model.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'controller_api_description_model.g.dart';

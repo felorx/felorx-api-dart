@@ -3,10 +3,10 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_platform.dart';
-import 'package:puupee_api_client/src/model/artifact_type.dart';
-import 'package:puupee_api_client/src/model/app_publisher.dart';
-import 'package:puupee_api_client/src/model/release_channel.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
+import 'package:felorx_api_client/src/model/artifact_type.dart';
+import 'package:felorx_api_client/src/model/app_publisher.dart';
+import 'package:felorx_api_client/src/model/release_channel.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_release_dto.g.dart';

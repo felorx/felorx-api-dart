@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_asset_device_type.dart';
-import 'package:puupee_api_client/src/model/app_asset_type.dart';
+import 'package:felorx_api_client/src/model/app_asset_device_type.dart';
+import 'package:felorx_api_client/src/model/app_asset_type.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_update_app_asset_dto.g.dart';

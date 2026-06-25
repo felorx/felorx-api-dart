@@ -7,14 +7,14 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/app_feature_dto.dart';
-import 'package:puupee_api_client/src/model/app_feature_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/create_or_update_app_feature_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/app_feature_dto.dart';
+import 'package:felorx_api_client/src/model/app_feature_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/create_or_update_app_feature_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppFeatureApi {
 

@@ -7,15 +7,15 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/bind_device_dto.dart';
-import 'package:puupee_api_client/src/model/device_dto.dart';
-import 'package:puupee_api_client/src/model/device_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/refresh_device_status_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/bind_device_dto.dart';
+import 'package:felorx_api_client/src/model/device_dto.dart';
+import 'package:felorx_api_client/src/model/device_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/refresh_device_status_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class DeviceApi {
 

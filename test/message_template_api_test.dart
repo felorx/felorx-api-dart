@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for MessageTemplateApi
 void main() {
-  final instance = PuupeeApiClient().getMessageTemplateApi();
+  final instance = FelorxApiClient().getMessageTemplateApi();
 
   group(MessageTemplateApi, () {
     //Future<MessageTemplateDto> createMessageTemplate({ CreateOrUpdateMessageTemplateDto createOrUpdateMessageTemplateDto }) async
@@ -31,6 +30,5 @@ void main() {
     test('test updateMessageTemplate', () async {
       // TODO
     });
-
   });
 }

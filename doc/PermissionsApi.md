@@ -1,8 +1,8 @@
-# puupee_api_client.api.PermissionsApi
+# felorx_api_client.api.PermissionsApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -20,11 +20,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getPermissionsApi();
+final api = FelorxApiClient().getPermissionsApi();
 final String providerName = providerName_example; // String | 
 final String providerKey = providerKey_example; // String | 
 
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getPermissionsApi();
+final api = FelorxApiClient().getPermissionsApi();
 final UpdatePermissionsDto updatePermissionsDto = ; // UpdatePermissionsDto | 
 final String providerName = providerName_example; // String | 
 final String providerKey = providerKey_example; // String | 

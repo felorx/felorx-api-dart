@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for StorageObjectApi
 void main() {
-  final instance = PuupeeApiClient().getStorageObjectApi();
+  final instance = FelorxApiClient().getStorageObjectApi();
 
   group(StorageObjectApi, () {
     // 获取所有 CDN Domain 配置
@@ -28,6 +27,5 @@ void main() {
     test('test preSignUrl', () async {
       // TODO
     });
-
   });
 }

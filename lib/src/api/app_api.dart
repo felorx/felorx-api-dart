@@ -7,24 +7,24 @@
 import 'dart:async';
 
 import 'dart:convert';
-import 'package:puupee_api_client/src/deserialize.dart';
+import 'package:felorx_api_client/src/deserialize.dart';
 
 import 'package:dio/dio.dart';
 
-import 'package:puupee_api_client/src/model/app_dto.dart';
-import 'package:puupee_api_client/src/model/app_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/app_feature_dto.dart';
-import 'package:puupee_api_client/src/model/app_run_dto.dart';
-import 'package:puupee_api_client/src/model/app_run_record_dto.dart';
-import 'package:puupee_api_client/src/model/app_run_record_update_dto.dart';
-import 'package:puupee_api_client/src/model/app_sdk_dto.dart';
-import 'package:puupee_api_client/src/model/app_storefront_landing_dto.dart';
-import 'package:puupee_api_client/src/model/app_with_user_dto.dart';
-import 'package:puupee_api_client/src/model/app_with_user_dto_paged_result_dto.dart';
-import 'package:puupee_api_client/src/model/create_or_update_app_dto.dart';
-import 'package:puupee_api_client/src/model/remote_service_error_response.dart';
-import 'package:puupee_api_client/src/model/set_app_linked_sdks_dto.dart';
-import 'package:puupee_api_client/src/model/storage_object_credentials.dart';
+import 'package:felorx_api_client/src/model/app_dto.dart';
+import 'package:felorx_api_client/src/model/app_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/app_feature_dto.dart';
+import 'package:felorx_api_client/src/model/app_run_dto.dart';
+import 'package:felorx_api_client/src/model/app_run_record_dto.dart';
+import 'package:felorx_api_client/src/model/app_run_record_update_dto.dart';
+import 'package:felorx_api_client/src/model/app_sdk_dto.dart';
+import 'package:felorx_api_client/src/model/app_storefront_landing_dto.dart';
+import 'package:felorx_api_client/src/model/app_with_user_dto.dart';
+import 'package:felorx_api_client/src/model/app_with_user_dto_paged_result_dto.dart';
+import 'package:felorx_api_client/src/model/create_or_update_app_dto.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/set_app_linked_sdks_dto.dart';
+import 'package:felorx_api_client/src/model/storage_object_credentials.dart';
 
 class AppApi {
 

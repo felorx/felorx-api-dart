@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for SubscriptionApi
 void main() {
-  final instance = PuupeeApiClient().getSubscriptionApi();
+  final instance = FelorxApiClient().getSubscriptionApi();
 
   group(SubscriptionApi, () {
     // 支付宝异步通知。成功时必须返回纯文本 success，否则支付宝会重试通知。
@@ -84,6 +83,5 @@ void main() {
     test('test verifyReceipt', () async {
       // TODO
     });
-
   });
 }

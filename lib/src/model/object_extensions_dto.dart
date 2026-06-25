@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/module_extension_dto.dart';
-import 'package:puupee_api_client/src/model/extension_enum_dto.dart';
+import 'package:felorx_api_client/src/model/module_extension_dto.dart';
+import 'package:felorx_api_client/src/model/extension_enum_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'object_extensions_dto.g.dart';

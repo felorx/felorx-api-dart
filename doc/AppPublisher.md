@@ -1,8 +1,8 @@
-# puupee_api_client.model.AppPublisher
+# felorx_api_client.model.AppPublisher
 
 ## Load the model package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 ## Properties

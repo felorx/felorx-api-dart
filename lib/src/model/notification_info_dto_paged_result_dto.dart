@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/notification_info_dto.dart';
+import 'package:felorx_api_client/src/model/notification_info_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'notification_info_dto_paged_result_dto.g.dart';

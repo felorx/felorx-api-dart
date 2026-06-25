@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/permission_group_dto.dart';
+import 'package:felorx_api_client/src/model/permission_group_dto.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'get_permission_list_result_dto.g.dart';

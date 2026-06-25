@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for AppTesterApi
 void main() {
-  final instance = PuupeeApiClient().getAppTesterApi();
+  final instance = FelorxApiClient().getAppTesterApi();
 
   group(AppTesterApi, () {
     // 检查用户是否是内测用户
@@ -48,6 +47,5 @@ void main() {
     test('test updateAppTester', () async {
       // TODO
     });
-
   });
 }

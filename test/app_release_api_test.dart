@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for AppReleaseApi
 void main() {
-  final instance = PuupeeApiClient().getAppReleaseApi();
+  final instance = FelorxApiClient().getAppReleaseApi();
 
   group(AppReleaseApi, () {
     // 创建新版本
@@ -55,6 +54,5 @@ void main() {
     test('test updateAppRelease', () async {
       // TODO
     });
-
   });
 }

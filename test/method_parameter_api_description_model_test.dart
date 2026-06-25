@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for MethodParameterApiDescriptionModel
 void main() {
-  final MethodParameterApiDescriptionModel? instance = /* MethodParameterApiDescriptionModel(...) */ null;
+  final MethodParameterApiDescriptionModel?
+  instance = /* MethodParameterApiDescriptionModel(...) */ null;
   // TODO add properties to the entity
 
   group(MethodParameterApiDescriptionModel, () {
@@ -36,6 +37,5 @@ void main() {
     test('to test the property `defaultValue`', () async {
       // TODO
     });
-
   });
 }

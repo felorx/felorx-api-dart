@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for AccountApi
 void main() {
-  final instance = PuupeeApiClient().getAccountApi();
+  final instance = FelorxApiClient().getAccountApi();
 
   group(AccountApi, () {
     //Future changeAccountPassword({ ChangePasswordDto changePasswordDto }) async
@@ -48,6 +47,5 @@ void main() {
     test('test verifyPasswordResetToken', () async {
       // TODO
     });
-
   });
 }

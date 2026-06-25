@@ -1,8 +1,8 @@
-name: puupee_api_client
+name: felorx_api_client
 resolution: workspace
 version: 1.23.2
 description: Api for Felorx app service.
-homepage: https://github.com/puupee/puupee-api-dart
+homepage: https://felorx.com
 
 
 environment:

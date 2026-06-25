@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for MessageApi
 void main() {
-  final instance = PuupeeApiClient().getMessageApi();
+  final instance = FelorxApiClient().getMessageApi();
 
   group(MessageApi, () {
     //Future publish({ MessagePublishDto messagePublishDto }) async
@@ -26,6 +25,5 @@ void main() {
     test('test unsubscribe', () async {
       // TODO
     });
-
   });
 }

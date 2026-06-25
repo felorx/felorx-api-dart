@@ -1,8 +1,8 @@
-# puupee_api_client.api.MessageApi
+# felorx_api_client.api.MessageApi
 
 ## Load the API package
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 ```
 
 All URIs are relative to *http://localhost*
@@ -22,11 +22,11 @@ Method | HTTP request | Description
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getMessageApi();
+final api = FelorxApiClient().getMessageApi();
 final MessagePublishDto messagePublishDto = ; // MessagePublishDto | 
 
 try {
@@ -64,11 +64,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getMessageApi();
+final api = FelorxApiClient().getMessageApi();
 final MessageRecallDto messageRecallDto = ; // MessageRecallDto | 
 
 try {
@@ -106,11 +106,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getMessageApi();
+final api = FelorxApiClient().getMessageApi();
 final MessageSubscribeDto messageSubscribeDto = ; // MessageSubscribeDto | 
 
 try {
@@ -148,11 +148,11 @@ void (empty response body)
 
 ### Example
 ```dart
-import 'package:puupee_api_client/api.dart';
+import 'package:felorx_api_client/api.dart';
 // TODO Configure OAuth2 access token for authorization: oauth2
 //defaultApiClient.getAuthentication<OAuth>('oauth2').accessToken = 'YOUR_ACCESS_TOKEN';
 
-final api = PuupeeApiClient().getMessageApi();
+final api = FelorxApiClient().getMessageApi();
 final MessageUnsubscribeDto messageUnsubscribeDto = ; // MessageUnsubscribeDto | 
 
 try {

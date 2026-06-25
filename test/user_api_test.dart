@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for UserApi
 void main() {
-  final instance = PuupeeApiClient().getUserApi();
+  final instance = FelorxApiClient().getUserApi();
 
   group(UserApi, () {
     //Future<IdentityUserDto> createIdentityUser({ IdentityUserCreateDto identityUserCreateDto }) async
@@ -56,6 +55,5 @@ void main() {
     test('test updateRoles', () async {
       // TODO
     });
-
   });
 }

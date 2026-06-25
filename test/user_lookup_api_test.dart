@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for UserLookupApi
 void main() {
-  final instance = PuupeeApiClient().getUserLookupApi();
+  final instance = FelorxApiClient().getUserLookupApi();
 
   group(UserLookupApi, () {
     //Future<UserData> findById(String id) async
@@ -26,6 +25,5 @@ void main() {
     test('test search', () async {
       // TODO
     });
-
   });
 }

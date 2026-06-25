@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_pricing_item_value_dto.dart';
-import 'package:puupee_api_client/src/model/app_price_naming.dart';
+import 'package:felorx_api_client/src/model/app_pricing_item_value_dto.dart';
+import 'package:felorx_api_client/src/model/app_price_naming.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'create_or_update_app_pricing_dto.g.dart';

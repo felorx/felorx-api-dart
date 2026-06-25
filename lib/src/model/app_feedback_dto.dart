@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/app_feedback_type.dart';
-import 'package:puupee_api_client/src/model/app_feedback_status.dart';
+import 'package:felorx_api_client/src/model/app_feedback_type.dart';
+import 'package:felorx_api_client/src/model/app_feedback_status.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'app_feedback_dto.g.dart';

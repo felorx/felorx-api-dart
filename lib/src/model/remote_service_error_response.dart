@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/remote_service_error_info.dart';
+import 'package:felorx_api_client/src/model/remote_service_error_info.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'remote_service_error_response.g.dart';

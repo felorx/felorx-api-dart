@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/iana_time_zone.dart';
-import 'package:puupee_api_client/src/model/windows_time_zone.dart';
+import 'package:felorx_api_client/src/model/iana_time_zone.dart';
+import 'package:felorx_api_client/src/model/windows_time_zone.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'time_zone.g.dart';

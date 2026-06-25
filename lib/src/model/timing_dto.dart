@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/time_zone.dart';
+import 'package:felorx_api_client/src/model/time_zone.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'timing_dto.g.dart';

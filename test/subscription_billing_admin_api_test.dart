@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for SubscriptionBillingAdminApi
 void main() {
-  final instance = PuupeeApiClient().getSubscriptionBillingAdminApi();
+  final instance = FelorxApiClient().getSubscriptionBillingAdminApi();
 
   group(SubscriptionBillingAdminApi, () {
     //Future<AppPlanPriceDto> createPlanPrice({ CreateOrUpdateAppPlanPriceDto createOrUpdateAppPlanPriceDto }) async
@@ -56,6 +55,5 @@ void main() {
     test('test upsertStoreMapping', () async {
       // TODO
     });
-
   });
 }

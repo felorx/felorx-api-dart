@@ -3,11 +3,11 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:puupee_api_client/src/model/billing_provider.dart';
-import 'package:puupee_api_client/src/model/subscription_entitlement_status.dart';
-import 'package:puupee_api_client/src/model/sub_billing_period.dart';
-import 'package:puupee_api_client/src/model/billing_mode.dart';
-import 'package:puupee_api_client/src/model/app_price_naming.dart';
+import 'package:felorx_api_client/src/model/billing_provider.dart';
+import 'package:felorx_api_client/src/model/subscription_entitlement_status.dart';
+import 'package:felorx_api_client/src/model/sub_billing_period.dart';
+import 'package:felorx_api_client/src/model/billing_mode.dart';
+import 'package:felorx_api_client/src/model/app_price_naming.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'subscription_dto.g.dart';

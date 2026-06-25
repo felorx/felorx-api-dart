@@ -1,9 +1,10 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateUpdateAppTesterDto
 void main() {
-  final CreateUpdateAppTesterDto? instance = /* CreateUpdateAppTesterDto(...) */ null;
+  final CreateUpdateAppTesterDto? instance = /* CreateUpdateAppTesterDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(CreateUpdateAppTesterDto, () {
@@ -24,6 +25,5 @@ void main() {
     test('to test the property `isEnabled`', () async {
       // TODO
     });
-
   });
 }

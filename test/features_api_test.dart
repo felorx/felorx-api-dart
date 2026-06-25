@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for FeaturesApi
 void main() {
-  final instance = PuupeeApiClient().getFeaturesApi();
+  final instance = FelorxApiClient().getFeaturesApi();
 
   group(FeaturesApi, () {
     //Future deleteFeatures({ String providerName, String providerKey }) async
@@ -21,6 +20,5 @@ void main() {
     test('test updateFeatures', () async {
       // TODO
     });
-
   });
 }

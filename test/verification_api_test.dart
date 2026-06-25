@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for VerificationApi
 void main() {
-  final instance = PuupeeApiClient().getVerificationApi();
+  final instance = FelorxApiClient().getVerificationApi();
 
   group(VerificationApi, () {
     //Future sendCode({ SendVerificationCodeDto sendVerificationCodeDto }) async
@@ -16,6 +15,5 @@ void main() {
     test('test sendCodeAnonymous', () async {
       // TODO
     });
-
   });
 }

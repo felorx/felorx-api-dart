@@ -300,7 +300,7 @@ doc/VerifyPasswordResetTokenInput.md
 doc/VerifyReceiptDto.md
 doc/VerifyReceiptResult.md
 doc/WindowsTimeZone.md
-lib/puupee_api_client.dart
+lib/felorx_api_client.dart
 lib/src/api.dart
 lib/src/api/abp_api_definition_api.dart
 lib/src/api/abp_application_configuration_api.dart

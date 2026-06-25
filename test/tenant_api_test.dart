@@ -1,10 +1,9 @@
 import 'package:test/test.dart';
-import 'package:puupee_api_client/puupee_api_client.dart';
-
+import 'package:felorx_api_client/felorx_api_client.dart';
 
 /// tests for TenantApi
 void main() {
-  final instance = PuupeeApiClient().getTenantApi();
+  final instance = FelorxApiClient().getTenantApi();
 
   group(TenantApi, () {
     //Future<TenantDto> createTenant({ TenantCreateDto tenantCreateDto }) async
@@ -46,6 +45,5 @@ void main() {
     test('test updateTenant', () async {
       // TODO
     });
-
   });
 }
