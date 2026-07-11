@@ -1,6 +1,6 @@
 name: felorx_api_client
 resolution: workspace
-version: 1.24.0
+version: 1.25.0
 description: Api for Felorx app service.
 homepage: https://github.com/felorx/felorx-api-dart
 

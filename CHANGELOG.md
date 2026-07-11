@@ -1,3 +1,7 @@
+## 1.25.0
+
+ - **FEAT**(felorx_api_client): 暴露构建记录日志字段.
+
 ## 1.24.0
 
  - **REFACTOR**(api_client): 重新生成 Felorx API 客户端.
