@@ -9,6 +9,6 @@ import 'package:felorx_api_client/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 
+支持 `Fdu`，表示 Felorx 桌面端应用内更新包（`.fdu`）。
+
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

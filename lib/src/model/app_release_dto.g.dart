@@ -117,6 +117,7 @@ const _$ArtifactTypeEnumMap = {
   ArtifactType.msix: 'Msix',
   ArtifactType.pkg: 'Pkg',
   ArtifactType.rpm: 'Rpm',
+  ArtifactType.fdu: 'Fdu',
   ArtifactType.zip: 'Zip',
   ArtifactType.bin: 'Bin',
   ArtifactType.other: 'Other',

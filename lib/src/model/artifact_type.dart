@@ -49,6 +49,9 @@ enum ArtifactType {
           /// Represents the type of an artifact.
       @JsonValue(r'Rpm')
       rpm(r'Rpm'),
+          /// Felorx desktop in-app update bundle.
+      @JsonValue(r'Fdu')
+      fdu(r'Fdu'),
           /// Represents the type of an artifact.
       @JsonValue(r'Zip')
       zip(r'Zip'),
