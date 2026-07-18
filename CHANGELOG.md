@@ -1,3 +1,7 @@
+## 1.26.0
+
+ - **FEAT**(felorx_api_client): 支持 FDU 制品类型.
+
 ## 1.25.0
 
  - **FEAT**(felorx_api_client): 暴露构建记录日志字段.
