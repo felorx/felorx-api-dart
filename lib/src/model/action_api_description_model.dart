@@ -10,7 +10,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'action_api_description_model.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -20,177 +19,87 @@ part 'action_api_description_model.g.dart';
 class ActionApiDescriptionModel {
   /// Returns a new [ActionApiDescriptionModel] instance.
   ActionApiDescriptionModel({
+    this.uniqueName,
 
-     this.uniqueName,
+    this.name,
 
-     this.name,
+    this.httpMethod,
 
-     this.httpMethod,
+    this.url,
 
-     this.url,
+    this.supportedVersions,
 
-     this.supportedVersions,
+    this.parametersOnMethod,
 
-     this.parametersOnMethod,
+    this.parameters,
 
-     this.parameters,
+    this.returnValue,
 
-     this.returnValue,
+    this.allowAnonymous,
 
-     this.allowAnonymous,
-
-     this.implementFrom,
+    this.implementFrom,
   });
 
-  @JsonKey(
-    
-    name: r'uniqueName',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'uniqueName', required: false, includeIfNull: false)
   String? uniqueName;
 
-
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'httpMethod',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'httpMethod', required: false, includeIfNull: false)
   String? httpMethod;
 
-
-
-  @JsonKey(
-    
-    name: r'url',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'url', required: false, includeIfNull: false)
   String? url;
 
-
-
-  @JsonKey(
-    
-    name: r'supportedVersions',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'supportedVersions', required: false, includeIfNull: false)
   List<String>? supportedVersions;
 
-
-
-  @JsonKey(
-    
-    name: r'parametersOnMethod',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'parametersOnMethod', required: false, includeIfNull: false)
   List<MethodParameterApiDescriptionModel>? parametersOnMethod;
 
-
-
-  @JsonKey(
-    
-    name: r'parameters',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'parameters', required: false, includeIfNull: false)
   List<ParameterApiDescriptionModel>? parameters;
 
-
-
-  @JsonKey(
-    
-    name: r'returnValue',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'returnValue', required: false, includeIfNull: false)
   ReturnValueApiDescriptionModel? returnValue;
 
-
-
-  @JsonKey(
-    
-    name: r'allowAnonymous',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'allowAnonymous', required: false, includeIfNull: false)
   bool? allowAnonymous;
 
-
-
-  @JsonKey(
-    
-    name: r'implementFrom',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'implementFrom', required: false, includeIfNull: false)
   String? implementFrom;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ActionApiDescriptionModel &&
+          other.uniqueName == uniqueName &&
+          other.name == name &&
+          other.httpMethod == httpMethod &&
+          other.url == url &&
+          other.supportedVersions == supportedVersions &&
+          other.parametersOnMethod == parametersOnMethod &&
+          other.parameters == parameters &&
+          other.returnValue == returnValue &&
+          other.allowAnonymous == allowAnonymous &&
+          other.implementFrom == implementFrom;
 
+  @override
+  int get hashCode =>
+      (uniqueName == null ? 0 : uniqueName.hashCode) +
+      (name == null ? 0 : name.hashCode) +
+      (httpMethod == null ? 0 : httpMethod.hashCode) +
+      (url == null ? 0 : url.hashCode) +
+      (supportedVersions == null ? 0 : supportedVersions.hashCode) +
+      (parametersOnMethod == null ? 0 : parametersOnMethod.hashCode) +
+      (parameters == null ? 0 : parameters.hashCode) +
+      returnValue.hashCode +
+      (allowAnonymous == null ? 0 : allowAnonymous.hashCode) +
+      (implementFrom == null ? 0 : implementFrom.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ActionApiDescriptionModel &&
-      other.uniqueName == uniqueName &&
-      other.name == name &&
-      other.httpMethod == httpMethod &&
-      other.url == url &&
-      other.supportedVersions == supportedVersions &&
-      other.parametersOnMethod == parametersOnMethod &&
-      other.parameters == parameters &&
-      other.returnValue == returnValue &&
-      other.allowAnonymous == allowAnonymous &&
-      other.implementFrom == implementFrom;
-
-    @override
-    int get hashCode =>
-        (uniqueName == null ? 0 : uniqueName.hashCode) +
-        (name == null ? 0 : name.hashCode) +
-        (httpMethod == null ? 0 : httpMethod.hashCode) +
-        (url == null ? 0 : url.hashCode) +
-        (supportedVersions == null ? 0 : supportedVersions.hashCode) +
-        (parametersOnMethod == null ? 0 : parametersOnMethod.hashCode) +
-        (parameters == null ? 0 : parameters.hashCode) +
-        returnValue.hashCode +
-        (allowAnonymous == null ? 0 : allowAnonymous.hashCode) +
-        (implementFrom == null ? 0 : implementFrom.hashCode);
-
-  factory ActionApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$ActionApiDescriptionModelFromJson(json);
+  factory ActionApiDescriptionModel.fromJson(Map<String, dynamic> json) =>
+      _$ActionApiDescriptionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ActionApiDescriptionModelToJson(this);
 
@@ -198,6 +107,4 @@ class ActionApiDescriptionModel {
   String toString() {
     return toJson().toString();
   }
-
 }
-

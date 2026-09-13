@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppUserScoreDto
 void main() {
-  final CreateOrUpdateAppUserScoreDto? instance = /* CreateOrUpdateAppUserScoreDto(...) */ null;
+  final CreateOrUpdateAppUserScoreDto?
+  instance = /* CreateOrUpdateAppUserScoreDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppUserScoreDto, () {
@@ -21,6 +22,5 @@ void main() {
     test('to test the property `comment`', () async {
       // TODO
     });
-
   });
 }

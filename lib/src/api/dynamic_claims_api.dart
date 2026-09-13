@@ -14,7 +14,6 @@ import 'package:dio/dio.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class DynamicClaimsApi {
-
   final Dio _dio;
 
   const DynamicClaimsApi(this._dio);
@@ -43,13 +42,8 @@ class DynamicClaimsApi {
     final _path = r'/api/account/dynamic-claims/refresh';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -63,5 +57,4 @@ class DynamicClaimsApi {
 
     return _response;
   }
-
 }

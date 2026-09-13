@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **quitUrl** | **String** | 手机网站支付中用户取消后的返回地址。 | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

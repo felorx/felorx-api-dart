@@ -17,5 +17,3 @@ Name | Type | Description | Notes
 **attachmentKeys** | **List&lt;String&gt;** | 截图/图片附件（对象存储 key，最多 5 个） | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

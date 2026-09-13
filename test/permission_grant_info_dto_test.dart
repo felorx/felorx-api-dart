@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for PermissionGrantInfoDto
 void main() {
-  final PermissionGrantInfoDto? instance = /* PermissionGrantInfoDto(...) */ null;
+  final PermissionGrantInfoDto? instance = /* PermissionGrantInfoDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(PermissionGrantInfoDto, () {
@@ -36,6 +37,5 @@ void main() {
     test('to test the property `grantedProviders`', () async {
       // TODO
     });
-
   });
 }

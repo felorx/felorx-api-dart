@@ -92,6 +92,12 @@ void main() {
       // TODO
     });
 
+    // 目标架构；空值或空字符串表示通用制品。
+    // String architecture
+    test('to test the property `architecture`', () async {
+      // TODO
+    });
+
     // 环境
     // String environment
     test('to test the property `environment`', () async {
@@ -118,6 +124,12 @@ void main() {
     // 结束时间
     // DateTime completedAt
     test('to test the property `completedAt`', () async {
+      // TODO
+    });
+
+    // 构建日志
+    // String logs
+    test('to test the property `logs`', () async {
       // TODO
     });
 
@@ -162,6 +174,5 @@ void main() {
     test('to test the property `duration`', () async {
       // TODO
     });
-
   });
 }

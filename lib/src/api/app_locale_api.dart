@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/create_or_update_app_locale_dto.dart
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppLocaleApi {
-
   final Dio _dio;
 
   const AppLocaleApi(this._dio);
@@ -47,13 +46,8 @@ class AppLocaleApi {
     final _path = r'/api/app/app-locale';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -61,13 +55,10 @@ class AppLocaleApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppLocaleDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppLocaleDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -86,9 +77,14 @@ _bodyData=jsonEncode(createOrUpdateAppLocaleDto);
     AppLocaleDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>(rawData, 'AppLocaleDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppLocaleDto, AppLocaleDto>(
+              rawData,
+              'AppLocaleDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +130,16 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-locale/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-locale/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -158,7 +154,7 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
     return _response;
   }
 
-  /// getListByAppId
+  /// getListByAppIdGetApiAppAppLocaleByAppIdAppId
   ///
   ///
   /// Parameters:
@@ -172,7 +168,8 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
   ///
   /// Returns a [Future] containing a [Response] with a [List<AppLocaleDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<AppLocaleDto>>> getListByAppId({
+  Future<Response<List<AppLocaleDto>>>
+  getListByAppIdGetApiAppAppLocaleByAppIdAppId({
     required String appId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -181,16 +178,16 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-locale/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
+    final _path = r'/api/app/app-locale/by-app-id/{appId}'.replaceAll(
+      '{'
+      r'appId'
+      '}',
+      appId.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -205,9 +202,14 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
     List<AppLocaleDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLocaleDto>(rawData, 'List<AppLocaleDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<AppLocaleDto>, AppLocaleDto>(
+              rawData,
+              'List<AppLocaleDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -255,16 +257,16 @@ _responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLoca
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-locale/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-locale/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -272,13 +274,10 @@ _responseData = rawData == null ? null : deserialize<List<AppLocaleDto>, AppLoca
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppLocaleDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppLocaleDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -297,9 +296,14 @@ _bodyData=jsonEncode(createOrUpdateAppLocaleDto);
     AppLocaleDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>(rawData, 'AppLocaleDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppLocaleDto, AppLocaleDto>(
+              rawData,
+              'AppLocaleDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -321,5 +325,4 @@ _responseData = rawData == null ? null : deserialize<AppLocaleDto, AppLocaleDto>
       extra: _response.extra,
     );
   }
-
 }

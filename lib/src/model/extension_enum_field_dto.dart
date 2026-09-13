@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_enum_field_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,50 +15,27 @@ part 'extension_enum_field_dto.g.dart';
 )
 class ExtensionEnumFieldDto {
   /// Returns a new [ExtensionEnumFieldDto] instance.
-  ExtensionEnumFieldDto({
+  ExtensionEnumFieldDto({this.name, this.value});
 
-     this.name,
-
-     this.value,
-  });
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'value',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'value', required: false, includeIfNull: false)
   Object? value;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExtensionEnumFieldDto &&
+          other.name == name &&
+          other.value == value;
 
+  @override
+  int get hashCode =>
+      (name == null ? 0 : name.hashCode) + (value == null ? 0 : value.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ExtensionEnumFieldDto &&
-      other.name == name &&
-      other.value == value;
-
-    @override
-    int get hashCode =>
-        (name == null ? 0 : name.hashCode) +
-        (value == null ? 0 : value.hashCode);
-
-  factory ExtensionEnumFieldDto.fromJson(Map<String, dynamic> json) => _$ExtensionEnumFieldDtoFromJson(json);
+  factory ExtensionEnumFieldDto.fromJson(Map<String, dynamic> json) =>
+      _$ExtensionEnumFieldDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ExtensionEnumFieldDtoToJson(this);
 
@@ -67,6 +43,4 @@ class ExtensionEnumFieldDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

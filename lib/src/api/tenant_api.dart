@@ -18,7 +18,6 @@ import 'package:felorx_api_client/src/model/tenant_dto_paged_result_dto.dart';
 import 'package:felorx_api_client/src/model/tenant_update_dto.dart';
 
 class TenantApi {
-
   final Dio _dio;
 
   const TenantApi(this._dio);
@@ -49,13 +48,8 @@ class TenantApi {
     final _path = r'/api/multi-tenancy/tenants';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -63,13 +57,10 @@ class TenantApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(tenantCreateDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(tenantCreateDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -88,9 +79,14 @@ _bodyData=jsonEncode(tenantCreateDto);
     TenantDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawData, 'TenantDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<TenantDto, TenantDto>(
+              rawData,
+              'TenantDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -136,16 +132,17 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'
+        .replaceAll(
+          '{'
+          r'id'
+          '}',
+          id.toString(),
+        );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -183,16 +180,16 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -230,16 +227,17 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'
+        .replaceAll(
+          '{'
+          r'id'
+          '}',
+          id.toString(),
+        );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -254,9 +252,10 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     String? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<String, String>(rawData, 'String', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<String, String>(rawData, 'String', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -302,16 +301,16 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -326,9 +325,14 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
     TenantDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawData, 'TenantDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<TenantDto, TenantDto>(
+              rawData,
+              'TenantDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -383,13 +387,8 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     final _path = r'/api/multi-tenancy/tenants';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -412,9 +411,14 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
     TenantDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, TenantDtoPagedResultDto>(rawData, 'TenantDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<TenantDtoPagedResultDto, TenantDtoPagedResultDto>(
+              rawData,
+              'TenantDtoPagedResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -462,21 +466,23 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}/default-connection-string'
+        .replaceAll(
+          '{'
+          r'id'
+          '}',
+          id.toString(),
+        );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      if (defaultConnectionString != null) r'defaultConnectionString': defaultConnectionString,
+      if (defaultConnectionString != null)
+        r'defaultConnectionString': defaultConnectionString,
     };
 
     final _response = await _dio.request<Object>(
@@ -516,16 +522,16 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/multi-tenancy/tenants/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -533,13 +539,10 @@ _responseData = rawData == null ? null : deserialize<TenantDtoPagedResultDto, Te
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(tenantUpdateDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(tenantUpdateDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -558,9 +561,14 @@ _bodyData=jsonEncode(tenantUpdateDto);
     TenantDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawData, 'TenantDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<TenantDto, TenantDto>(
+              rawData,
+              'TenantDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -582,5 +590,4 @@ _responseData = rawData == null ? null : deserialize<TenantDto, TenantDto>(rawDa
       extra: _response.extra,
     );
   }
-
 }

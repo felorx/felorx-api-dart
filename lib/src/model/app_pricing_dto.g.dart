@@ -2,6 +2,10 @@
 
 part of 'app_pricing_dto.dart';
 
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
 AppPricingDto _$AppPricingDtoFromJson(Map<String, dynamic> json) =>
     $checkedCreate('AppPricingDto', json, ($checkedConvert) {
       final val = AppPricingDto(

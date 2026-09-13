@@ -25,5 +25,3 @@ Name | Type | Description | Notes
 **intValueType** | **String** | 数字值类型, FileSize: 文件大小, Count: 数目 | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

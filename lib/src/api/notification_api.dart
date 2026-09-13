@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/notification_info_dto_paged_result_d
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class NotificationApi {
-
   final Dio _dio;
 
   const NotificationApi(this._dio);
@@ -60,16 +59,23 @@ class NotificationApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/notification/bark/{apiKey}/{message}'.replaceAll('{' r'apiKey' '}', apiKey.toString()).replaceAll('{' r'message' '}', message.toString());
+    final _path = r'/api/app/notification/bark/{apiKey}/{message}'
+        .replaceAll(
+          '{'
+          r'apiKey'
+          '}',
+          apiKey.toString(),
+        )
+        .replaceAll(
+          '{'
+          r'message'
+          '}',
+          message.toString(),
+        );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -125,13 +131,8 @@ class NotificationApi {
     final _path = r'/api/app/notification';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -153,9 +154,13 @@ class NotificationApi {
     NotificationInfoDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedResultDto, NotificationInfoDtoPagedResultDto>(rawData, 'NotificationInfoDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              NotificationInfoDtoPagedResultDto,
+              NotificationInfoDtoPagedResultDto
+            >(rawData, 'NotificationInfoDtoPagedResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -204,13 +209,8 @@ _responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedRes
     final _path = r'/api/app/notification/push';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -218,13 +218,10 @@ _responseData = rawData == null ? null : deserialize<NotificationInfoDtoPagedRes
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createPushNotificationDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createPushNotificationDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -242,5 +239,4 @@ _bodyData=jsonEncode(createPushNotificationDto);
 
     return _response;
   }
-
 }

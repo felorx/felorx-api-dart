@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for DeployRecordApi
 void main() {
   final instance = FelorxApiClient().getDeployRecordApi();
@@ -14,26 +13,6 @@ void main() {
 
     //Future deleteDeployRecordById(String id) async
     test('test deleteDeployRecordById', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> deployRecordGetLatest(String appId, { AppPlatform platform, String environment }) async
-    test('test deployRecordGetLatest', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> deployRecordMarkAsCanceled(String id) async
-    test('test deployRecordMarkAsCanceled', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> deployRecordMarkAsFailed(String id, { String errorMessage }) async
-    test('test deployRecordMarkAsFailed', () async {
-      // TODO
-    });
-
-    //Future<DeployRecordDto> deployRecordMarkAsSucceeded(String id, { String deployUrl }) async
-    test('test deployRecordMarkAsSucceeded', () async {
       // TODO
     });
 
@@ -52,8 +31,18 @@ void main() {
       // TODO
     });
 
+    //Future<DeployRecordDto> getLatestGetApiAppDeployRecordLatestAppId(String appId, { AppPlatform platform, String environment }) async
+    test('test getLatestGetApiAppDeployRecordLatestAppId', () async {
+      // TODO
+    });
+
     //Future<List<DeployRecordDto>> getListByBuildRecordId(String buildRecordId) async
     test('test getListByBuildRecordId', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(String id) async
+    test('test markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled', () async {
       // TODO
     });
 
@@ -62,10 +51,22 @@ void main() {
       // TODO
     });
 
+    //Future<DeployRecordDto> markAsFailedPostApiAppDeployRecordIdMarkAsFailed(String id, { String errorMessage }) async
+    test('test markAsFailedPostApiAppDeployRecordIdMarkAsFailed', () async {
+      // TODO
+    });
+
+    //Future<DeployRecordDto> markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(String id, { String deployUrl }) async
+    test(
+      'test markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded',
+      () async {
+        // TODO
+      },
+    );
+
     //Future<DeployRecordDto> updateDeployRecord(String id, { UpdateDeployRecordDto updateDeployRecordDto }) async
     test('test updateDeployRecord', () async {
       // TODO
     });
-
   });
 }

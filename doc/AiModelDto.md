@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **isDeleted** | **bool** |  | [optional]
 **deleterId** | **String** |  | [optional]
 **deletionTime** | [**DateTime**](DateTime.md) |  | [optional]
+**verifiedCapabilities** | [**List&lt;AiCapability&gt;**](AiCapability.md) |  | [optional]
+**capabilityCertificateVersion** | **String** |  | [optional]
+**capabilityTestedAt** | [**DateTime**](DateTime.md) |  | [optional]
 **providerId** | **String** |  | [optional]
 **routeName** | **String** |  | [optional]
 **name** | **String** |  | [optional]
@@ -26,5 +29,3 @@ Name | Type | Description | Notes
 **defaultParameters** | **Map&lt;String, String&gt;** |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

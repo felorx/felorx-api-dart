@@ -15,5 +15,3 @@ Name | Type | Description | Notes
 **checkoutKind** | **String** | order=一次性订单，subscription=自动续费订阅。 | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

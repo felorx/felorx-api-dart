@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **grantedProviders** | [**List&lt;ProviderInfoDto&gt;**](ProviderInfoDto.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

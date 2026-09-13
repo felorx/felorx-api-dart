@@ -16,26 +16,35 @@ part 'create_or_update_app_pricing_dto.g.dart';
   explicitToJson: true,
 )
 class CreateOrUpdateAppPricingDto {
+  /// Returns a new [CreateOrUpdateAppPricingDto] instance.
   CreateOrUpdateAppPricingDto({
     this.naming,
+
     this.description,
+
     this.appId,
+
     this.sortIndex,
+
     this.items,
   });
 
   @JsonKey(name: r'naming', required: false, includeIfNull: false)
   AppPriceNaming? naming;
 
+  /// 简单描述  适用于个人网站和任何想用基本的聊天方式与游客交流的人。  适用于希望改善客户关系的早期创业公司。  为需要全功能解决方案与客户沟通的公司而设。
   @JsonKey(name: r'description', required: false, includeIfNull: false)
   String? description;
 
+  /// APPID
   @JsonKey(name: r'appId', required: false, includeIfNull: false)
   String? appId;
 
+  /// 排序
   @JsonKey(name: r'sortIndex', required: false, includeIfNull: false)
   int? sortIndex;
 
+  /// 收费点
   @JsonKey(name: r'items', required: false, includeIfNull: false)
   List<AppPricingItemValueDto>? items;
 
@@ -52,13 +61,18 @@ class CreateOrUpdateAppPricingDto {
   @override
   int get hashCode =>
       naming.hashCode +
-      description.hashCode +
+      (description == null ? 0 : description.hashCode) +
       appId.hashCode +
       sortIndex.hashCode +
-      items.hashCode;
+      (items == null ? 0 : items.hashCode);
 
   factory CreateOrUpdateAppPricingDto.fromJson(Map<String, dynamic> json) =>
       _$CreateOrUpdateAppPricingDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$CreateOrUpdateAppPricingDtoToJson(this);
+
+  @override
+  String toString() {
+    return toJson().toString();
+  }
 }

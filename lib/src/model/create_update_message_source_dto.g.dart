@@ -10,6 +10,7 @@ CreateUpdateMessageSourceDto _$CreateUpdateMessageSourceDtoFromJson(
   Map<String, dynamic> json,
 ) => $checkedCreate('CreateUpdateMessageSourceDto', json, ($checkedConvert) {
   final val = CreateUpdateMessageSourceDto(
+    categoryId: $checkedConvert('categoryId', (v) => v as String?),
     name: $checkedConvert('name', (v) => v as String?),
     description: $checkedConvert('description', (v) => v as String?),
     isPublished: $checkedConvert('isPublished', (v) => v as bool?),
@@ -31,6 +32,7 @@ CreateUpdateMessageSourceDto _$CreateUpdateMessageSourceDtoFromJson(
 Map<String, dynamic> _$CreateUpdateMessageSourceDtoToJson(
   CreateUpdateMessageSourceDto instance,
 ) => <String, dynamic>{
+  'categoryId': ?instance.categoryId,
   'name': ?instance.name,
   'description': ?instance.description,
   'isPublished': ?instance.isPublished,

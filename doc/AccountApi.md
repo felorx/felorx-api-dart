@@ -11,8 +11,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**changeAccountPassword**](AccountApi.md#changeaccountpassword) | **POST** /api/app/account/change-password |
 [**checkSyncAuth**](AccountApi.md#checksyncauth) | **POST** /api/app/account/check-sync-auth | 检查同步认证
+[**deletionStatus**](AccountApi.md#deletionstatus) | **POST** /api/app/account/deletion-status |
 [**destroyAccount**](AccountApi.md#destroyaccount) | **POST** /api/app/account/destroy-account |
-[**getAccount**](AccountApi.md#getaccount) | **GET** /api/app/account |
+[**getAccountGetApiAppAccount**](AccountApi.md#getaccountgetapiappaccount) | **GET** /api/app/account |
 [**register**](AccountApi.md#register) | **POST** /api/account/register |
 [**resetPassword**](AccountApi.md#resetpassword) | **POST** /api/account/reset-password |
 [**sendPasswordResetCode**](AccountApi.md#sendpasswordresetcode) | **POST** /api/account/send-password-reset-code |
@@ -96,8 +97,49 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **deletionStatus**
+> AccountDeletionStatusDto deletionStatus(accountDeletionStatusQueryDto)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getAccountApi();
+final AccountDeletionStatusQueryDto accountDeletionStatusQueryDto = ; // AccountDeletionStatusQueryDto |
+
+try {
+    final response = api.deletionStatus(accountDeletionStatusQueryDto);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling AccountApi->deletionStatus: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountDeletionStatusQueryDto** | [**AccountDeletionStatusQueryDto**](AccountDeletionStatusQueryDto.md)|  | [optional]
+
+### Return type
+
+[**AccountDeletionStatusDto**](AccountDeletionStatusDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **destroyAccount**
-> destroyAccount(accountDeletionDto)
+> AccountDeletionStatusDto destroyAccount(accountDeletionDto)
 
 
 
@@ -109,7 +151,8 @@ final api = FelorxApiClient().getAccountApi();
 final AccountDeletionDto accountDeletionDto = ; // AccountDeletionDto |
 
 try {
-    api.destroyAccount(accountDeletionDto);
+    final response = api.destroyAccount(accountDeletionDto);
+    print(response);
 } on DioException catch (e) {
     print('Exception when calling AccountApi->destroyAccount: $e\n');
 }
@@ -123,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**AccountDeletionStatusDto**](AccountDeletionStatusDto.md)
 
 ### Authorization
 
@@ -136,8 +179,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getAccount**
-> UserProfileDto getAccount()
+# **getAccountGetApiAppAccount**
+> UserProfileDto getAccountGetApiAppAccount()
 
 
 
@@ -148,10 +191,10 @@ import 'package:felorx_api_client/api.dart';
 final api = FelorxApiClient().getAccountApi();
 
 try {
-    final response = api.getAccount();
+    final response = api.getAccountGetApiAppAccount();
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AccountApi->getAccount: $e\n');
+    print('Exception when calling AccountApi->getAccountGetApiAppAccount: $e\n');
 }
 ```
 
@@ -334,4 +377,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

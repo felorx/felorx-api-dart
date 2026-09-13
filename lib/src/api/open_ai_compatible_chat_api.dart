@@ -15,12 +15,11 @@ import 'package:felorx_api_client/src/model/ai_chat_completion_dto.dart';
 import 'package:felorx_api_client/src/model/open_ai_chat_completion_request_dto.dart';
 
 class OpenAiCompatibleChatApi {
-
   final Dio _dio;
 
   const OpenAiCompatibleChatApi(this._dio);
 
-  /// openAiCompatibleChatCreate
+  /// createPostApiAiV1ChatCompletions
   ///
   ///
   /// Parameters:
@@ -34,7 +33,7 @@ class OpenAiCompatibleChatApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AiChatCompletionDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiChatCompletionDto>> openAiCompatibleChatCreate({
+  Future<Response<AiChatCompletionDto>> createPostApiAiV1ChatCompletions({
     OpenAiChatCompletionRequestDto? openAiChatCompletionRequestDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -46,13 +45,8 @@ class OpenAiCompatibleChatApi {
     final _path = r'/api/ai/v1/chat/completions';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -60,13 +54,10 @@ class OpenAiCompatibleChatApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(openAiChatCompletionRequestDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(openAiChatCompletionRequestDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -85,9 +76,14 @@ _bodyData=jsonEncode(openAiChatCompletionRequestDto);
     AiChatCompletionDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiChatCompletionDto, AiChatCompletionDto>(rawData, 'AiChatCompletionDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiChatCompletionDto, AiChatCompletionDto>(
+              rawData,
+              'AiChatCompletionDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -109,5 +105,4 @@ _responseData = rawData == null ? null : deserialize<AiChatCompletionDto, AiChat
       extra: _response.extra,
     );
   }
-
 }

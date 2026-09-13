@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for IdentityUserOrganizationUnit
 void main() {
-  final IdentityUserOrganizationUnit? instance = /* IdentityUserOrganizationUnit(...) */ null;
+  final IdentityUserOrganizationUnit?
+  instance = /* IdentityUserOrganizationUnit(...) */ null;
   // TODO add properties to the entity
 
   group(IdentityUserOrganizationUnit, () {
@@ -31,6 +32,5 @@ void main() {
     test('to test the property `organizationUnitId`', () async {
       // TODO
     });
-
   });
 }

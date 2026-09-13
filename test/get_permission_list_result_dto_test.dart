@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for GetPermissionListResultDto
 void main() {
-  final GetPermissionListResultDto? instance = /* GetPermissionListResultDto(...) */ null;
+  final GetPermissionListResultDto?
+  instance = /* GetPermissionListResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(GetPermissionListResultDto, () {
@@ -16,6 +17,5 @@ void main() {
     test('to test the property `groups`', () async {
       // TODO
     });
-
   });
 }

@@ -12,7 +12,9 @@ import 'package:felorx_api_client/src/deserialize.dart';
 import 'package:dio/dio.dart';
 
 import 'package:felorx_api_client/src/model/app_plan_price_dto.dart';
+import 'package:felorx_api_client/src/model/app_platform.dart';
 import 'package:felorx_api_client/src/model/apple_notificaion_dto.dart';
+import 'package:felorx_api_client/src/model/billing_provider.dart';
 import 'package:felorx_api_client/src/model/capture_pay_pal_order_dto.dart';
 import 'package:felorx_api_client/src/model/create_alipay_order_dto.dart';
 import 'package:felorx_api_client/src/model/create_alipay_order_result_dto.dart';
@@ -21,13 +23,13 @@ import 'package:felorx_api_client/src/model/create_pay_pal_order_dto.dart';
 import 'package:felorx_api_client/src/model/create_pay_pal_order_result_dto.dart';
 import 'package:felorx_api_client/src/model/pay_pal_webhook_process_result_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
+import 'package:felorx_api_client/src/model/store_product_mapping_dto.dart';
 import 'package:felorx_api_client/src/model/subscription_dto.dart';
 import 'package:felorx_api_client/src/model/subscription_order_dto.dart';
 import 'package:felorx_api_client/src/model/verify_receipt_dto.dart';
 import 'package:felorx_api_client/src/model/verify_receipt_result.dart';
 
 class SubscriptionApi {
-
   final Dio _dio;
 
   const SubscriptionApi(this._dio);
@@ -56,13 +58,8 @@ class SubscriptionApi {
     final _path = r'/api/app/alipay/notify';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -77,9 +74,10 @@ class SubscriptionApi {
     String? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<String, String>(rawData, 'String', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<String, String>(rawData, 'String', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -128,13 +126,8 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
     final _path = r'/api/app/subscription/apple-notifications';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -142,13 +135,10 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(appleNotificaionDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(appleNotificaionDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -193,13 +183,8 @@ _bodyData=jsonEncode(appleNotificaionDto);
     final _path = r'/api/app/subscription/capture-pay-pal-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -207,13 +192,10 @@ _bodyData=jsonEncode(appleNotificaionDto);
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(capturePayPalOrderDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(capturePayPalOrderDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -232,9 +214,14 @@ _bodyData=jsonEncode(capturePayPalOrderDto);
     SubscriptionDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<SubscriptionDto, SubscriptionDto>(rawData, 'SubscriptionDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<SubscriptionDto, SubscriptionDto>(
+              rawData,
+              'SubscriptionDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -246,6 +233,94 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
     }
 
     return Response<SubscriptionDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 创建支付宝一次性支付订单
+  ///
+  ///
+  /// Parameters:
+  /// * [createAlipayOrderDto]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [CreateAlipayOrderResultDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<CreateAlipayOrderResultDto>>
+  createAlipayOrderPostApiAppSubscriptionAlipayOrder({
+    CreateAlipayOrderDto? createAlipayOrderDto,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/subscription/alipay-order';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      _bodyData = jsonEncode(createAlipayOrderDto);
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _options.compose(_dio.options, _path),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    CreateAlipayOrderResultDto? _responseData;
+
+    try {
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<CreateAlipayOrderResultDto, CreateAlipayOrderResultDto>(
+              rawData,
+              'CreateAlipayOrderResultDto',
+              growable: true,
+            );
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<CreateAlipayOrderResultDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -283,13 +358,8 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
     final _path = r'/api/app/subscription/order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -297,13 +367,10 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrGetSubscriptionOrderDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrGetSubscriptionOrderDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -322,9 +389,14 @@ _bodyData=jsonEncode(createOrGetSubscriptionOrderDto);
     SubscriptionOrderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, SubscriptionOrderDto>(rawData, 'SubscriptionOrderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<SubscriptionOrderDto, SubscriptionOrderDto>(
+              rawData,
+              'SubscriptionOrderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -336,6 +408,94 @@ _responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, Subsc
     }
 
     return Response<SubscriptionOrderDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 创建 PayPal 订单
+  ///
+  ///
+  /// Parameters:
+  /// * [createPayPalOrderDto]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [CreatePayPalOrderResultDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<CreatePayPalOrderResultDto>>
+  createPayPalOrderPostApiAppSubscriptionPayPalOrder({
+    CreatePayPalOrderDto? createPayPalOrderDto,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/subscription/pay-pal-order';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      _bodyData = jsonEncode(createPayPalOrderDto);
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _options.compose(_dio.options, _path),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    CreatePayPalOrderResultDto? _responseData;
+
+    try {
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<CreatePayPalOrderResultDto, CreatePayPalOrderResultDto>(
+              rawData,
+              'CreatePayPalOrderResultDto',
+              growable: true,
+            );
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<CreatePayPalOrderResultDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -370,16 +530,17 @@ _responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, Subsc
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/plan-prices/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
+    final _path = r'/api/app/subscription/plan-prices/by-app-id/{appId}'
+        .replaceAll(
+          '{'
+          r'appId'
+          '}',
+          appId.toString(),
+        );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -394,9 +555,14 @@ _responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, Subsc
     List<AppPlanPriceDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(rawData, 'List<AppPlanPriceDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(
+              rawData,
+              'List<AppPlanPriceDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -408,6 +574,97 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
     }
 
     return Response<List<AppPlanPriceDto>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
+  ///
+  ///
+  /// Parameters:
+  /// * [appId]
+  /// * [provider]
+  /// * [platform]
+  /// * [environment]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [List<StoreProductMappingDto>] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<List<StoreProductMappingDto>>> getStoreProducts({
+    required String appId,
+    BillingProvider? provider,
+    AppPlatform? platform,
+    String? environment = 'production',
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/subscription/store-products/by-app-id/{appId}'
+        .replaceAll(
+          '{'
+          r'appId'
+          '}',
+          appId.toString(),
+        );
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      validateStatus: validateStatus,
+    );
+
+    final _queryParameters = <String, dynamic>{
+      if (provider != null) r'provider': provider,
+      if (platform != null) r'platform': platform,
+      if (environment != null) r'environment': environment,
+    };
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      queryParameters: _queryParameters,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    List<StoreProductMappingDto>? _responseData;
+
+    try {
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(
+              rawData,
+              'List<StoreProductMappingDto>',
+              growable: true,
+            );
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<List<StoreProductMappingDto>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -445,13 +702,8 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
     final _path = r'/api/app/subscription';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -471,9 +723,14 @@ _responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppP
     SubscriptionDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<SubscriptionDto, SubscriptionDto>(rawData, 'SubscriptionDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<SubscriptionDto, SubscriptionDto>(
+              rawData,
+              'SubscriptionDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -520,13 +777,8 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
     final _path = r'/api/app/subscription/list';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -541,9 +793,14 @@ _responseData = rawData == null ? null : deserialize<SubscriptionDto, Subscripti
     List<SubscriptionDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, SubscriptionDto>(rawData, 'List<SubscriptionDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<SubscriptionDto>, SubscriptionDto>(
+              rawData,
+              'List<SubscriptionDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -594,13 +851,8 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -645,13 +897,8 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -666,9 +913,13 @@ _responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, Subs
     PayPalWebhookProcessResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<PayPalWebhookProcessResultDto, PayPalWebhookProcessResultDto>(rawData, 'PayPalWebhookProcessResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              PayPalWebhookProcessResultDto,
+              PayPalWebhookProcessResultDto
+            >(rawData, 'PayPalWebhookProcessResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -680,186 +931,6 @@ _responseData = rawData == null ? null : deserialize<PayPalWebhookProcessResultD
     }
 
     return Response<PayPalWebhookProcessResultDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// 创建支付宝一次性支付订单
-  ///
-  ///
-  /// Parameters:
-  /// * [createAlipayOrderDto]
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [CreateAlipayOrderResultDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateAlipayOrderResultDto>> subscriptionCreateAlipayOrder({
-    CreateAlipayOrderDto? createAlipayOrderDto,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/subscription/alipay-order';
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-_bodyData=jsonEncode(createAlipayOrderDto);
-    } catch(error, stackTrace) {
-      throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    CreateAlipayOrderResultDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<CreateAlipayOrderResultDto, CreateAlipayOrderResultDto>(rawData, 'CreateAlipayOrderResultDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<CreateAlipayOrderResultDto>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// 创建 PayPal 订单
-  ///
-  ///
-  /// Parameters:
-  /// * [createPayPalOrderDto]
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [CreatePayPalOrderResultDto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreatePayPalOrderResultDto>> subscriptionCreatePayPalOrder({
-    CreatePayPalOrderDto? createPayPalOrderDto,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/api/app/subscription/pay-pal-order';
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-_bodyData=jsonEncode(createPayPalOrderDto);
-    } catch(error, stackTrace) {
-      throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    CreatePayPalOrderResultDto? _responseData;
-
-    try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<CreatePayPalOrderResultDto, CreatePayPalOrderResultDto>(rawData, 'CreatePayPalOrderResultDto', growable: true);
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<CreatePayPalOrderResultDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -897,13 +968,8 @@ _responseData = rawData == null ? null : deserialize<CreatePayPalOrderResultDto,
     final _path = r'/api/app/subscription/verify-receipt';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -911,13 +977,10 @@ _responseData = rawData == null ? null : deserialize<CreatePayPalOrderResultDto,
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(verifyReceiptDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(verifyReceiptDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -936,9 +999,14 @@ _bodyData=jsonEncode(verifyReceiptDto);
     VerifyReceiptResult? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<VerifyReceiptResult, VerifyReceiptResult>(rawData, 'VerifyReceiptResult', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<VerifyReceiptResult, VerifyReceiptResult>(
+              rawData,
+              'VerifyReceiptResult',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -960,5 +1028,4 @@ _responseData = rawData == null ? null : deserialize<VerifyReceiptResult, Verify
       extra: _response.extra,
     );
   }
-
 }

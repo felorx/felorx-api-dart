@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ControllerInterfaceApiDescriptionModel
 void main() {
-  final ControllerInterfaceApiDescriptionModel? instance = /* ControllerInterfaceApiDescriptionModel(...) */ null;
+  final ControllerInterfaceApiDescriptionModel?
+  instance = /* ControllerInterfaceApiDescriptionModel(...) */ null;
   // TODO add properties to the entity
 
   group(ControllerInterfaceApiDescriptionModel, () {
@@ -21,6 +22,5 @@ void main() {
     test('to test the property `methods`', () async {
       // TODO
     });
-
   });
 }

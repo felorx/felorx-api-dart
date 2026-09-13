@@ -16,5 +16,3 @@ Name | Type | Description | Notes
 **orderString** | **String** | App 支付订单串，原生客户端接支付宝 App SDK 时使用。 | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

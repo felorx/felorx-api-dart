@@ -22,5 +22,3 @@ Name | Type | Description | Notes
 **featureLocales** | [**List&lt;AppFeatureLocaleDto&gt;**](AppFeatureLocaleDto.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

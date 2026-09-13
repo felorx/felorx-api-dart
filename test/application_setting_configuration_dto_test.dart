@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ApplicationSettingConfigurationDto
 void main() {
-  final ApplicationSettingConfigurationDto? instance = /* ApplicationSettingConfigurationDto(...) */ null;
+  final ApplicationSettingConfigurationDto?
+  instance = /* ApplicationSettingConfigurationDto(...) */ null;
   // TODO add properties to the entity
 
   group(ApplicationSettingConfigurationDto, () {
@@ -11,6 +12,5 @@ void main() {
     test('to test the property `values`', () async {
       // TODO
     });
-
   });
 }

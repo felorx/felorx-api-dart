@@ -12,5 +12,3 @@ Name | Type | Description | Notes
 **payPalSubscriptionId** | **String** | PayPal 订阅 ID。自动续费场景使用该字段。 | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

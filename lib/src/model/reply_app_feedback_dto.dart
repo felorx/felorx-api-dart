@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'reply_app_feedback_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,35 +15,22 @@ part 'reply_app_feedback_dto.g.dart';
 )
 class ReplyAppFeedbackDto {
   /// Returns a new [ReplyAppFeedbackDto] instance.
-  ReplyAppFeedbackDto({
+  ReplyAppFeedbackDto({required this.reply});
 
-    required  this.reply,
-  });
-
-      /// 回复内容
-  @JsonKey(
-    
-    name: r'reply',
-    required: true,
-    includeIfNull: false,
-  )
-
-
+  /// 回复内容
+  @JsonKey(name: r'reply', required: true, includeIfNull: false)
   String reply;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ReplyAppFeedbackDto && other.reply == reply;
 
+  @override
+  int get hashCode => reply.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ReplyAppFeedbackDto &&
-      other.reply == reply;
-
-    @override
-    int get hashCode =>
-        reply.hashCode;
-
-  factory ReplyAppFeedbackDto.fromJson(Map<String, dynamic> json) => _$ReplyAppFeedbackDtoFromJson(json);
+  factory ReplyAppFeedbackDto.fromJson(Map<String, dynamic> json) =>
+      _$ReplyAppFeedbackDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ReplyAppFeedbackDtoToJson(this);
 
@@ -52,6 +38,4 @@ class ReplyAppFeedbackDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for ProfileApi
 void main() {
   final instance = FelorxApiClient().getProfileApi();
@@ -21,6 +20,5 @@ void main() {
     test('test updateProfile', () async {
       // TODO
     });
-
   });
 }

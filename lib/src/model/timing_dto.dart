@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'timing_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,34 +16,21 @@ part 'timing_dto.g.dart';
 )
 class TimingDto {
   /// Returns a new [TimingDto] instance.
-  TimingDto({
+  TimingDto({this.timeZone});
 
-     this.timeZone,
-  });
-
-  @JsonKey(
-    
-    name: r'timeZone',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'timeZone', required: false, includeIfNull: false)
   TimeZone? timeZone;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TimingDto && other.timeZone == timeZone;
 
+  @override
+  int get hashCode => timeZone.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is TimingDto &&
-      other.timeZone == timeZone;
-
-    @override
-    int get hashCode =>
-        timeZone.hashCode;
-
-  factory TimingDto.fromJson(Map<String, dynamic> json) => _$TimingDtoFromJson(json);
+  factory TimingDto.fromJson(Map<String, dynamic> json) =>
+      _$TimingDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$TimingDtoToJson(this);
 
@@ -52,6 +38,4 @@ class TimingDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

@@ -17,7 +17,6 @@ import 'package:felorx_api_client/src/model/send_test_email_input.dart';
 import 'package:felorx_api_client/src/model/update_email_settings_dto.dart';
 
 class EmailSettingsApi {
-
   final Dio _dio;
 
   const EmailSettingsApi(this._dio);
@@ -46,13 +45,8 @@ class EmailSettingsApi {
     final _path = r'/api/setting-management/emailing';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -67,9 +61,14 @@ class EmailSettingsApi {
     EmailSettingsDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSettingsDto>(rawData, 'EmailSettingsDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<EmailSettingsDto, EmailSettingsDto>(
+              rawData,
+              'EmailSettingsDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -118,13 +117,8 @@ _responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSett
     final _path = r'/api/setting-management/emailing/send-test-email';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -132,13 +126,10 @@ _responseData = rawData == null ? null : deserialize<EmailSettingsDto, EmailSett
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(sendTestEmailInput);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(sendTestEmailInput);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -183,13 +174,8 @@ _bodyData=jsonEncode(sendTestEmailInput);
     final _path = r'/api/setting-management/emailing';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -197,13 +183,10 @@ _bodyData=jsonEncode(sendTestEmailInput);
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(updateEmailSettingsDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(updateEmailSettingsDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -221,5 +204,4 @@ _bodyData=jsonEncode(updateEmailSettingsDto);
 
     return _response;
   }
-
 }

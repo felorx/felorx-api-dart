@@ -20,7 +20,6 @@ import 'package:felorx_api_client/src/model/identity_user_update_roles_dto.dart'
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class UserApi {
-
   final Dio _dio;
 
   const UserApi(this._dio);
@@ -51,13 +50,8 @@ class UserApi {
     final _path = r'/api/identity/users';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -65,13 +59,10 @@ class UserApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(identityUserCreateDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(identityUserCreateDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -90,9 +81,14 @@ _bodyData=jsonEncode(identityUserCreateDto);
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -138,16 +134,16 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -185,16 +181,16 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/by-email/{email}'.replaceAll('{' r'email' '}', email.toString());
+    final _path = r'/api/identity/users/by-email/{email}'.replaceAll(
+      '{'
+      r'email'
+      '}',
+      email.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -209,9 +205,14 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -234,7 +235,7 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     );
   }
 
-  /// findByUsername
+  /// findByUsernameGetApiIdentityUsersByUsernameUserName
   ///
   ///
   /// Parameters:
@@ -248,7 +249,8 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
   ///
   /// Returns a [Future] containing a [Response] with a [IdentityUserDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentityUserDto>> findByUsername({
+  Future<Response<IdentityUserDto>>
+  findByUsernameGetApiIdentityUsersByUsernameUserName({
     required String userName,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -257,16 +259,16 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/by-username/{userName}'.replaceAll('{' r'userName' '}', userName.toString());
+    final _path = r'/api/identity/users/by-username/{userName}'.replaceAll(
+      '{'
+      r'userName'
+      '}',
+      userName.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -281,9 +283,14 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -330,13 +337,8 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     final _path = r'/api/identity/users/assignable-roles';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -351,9 +353,13 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     IdentityRoleDtoListResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDto, IdentityRoleDtoListResultDto>(rawData, 'IdentityRoleDtoListResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              IdentityRoleDtoListResultDto,
+              IdentityRoleDtoListResultDto
+            >(rawData, 'IdentityRoleDtoListResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -399,16 +405,16 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -423,9 +429,14 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -480,13 +491,8 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     final _path = r'/api/identity/users';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -509,9 +515,13 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     IdentityUserDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultDto, IdentityUserDtoPagedResultDto>(rawData, 'IdentityUserDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              IdentityUserDtoPagedResultDto,
+              IdentityUserDtoPagedResultDto
+            >(rawData, 'IdentityUserDtoPagedResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -557,16 +567,16 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/{id}/roles'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/{id}/roles'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -581,9 +591,13 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDtoPagedResultD
     IdentityRoleDtoListResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDto, IdentityRoleDtoListResultDto>(rawData, 'IdentityRoleDtoListResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              IdentityRoleDtoListResultDto,
+              IdentityRoleDtoListResultDto
+            >(rawData, 'IdentityRoleDtoListResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -631,16 +645,16 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -648,13 +662,10 @@ _responseData = rawData == null ? null : deserialize<IdentityRoleDtoListResultDt
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(identityUserUpdateDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(identityUserUpdateDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -673,9 +684,14 @@ _bodyData=jsonEncode(identityUserUpdateDto);
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -723,16 +739,16 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/{id}/roles'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/{id}/roles'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -740,13 +756,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(identityUserUpdateRolesDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(identityUserUpdateRolesDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -764,5 +777,4 @@ _bodyData=jsonEncode(identityUserUpdateRolesDto);
 
     return _response;
   }
-
 }

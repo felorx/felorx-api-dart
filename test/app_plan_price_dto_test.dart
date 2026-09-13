@@ -116,6 +116,5 @@ void main() {
     test('to test the property `description`', () async {
       // TODO
     });
-
   });
 }

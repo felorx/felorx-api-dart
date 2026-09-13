@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for SubscriptionApi
 void main() {
   final instance = FelorxApiClient().getSubscriptionApi();
@@ -28,8 +27,22 @@ void main() {
       // TODO
     });
 
+    // 创建支付宝一次性支付订单
+    //
+    //Future<CreateAlipayOrderResultDto> createAlipayOrderPostApiAppSubscriptionAlipayOrder({ CreateAlipayOrderDto createAlipayOrderDto }) async
+    test('test createAlipayOrderPostApiAppSubscriptionAlipayOrder', () async {
+      // TODO
+    });
+
     //Future<SubscriptionOrderDto> createOrder({ CreateOrGetSubscriptionOrderDto createOrGetSubscriptionOrderDto }) async
     test('test createOrder', () async {
+      // TODO
+    });
+
+    // 创建 PayPal 订单
+    //
+    //Future<CreatePayPalOrderResultDto> createPayPalOrderPostApiAppSubscriptionPayPalOrder({ CreatePayPalOrderDto createPayPalOrderDto }) async
+    test('test createPayPalOrderPostApiAppSubscriptionPayPalOrder', () async {
       // TODO
     });
 
@@ -37,6 +50,13 @@ void main() {
     //
     //Future<List<AppPlanPriceDto>> getPlanPrices(String appId) async
     test('test getPlanPrices', () async {
+      // TODO
+    });
+
+    // 获取客户端商店购买所需的启用商品映射。商品 ID 本身属于公开商店元数据。
+    //
+    //Future<List<StoreProductMappingDto>> getStoreProducts(String appId, { BillingProvider provider, AppPlatform platform, String environment }) async
+    test('test getStoreProducts', () async {
       // TODO
     });
 
@@ -66,24 +86,9 @@ void main() {
       // TODO
     });
 
-    // 创建支付宝一次性支付订单
-    //
-    //Future<CreateAlipayOrderResultDto> subscriptionCreateAlipayOrder({ CreateAlipayOrderDto createAlipayOrderDto }) async
-    test('test subscriptionCreateAlipayOrder', () async {
-      // TODO
-    });
-
-    // 创建 PayPal 订单
-    //
-    //Future<CreatePayPalOrderResultDto> subscriptionCreatePayPalOrder({ CreatePayPalOrderDto createPayPalOrderDto }) async
-    test('test subscriptionCreatePayPalOrder', () async {
-      // TODO
-    });
-
     //Future<VerifyReceiptResult> verifyReceipt({ VerifyReceiptDto verifyReceiptDto }) async
     test('test verifyReceipt', () async {
       // TODO
     });
-
   });
 }

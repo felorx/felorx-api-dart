@@ -9,11 +9,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**openAiCompatibleChatCreate**](OpenAiCompatibleChatApi.md#openaicompatiblechatcreate) | **POST** /api/ai/v1/chat/completions |
+[**createPostApiAiV1ChatCompletions**](OpenAiCompatibleChatApi.md#createpostapiaiv1chatcompletions) | **POST** /api/ai/v1/chat/completions |
 
 
-# **openAiCompatibleChatCreate**
-> AiChatCompletionDto openAiCompatibleChatCreate(openAiChatCompletionRequestDto)
+# **createPostApiAiV1ChatCompletions**
+> AiChatCompletionDto createPostApiAiV1ChatCompletions(openAiChatCompletionRequestDto)
 
 
 
@@ -25,10 +25,10 @@ final api = FelorxApiClient().getOpenAiCompatibleChatApi();
 final OpenAiChatCompletionRequestDto openAiChatCompletionRequestDto = ; // OpenAiChatCompletionRequestDto |
 
 try {
-    final response = api.openAiCompatibleChatCreate(openAiChatCompletionRequestDto);
+    final response = api.createPostApiAiV1ChatCompletions(openAiChatCompletionRequestDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling OpenAiCompatibleChatApi->openAiCompatibleChatCreate: $e\n');
+    print('Exception when calling OpenAiCompatibleChatApi->createPostApiAiV1ChatCompletions: $e\n');
 }
 ```
 
@@ -52,4 +52,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

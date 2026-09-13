@@ -111,6 +111,5 @@ void main() {
     test('to test the property `appleVerifyReceiptResult`', () async {
       // TODO
     });
-
   });
 }

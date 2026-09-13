@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'identity_user_update_roles_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,34 +15,21 @@ part 'identity_user_update_roles_dto.g.dart';
 )
 class IdentityUserUpdateRolesDto {
   /// Returns a new [IdentityUserUpdateRolesDto] instance.
-  IdentityUserUpdateRolesDto({
+  IdentityUserUpdateRolesDto({required this.roleNames});
 
-    required  this.roleNames,
-  });
-
-  @JsonKey(
-    
-    name: r'roleNames',
-    required: true,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'roleNames', required: true, includeIfNull: false)
   List<String> roleNames;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is IdentityUserUpdateRolesDto && other.roleNames == roleNames;
 
+  @override
+  int get hashCode => roleNames.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is IdentityUserUpdateRolesDto &&
-      other.roleNames == roleNames;
-
-    @override
-    int get hashCode =>
-        roleNames.hashCode;
-
-  factory IdentityUserUpdateRolesDto.fromJson(Map<String, dynamic> json) => _$IdentityUserUpdateRolesDtoFromJson(json);
+  factory IdentityUserUpdateRolesDto.fromJson(Map<String, dynamic> json) =>
+      _$IdentityUserUpdateRolesDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$IdentityUserUpdateRolesDtoToJson(this);
 
@@ -51,6 +37,4 @@ class IdentityUserUpdateRolesDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

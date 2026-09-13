@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'update_deploy_record_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -18,84 +17,48 @@ part 'update_deploy_record_dto.g.dart';
 class UpdateDeployRecordDto {
   /// Returns a new [UpdateDeployRecordDto] instance.
   UpdateDeployRecordDto({
+    required this.status,
 
-    required  this.status,
+    this.logs,
 
-     this.logs,
+    this.errorMessage,
 
-     this.errorMessage,
-
-     this.deployUrl,
+    this.deployUrl,
   });
 
-  @JsonKey(
-    
-    name: r'status',
-    required: true,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'status', required: true, includeIfNull: false)
   DeployStatus status;
 
-
-
-      /// 部署日志
-  @JsonKey(
-    
-    name: r'logs',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  /// 部署日志
+  @JsonKey(name: r'logs', required: false, includeIfNull: false)
   String? logs;
 
-
-
-      /// 错误信息
-  @JsonKey(
-    
-    name: r'errorMessage',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  /// 错误信息
+  @JsonKey(name: r'errorMessage', required: false, includeIfNull: false)
   String? errorMessage;
 
-
-
-      /// 部署地址
-  @JsonKey(
-    
-    name: r'deployUrl',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  /// 部署地址
+  @JsonKey(name: r'deployUrl', required: false, includeIfNull: false)
   String? deployUrl;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is UpdateDeployRecordDto &&
+          other.status == status &&
+          other.logs == logs &&
+          other.errorMessage == errorMessage &&
+          other.deployUrl == deployUrl;
 
+  @override
+  int get hashCode =>
+      status.hashCode +
+      (logs == null ? 0 : logs.hashCode) +
+      (errorMessage == null ? 0 : errorMessage.hashCode) +
+      (deployUrl == null ? 0 : deployUrl.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is UpdateDeployRecordDto &&
-      other.status == status &&
-      other.logs == logs &&
-      other.errorMessage == errorMessage &&
-      other.deployUrl == deployUrl;
-
-    @override
-    int get hashCode =>
-        status.hashCode +
-        (logs == null ? 0 : logs.hashCode) +
-        (errorMessage == null ? 0 : errorMessage.hashCode) +
-        (deployUrl == null ? 0 : deployUrl.hashCode);
-
-  factory UpdateDeployRecordDto.fromJson(Map<String, dynamic> json) => _$UpdateDeployRecordDtoFromJson(json);
+  factory UpdateDeployRecordDto.fromJson(Map<String, dynamic> json) =>
+      _$UpdateDeployRecordDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UpdateDeployRecordDtoToJson(this);
 
@@ -103,6 +66,4 @@ class UpdateDeployRecordDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'auth_center_summary_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -18,65 +17,36 @@ part 'auth_center_summary_dto.g.dart';
 class AuthCenterSummaryDto {
   /// Returns a new [AuthCenterSummaryDto] instance.
   AuthCenterSummaryDto({
+    this.account,
 
-     this.account,
+    this.deviceCount,
 
-     this.deviceCount,
-
-     this.authorizedAppCount,
+    this.authorizedAppCount,
   });
 
-  @JsonKey(
-    
-    name: r'account',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'account', required: false, includeIfNull: false)
   UserAuthProfileDto? account;
 
-
-
-  @JsonKey(
-    
-    name: r'deviceCount',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'deviceCount', required: false, includeIfNull: false)
   int? deviceCount;
 
-
-
-  @JsonKey(
-    
-    name: r'authorizedAppCount',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'authorizedAppCount', required: false, includeIfNull: false)
   int? authorizedAppCount;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AuthCenterSummaryDto &&
+          other.account == account &&
+          other.deviceCount == deviceCount &&
+          other.authorizedAppCount == authorizedAppCount;
 
+  @override
+  int get hashCode =>
+      account.hashCode + deviceCount.hashCode + authorizedAppCount.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is AuthCenterSummaryDto &&
-      other.account == account &&
-      other.deviceCount == deviceCount &&
-      other.authorizedAppCount == authorizedAppCount;
-
-    @override
-    int get hashCode =>
-        account.hashCode +
-        deviceCount.hashCode +
-        authorizedAppCount.hashCode;
-
-  factory AuthCenterSummaryDto.fromJson(Map<String, dynamic> json) => _$AuthCenterSummaryDtoFromJson(json);
+  factory AuthCenterSummaryDto.fromJson(Map<String, dynamic> json) =>
+      _$AuthCenterSummaryDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AuthCenterSummaryDtoToJson(this);
 
@@ -84,6 +54,4 @@ class AuthCenterSummaryDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

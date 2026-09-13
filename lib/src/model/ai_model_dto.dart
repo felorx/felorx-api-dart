@@ -33,6 +33,12 @@ class AiModelDto {
 
     this.deletionTime,
 
+    this.verifiedCapabilities,
+
+    this.capabilityCertificateVersion,
+
+    this.capabilityTestedAt,
+
     this.providerId,
 
     this.routeName,
@@ -42,12 +48,6 @@ class AiModelDto {
     this.displayName,
 
     this.capabilities,
-
-    this.verifiedCapabilities,
-
-    this.capabilityTestedAt,
-
-    this.capabilityCertificateVersion,
 
     this.enabled,
 
@@ -80,6 +80,23 @@ class AiModelDto {
   @JsonKey(name: r'deletionTime', required: false, includeIfNull: false)
   DateTime? deletionTime;
 
+  @JsonKey(
+    name: r'verified_capabilities',
+    required: false,
+    includeIfNull: false,
+  )
+  List<AiCapability>? verifiedCapabilities;
+
+  @JsonKey(
+    name: r'capability_certificate_version',
+    required: false,
+    includeIfNull: false,
+  )
+  String? capabilityCertificateVersion;
+
+  @JsonKey(name: r'capability_tested_at', required: false, includeIfNull: false)
+  DateTime? capabilityTestedAt;
+
   @JsonKey(name: r'provider_id', required: false, includeIfNull: false)
   String? providerId;
 
@@ -94,23 +111,6 @@ class AiModelDto {
 
   @JsonKey(name: r'capabilities', required: false, includeIfNull: false)
   List<AiCapability>? capabilities;
-
-  @JsonKey(
-    name: r'verified_capabilities',
-    required: false,
-    includeIfNull: false,
-  )
-  List<AiCapability>? verifiedCapabilities;
-
-  @JsonKey(name: r'capability_tested_at', required: false, includeIfNull: false)
-  DateTime? capabilityTestedAt;
-
-  @JsonKey(
-    name: r'capability_certificate_version',
-    required: false,
-    includeIfNull: false,
-  )
-  String? capabilityCertificateVersion;
 
   @JsonKey(name: r'enabled', required: false, includeIfNull: false)
   bool? enabled;
@@ -133,14 +133,14 @@ class AiModelDto {
           other.isDeleted == isDeleted &&
           other.deleterId == deleterId &&
           other.deletionTime == deletionTime &&
+          other.verifiedCapabilities == verifiedCapabilities &&
+          other.capabilityCertificateVersion == capabilityCertificateVersion &&
+          other.capabilityTestedAt == capabilityTestedAt &&
           other.providerId == providerId &&
           other.routeName == routeName &&
           other.name == name &&
           other.displayName == displayName &&
           other.capabilities == capabilities &&
-          other.verifiedCapabilities == verifiedCapabilities &&
-          other.capabilityTestedAt == capabilityTestedAt &&
-          other.capabilityCertificateVersion == capabilityCertificateVersion &&
           other.enabled == enabled &&
           other.isDefault == isDefault &&
           other.defaultParameters == defaultParameters;
@@ -155,16 +155,16 @@ class AiModelDto {
       isDeleted.hashCode +
       (deleterId == null ? 0 : deleterId.hashCode) +
       (deletionTime == null ? 0 : deletionTime.hashCode) +
+      (verifiedCapabilities == null ? 0 : verifiedCapabilities.hashCode) +
+      (capabilityCertificateVersion == null
+          ? 0
+          : capabilityCertificateVersion.hashCode) +
+      (capabilityTestedAt == null ? 0 : capabilityTestedAt.hashCode) +
       providerId.hashCode +
       (routeName == null ? 0 : routeName.hashCode) +
       (name == null ? 0 : name.hashCode) +
       (displayName == null ? 0 : displayName.hashCode) +
       (capabilities == null ? 0 : capabilities.hashCode) +
-      (verifiedCapabilities == null ? 0 : verifiedCapabilities.hashCode) +
-      (capabilityTestedAt == null ? 0 : capabilityTestedAt.hashCode) +
-      (capabilityCertificateVersion == null
-          ? 0
-          : capabilityCertificateVersion.hashCode) +
       enabled.hashCode +
       isDefault.hashCode +
       (defaultParameters == null ? 0 : defaultParameters.hashCode);

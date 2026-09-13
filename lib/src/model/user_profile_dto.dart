@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'user_profile_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,129 +16,66 @@ part 'user_profile_dto.g.dart';
 class UserProfileDto {
   /// Returns a new [UserProfileDto] instance.
   UserProfileDto({
+    this.id,
 
-     this.id,
+    this.name,
 
-     this.name,
+    this.userName,
 
-     this.userName,
+    this.avatarUrl,
 
-     this.avatarUrl,
+    this.email,
 
-     this.email,
+    this.phoneNumber,
 
-     this.phoneNumber,
-
-     this.hasPassword,
+    this.hasPassword,
   });
 
-  @JsonKey(
-    
-    name: r'id',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'id', required: false, includeIfNull: false)
   String? id;
 
-
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'userName',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'userName', required: false, includeIfNull: false)
   String? userName;
 
-
-
-  @JsonKey(
-    
-    name: r'avatarUrl',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'avatarUrl', required: false, includeIfNull: false)
   String? avatarUrl;
 
-
-
-  @JsonKey(
-    
-    name: r'email',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'email', required: false, includeIfNull: false)
   String? email;
 
-
-
-  @JsonKey(
-    
-    name: r'phoneNumber',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'phoneNumber', required: false, includeIfNull: false)
   String? phoneNumber;
 
-
-
-  @JsonKey(
-    
-    name: r'hasPassword',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'hasPassword', required: false, includeIfNull: false)
   bool? hasPassword;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is UserProfileDto &&
+          other.id == id &&
+          other.name == name &&
+          other.userName == userName &&
+          other.avatarUrl == avatarUrl &&
+          other.email == email &&
+          other.phoneNumber == phoneNumber &&
+          other.hasPassword == hasPassword;
 
+  @override
+  int get hashCode =>
+      id.hashCode +
+      (name == null ? 0 : name.hashCode) +
+      (userName == null ? 0 : userName.hashCode) +
+      (avatarUrl == null ? 0 : avatarUrl.hashCode) +
+      (email == null ? 0 : email.hashCode) +
+      (phoneNumber == null ? 0 : phoneNumber.hashCode) +
+      hasPassword.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is UserProfileDto &&
-      other.id == id &&
-      other.name == name &&
-      other.userName == userName &&
-      other.avatarUrl == avatarUrl &&
-      other.email == email &&
-      other.phoneNumber == phoneNumber &&
-      other.hasPassword == hasPassword;
-
-    @override
-    int get hashCode =>
-        id.hashCode +
-        (name == null ? 0 : name.hashCode) +
-        (userName == null ? 0 : userName.hashCode) +
-        (avatarUrl == null ? 0 : avatarUrl.hashCode) +
-        (email == null ? 0 : email.hashCode) +
-        (phoneNumber == null ? 0 : phoneNumber.hashCode) +
-        hasPassword.hashCode;
-
-  factory UserProfileDto.fromJson(Map<String, dynamic> json) => _$UserProfileDtoFromJson(json);
+  factory UserProfileDto.fromJson(Map<String, dynamic> json) =>
+      _$UserProfileDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UserProfileDtoToJson(this);
 
@@ -147,6 +83,4 @@ class UserProfileDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

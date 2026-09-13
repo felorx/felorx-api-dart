@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createAppLocale**](AppLocaleApi.md#createapplocale) | **POST** /api/app/app-locale |
 [**deleteAppLocaleById**](AppLocaleApi.md#deleteapplocalebyid) | **DELETE** /api/app/app-locale/{id} |
-[**getListByAppId**](AppLocaleApi.md#getlistbyappid) | **GET** /api/app/app-locale/by-app-id/{appId} |
+[**getListByAppIdGetApiAppAppLocaleByAppIdAppId**](AppLocaleApi.md#getlistbyappidgetapiappapplocalebyappidappid) | **GET** /api/app/app-locale/by-app-id/{appId} |
 [**updateAppLocale**](AppLocaleApi.md#updateapplocale) | **PUT** /api/app/app-locale/{id} |
 
 
@@ -96,8 +96,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getListByAppId**
-> List<AppLocaleDto> getListByAppId(appId)
+# **getListByAppIdGetApiAppAppLocaleByAppIdAppId**
+> List<AppLocaleDto> getListByAppIdGetApiAppAppLocaleByAppIdAppId(appId)
 
 
 
@@ -109,10 +109,10 @@ final api = FelorxApiClient().getAppLocaleApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
-    final response = api.getListByAppId(appId);
+    final response = api.getListByAppIdGetApiAppAppLocaleByAppIdAppId(appId);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AppLocaleApi->getListByAppId: $e\n');
+    print('Exception when calling AppLocaleApi->getListByAppIdGetApiAppAppLocaleByAppIdAppId: $e\n');
 }
 ```
 
@@ -179,4 +179,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**findById**](UserLookupApi.md#findbyid) | **GET** /api/identity/users/lookup/{id} |
-[**findByUserName**](UserLookupApi.md#findbyusername) | **GET** /api/identity/users/lookup/by-username/{userName} |
+[**findByUserNameGetApiIdentityUsersLookupByUsernameUserName**](UserLookupApi.md#findbyusernamegetapiidentityuserslookupbyusernameusername) | **GET** /api/identity/users/lookup/by-username/{userName} |
 [**getCount**](UserLookupApi.md#getcount) | **GET** /api/identity/users/lookup/count |
 [**search**](UserLookupApi.md#search) | **GET** /api/identity/users/lookup/search |
 
@@ -56,8 +56,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findByUserName**
-> UserData findByUserName(userName)
+# **findByUserNameGetApiIdentityUsersLookupByUsernameUserName**
+> UserData findByUserNameGetApiIdentityUsersLookupByUsernameUserName(userName)
 
 
 
@@ -69,10 +69,10 @@ final api = FelorxApiClient().getUserLookupApi();
 final String userName = userName_example; // String |
 
 try {
-    final response = api.findByUserName(userName);
+    final response = api.findByUserNameGetApiIdentityUsersLookupByUsernameUserName(userName);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling UserLookupApi->findByUserName: $e\n');
+    print('Exception when calling UserLookupApi->findByUserNameGetApiIdentityUsersLookupByUsernameUserName: $e\n');
 }
 ```
 
@@ -184,4 +184,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

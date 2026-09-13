@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for AppStorefrontFeatureBlockDto
 void main() {
-  final AppStorefrontFeatureBlockDto? instance = /* AppStorefrontFeatureBlockDto(...) */ null;
+  final AppStorefrontFeatureBlockDto?
+  instance = /* AppStorefrontFeatureBlockDto(...) */ null;
   // TODO add properties to the entity
 
   group(AppStorefrontFeatureBlockDto, () {
@@ -36,6 +37,5 @@ void main() {
     test('to test the property `tabletUrl`', () async {
       // TODO
     });
-
   });
 }

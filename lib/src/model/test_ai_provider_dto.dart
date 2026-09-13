@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:felorx_api_client/src/model/ai_capability.dart';
 import 'package:felorx_api_client/src/model/ai_protocol.dart';
+import 'package:felorx_api_client/src/model/ai_capability.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'test_ai_provider_dto.g.dart';
@@ -57,7 +57,7 @@ class TestAiProviderDto {
   @override
   int get hashCode =>
       (modelId == null ? 0 : modelId.hashCode) +
-      (protocol == null ? 0 : protocol.hashCode) +
+      protocol.hashCode +
       capability.hashCode +
       (prompt == null ? 0 : prompt.hashCode) +
       (imageUrl == null ? 0 : imageUrl.hashCode);

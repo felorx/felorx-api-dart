@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOpenIddictApplicationDto
 void main() {
-  final CreateOpenIddictApplicationDto? instance = /* CreateOpenIddictApplicationDto(...) */ null;
+  final CreateOpenIddictApplicationDto?
+  instance = /* CreateOpenIddictApplicationDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOpenIddictApplicationDto, () {
@@ -66,6 +67,5 @@ void main() {
     test('to test the property `scopes`', () async {
       // TODO
     });
-
   });
 }

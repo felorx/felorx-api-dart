@@ -17,7 +17,6 @@ import 'package:felorx_api_client/src/model/create_or_update_app_sdk_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppSdkApi {
-
   final Dio _dio;
 
   const AppSdkApi(this._dio);
@@ -48,13 +47,8 @@ class AppSdkApi {
     final _path = r'/api/app/app-sdk';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -62,13 +56,10 @@ class AppSdkApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppSdkDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppSdkDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -87,9 +78,14 @@ _bodyData=jsonEncode(createOrUpdateAppSdkDto);
     AppSdkDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawData, 'AppSdkDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppSdkDto, AppSdkDto>(
+              rawData,
+              'AppSdkDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -135,16 +131,16 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-sdk/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-sdk/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -191,13 +187,8 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
     final _path = r'/api/app/app-sdk';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -220,9 +211,14 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
     AppSdkDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, AppSdkDtoPagedResultDto>(rawData, 'AppSdkDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppSdkDtoPagedResultDto, AppSdkDtoPagedResultDto>(
+              rawData,
+              'AppSdkDtoPagedResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -270,16 +266,16 @@ _responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, Ap
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-sdk/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-sdk/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -287,13 +283,10 @@ _responseData = rawData == null ? null : deserialize<AppSdkDtoPagedResultDto, Ap
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppSdkDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppSdkDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -312,9 +305,14 @@ _bodyData=jsonEncode(createOrUpdateAppSdkDto);
     AppSdkDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawData, 'AppSdkDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppSdkDto, AppSdkDto>(
+              rawData,
+              'AppSdkDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -336,5 +334,4 @@ _responseData = rawData == null ? null : deserialize<AppSdkDto, AppSdkDto>(rawDa
       extra: _response.extra,
     );
   }
-
 }

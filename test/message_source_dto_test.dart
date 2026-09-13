@@ -7,6 +7,16 @@ void main() {
   // TODO add properties to the entity
 
   group(MessageSourceDto, () {
+    // String id
+    test('to test the property `id`', () async {
+      // TODO
+    });
+
+    // String categoryId
+    test('to test the property `categoryId`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -31,6 +41,5 @@ void main() {
     test('to test the property `routes`', () async {
       // TODO
     });
-
   });
 }

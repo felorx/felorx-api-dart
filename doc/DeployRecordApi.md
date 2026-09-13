@@ -11,15 +11,15 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createDeployRecord**](DeployRecordApi.md#createdeployrecord) | **POST** /api/app/deploy-record |
 [**deleteDeployRecordById**](DeployRecordApi.md#deletedeployrecordbyid) | **DELETE** /api/app/deploy-record/{id} |
-[**deployRecordGetLatest**](DeployRecordApi.md#deployrecordgetlatest) | **GET** /api/app/deploy-record/latest/{appId} |
-[**deployRecordMarkAsCanceled**](DeployRecordApi.md#deployrecordmarkascanceled) | **POST** /api/app/deploy-record/{id}/mark-as-canceled |
-[**deployRecordMarkAsFailed**](DeployRecordApi.md#deployrecordmarkasfailed) | **POST** /api/app/deploy-record/{id}/mark-as-failed |
-[**deployRecordMarkAsSucceeded**](DeployRecordApi.md#deployrecordmarkassucceeded) | **POST** /api/app/deploy-record/{id}/mark-as-succeeded |
 [**getByCiDeployId**](DeployRecordApi.md#getbycideployid) | **GET** /api/app/deploy-record/by-ci-deploy-id/{ciDeployId} |
 [**getDeployRecordById**](DeployRecordApi.md#getdeployrecordbyid) | **GET** /api/app/deploy-record/{id} |
 [**getDeployRecordList**](DeployRecordApi.md#getdeployrecordlist) | **GET** /api/app/deploy-record |
+[**getLatestGetApiAppDeployRecordLatestAppId**](DeployRecordApi.md#getlatestgetapiappdeployrecordlatestappid) | **GET** /api/app/deploy-record/latest/{appId} |
 [**getListByBuildRecordId**](DeployRecordApi.md#getlistbybuildrecordid) | **GET** /api/app/deploy-record/by-build-record-id/{buildRecordId} |
+[**markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled**](DeployRecordApi.md#markascanceledpostapiappdeployrecordidmarkascanceled) | **POST** /api/app/deploy-record/{id}/mark-as-canceled |
 [**markAsDeploying**](DeployRecordApi.md#markasdeploying) | **POST** /api/app/deploy-record/{id}/mark-as-deploying |
+[**markAsFailedPostApiAppDeployRecordIdMarkAsFailed**](DeployRecordApi.md#markasfailedpostapiappdeployrecordidmarkasfailed) | **POST** /api/app/deploy-record/{id}/mark-as-failed |
+[**markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded**](DeployRecordApi.md#markassucceededpostapiappdeployrecordidmarkassucceeded) | **POST** /api/app/deploy-record/{id}/mark-as-succeeded |
 [**updateDeployRecord**](DeployRecordApi.md#updatedeployrecord) | **PUT** /api/app/deploy-record/{id} |
 
 
@@ -92,178 +92,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deployRecordGetLatest**
-> DeployRecordDto deployRecordGetLatest(appId, platform, environment)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getDeployRecordApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final AppPlatform platform = ; // AppPlatform |
-final String environment = environment_example; // String |
-
-try {
-    final response = api.deployRecordGetLatest(appId, platform, environment);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling DeployRecordApi->deployRecordGetLatest: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **platform** | [**AppPlatform**](.md)|  | [optional]
- **environment** | **String**|  | [optional]
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deployRecordMarkAsCanceled**
-> DeployRecordDto deployRecordMarkAsCanceled(id)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getDeployRecordApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-
-try {
-    final response = api.deployRecordMarkAsCanceled(id);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling DeployRecordApi->deployRecordMarkAsCanceled: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deployRecordMarkAsFailed**
-> DeployRecordDto deployRecordMarkAsFailed(id, errorMessage)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getDeployRecordApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final String errorMessage = errorMessage_example; // String |
-
-try {
-    final response = api.deployRecordMarkAsFailed(id, errorMessage);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling DeployRecordApi->deployRecordMarkAsFailed: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **errorMessage** | **String**|  | [optional]
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **deployRecordMarkAsSucceeded**
-> DeployRecordDto deployRecordMarkAsSucceeded(id, deployUrl)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getDeployRecordApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final String deployUrl = deployUrl_example; // String |
-
-try {
-    final response = api.deployRecordMarkAsSucceeded(id, deployUrl);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling DeployRecordApi->deployRecordMarkAsSucceeded: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **deployUrl** | **String**|  | [optional]
-
-### Return type
-
-[**DeployRecordDto**](DeployRecordDto.md)
 
 ### Authorization
 
@@ -415,6 +243,51 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getLatestGetApiAppDeployRecordLatestAppId**
+> DeployRecordDto getLatestGetApiAppDeployRecordLatestAppId(appId, platform, environment)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getDeployRecordApi();
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final AppPlatform platform = ; // AppPlatform |
+final String environment = environment_example; // String |
+
+try {
+    final response = api.getLatestGetApiAppDeployRecordLatestAppId(appId, platform, environment);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DeployRecordApi->getLatestGetApiAppDeployRecordLatestAppId: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **platform** | [**AppPlatform**](.md)|  | [optional]
+ **environment** | **String**|  | [optional]
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getListByBuildRecordId**
 > List<DeployRecordDto> getListByBuildRecordId(buildRecordId)
 
@@ -456,6 +329,47 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled**
+> DeployRecordDto markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(id)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getDeployRecordApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+
+try {
+    final response = api.markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled(id);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DeployRecordApi->markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **markAsDeploying**
 > DeployRecordDto markAsDeploying(id)
 
@@ -481,6 +395,92 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  |
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **markAsFailedPostApiAppDeployRecordIdMarkAsFailed**
+> DeployRecordDto markAsFailedPostApiAppDeployRecordIdMarkAsFailed(id, errorMessage)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getDeployRecordApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String errorMessage = errorMessage_example; // String |
+
+try {
+    final response = api.markAsFailedPostApiAppDeployRecordIdMarkAsFailed(id, errorMessage);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DeployRecordApi->markAsFailedPostApiAppDeployRecordIdMarkAsFailed: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **errorMessage** | **String**|  | [optional]
+
+### Return type
+
+[**DeployRecordDto**](DeployRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded**
+> DeployRecordDto markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(id, deployUrl)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getDeployRecordApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final String deployUrl = deployUrl_example; // String |
+
+try {
+    final response = api.markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(id, deployUrl);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling DeployRecordApi->markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **deployUrl** | **String**|  | [optional]
 
 ### Return type
 
@@ -539,4 +539,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

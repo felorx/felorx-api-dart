@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/create_or_update_app_asset_dto.dart'
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppAssetApi {
-
   final Dio _dio;
 
   const AppAssetApi(this._dio);
@@ -47,13 +46,8 @@ class AppAssetApi {
     final _path = r'/api/app/app-asset';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -61,13 +55,10 @@ class AppAssetApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppAssetDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppAssetDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -86,9 +77,14 @@ _bodyData=jsonEncode(createOrUpdateAppAssetDto);
     AppAssetDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(rawData, 'AppAssetDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppAssetDto, AppAssetDto>(
+              rawData,
+              'AppAssetDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +130,16 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-asset/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-asset/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -181,16 +177,17 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-asset/by-app-locale-id/{appLocaleId}'.replaceAll('{' r'appLocaleId' '}', appLocaleId.toString());
+    final _path = r'/api/app/app-asset/by-app-locale-id/{appLocaleId}'
+        .replaceAll(
+          '{'
+          r'appLocaleId'
+          '}',
+          appLocaleId.toString(),
+        );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -205,9 +202,14 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
     List<AppAssetDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAssetDto>(rawData, 'List<AppAssetDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<AppAssetDto>, AppAssetDto>(
+              rawData,
+              'List<AppAssetDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -255,16 +257,16 @@ _responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAsset
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-asset/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-asset/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -272,13 +274,10 @@ _responseData = rawData == null ? null : deserialize<List<AppAssetDto>, AppAsset
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppAssetDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppAssetDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -297,9 +296,14 @@ _bodyData=jsonEncode(createOrUpdateAppAssetDto);
     AppAssetDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(rawData, 'AppAssetDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppAssetDto, AppAssetDto>(
+              rawData,
+              'AppAssetDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -321,5 +325,4 @@ _responseData = rawData == null ? null : deserialize<AppAssetDto, AppAssetDto>(r
       extra: _response.extra,
     );
   }
-
 }

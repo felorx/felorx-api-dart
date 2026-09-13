@@ -18,7 +18,6 @@ import 'package:felorx_api_client/src/model/release_channel.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppReleaseApi {
-
   final Dio _dio;
 
   const AppReleaseApi(this._dio);
@@ -49,13 +48,8 @@ class AppReleaseApi {
     final _path = r'/api/app/app-release';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -63,13 +57,10 @@ class AppReleaseApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppReleaseDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppReleaseDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -88,9 +79,14 @@ _bodyData=jsonEncode(createOrUpdateAppReleaseDto);
     AppReleaseDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDto>(rawData, 'AppReleaseDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppReleaseDto, AppReleaseDto>(
+              rawData,
+              'AppReleaseDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -136,16 +132,16 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-release/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-release/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -183,16 +179,16 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-release/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-release/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -207,9 +203,14 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     AppReleaseDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDto>(rawData, 'AppReleaseDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppReleaseDto, AppReleaseDto>(
+              rawData,
+              'AppReleaseDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -272,13 +273,8 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     final _path = r'/api/app/app-release';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -305,9 +301,13 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     AppReleaseDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto, AppReleaseDtoPagedResultDto>(rawData, 'AppReleaseDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              AppReleaseDtoPagedResultDto,
+              AppReleaseDtoPagedResultDto
+            >(rawData, 'AppReleaseDtoPagedResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -348,7 +348,7 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AppReleaseDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AppReleaseDto>> getLatest({
+  Future<Response<AppReleaseDto>> getLatestGetApiAppAppReleaseLatest({
     String? appName,
     String? platform,
     String? artifactType,
@@ -364,13 +364,8 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
     final _path = r'/api/app/app-release/latest';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -394,9 +389,14 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
     AppReleaseDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDto>(rawData, 'AppReleaseDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppReleaseDto, AppReleaseDto>(
+              rawData,
+              'AppReleaseDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -459,13 +459,8 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     final _path = r'/api/app/app-release/by-developer';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -492,9 +487,13 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
     AppReleaseDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto, AppReleaseDtoPagedResultDto>(rawData, 'AppReleaseDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              AppReleaseDtoPagedResultDto,
+              AppReleaseDtoPagedResultDto
+            >(rawData, 'AppReleaseDtoPagedResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -542,16 +541,16 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-release/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-release/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -559,13 +558,10 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDtoPagedResultDto
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppReleaseDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppReleaseDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -584,9 +580,14 @@ _bodyData=jsonEncode(createOrUpdateAppReleaseDto);
     AppReleaseDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDto>(rawData, 'AppReleaseDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppReleaseDto, AppReleaseDto>(
+              rawData,
+              'AppReleaseDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -608,5 +609,4 @@ _responseData = rawData == null ? null : deserialize<AppReleaseDto, AppReleaseDt
       extra: _response.extra,
     );
   }
-
 }

@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'ai_chat_message_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,66 +15,33 @@ part 'ai_chat_message_dto.g.dart';
 )
 class AiChatMessageDto {
   /// Returns a new [AiChatMessageDto] instance.
-  AiChatMessageDto({
+  AiChatMessageDto({this.role, this.content, this.name});
 
-     this.role,
-
-     this.content,
-
-     this.name,
-  });
-
-  @JsonKey(
-    
-    name: r'role',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'role', required: false, includeIfNull: false)
   String? role;
 
-
-
-  @JsonKey(
-    
-    name: r'content',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'content', required: false, includeIfNull: false)
   Object? content;
 
-
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AiChatMessageDto &&
+          other.role == role &&
+          other.content == content &&
+          other.name == name;
 
+  @override
+  int get hashCode =>
+      (role == null ? 0 : role.hashCode) +
+      (content == null ? 0 : content.hashCode) +
+      (name == null ? 0 : name.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is AiChatMessageDto &&
-      other.role == role &&
-      other.content == content &&
-      other.name == name;
-
-    @override
-    int get hashCode =>
-        (role == null ? 0 : role.hashCode) +
-        (content == null ? 0 : content.hashCode) +
-        (name == null ? 0 : name.hashCode);
-
-  factory AiChatMessageDto.fromJson(Map<String, dynamic> json) => _$AiChatMessageDtoFromJson(json);
+  factory AiChatMessageDto.fromJson(Map<String, dynamic> json) =>
+      _$AiChatMessageDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AiChatMessageDtoToJson(this);
 
@@ -83,6 +49,4 @@ class AiChatMessageDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

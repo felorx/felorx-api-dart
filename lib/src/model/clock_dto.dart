@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'clock_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,34 +15,20 @@ part 'clock_dto.g.dart';
 )
 class ClockDto {
   /// Returns a new [ClockDto] instance.
-  ClockDto({
+  ClockDto({this.kind});
 
-     this.kind,
-  });
-
-  @JsonKey(
-    
-    name: r'kind',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'kind', required: false, includeIfNull: false)
   String? kind;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) || other is ClockDto && other.kind == kind;
 
+  @override
+  int get hashCode => (kind == null ? 0 : kind.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ClockDto &&
-      other.kind == kind;
-
-    @override
-    int get hashCode =>
-        (kind == null ? 0 : kind.hashCode);
-
-  factory ClockDto.fromJson(Map<String, dynamic> json) => _$ClockDtoFromJson(json);
+  factory ClockDto.fromJson(Map<String, dynamic> json) =>
+      _$ClockDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ClockDtoToJson(this);
 
@@ -51,6 +36,4 @@ class ClockDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

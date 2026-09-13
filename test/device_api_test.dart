@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for DeviceApi
 void main() {
   final instance = FelorxApiClient().getDeviceApi();
@@ -41,6 +40,5 @@ void main() {
     test('test remove', () async {
       // TODO
     });
-
   });
 }

@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for AppPricingItemApi
 void main() {
   final instance = FelorxApiClient().getAppPricingItemApi();
@@ -31,6 +30,5 @@ void main() {
     test('test updateAppPricingItem', () async {
       // TODO
     });
-
   });
 }

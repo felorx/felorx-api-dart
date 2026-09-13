@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'localizable_string_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,50 +15,28 @@ part 'localizable_string_dto.g.dart';
 )
 class LocalizableStringDto {
   /// Returns a new [LocalizableStringDto] instance.
-  LocalizableStringDto({
+  LocalizableStringDto({this.name, this.resource});
 
-     this.name,
-
-     this.resource,
-  });
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'resource',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'resource', required: false, includeIfNull: false)
   String? resource;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LocalizableStringDto &&
+          other.name == name &&
+          other.resource == resource;
 
+  @override
+  int get hashCode =>
+      (name == null ? 0 : name.hashCode) +
+      (resource == null ? 0 : resource.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is LocalizableStringDto &&
-      other.name == name &&
-      other.resource == resource;
-
-    @override
-    int get hashCode =>
-        (name == null ? 0 : name.hashCode) +
-        (resource == null ? 0 : resource.hashCode);
-
-  factory LocalizableStringDto.fromJson(Map<String, dynamic> json) => _$LocalizableStringDtoFromJson(json);
+  factory LocalizableStringDto.fromJson(Map<String, dynamic> json) =>
+      _$LocalizableStringDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$LocalizableStringDtoToJson(this);
 
@@ -67,6 +44,4 @@ class LocalizableStringDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

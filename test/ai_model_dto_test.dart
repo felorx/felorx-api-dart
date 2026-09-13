@@ -47,6 +47,21 @@ void main() {
       // TODO
     });
 
+    // List<AiCapability> verifiedCapabilities
+    test('to test the property `verifiedCapabilities`', () async {
+      // TODO
+    });
+
+    // String capabilityCertificateVersion
+    test('to test the property `capabilityCertificateVersion`', () async {
+      // TODO
+    });
+
+    // DateTime capabilityTestedAt
+    test('to test the property `capabilityTestedAt`', () async {
+      // TODO
+    });
+
     // String providerId
     test('to test the property `providerId`', () async {
       // TODO
@@ -86,6 +101,5 @@ void main() {
     test('to test the property `defaultParameters`', () async {
       // TODO
     });
-
   });
 }

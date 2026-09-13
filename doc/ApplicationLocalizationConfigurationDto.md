@@ -17,5 +17,3 @@ Name | Type | Description | Notes
 **languageFilesMap** | [**Map&lt;String, List&lt;NameValue&gt;&gt;**](List.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

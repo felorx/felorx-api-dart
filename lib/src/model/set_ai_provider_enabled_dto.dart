@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'set_ai_provider_enabled_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,34 +15,21 @@ part 'set_ai_provider_enabled_dto.g.dart';
 )
 class SetAiProviderEnabledDto {
   /// Returns a new [SetAiProviderEnabledDto] instance.
-  SetAiProviderEnabledDto({
+  SetAiProviderEnabledDto({this.enabled});
 
-     this.enabled,
-  });
-
-  @JsonKey(
-    
-    name: r'enabled',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'enabled', required: false, includeIfNull: false)
   bool? enabled;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is SetAiProviderEnabledDto && other.enabled == enabled;
 
+  @override
+  int get hashCode => enabled.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is SetAiProviderEnabledDto &&
-      other.enabled == enabled;
-
-    @override
-    int get hashCode =>
-        enabled.hashCode;
-
-  factory SetAiProviderEnabledDto.fromJson(Map<String, dynamic> json) => _$SetAiProviderEnabledDtoFromJson(json);
+  factory SetAiProviderEnabledDto.fromJson(Map<String, dynamic> json) =>
+      _$SetAiProviderEnabledDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$SetAiProviderEnabledDtoToJson(this);
 
@@ -51,6 +37,4 @@ class SetAiProviderEnabledDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

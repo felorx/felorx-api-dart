@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'feature_group_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,66 +16,33 @@ part 'feature_group_dto.g.dart';
 )
 class FeatureGroupDto {
   /// Returns a new [FeatureGroupDto] instance.
-  FeatureGroupDto({
+  FeatureGroupDto({this.name, this.displayName, this.features});
 
-     this.name,
-
-     this.displayName,
-
-     this.features,
-  });
-
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'displayName',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'displayName', required: false, includeIfNull: false)
   String? displayName;
 
-
-
-  @JsonKey(
-    
-    name: r'features',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'features', required: false, includeIfNull: false)
   List<FeatureDto>? features;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is FeatureGroupDto &&
+          other.name == name &&
+          other.displayName == displayName &&
+          other.features == features;
 
+  @override
+  int get hashCode =>
+      (name == null ? 0 : name.hashCode) +
+      (displayName == null ? 0 : displayName.hashCode) +
+      (features == null ? 0 : features.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is FeatureGroupDto &&
-      other.name == name &&
-      other.displayName == displayName &&
-      other.features == features;
-
-    @override
-    int get hashCode =>
-        (name == null ? 0 : name.hashCode) +
-        (displayName == null ? 0 : displayName.hashCode) +
-        (features == null ? 0 : features.hashCode);
-
-  factory FeatureGroupDto.fromJson(Map<String, dynamic> json) => _$FeatureGroupDtoFromJson(json);
+  factory FeatureGroupDto.fromJson(Map<String, dynamic> json) =>
+      _$FeatureGroupDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$FeatureGroupDtoToJson(this);
 
@@ -84,6 +50,4 @@ class FeatureGroupDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

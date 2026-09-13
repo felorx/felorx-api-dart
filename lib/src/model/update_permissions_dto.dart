@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'update_permissions_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,34 +16,21 @@ part 'update_permissions_dto.g.dart';
 )
 class UpdatePermissionsDto {
   /// Returns a new [UpdatePermissionsDto] instance.
-  UpdatePermissionsDto({
+  UpdatePermissionsDto({this.permissions});
 
-     this.permissions,
-  });
-
-  @JsonKey(
-    
-    name: r'permissions',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'permissions', required: false, includeIfNull: false)
   List<UpdatePermissionDto>? permissions;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is UpdatePermissionsDto && other.permissions == permissions;
 
+  @override
+  int get hashCode => (permissions == null ? 0 : permissions.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is UpdatePermissionsDto &&
-      other.permissions == permissions;
-
-    @override
-    int get hashCode =>
-        (permissions == null ? 0 : permissions.hashCode);
-
-  factory UpdatePermissionsDto.fromJson(Map<String, dynamic> json) => _$UpdatePermissionsDtoFromJson(json);
+  factory UpdatePermissionsDto.fromJson(Map<String, dynamic> json) =>
+      _$UpdatePermissionsDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UpdatePermissionsDtoToJson(this);
 
@@ -52,6 +38,4 @@ class UpdatePermissionsDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

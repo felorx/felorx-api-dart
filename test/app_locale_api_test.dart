@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for AppLocaleApi
 void main() {
   final instance = FelorxApiClient().getAppLocaleApi();
@@ -17,8 +16,8 @@ void main() {
       // TODO
     });
 
-    //Future<List<AppLocaleDto>> getListByAppId(String appId) async
-    test('test getListByAppId', () async {
+    //Future<List<AppLocaleDto>> getListByAppIdGetApiAppAppLocaleByAppIdAppId(String appId) async
+    test('test getListByAppIdGetApiAppAppLocaleByAppIdAppId', () async {
       // TODO
     });
 
@@ -26,6 +25,5 @@ void main() {
     test('test updateAppLocale', () async {
       // TODO
     });
-
   });
 }

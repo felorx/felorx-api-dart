@@ -17,7 +17,6 @@ import 'package:felorx_api_client/src/model/storage_object_credentials.dart';
 import 'package:felorx_api_client/src/model/user_storage_dto.dart';
 
 class StorageObjectApi {
-
   final Dio _dio;
 
   const StorageObjectApi(this._dio);
@@ -46,13 +45,8 @@ class StorageObjectApi {
     final _path = r'/api/app/storage-object/cdn-domains';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -67,9 +61,14 @@ class StorageObjectApi {
     List<CdnDomainDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDomainDto>(rawData, 'List<CdnDomainDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<CdnDomainDto>, CdnDomainDto>(
+              rawData,
+              'List<CdnDomainDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -124,13 +123,8 @@ _responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDoma
     final _path = r'/api/app/storage-object/file-credential';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -153,9 +147,14 @@ _responseData = rawData == null ? null : deserialize<List<CdnDomainDto>, CdnDoma
     StorageObjectCredentials? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<StorageObjectCredentials, StorageObjectCredentials>(rawData, 'StorageObjectCredentials', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<StorageObjectCredentials, StorageObjectCredentials>(
+              rawData,
+              'StorageObjectCredentials',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -202,13 +201,8 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
     final _path = r'/api/app/storage-object/user-storages';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -223,9 +217,14 @@ _responseData = rawData == null ? null : deserialize<StorageObjectCredentials, S
     List<UserStorageDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserStorageDto>(rawData, 'List<UserStorageDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<UserStorageDto>, UserStorageDto>(
+              rawData,
+              'List<UserStorageDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -276,13 +275,8 @@ _responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserS
     final _path = r'/api/app/storage-object/pre-sign-url';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -303,9 +297,10 @@ _responseData = rawData == null ? null : deserialize<List<UserStorageDto>, UserS
     String? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<String, String>(rawData, 'String', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<String, String>(rawData, 'String', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -327,5 +322,4 @@ _responseData = rawData == null ? null : deserialize<String, String>(rawData, 'S
       extra: _response.extra,
     );
   }
-
 }

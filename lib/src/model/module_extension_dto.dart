@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'module_extension_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,50 +16,28 @@ part 'module_extension_dto.g.dart';
 )
 class ModuleExtensionDto {
   /// Returns a new [ModuleExtensionDto] instance.
-  ModuleExtensionDto({
+  ModuleExtensionDto({this.entities, this.configuration});
 
-     this.entities,
-
-     this.configuration,
-  });
-
-  @JsonKey(
-    
-    name: r'entities',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'entities', required: false, includeIfNull: false)
   Map<String, EntityExtensionDto>? entities;
 
-
-
-  @JsonKey(
-    
-    name: r'configuration',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'configuration', required: false, includeIfNull: false)
   Map<String, Object>? configuration;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ModuleExtensionDto &&
+          other.entities == entities &&
+          other.configuration == configuration;
 
+  @override
+  int get hashCode =>
+      (entities == null ? 0 : entities.hashCode) +
+      (configuration == null ? 0 : configuration.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ModuleExtensionDto &&
-      other.entities == entities &&
-      other.configuration == configuration;
-
-    @override
-    int get hashCode =>
-        (entities == null ? 0 : entities.hashCode) +
-        (configuration == null ? 0 : configuration.hashCode);
-
-  factory ModuleExtensionDto.fromJson(Map<String, dynamic> json) => _$ModuleExtensionDtoFromJson(json);
+  factory ModuleExtensionDto.fromJson(Map<String, dynamic> json) =>
+      _$ModuleExtensionDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ModuleExtensionDtoToJson(this);
 
@@ -68,6 +45,4 @@ class ModuleExtensionDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

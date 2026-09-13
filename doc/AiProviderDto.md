@@ -16,6 +16,9 @@ Name | Type | Description | Notes
 **isDeleted** | **bool** |  | [optional]
 **deleterId** | **String** |  | [optional]
 **deletionTime** | [**DateTime**](DateTime.md) |  | [optional]
+**verifiedCapabilities** | [**List&lt;AiCapability&gt;**](AiCapability.md) |  | [optional]
+**capabilityCertificateVersion** | **String** |  | [optional]
+**capabilityTestedAt** | [**DateTime**](DateTime.md) |  | [optional]
 **name** | **String** |  | [optional]
 **displayName** | **String** |  | [optional]
 **providerType** | [**AiProviderType**](AiProviderType.md) |  | [optional]
@@ -28,5 +31,3 @@ Name | Type | Description | Notes
 **models** | [**List&lt;AiModelDto&gt;**](AiModelDto.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

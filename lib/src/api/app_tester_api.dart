@@ -17,7 +17,6 @@ import 'package:felorx_api_client/src/model/create_update_app_tester_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppTesterApi {
-
   final Dio _dio;
 
   const AppTesterApi(this._dio);
@@ -50,13 +49,8 @@ class AppTesterApi {
     final _path = r'/api/app/app-tester/check-is-app-tester';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -77,9 +71,10 @@ class AppTesterApi {
     bool? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<bool, bool>(rawData, 'bool', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -128,13 +123,8 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
     final _path = r'/api/app/app-tester';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -142,13 +132,10 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateAppTesterDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateAppTesterDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -167,9 +154,14 @@ _bodyData=jsonEncode(createUpdateAppTesterDto);
     AppTesterDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>(rawData, 'AppTesterDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppTesterDto, AppTesterDto>(
+              rawData,
+              'AppTesterDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -215,16 +207,16 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-tester/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-tester/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -262,16 +254,16 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-tester/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-tester/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -286,9 +278,14 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
     AppTesterDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>(rawData, 'AppTesterDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppTesterDto, AppTesterDto>(
+              rawData,
+              'AppTesterDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -341,13 +338,8 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
     final _path = r'/api/app/app-tester';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -369,9 +361,14 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
     AppTesterDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto, AppTesterDtoPagedResultDto>(rawData, 'AppTesterDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppTesterDtoPagedResultDto, AppTesterDtoPagedResultDto>(
+              rawData,
+              'AppTesterDtoPagedResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -419,16 +416,16 @@ _responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto,
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-tester/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-tester/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -436,13 +433,10 @@ _responseData = rawData == null ? null : deserialize<AppTesterDtoPagedResultDto,
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateAppTesterDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateAppTesterDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -461,9 +455,14 @@ _bodyData=jsonEncode(createUpdateAppTesterDto);
     AppTesterDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>(rawData, 'AppTesterDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppTesterDto, AppTesterDto>(
+              rawData,
+              'AppTesterDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -485,5 +484,4 @@ _responseData = rawData == null ? null : deserialize<AppTesterDto, AppTesterDto>
       extra: _response.extra,
     );
   }
-
 }

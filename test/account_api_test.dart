@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for AccountApi
 void main() {
   final instance = FelorxApiClient().getAccountApi();
@@ -19,13 +18,18 @@ void main() {
       // TODO
     });
 
-    //Future destroyAccount({ AccountDeletionDto accountDeletionDto }) async
+    //Future<AccountDeletionStatusDto> deletionStatus({ AccountDeletionStatusQueryDto accountDeletionStatusQueryDto }) async
+    test('test deletionStatus', () async {
+      // TODO
+    });
+
+    //Future<AccountDeletionStatusDto> destroyAccount({ AccountDeletionDto accountDeletionDto }) async
     test('test destroyAccount', () async {
       // TODO
     });
 
-    //Future<UserProfileDto> getAccount() async
-    test('test getAccount', () async {
+    //Future<UserProfileDto> getAccountGetApiAppAccount() async
+    test('test getAccountGetApiAppAccount', () async {
       // TODO
     });
 
@@ -48,6 +52,5 @@ void main() {
     test('test verifyPasswordResetToken', () async {
       // TODO
     });
-
   });
 }

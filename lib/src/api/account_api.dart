@@ -12,6 +12,8 @@ import 'package:felorx_api_client/src/deserialize.dart';
 import 'package:dio/dio.dart';
 
 import 'package:felorx_api_client/src/model/account_deletion_dto.dart';
+import 'package:felorx_api_client/src/model/account_deletion_status_dto.dart';
+import 'package:felorx_api_client/src/model/account_deletion_status_query_dto.dart';
 import 'package:felorx_api_client/src/model/change_password_dto.dart';
 import 'package:felorx_api_client/src/model/check_sync_auth_result_dto.dart';
 import 'package:felorx_api_client/src/model/identity_user_dto.dart';
@@ -23,7 +25,6 @@ import 'package:felorx_api_client/src/model/user_profile_dto.dart';
 import 'package:felorx_api_client/src/model/verify_password_reset_token_input.dart';
 
 class AccountApi {
-
   final Dio _dio;
 
   const AccountApi(this._dio);
@@ -54,13 +55,8 @@ class AccountApi {
     final _path = r'/api/app/account/change-password';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -68,13 +64,10 @@ class AccountApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(changePasswordDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(changePasswordDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -117,13 +110,8 @@ _bodyData=jsonEncode(changePasswordDto);
     final _path = r'/api/app/account/check-sync-auth';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -138,9 +126,14 @@ _bodyData=jsonEncode(changePasswordDto);
     CheckSyncAuthResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, CheckSyncAuthResultDto>(rawData, 'CheckSyncAuthResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<CheckSyncAuthResultDto, CheckSyncAuthResultDto>(
+              rawData,
+              'CheckSyncAuthResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -152,6 +145,93 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
     }
 
     return Response<CheckSyncAuthResultDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// deletionStatus
+  ///
+  ///
+  /// Parameters:
+  /// * [accountDeletionStatusQueryDto]
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [AccountDeletionStatusDto] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<AccountDeletionStatusDto>> deletionStatus({
+    AccountDeletionStatusQueryDto? accountDeletionStatusQueryDto,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/app/account/deletion-status';
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      _bodyData = jsonEncode(accountDeletionStatusQueryDto);
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _options.compose(_dio.options, _path),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    AccountDeletionStatusDto? _responseData;
+
+    try {
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AccountDeletionStatusDto, AccountDeletionStatusDto>(
+              rawData,
+              'AccountDeletionStatusDto',
+              growable: true,
+            );
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<AccountDeletionStatusDto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -175,9 +255,9 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future]
+  /// Returns a [Future] containing a [Response] with a [AccountDeletionStatusDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> destroyAccount({
+  Future<Response<AccountDeletionStatusDto>> destroyAccount({
     AccountDeletionDto? accountDeletionDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -189,13 +269,8 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
     final _path = r'/api/app/account/destroy-account';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -203,13 +278,10 @@ _responseData = rawData == null ? null : deserialize<CheckSyncAuthResultDto, Che
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(accountDeletionDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(accountDeletionDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -225,10 +297,40 @@ _bodyData=jsonEncode(accountDeletionDto);
       onReceiveProgress: onReceiveProgress,
     );
 
-    return _response;
+    AccountDeletionStatusDto? _responseData;
+
+    try {
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AccountDeletionStatusDto, AccountDeletionStatusDto>(
+              rawData,
+              'AccountDeletionStatusDto',
+              growable: true,
+            );
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<AccountDeletionStatusDto>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
   }
 
-  /// getAccount
+  /// getAccountGetApiAppAccount
   ///
   ///
   /// Parameters:
@@ -241,7 +343,7 @@ _bodyData=jsonEncode(accountDeletionDto);
   ///
   /// Returns a [Future] containing a [Response] with a [UserProfileDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserProfileDto>> getAccount({
+  Future<Response<UserProfileDto>> getAccountGetApiAppAccount({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -252,13 +354,8 @@ _bodyData=jsonEncode(accountDeletionDto);
     final _path = r'/api/app/account';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -273,9 +370,14 @@ _bodyData=jsonEncode(accountDeletionDto);
     UserProfileDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfileDto>(rawData, 'UserProfileDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<UserProfileDto, UserProfileDto>(
+              rawData,
+              'UserProfileDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -324,13 +426,8 @@ _responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfile
     final _path = r'/api/account/register';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -338,13 +435,10 @@ _responseData = rawData == null ? null : deserialize<UserProfileDto, UserProfile
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(registerDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(registerDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -363,9 +457,14 @@ _bodyData=jsonEncode(registerDto);
     IdentityUserDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUserDto>(rawData, 'IdentityUserDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<IdentityUserDto, IdentityUserDto>(
+              rawData,
+              'IdentityUserDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -414,13 +513,8 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     final _path = r'/api/account/reset-password';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -428,13 +522,10 @@ _responseData = rawData == null ? null : deserialize<IdentityUserDto, IdentityUs
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(resetPasswordDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(resetPasswordDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -479,13 +570,8 @@ _bodyData=jsonEncode(resetPasswordDto);
     final _path = r'/api/account/send-password-reset-code';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -493,13 +579,10 @@ _bodyData=jsonEncode(resetPasswordDto);
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(sendPasswordResetCodeDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(sendPasswordResetCodeDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -544,13 +627,8 @@ _bodyData=jsonEncode(sendPasswordResetCodeDto);
     final _path = r'/api/account/verify-password-reset-token';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -558,13 +636,10 @@ _bodyData=jsonEncode(sendPasswordResetCodeDto);
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(verifyPasswordResetTokenInput);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(verifyPasswordResetTokenInput);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -583,9 +658,10 @@ _bodyData=jsonEncode(verifyPasswordResetTokenInput);
     bool? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<bool, bool>(rawData, 'bool', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -607,5 +683,4 @@ _responseData = rawData == null ? null : deserialize<bool, bool>(rawData, 'bool'
       extra: _response.extra,
     );
   }
-
 }

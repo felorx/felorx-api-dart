@@ -35,9 +35,10 @@ void main() {
       final dio = _capturingDio(captured);
 
       await BuildRecordApi(dio).getBuildRecordList(architecture: 'arm64');
-      await BuildRecordApi(
-        dio,
-      ).buildRecordGetLatest(appId: 'app-id', architecture: 'x64');
+      await BuildRecordApi(dio).getLatestGetApiAppBuildRecordLatestAppId(
+        appId: 'app-id',
+        architecture: 'x64',
+      );
 
       expect(captured[0].queryParameters['Architecture'], 'arm64');
       expect(captured[1].queryParameters['architecture'], 'x64');
@@ -49,7 +50,7 @@ void main() {
 
       await api.getAppReleaseList(architecture: 'arm64');
       await api.getListByDeveloper(architecture: 'x64');
-      await api.getLatest(architecture: 'multiarch');
+      await api.getLatestGetApiAppAppReleaseLatest(architecture: 'multiarch');
 
       expect(
         captured.map((request) => request.queryParameters['Architecture']),

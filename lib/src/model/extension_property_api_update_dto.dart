@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_property_api_update_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,34 +15,22 @@ part 'extension_property_api_update_dto.g.dart';
 )
 class ExtensionPropertyApiUpdateDto {
   /// Returns a new [ExtensionPropertyApiUpdateDto] instance.
-  ExtensionPropertyApiUpdateDto({
+  ExtensionPropertyApiUpdateDto({this.isAvailable});
 
-     this.isAvailable,
-  });
-
-  @JsonKey(
-    
-    name: r'isAvailable',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'isAvailable', required: false, includeIfNull: false)
   bool? isAvailable;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExtensionPropertyApiUpdateDto &&
+          other.isAvailable == isAvailable;
 
+  @override
+  int get hashCode => isAvailable.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ExtensionPropertyApiUpdateDto &&
-      other.isAvailable == isAvailable;
-
-    @override
-    int get hashCode =>
-        isAvailable.hashCode;
-
-  factory ExtensionPropertyApiUpdateDto.fromJson(Map<String, dynamic> json) => _$ExtensionPropertyApiUpdateDtoFromJson(json);
+  factory ExtensionPropertyApiUpdateDto.fromJson(Map<String, dynamic> json) =>
+      _$ExtensionPropertyApiUpdateDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ExtensionPropertyApiUpdateDtoToJson(this);
 
@@ -51,6 +38,4 @@ class ExtensionPropertyApiUpdateDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

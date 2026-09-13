@@ -35,6 +35,12 @@ class AiProviderDto {
 
     this.deletionTime,
 
+    this.verifiedCapabilities,
+
+    this.capabilityCertificateVersion,
+
+    this.capabilityTestedAt,
+
     this.name,
 
     this.displayName,
@@ -48,12 +54,6 @@ class AiProviderDto {
     this.enabled,
 
     this.capabilities,
-
-    this.verifiedCapabilities,
-
-    this.capabilityTestedAt,
-
-    this.capabilityCertificateVersion,
 
     this.secretConfigured,
 
@@ -86,6 +86,23 @@ class AiProviderDto {
   @JsonKey(name: r'deletionTime', required: false, includeIfNull: false)
   DateTime? deletionTime;
 
+  @JsonKey(
+    name: r'verified_capabilities',
+    required: false,
+    includeIfNull: false,
+  )
+  List<AiCapability>? verifiedCapabilities;
+
+  @JsonKey(
+    name: r'capability_certificate_version',
+    required: false,
+    includeIfNull: false,
+  )
+  String? capabilityCertificateVersion;
+
+  @JsonKey(name: r'capability_tested_at', required: false, includeIfNull: false)
+  DateTime? capabilityTestedAt;
+
   @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
@@ -106,23 +123,6 @@ class AiProviderDto {
 
   @JsonKey(name: r'capabilities', required: false, includeIfNull: false)
   List<AiCapability>? capabilities;
-
-  @JsonKey(
-    name: r'verified_capabilities',
-    required: false,
-    includeIfNull: false,
-  )
-  List<AiCapability>? verifiedCapabilities;
-
-  @JsonKey(name: r'capability_tested_at', required: false, includeIfNull: false)
-  DateTime? capabilityTestedAt;
-
-  @JsonKey(
-    name: r'capability_certificate_version',
-    required: false,
-    includeIfNull: false,
-  )
-  String? capabilityCertificateVersion;
 
   @JsonKey(name: r'secret_configured', required: false, includeIfNull: false)
   bool? secretConfigured;
@@ -145,6 +145,9 @@ class AiProviderDto {
           other.isDeleted == isDeleted &&
           other.deleterId == deleterId &&
           other.deletionTime == deletionTime &&
+          other.verifiedCapabilities == verifiedCapabilities &&
+          other.capabilityCertificateVersion == capabilityCertificateVersion &&
+          other.capabilityTestedAt == capabilityTestedAt &&
           other.name == name &&
           other.displayName == displayName &&
           other.providerType == providerType &&
@@ -152,9 +155,6 @@ class AiProviderDto {
           other.region == region &&
           other.enabled == enabled &&
           other.capabilities == capabilities &&
-          other.verifiedCapabilities == verifiedCapabilities &&
-          other.capabilityTestedAt == capabilityTestedAt &&
-          other.capabilityCertificateVersion == capabilityCertificateVersion &&
           other.secretConfigured == secretConfigured &&
           other.metadata == metadata &&
           other.models == models;
@@ -169,6 +169,11 @@ class AiProviderDto {
       isDeleted.hashCode +
       (deleterId == null ? 0 : deleterId.hashCode) +
       (deletionTime == null ? 0 : deletionTime.hashCode) +
+      (verifiedCapabilities == null ? 0 : verifiedCapabilities.hashCode) +
+      (capabilityCertificateVersion == null
+          ? 0
+          : capabilityCertificateVersion.hashCode) +
+      (capabilityTestedAt == null ? 0 : capabilityTestedAt.hashCode) +
       (name == null ? 0 : name.hashCode) +
       (displayName == null ? 0 : displayName.hashCode) +
       providerType.hashCode +
@@ -176,11 +181,6 @@ class AiProviderDto {
       (region == null ? 0 : region.hashCode) +
       enabled.hashCode +
       (capabilities == null ? 0 : capabilities.hashCode) +
-      (verifiedCapabilities == null ? 0 : verifiedCapabilities.hashCode) +
-      (capabilityTestedAt == null ? 0 : capabilityTestedAt.hashCode) +
-      (capabilityCertificateVersion == null
-          ? 0
-          : capabilityCertificateVersion.hashCode) +
       secretConfigured.hashCode +
       (metadata == null ? 0 : metadata.hashCode) +
       (models == null ? 0 : models.hashCode);

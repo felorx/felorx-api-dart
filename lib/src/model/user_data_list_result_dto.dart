@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'user_data_list_result_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,34 +16,21 @@ part 'user_data_list_result_dto.g.dart';
 )
 class UserDataListResultDto {
   /// Returns a new [UserDataListResultDto] instance.
-  UserDataListResultDto({
+  UserDataListResultDto({this.items});
 
-     this.items,
-  });
-
-  @JsonKey(
-    
-    name: r'items',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'items', required: false, includeIfNull: false)
   List<UserData>? items;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is UserDataListResultDto && other.items == items;
 
+  @override
+  int get hashCode => (items == null ? 0 : items.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is UserDataListResultDto &&
-      other.items == items;
-
-    @override
-    int get hashCode =>
-        (items == null ? 0 : items.hashCode);
-
-  factory UserDataListResultDto.fromJson(Map<String, dynamic> json) => _$UserDataListResultDtoFromJson(json);
+  factory UserDataListResultDto.fromJson(Map<String, dynamic> json) =>
+      _$UserDataListResultDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UserDataListResultDtoToJson(this);
 
@@ -52,6 +38,4 @@ class UserDataListResultDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

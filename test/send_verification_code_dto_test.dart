@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for SendVerificationCodeDto
 void main() {
-  final SendVerificationCodeDto? instance = /* SendVerificationCodeDto(...) */ null;
+  final SendVerificationCodeDto? instance = /* SendVerificationCodeDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(SendVerificationCodeDto, () {
@@ -24,6 +25,5 @@ void main() {
     test('to test the property `purpose`', () async {
       // TODO
     });
-
   });
 }

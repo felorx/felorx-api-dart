@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/create_or_update_app_pricing_item_dt
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppPricingItemApi {
-
   final Dio _dio;
 
   const AppPricingItemApi(this._dio);
@@ -47,13 +46,8 @@ class AppPricingItemApi {
     final _path = r'/api/app/app-pricing-item';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -61,13 +55,10 @@ class AppPricingItemApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppPricingItemDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppPricingItemDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -86,9 +77,14 @@ _bodyData=jsonEncode(createOrUpdateAppPricingItemDto);
     AppPricingItemDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPricingItemDto>(rawData, 'AppPricingItemDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppPricingItemDto, AppPricingItemDto>(
+              rawData,
+              'AppPricingItemDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +130,16 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -181,16 +177,16 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -205,9 +201,14 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
     AppPricingItemDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPricingItemDto>(rawData, 'AppPricingItemDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppPricingItemDto, AppPricingItemDto>(
+              rawData,
+              'AppPricingItemDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -254,13 +255,8 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
     final _path = r'/api/app/app-pricing-item';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -275,9 +271,14 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
     List<AppPricingItemDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<AppPricingItemDto>, AppPricingItemDto>(rawData, 'List<AppPricingItemDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<AppPricingItemDto>, AppPricingItemDto>(
+              rawData,
+              'List<AppPricingItemDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -325,16 +326,16 @@ _responseData = rawData == null ? null : deserialize<List<AppPricingItemDto>, Ap
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/app-pricing-item/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -342,13 +343,10 @@ _responseData = rawData == null ? null : deserialize<List<AppPricingItemDto>, Ap
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAppPricingItemDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAppPricingItemDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -367,9 +365,14 @@ _bodyData=jsonEncode(createOrUpdateAppPricingItemDto);
     AppPricingItemDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPricingItemDto>(rawData, 'AppPricingItemDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AppPricingItemDto, AppPricingItemDto>(
+              rawData,
+              'AppPricingItemDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -391,5 +394,4 @@ _responseData = rawData == null ? null : deserialize<AppPricingItemDto, AppPrici
       extra: _response.extra,
     );
   }
-
 }

@@ -10,8 +10,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **routeId** | **String** |  | [optional]
 **path** | **String** |  | [optional]
-**values** | **Object** |  | [optional]
+**values** | **Map&lt;String, Object&gt;** |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

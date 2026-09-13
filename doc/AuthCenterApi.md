@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getAuthorizedApps**](AuthCenterApi.md#getauthorizedapps) | **GET** /api/app/auth-center/authorized-apps |
-[**getSummary**](AuthCenterApi.md#getsummary) | **GET** /api/app/auth-center/summary |
+[**getSummaryGetApiAppAuthCenterSummary**](AuthCenterApi.md#getsummarygetapiappauthcentersummary) | **GET** /api/app/auth-center/summary |
 [**revokeAuthorizedApp**](AuthCenterApi.md#revokeauthorizedapp) | **POST** /api/app/auth-center/revoke-authorized-app/{clientId} |
 
 
@@ -51,8 +51,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getSummary**
-> AuthCenterSummaryDto getSummary()
+# **getSummaryGetApiAppAuthCenterSummary**
+> AuthCenterSummaryDto getSummaryGetApiAppAuthCenterSummary()
 
 
 
@@ -63,10 +63,10 @@ import 'package:felorx_api_client/api.dart';
 final api = FelorxApiClient().getAuthCenterApi();
 
 try {
-    final response = api.getSummary();
+    final response = api.getSummaryGetApiAppAuthCenterSummary();
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AuthCenterApi->getSummary: $e\n');
+    print('Exception when calling AuthCenterApi->getSummaryGetApiAppAuthCenterSummary: $e\n');
 }
 ```
 
@@ -127,4 +127,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

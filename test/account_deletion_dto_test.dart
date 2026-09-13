@@ -12,5 +12,14 @@ void main() {
       // TODO
     });
 
+    // String clientRequestId
+    test('to test the property `clientRequestId`', () async {
+      // TODO
+    });
+
+    // String statusToken
+    test('to test the property `statusToken`', () async {
+      // TODO
+    });
   });
 }

@@ -9,16 +9,16 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createAlipayOrder**](CreditApi.md#createalipayorder) | **POST** /api/app/credit/alipay-order |
-[**createPayPalOrder**](CreditApi.md#createpaypalorder) | **POST** /api/app/credit/pay-pal-order |
-[**creditGetAccount**](CreditApi.md#creditgetaccount) | **GET** /api/app/credit/account/{appId} |
+[**createAlipayOrderPostApiAppCreditAlipayOrder**](CreditApi.md#createalipayorderpostapiappcreditalipayorder) | **POST** /api/app/credit/alipay-order |
+[**createPayPalOrderPostApiAppCreditPayPalOrder**](CreditApi.md#createpaypalorderpostapiappcreditpaypalorder) | **POST** /api/app/credit/pay-pal-order |
+[**getAccountGetApiAppCreditAccountAppId**](CreditApi.md#getaccountgetapiappcreditaccountappid) | **GET** /api/app/credit/account/{appId} |
 [**getPackages**](CreditApi.md#getpackages) | **GET** /api/app/credit/packages/{appId} |
 [**refund**](CreditApi.md#refund) | **POST** /api/app/credit/refund |
 [**spend**](CreditApi.md#spend) | **POST** /api/app/credit/spend |
 
 
-# **createAlipayOrder**
-> CreateCreditAlipayOrderResultDto createAlipayOrder(createCreditAlipayOrderDto)
+# **createAlipayOrderPostApiAppCreditAlipayOrder**
+> CreateCreditAlipayOrderResultDto createAlipayOrderPostApiAppCreditAlipayOrder(createCreditAlipayOrderDto)
 
 
 
@@ -30,10 +30,10 @@ final api = FelorxApiClient().getCreditApi();
 final CreateCreditAlipayOrderDto createCreditAlipayOrderDto = ; // CreateCreditAlipayOrderDto |
 
 try {
-    final response = api.createAlipayOrder(createCreditAlipayOrderDto);
+    final response = api.createAlipayOrderPostApiAppCreditAlipayOrder(createCreditAlipayOrderDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling CreditApi->createAlipayOrder: $e\n');
+    print('Exception when calling CreditApi->createAlipayOrderPostApiAppCreditAlipayOrder: $e\n');
 }
 ```
 
@@ -58,8 +58,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **createPayPalOrder**
-> CreateCreditPayPalOrderResultDto createPayPalOrder(createCreditPayPalOrderDto)
+# **createPayPalOrderPostApiAppCreditPayPalOrder**
+> CreateCreditPayPalOrderResultDto createPayPalOrderPostApiAppCreditPayPalOrder(createCreditPayPalOrderDto)
 
 
 
@@ -71,10 +71,10 @@ final api = FelorxApiClient().getCreditApi();
 final CreateCreditPayPalOrderDto createCreditPayPalOrderDto = ; // CreateCreditPayPalOrderDto |
 
 try {
-    final response = api.createPayPalOrder(createCreditPayPalOrderDto);
+    final response = api.createPayPalOrderPostApiAppCreditPayPalOrder(createCreditPayPalOrderDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling CreditApi->createPayPalOrder: $e\n');
+    print('Exception when calling CreditApi->createPayPalOrderPostApiAppCreditPayPalOrder: $e\n');
 }
 ```
 
@@ -99,8 +99,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **creditGetAccount**
-> CreditAccountDto creditGetAccount(appId)
+# **getAccountGetApiAppCreditAccountAppId**
+> CreditAccountDto getAccountGetApiAppCreditAccountAppId(appId)
 
 
 
@@ -112,10 +112,10 @@ final api = FelorxApiClient().getCreditApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
-    final response = api.creditGetAccount(appId);
+    final response = api.getAccountGetApiAppCreditAccountAppId(appId);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling CreditApi->creditGetAccount: $e\n');
+    print('Exception when calling CreditApi->getAccountGetApiAppCreditAccountAppId: $e\n');
 }
 ```
 
@@ -262,4 +262,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -9,7 +9,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'interface_method_api_description_model.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -19,72 +18,45 @@ part 'interface_method_api_description_model.g.dart';
 class InterfaceMethodApiDescriptionModel {
   /// Returns a new [InterfaceMethodApiDescriptionModel] instance.
   InterfaceMethodApiDescriptionModel({
+    this.name,
 
-     this.name,
+    this.parametersOnMethod,
 
-     this.parametersOnMethod,
-
-     this.returnValue,
+    this.returnValue,
   });
 
-  @JsonKey(
-    
-    name: r'name',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
-
-
-  @JsonKey(
-    
-    name: r'parametersOnMethod',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'parametersOnMethod', required: false, includeIfNull: false)
   List<MethodParameterApiDescriptionModel>? parametersOnMethod;
 
-
-
-  @JsonKey(
-    
-    name: r'returnValue',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'returnValue', required: false, includeIfNull: false)
   ReturnValueApiDescriptionModel? returnValue;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is InterfaceMethodApiDescriptionModel &&
+          other.name == name &&
+          other.parametersOnMethod == parametersOnMethod &&
+          other.returnValue == returnValue;
 
+  @override
+  int get hashCode =>
+      (name == null ? 0 : name.hashCode) +
+      (parametersOnMethod == null ? 0 : parametersOnMethod.hashCode) +
+      returnValue.hashCode;
 
+  factory InterfaceMethodApiDescriptionModel.fromJson(
+    Map<String, dynamic> json,
+  ) => _$InterfaceMethodApiDescriptionModelFromJson(json);
 
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is InterfaceMethodApiDescriptionModel &&
-      other.name == name &&
-      other.parametersOnMethod == parametersOnMethod &&
-      other.returnValue == returnValue;
-
-    @override
-    int get hashCode =>
-        (name == null ? 0 : name.hashCode) +
-        (parametersOnMethod == null ? 0 : parametersOnMethod.hashCode) +
-        returnValue.hashCode;
-
-  factory InterfaceMethodApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$InterfaceMethodApiDescriptionModelFromJson(json);
-
-  Map<String, dynamic> toJson() => _$InterfaceMethodApiDescriptionModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$InterfaceMethodApiDescriptionModelToJson(this);
 
   @override
   String toString() {
     return toJson().toString();
   }
-
 }
-

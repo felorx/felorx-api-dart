@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'refresh_device_status_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,50 +16,26 @@ part 'refresh_device_status_dto.g.dart';
 )
 class RefreshDeviceStatusDto {
   /// Returns a new [RefreshDeviceStatusDto] instance.
-  RefreshDeviceStatusDto({
+  RefreshDeviceStatusDto({this.token, this.status});
 
-     this.token,
-
-     this.status,
-  });
-
-  @JsonKey(
-    
-    name: r'token',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'token', required: false, includeIfNull: false)
   String? token;
 
-
-
-  @JsonKey(
-    
-    name: r'status',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'status', required: false, includeIfNull: false)
   DeviceStatus? status;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is RefreshDeviceStatusDto &&
+          other.token == token &&
+          other.status == status;
 
+  @override
+  int get hashCode => (token == null ? 0 : token.hashCode) + status.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is RefreshDeviceStatusDto &&
-      other.token == token &&
-      other.status == status;
-
-    @override
-    int get hashCode =>
-        (token == null ? 0 : token.hashCode) +
-        status.hashCode;
-
-  factory RefreshDeviceStatusDto.fromJson(Map<String, dynamic> json) => _$RefreshDeviceStatusDtoFromJson(json);
+  factory RefreshDeviceStatusDto.fromJson(Map<String, dynamic> json) =>
+      _$RefreshDeviceStatusDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$RefreshDeviceStatusDtoToJson(this);
 
@@ -68,6 +43,4 @@ class RefreshDeviceStatusDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

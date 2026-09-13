@@ -15,7 +15,6 @@ import 'package:felorx_api_client/src/model/application_api_description_model.da
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AbpApiDefinitionApi {
-
   final Dio _dio;
 
   const AbpApiDefinitionApi(this._dio);
@@ -46,13 +45,8 @@ class AbpApiDefinitionApi {
     final _path = r'/api/abp/api-definition';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -72,9 +66,13 @@ class AbpApiDefinitionApi {
     ApplicationApiDescriptionModel? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<ApplicationApiDescriptionModel, ApplicationApiDescriptionModel>(rawData, 'ApplicationApiDescriptionModel', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              ApplicationApiDescriptionModel,
+              ApplicationApiDescriptionModel
+            >(rawData, 'ApplicationApiDescriptionModel', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -96,5 +94,4 @@ _responseData = rawData == null ? null : deserialize<ApplicationApiDescriptionMo
       extra: _response.extra,
     );
   }
-
 }

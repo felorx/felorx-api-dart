@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_enum_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,50 +16,28 @@ part 'extension_enum_dto.g.dart';
 )
 class ExtensionEnumDto {
   /// Returns a new [ExtensionEnumDto] instance.
-  ExtensionEnumDto({
+  ExtensionEnumDto({this.fields, this.localizationResource});
 
-     this.fields,
-
-     this.localizationResource,
-  });
-
-  @JsonKey(
-    
-    name: r'fields',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'fields', required: false, includeIfNull: false)
   List<ExtensionEnumFieldDto>? fields;
 
-
-
-  @JsonKey(
-    
-    name: r'localizationResource',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'localizationResource', required: false, includeIfNull: false)
   String? localizationResource;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExtensionEnumDto &&
+          other.fields == fields &&
+          other.localizationResource == localizationResource;
 
+  @override
+  int get hashCode =>
+      (fields == null ? 0 : fields.hashCode) +
+      (localizationResource == null ? 0 : localizationResource.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ExtensionEnumDto &&
-      other.fields == fields &&
-      other.localizationResource == localizationResource;
-
-    @override
-    int get hashCode =>
-        (fields == null ? 0 : fields.hashCode) +
-        (localizationResource == null ? 0 : localizationResource.hashCode);
-
-  factory ExtensionEnumDto.fromJson(Map<String, dynamic> json) => _$ExtensionEnumDtoFromJson(json);
+  factory ExtensionEnumDto.fromJson(Map<String, dynamic> json) =>
+      _$ExtensionEnumDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ExtensionEnumDtoToJson(this);
 
@@ -68,6 +45,4 @@ class ExtensionEnumDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

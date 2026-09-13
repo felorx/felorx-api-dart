@@ -10,9 +10,18 @@ AccountDeletionDto _$AccountDeletionDtoFromJson(Map<String, dynamic> json) =>
     $checkedCreate('AccountDeletionDto', json, ($checkedConvert) {
       final val = AccountDeletionDto(
         code: $checkedConvert('code', (v) => v as String?),
+        clientRequestId: $checkedConvert(
+          'clientRequestId',
+          (v) => v as String?,
+        ),
+        statusToken: $checkedConvert('statusToken', (v) => v as String?),
       );
       return val;
     });
 
 Map<String, dynamic> _$AccountDeletionDtoToJson(AccountDeletionDto instance) =>
-    <String, dynamic>{'code': ?instance.code};
+    <String, dynamic>{
+      'code': ?instance.code,
+      'clientRequestId': ?instance.clientRequestId,
+      'statusToken': ?instance.statusToken,
+    };

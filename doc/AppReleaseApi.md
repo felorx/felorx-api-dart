@@ -13,7 +13,7 @@ Method | HTTP request | Description
 [**deleteAppReleaseById**](AppReleaseApi.md#deleteappreleasebyid) | **DELETE** /api/app/app-release/{id} | 删除版本
 [**getAppReleaseById**](AppReleaseApi.md#getappreleasebyid) | **GET** /api/app/app-release/{id} | 获取版本
 [**getAppReleaseList**](AppReleaseApi.md#getappreleaselist) | **GET** /api/app/app-release | 获取版本列表
-[**getLatest**](AppReleaseApi.md#getlatest) | **GET** /api/app/app-release/latest | 获取最新版本
+[**getLatestGetApiAppAppReleaseLatest**](AppReleaseApi.md#getlatestgetapiappappreleaselatest) | **GET** /api/app/app-release/latest | 获取最新版本
 [**getListByDeveloper**](AppReleaseApi.md#getlistbydeveloper) | **GET** /api/app/app-release/by-developer | 开发者获取版本列表（版本的创建者为当前用户）
 [**updateAppRelease**](AppReleaseApi.md#updateapprelease) | **PUT** /api/app/app-release/{id} | 更新版本
 
@@ -195,8 +195,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getLatest**
-> AppReleaseDto getLatest(appName, platform, artifactType, publisher, architecture)
+# **getLatestGetApiAppAppReleaseLatest**
+> AppReleaseDto getLatestGetApiAppAppReleaseLatest(appName, platform, artifactType, publisher, architecture)
 
 获取最新版本
 
@@ -212,10 +212,10 @@ final String publisher = publisher_example; // String |
 final String architecture = architecture_example; // String |
 
 try {
-    final response = api.getLatest(appName, platform, artifactType, publisher, architecture);
+    final response = api.getLatestGetApiAppAppReleaseLatest(appName, platform, artifactType, publisher, architecture);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AppReleaseApi->getLatest: $e\n');
+    print('Exception when calling AppReleaseApi->getLatestGetApiAppAppReleaseLatest: $e\n');
 }
 ```
 

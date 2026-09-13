@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ApplicationLocalizationConfigurationDto
 void main() {
-  final ApplicationLocalizationConfigurationDto? instance = /* ApplicationLocalizationConfigurationDto(...) */ null;
+  final ApplicationLocalizationConfigurationDto?
+  instance = /* ApplicationLocalizationConfigurationDto(...) */ null;
   // TODO add properties to the entity
 
   group(ApplicationLocalizationConfigurationDto, () {
@@ -41,6 +42,5 @@ void main() {
     test('to test the property `languageFilesMap`', () async {
       // TODO
     });
-
   });
 }

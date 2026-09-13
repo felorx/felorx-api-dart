@@ -12,5 +12,3 @@ Name | Type | Description | Notes
 **enums** | [**Map&lt;String, ExtensionEnumDto&gt;**](ExtensionEnumDto.md) |  | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
-

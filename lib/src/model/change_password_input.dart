@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'change_password_input.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,50 +15,28 @@ part 'change_password_input.g.dart';
 )
 class ChangePasswordInput {
   /// Returns a new [ChangePasswordInput] instance.
-  ChangePasswordInput({
+  ChangePasswordInput({this.currentPassword, required this.newPassword});
 
-     this.currentPassword,
-
-    required  this.newPassword,
-  });
-
-  @JsonKey(
-    
-    name: r'currentPassword',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'currentPassword', required: false, includeIfNull: false)
   String? currentPassword;
 
-
-
-  @JsonKey(
-    
-    name: r'newPassword',
-    required: true,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'newPassword', required: true, includeIfNull: false)
   String newPassword;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ChangePasswordInput &&
+          other.currentPassword == currentPassword &&
+          other.newPassword == newPassword;
 
+  @override
+  int get hashCode =>
+      (currentPassword == null ? 0 : currentPassword.hashCode) +
+      newPassword.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ChangePasswordInput &&
-      other.currentPassword == currentPassword &&
-      other.newPassword == newPassword;
-
-    @override
-    int get hashCode =>
-        (currentPassword == null ? 0 : currentPassword.hashCode) +
-        newPassword.hashCode;
-
-  factory ChangePasswordInput.fromJson(Map<String, dynamic> json) => _$ChangePasswordInputFromJson(json);
+  factory ChangePasswordInput.fromJson(Map<String, dynamic> json) =>
+      _$ChangePasswordInputFromJson(json);
 
   Map<String, dynamic> toJson() => _$ChangePasswordInputToJson(this);
 
@@ -67,6 +44,4 @@ class ChangePasswordInput {
   String toString() {
     return toJson().toString();
   }
-
 }
-

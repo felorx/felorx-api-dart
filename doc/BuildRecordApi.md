@@ -9,65 +9,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**buildRecordGetLatest**](BuildRecordApi.md#buildrecordgetlatest) | **GET** /api/app/build-record/latest/{appId} |
 [**createBuildRecord**](BuildRecordApi.md#createbuildrecord) | **POST** /api/app/build-record |
 [**deleteBuildRecordById**](BuildRecordApi.md#deletebuildrecordbyid) | **DELETE** /api/app/build-record/{id} |
 [**getBuildRecordById**](BuildRecordApi.md#getbuildrecordbyid) | **GET** /api/app/build-record/{id} |
 [**getBuildRecordList**](BuildRecordApi.md#getbuildrecordlist) | **GET** /api/app/build-record |
 [**getByCiBuildId**](BuildRecordApi.md#getbycibuildid) | **GET** /api/app/build-record/by-ci-build-id/{ciBuildId} |
+[**getLatestGetApiAppBuildRecordLatestAppId**](BuildRecordApi.md#getlatestgetapiappbuildrecordlatestappid) | **GET** /api/app/build-record/latest/{appId} |
 [**markAsBuilding**](BuildRecordApi.md#markasbuilding) | **POST** /api/app/build-record/{id}/mark-as-building |
-[**markAsCanceled**](BuildRecordApi.md#markascanceled) | **POST** /api/app/build-record/{id}/mark-as-canceled |
-[**markAsFailed**](BuildRecordApi.md#markasfailed) | **POST** /api/app/build-record/{id}/mark-as-failed |
-[**markAsSucceeded**](BuildRecordApi.md#markassucceeded) | **POST** /api/app/build-record/{id}/mark-as-succeeded |
+[**markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled**](BuildRecordApi.md#markascanceledpostapiappbuildrecordidmarkascanceled) | **POST** /api/app/build-record/{id}/mark-as-canceled |
+[**markAsFailedPostApiAppBuildRecordIdMarkAsFailed**](BuildRecordApi.md#markasfailedpostapiappbuildrecordidmarkasfailed) | **POST** /api/app/build-record/{id}/mark-as-failed |
+[**markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded**](BuildRecordApi.md#markassucceededpostapiappbuildrecordidmarkassucceeded) | **POST** /api/app/build-record/{id}/mark-as-succeeded |
 [**updateBuildRecord**](BuildRecordApi.md#updatebuildrecord) | **PUT** /api/app/build-record/{id} |
 
-
-# **buildRecordGetLatest**
-> BuildRecordDto buildRecordGetLatest(appId, platform, environment, architecture)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getBuildRecordApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final AppPlatform platform = ; // AppPlatform |
-final String environment = environment_example; // String |
-final String architecture = architecture_example; // String |
-
-try {
-    final response = api.buildRecordGetLatest(appId, platform, environment, architecture);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling BuildRecordApi->buildRecordGetLatest: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
- **platform** | [**AppPlatform**](.md)|  | [optional]
- **environment** | **String**|  | [optional]
- **architecture** | **String**|  | [optional]
-
-### Return type
-
-[**BuildRecordDto**](BuildRecordDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createBuildRecord**
 > BuildRecordDto createBuildRecord(createBuildRecordDto)
@@ -204,7 +157,7 @@ final api = FelorxApiClient().getBuildRecordApi();
 final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 应用ID
 final BuildStatus status = ; // BuildStatus | 构建状态
 final AppPlatform platform = ; // AppPlatform | 目标平台
-final String architecture = architecture_example; // String | 目标架构
+final String architecture = architecture_example; // String | 目标架构。
 final String environment = environment_example; // String | 环境
 final String version = version_example; // String | 版本号
 final String branch = branch_example; // String | 分支名称
@@ -227,7 +180,7 @@ Name | Type | Description  | Notes
  **appId** | **String**| 应用ID | [optional]
  **status** | [**BuildStatus**](.md)| 构建状态 | [optional]
  **platform** | [**AppPlatform**](.md)| 目标平台 | [optional]
- **architecture** | **String**| 目标架构 | [optional]
+ **architecture** | **String**| 目标架构。 | [optional]
  **environment** | **String**| 环境 | [optional]
  **version** | **String**| 版本号 | [optional]
  **branch** | **String**| 分支名称 | [optional]
@@ -291,6 +244,53 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getLatestGetApiAppBuildRecordLatestAppId**
+> BuildRecordDto getLatestGetApiAppBuildRecordLatestAppId(appId, platform, environment, architecture)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getBuildRecordApi();
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final AppPlatform platform = ; // AppPlatform |
+final String environment = environment_example; // String |
+final String architecture = architecture_example; // String |
+
+try {
+    final response = api.getLatestGetApiAppBuildRecordLatestAppId(appId, platform, environment, architecture);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling BuildRecordApi->getLatestGetApiAppBuildRecordLatestAppId: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+ **platform** | [**AppPlatform**](.md)|  | [optional]
+ **environment** | **String**|  | [optional]
+ **architecture** | **String**|  | [optional]
+
+### Return type
+
+[**BuildRecordDto**](BuildRecordDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **markAsBuilding**
 > BuildRecordDto markAsBuilding(id)
 
@@ -332,8 +332,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **markAsCanceled**
-> BuildRecordDto markAsCanceled(id)
+# **markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled**
+> BuildRecordDto markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled(id)
 
 
 
@@ -345,10 +345,10 @@ final api = FelorxApiClient().getBuildRecordApi();
 final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
-    final response = api.markAsCanceled(id);
+    final response = api.markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled(id);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling BuildRecordApi->markAsCanceled: $e\n');
+    print('Exception when calling BuildRecordApi->markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled: $e\n');
 }
 ```
 
@@ -373,8 +373,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **markAsFailed**
-> BuildRecordDto markAsFailed(id, errorMessage)
+# **markAsFailedPostApiAppBuildRecordIdMarkAsFailed**
+> BuildRecordDto markAsFailedPostApiAppBuildRecordIdMarkAsFailed(id, errorMessage)
 
 
 
@@ -387,10 +387,10 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 final String errorMessage = errorMessage_example; // String |
 
 try {
-    final response = api.markAsFailed(id, errorMessage);
+    final response = api.markAsFailedPostApiAppBuildRecordIdMarkAsFailed(id, errorMessage);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling BuildRecordApi->markAsFailed: $e\n');
+    print('Exception when calling BuildRecordApi->markAsFailedPostApiAppBuildRecordIdMarkAsFailed: $e\n');
 }
 ```
 
@@ -416,8 +416,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **markAsSucceeded**
-> BuildRecordDto markAsSucceeded(id, artifactUrl, artifactSize)
+# **markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded**
+> BuildRecordDto markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded(id, artifactUrl, artifactSize)
 
 
 
@@ -431,10 +431,10 @@ final String artifactUrl = artifactUrl_example; // String |
 final int artifactSize = 789; // int |
 
 try {
-    final response = api.markAsSucceeded(id, artifactUrl, artifactSize);
+    final response = api.markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded(id, artifactUrl, artifactSize);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling BuildRecordApi->markAsSucceeded: $e\n');
+    print('Exception when calling BuildRecordApi->markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded: $e\n');
 }
 ```
 

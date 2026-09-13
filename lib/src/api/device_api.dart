@@ -18,7 +18,6 @@ import 'package:felorx_api_client/src/model/refresh_device_status_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class DeviceApi {
-
   final Dio _dio;
 
   const DeviceApi(this._dio);
@@ -49,13 +48,8 @@ class DeviceApi {
     final _path = r'/api/app/device/bind';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -63,13 +57,10 @@ class DeviceApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(bindDeviceDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(bindDeviceDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -114,13 +105,8 @@ _bodyData=jsonEncode(bindDeviceDto);
     final _path = r'/api/app/device/by-token';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -140,9 +126,14 @@ _bodyData=jsonEncode(bindDeviceDto);
     DeviceDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawData, 'DeviceDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<DeviceDto, DeviceDto>(
+              rawData,
+              'DeviceDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -188,16 +179,16 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/device/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/device/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -212,9 +203,14 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
     DeviceDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawData, 'DeviceDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<DeviceDto, DeviceDto>(
+              rawData,
+              'DeviceDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -267,13 +263,8 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
     final _path = r'/api/app/device';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -295,9 +286,14 @@ _responseData = rawData == null ? null : deserialize<DeviceDto, DeviceDto>(rawDa
     DeviceDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, DeviceDtoPagedResultDto>(rawData, 'DeviceDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<DeviceDtoPagedResultDto, DeviceDtoPagedResultDto>(
+              rawData,
+              'DeviceDtoPagedResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -346,13 +342,8 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
     final _path = r'/api/app/device/logout';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -398,13 +389,8 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
     final _path = r'/api/app/device/refresh-device';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -412,13 +398,10 @@ _responseData = rawData == null ? null : deserialize<DeviceDtoPagedResultDto, De
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(refreshDeviceStatusDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(refreshDeviceStatusDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -463,13 +446,8 @@ _bodyData=jsonEncode(refreshDeviceStatusDto);
     final _path = r'/api/app/device';
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -488,5 +466,4 @@ _bodyData=jsonEncode(refreshDeviceStatusDto);
 
     return _response;
   }
-
 }

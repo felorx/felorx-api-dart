@@ -81,6 +81,5 @@ void main() {
     test('to test the property `appName`', () async {
       // TODO
     });
-
   });
 }

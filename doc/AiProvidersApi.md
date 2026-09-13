@@ -9,145 +9,18 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**aiProvidersSetDefaultModel**](AiProvidersApi.md#aiproviderssetdefaultmodel) | **POST** /api/ai/providers/default-model |
-[**aiProvidersSetEnabled**](AiProvidersApi.md#aiproviderssetenabled) | **POST** /api/ai/providers/{id}/enabled |
-[**aiProvidersTest**](AiProvidersApi.md#aiproviderstest) | **POST** /api/ai/providers/{id}/test |
-[**create**](AiProvidersApi.md#create) | **POST** /api/ai/providers |
+[**createPostApiAiProviders**](AiProvidersApi.md#createpostapiaiproviders) | **POST** /api/ai/providers |
 [**deleteById**](AiProvidersApi.md#deletebyid) | **DELETE** /api/ai/providers/{id} |
 [**getById**](AiProvidersApi.md#getbyid) | **GET** /api/ai/providers/{id} |
 [**getList**](AiProvidersApi.md#getlist) | **GET** /api/ai/providers |
+[**setDefaultModelPostApiAiProvidersDefaultModel**](AiProvidersApi.md#setdefaultmodelpostapiaiprovidersdefaultmodel) | **POST** /api/ai/providers/default-model |
+[**setEnabledPostApiAiProvidersIdEnabled**](AiProvidersApi.md#setenabledpostapiaiprovidersidenabled) | **POST** /api/ai/providers/{id}/enabled |
+[**testPostApiAiProvidersIdTest**](AiProvidersApi.md#testpostapiaiprovidersidtest) | **POST** /api/ai/providers/{id}/test |
 [**update**](AiProvidersApi.md#update) | **PUT** /api/ai/providers/{id} |
 
 
-# **aiProvidersSetDefaultModel**
-> AiProviderDto aiProvidersSetDefaultModel(setDefaultAiModelDto)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getAiProvidersApi();
-final SetDefaultAiModelDto setDefaultAiModelDto = ; // SetDefaultAiModelDto |
-
-try {
-    final response = api.aiProvidersSetDefaultModel(setDefaultAiModelDto);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling AiProvidersApi->aiProvidersSetDefaultModel: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md)|  | [optional]
-
-### Return type
-
-[**AiProviderDto**](AiProviderDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **aiProvidersSetEnabled**
-> AiProviderDto aiProvidersSetEnabled(id, setAiProviderEnabledDto)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getAiProvidersApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final SetAiProviderEnabledDto setAiProviderEnabledDto = ; // SetAiProviderEnabledDto |
-
-try {
-    final response = api.aiProvidersSetEnabled(id, setAiProviderEnabledDto);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling AiProvidersApi->aiProvidersSetEnabled: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md)|  | [optional]
-
-### Return type
-
-[**AiProviderDto**](AiProviderDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **aiProvidersTest**
-> AiProviderDto aiProvidersTest(id, testAiProviderDto)
-
-
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getAiProvidersApi();
-final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-final TestAiProviderDto testAiProviderDto = ; // TestAiProviderDto |
-
-try {
-    final response = api.aiProvidersTest(id, testAiProviderDto);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling AiProvidersApi->aiProvidersTest: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **String**|  |
- **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md)|  | [optional]
-
-### Return type
-
-[**AiProviderDto**](AiProviderDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create**
-> AiProviderDto create(createOrUpdateAiProviderDto)
+# **createPostApiAiProviders**
+> AiProviderDto createPostApiAiProviders(createOrUpdateAiProviderDto)
 
 
 
@@ -159,10 +32,10 @@ final api = FelorxApiClient().getAiProvidersApi();
 final CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto = ; // CreateOrUpdateAiProviderDto |
 
 try {
-    final response = api.create(createOrUpdateAiProviderDto);
+    final response = api.createPostApiAiProviders(createOrUpdateAiProviderDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AiProvidersApi->create: $e\n');
+    print('Exception when calling AiProvidersApi->createPostApiAiProviders: $e\n');
 }
 ```
 
@@ -323,6 +196,133 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **setDefaultModelPostApiAiProvidersDefaultModel**
+> AiProviderDto setDefaultModelPostApiAiProvidersDefaultModel(setDefaultAiModelDto)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getAiProvidersApi();
+final SetDefaultAiModelDto setDefaultAiModelDto = ; // SetDefaultAiModelDto |
+
+try {
+    final response = api.setDefaultModelPostApiAiProvidersDefaultModel(setDefaultAiModelDto);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling AiProvidersApi->setDefaultModelPostApiAiProvidersDefaultModel: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setDefaultAiModelDto** | [**SetDefaultAiModelDto**](SetDefaultAiModelDto.md)|  | [optional]
+
+### Return type
+
+[**AiProviderDto**](AiProviderDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **setEnabledPostApiAiProvidersIdEnabled**
+> AiProviderDto setEnabledPostApiAiProvidersIdEnabled(id, setAiProviderEnabledDto)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getAiProvidersApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final SetAiProviderEnabledDto setAiProviderEnabledDto = ; // SetAiProviderEnabledDto |
+
+try {
+    final response = api.setEnabledPostApiAiProvidersIdEnabled(id, setAiProviderEnabledDto);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling AiProvidersApi->setEnabledPostApiAiProvidersIdEnabled: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **setAiProviderEnabledDto** | [**SetAiProviderEnabledDto**](SetAiProviderEnabledDto.md)|  | [optional]
+
+### Return type
+
+[**AiProviderDto**](AiProviderDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **testPostApiAiProvidersIdTest**
+> AiProviderDto testPostApiAiProvidersIdTest(id, testAiProviderDto)
+
+
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getAiProvidersApi();
+final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+final TestAiProviderDto testAiProviderDto = ; // TestAiProviderDto |
+
+try {
+    final response = api.testPostApiAiProvidersIdTest(id, testAiProviderDto);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling AiProvidersApi->testPostApiAiProvidersIdTest: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  |
+ **testAiProviderDto** | [**TestAiProviderDto**](TestAiProviderDto.md)|  | [optional]
+
+### Return type
+
+[**AiProviderDto**](AiProviderDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update**
 > AiProviderDto update(id, createOrUpdateAiProviderDto)
 
@@ -365,4 +365,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

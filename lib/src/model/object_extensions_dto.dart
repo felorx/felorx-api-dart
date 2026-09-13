@@ -9,7 +9,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'object_extensions_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -18,50 +17,28 @@ part 'object_extensions_dto.g.dart';
 )
 class ObjectExtensionsDto {
   /// Returns a new [ObjectExtensionsDto] instance.
-  ObjectExtensionsDto({
+  ObjectExtensionsDto({this.modules, this.enums});
 
-     this.modules,
-
-     this.enums,
-  });
-
-  @JsonKey(
-    
-    name: r'modules',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'modules', required: false, includeIfNull: false)
   Map<String, ModuleExtensionDto>? modules;
 
-
-
-  @JsonKey(
-    
-    name: r'enums',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'enums', required: false, includeIfNull: false)
   Map<String, ExtensionEnumDto>? enums;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ObjectExtensionsDto &&
+          other.modules == modules &&
+          other.enums == enums;
 
+  @override
+  int get hashCode =>
+      (modules == null ? 0 : modules.hashCode) +
+      (enums == null ? 0 : enums.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ObjectExtensionsDto &&
-      other.modules == modules &&
-      other.enums == enums;
-
-    @override
-    int get hashCode =>
-        (modules == null ? 0 : modules.hashCode) +
-        (enums == null ? 0 : enums.hashCode);
-
-  factory ObjectExtensionsDto.fromJson(Map<String, dynamic> json) => _$ObjectExtensionsDtoFromJson(json);
+  factory ObjectExtensionsDto.fromJson(Map<String, dynamic> json) =>
+      _$ObjectExtensionsDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ObjectExtensionsDtoToJson(this);
 
@@ -69,6 +46,4 @@ class ObjectExtensionsDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

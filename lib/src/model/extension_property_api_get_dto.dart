@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_property_api_get_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,34 +15,21 @@ part 'extension_property_api_get_dto.g.dart';
 )
 class ExtensionPropertyApiGetDto {
   /// Returns a new [ExtensionPropertyApiGetDto] instance.
-  ExtensionPropertyApiGetDto({
+  ExtensionPropertyApiGetDto({this.isAvailable});
 
-     this.isAvailable,
-  });
-
-  @JsonKey(
-    
-    name: r'isAvailable',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'isAvailable', required: false, includeIfNull: false)
   bool? isAvailable;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is ExtensionPropertyApiGetDto && other.isAvailable == isAvailable;
 
+  @override
+  int get hashCode => isAvailable.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is ExtensionPropertyApiGetDto &&
-      other.isAvailable == isAvailable;
-
-    @override
-    int get hashCode =>
-        isAvailable.hashCode;
-
-  factory ExtensionPropertyApiGetDto.fromJson(Map<String, dynamic> json) => _$ExtensionPropertyApiGetDtoFromJson(json);
+  factory ExtensionPropertyApiGetDto.fromJson(Map<String, dynamic> json) =>
+      _$ExtensionPropertyApiGetDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ExtensionPropertyApiGetDtoToJson(this);
 
@@ -51,6 +37,4 @@ class ExtensionPropertyApiGetDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

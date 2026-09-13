@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/message_source_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageSourceApi {
-
   final Dio _dio;
 
   const MessageSourceApi(this._dio);
@@ -47,13 +46,8 @@ class MessageSourceApi {
     final _path = r'/api/app/message-source';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -61,13 +55,10 @@ class MessageSourceApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateMessageSourceDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateMessageSourceDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -86,9 +77,13 @@ _bodyData=jsonEncode(createUpdateMessageSourceDto);
     CreateUpdateMessageSourceDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDto, CreateUpdateMessageSourceDto>(rawData, 'CreateUpdateMessageSourceDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              CreateUpdateMessageSourceDto,
+              CreateUpdateMessageSourceDto
+            >(rawData, 'CreateUpdateMessageSourceDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +129,16 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -181,16 +176,16 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -205,9 +200,14 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
     MessageSourceDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSourceDto>(rawData, 'MessageSourceDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<MessageSourceDto, MessageSourceDto>(
+              rawData,
+              'MessageSourceDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -256,13 +256,8 @@ _responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSo
     final _path = r'/api/app/message-source';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -282,9 +277,14 @@ _responseData = rawData == null ? null : deserialize<MessageSourceDto, MessageSo
     List<MessageSourceDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, MessageSourceDto>(rawData, 'List<MessageSourceDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<MessageSourceDto>, MessageSourceDto>(
+              rawData,
+              'List<MessageSourceDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -332,16 +332,16 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, Mes
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -349,13 +349,10 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceDto>, Mes
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateMessageSourceDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateMessageSourceDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -374,9 +371,13 @@ _bodyData=jsonEncode(createUpdateMessageSourceDto);
     CreateUpdateMessageSourceDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDto, CreateUpdateMessageSourceDto>(rawData, 'CreateUpdateMessageSourceDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              CreateUpdateMessageSourceDto,
+              CreateUpdateMessageSourceDto
+            >(rawData, 'CreateUpdateMessageSourceDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -398,5 +399,4 @@ _responseData = rawData == null ? null : deserialize<CreateUpdateMessageSourceDt
       extra: _response.extra,
     );
   }
-
 }

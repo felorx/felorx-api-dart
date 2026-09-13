@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/message_source_route_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageSourceRouteApi {
-
   final Dio _dio;
 
   const MessageSourceRouteApi(this._dio);
@@ -47,13 +46,8 @@ class MessageSourceRouteApi {
     final _path = r'/api/app/message-source-route';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -61,13 +55,10 @@ class MessageSourceRouteApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateMessageSourceRouteDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -109,16 +100,16 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source-route/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -156,16 +147,16 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source-route/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -180,9 +171,14 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
     MessageSourceRouteDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<MessageSourceRouteDto, MessageSourceRouteDto>(rawData, 'MessageSourceRouteDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<MessageSourceRouteDto, MessageSourceRouteDto>(
+              rawData,
+              'MessageSourceRouteDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -231,13 +227,8 @@ _responseData = rawData == null ? null : deserialize<MessageSourceRouteDto, Mess
     final _path = r'/api/app/message-source-route';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -257,9 +248,14 @@ _responseData = rawData == null ? null : deserialize<MessageSourceRouteDto, Mess
     List<MessageSourceRouteDto>? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<List<MessageSourceRouteDto>, MessageSourceRouteDto>(rawData, 'List<MessageSourceRouteDto>', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<List<MessageSourceRouteDto>, MessageSourceRouteDto>(
+              rawData,
+              'List<MessageSourceRouteDto>',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -307,16 +303,16 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceRouteDto>
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/message-source-route/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -324,13 +320,10 @@ _responseData = rawData == null ? null : deserialize<List<MessageSourceRouteDto>
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createUpdateMessageSourceRouteDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -348,5 +341,4 @@ _bodyData=jsonEncode(createUpdateMessageSourceRouteDto);
 
     return _response;
   }
-
 }

@@ -15,7 +15,6 @@ import 'package:felorx_api_client/src/model/ops_crypto_vault_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class OpsCryptoApi {
-
   final Dio _dio;
 
   const OpsCryptoApi(this._dio);
@@ -44,13 +43,8 @@ class OpsCryptoApi {
     final _path = r'/api/app/ops-crypto/vault';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -65,9 +59,14 @@ class OpsCryptoApi {
     OpsCryptoVaultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCryptoVaultDto>(rawData, 'OpsCryptoVaultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<OpsCryptoVaultDto, OpsCryptoVaultDto>(
+              rawData,
+              'OpsCryptoVaultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -116,13 +115,8 @@ _responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCrypt
     final _path = r'/api/app/ops-crypto/vault';
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -130,13 +124,10 @@ _responseData = rawData == null ? null : deserialize<OpsCryptoVaultDto, OpsCrypt
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(opsCryptoVaultDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(opsCryptoVaultDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -154,5 +145,4 @@ _bodyData=jsonEncode(opsCryptoVaultDto);
 
     return _response;
   }
-
 }

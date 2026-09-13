@@ -47,6 +47,21 @@ void main() {
       // TODO
     });
 
+    // List<AiCapability> verifiedCapabilities
+    test('to test the property `verifiedCapabilities`', () async {
+      // TODO
+    });
+
+    // String capabilityCertificateVersion
+    test('to test the property `capabilityCertificateVersion`', () async {
+      // TODO
+    });
+
+    // DateTime capabilityTestedAt
+    test('to test the property `capabilityTestedAt`', () async {
+      // TODO
+    });
+
     // String name
     test('to test the property `name`', () async {
       // TODO
@@ -96,6 +111,5 @@ void main() {
     test('to test the property `models`', () async {
       // TODO
     });
-
   });
 }

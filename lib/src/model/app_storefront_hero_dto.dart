@@ -7,7 +7,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'app_storefront_hero_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,50 +15,28 @@ part 'app_storefront_hero_dto.g.dart';
 )
 class AppStorefrontHeroDto {
   /// Returns a new [AppStorefrontHeroDto] instance.
-  AppStorefrontHeroDto({
+  AppStorefrontHeroDto({this.phoneUrl, this.tabletUrl});
 
-     this.phoneUrl,
-
-     this.tabletUrl,
-  });
-
-  @JsonKey(
-    
-    name: r'phoneUrl',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'phoneUrl', required: false, includeIfNull: false)
   String? phoneUrl;
 
-
-
-  @JsonKey(
-    
-    name: r'tabletUrl',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'tabletUrl', required: false, includeIfNull: false)
   String? tabletUrl;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AppStorefrontHeroDto &&
+          other.phoneUrl == phoneUrl &&
+          other.tabletUrl == tabletUrl;
 
+  @override
+  int get hashCode =>
+      (phoneUrl == null ? 0 : phoneUrl.hashCode) +
+      (tabletUrl == null ? 0 : tabletUrl.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is AppStorefrontHeroDto &&
-      other.phoneUrl == phoneUrl &&
-      other.tabletUrl == tabletUrl;
-
-    @override
-    int get hashCode =>
-        (phoneUrl == null ? 0 : phoneUrl.hashCode) +
-        (tabletUrl == null ? 0 : tabletUrl.hashCode);
-
-  factory AppStorefrontHeroDto.fromJson(Map<String, dynamic> json) => _$AppStorefrontHeroDtoFromJson(json);
+  factory AppStorefrontHeroDto.fromJson(Map<String, dynamic> json) =>
+      _$AppStorefrontHeroDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppStorefrontHeroDtoToJson(this);
 
@@ -67,6 +44,4 @@ class AppStorefrontHeroDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

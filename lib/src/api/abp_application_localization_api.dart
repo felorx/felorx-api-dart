@@ -15,7 +15,6 @@ import 'package:felorx_api_client/src/model/application_localization_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AbpApplicationLocalizationApi {
-
   final Dio _dio;
 
   const AbpApplicationLocalizationApi(this._dio);
@@ -48,13 +47,8 @@ class AbpApplicationLocalizationApi {
     final _path = r'/api/abp/application-localization';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -75,9 +69,14 @@ class AbpApplicationLocalizationApi {
     ApplicationLocalizationDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<ApplicationLocalizationDto, ApplicationLocalizationDto>(rawData, 'ApplicationLocalizationDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<ApplicationLocalizationDto, ApplicationLocalizationDto>(
+              rawData,
+              'ApplicationLocalizationDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -99,5 +98,4 @@ _responseData = rawData == null ? null : deserialize<ApplicationLocalizationDto,
       extra: _response.extra,
     );
   }
-
 }

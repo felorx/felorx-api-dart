@@ -13,9 +13,9 @@ Method | HTTP request | Description
 [**deleteAiProviderById**](AiProviderApi.md#deleteaiproviderbyid) | **DELETE** /api/app/ai-provider/{id} |
 [**getAiProviderById**](AiProviderApi.md#getaiproviderbyid) | **GET** /api/app/ai-provider/{id} |
 [**getAiProviderList**](AiProviderApi.md#getaiproviderlist) | **GET** /api/app/ai-provider |
-[**setDefaultModel**](AiProviderApi.md#setdefaultmodel) | **POST** /api/app/ai-provider/set-default-model |
-[**setEnabled**](AiProviderApi.md#setenabled) | **POST** /api/app/ai-provider/{id}/set-enabled |
-[**test**](AiProviderApi.md#test) | **POST** /api/app/ai-provider/{id}/test |
+[**setDefaultModelPostApiAppAiProviderSetDefaultModel**](AiProviderApi.md#setdefaultmodelpostapiappaiprovidersetdefaultmodel) | **POST** /api/app/ai-provider/set-default-model |
+[**setEnabledPostApiAppAiProviderIdSetEnabled**](AiProviderApi.md#setenabledpostapiappaiprovideridsetenabled) | **POST** /api/app/ai-provider/{id}/set-enabled |
+[**testPostApiAppAiProviderIdTest**](AiProviderApi.md#testpostapiappaiprovideridtest) | **POST** /api/app/ai-provider/{id}/test |
 [**updateAiProvider**](AiProviderApi.md#updateaiprovider) | **PUT** /api/app/ai-provider/{id} |
 
 
@@ -194,8 +194,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **setDefaultModel**
-> AiProviderDto setDefaultModel(setDefaultAiModelDto)
+# **setDefaultModelPostApiAppAiProviderSetDefaultModel**
+> AiProviderDto setDefaultModelPostApiAppAiProviderSetDefaultModel(setDefaultAiModelDto)
 
 
 
@@ -207,10 +207,10 @@ final api = FelorxApiClient().getAiProviderApi();
 final SetDefaultAiModelDto setDefaultAiModelDto = ; // SetDefaultAiModelDto |
 
 try {
-    final response = api.setDefaultModel(setDefaultAiModelDto);
+    final response = api.setDefaultModelPostApiAppAiProviderSetDefaultModel(setDefaultAiModelDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AiProviderApi->setDefaultModel: $e\n');
+    print('Exception when calling AiProviderApi->setDefaultModelPostApiAppAiProviderSetDefaultModel: $e\n');
 }
 ```
 
@@ -235,8 +235,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **setEnabled**
-> AiProviderDto setEnabled(id, setAiProviderEnabledDto)
+# **setEnabledPostApiAppAiProviderIdSetEnabled**
+> AiProviderDto setEnabledPostApiAppAiProviderIdSetEnabled(id, setAiProviderEnabledDto)
 
 
 
@@ -249,10 +249,10 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 final SetAiProviderEnabledDto setAiProviderEnabledDto = ; // SetAiProviderEnabledDto |
 
 try {
-    final response = api.setEnabled(id, setAiProviderEnabledDto);
+    final response = api.setEnabledPostApiAppAiProviderIdSetEnabled(id, setAiProviderEnabledDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AiProviderApi->setEnabled: $e\n');
+    print('Exception when calling AiProviderApi->setEnabledPostApiAppAiProviderIdSetEnabled: $e\n');
 }
 ```
 
@@ -278,8 +278,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **test**
-> AiProviderDto test(id, testAiProviderDto)
+# **testPostApiAppAiProviderIdTest**
+> AiProviderDto testPostApiAppAiProviderIdTest(id, testAiProviderDto)
 
 
 
@@ -292,10 +292,10 @@ final String id = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 final TestAiProviderDto testAiProviderDto = ; // TestAiProviderDto |
 
 try {
-    final response = api.test(id, testAiProviderDto);
+    final response = api.testPostApiAppAiProviderIdTest(id, testAiProviderDto);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling AiProviderApi->test: $e\n');
+    print('Exception when calling AiProviderApi->testPostApiAppAiProviderIdTest: $e\n');
 }
 ```
 
@@ -363,4 +363,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

@@ -2,6 +2,10 @@
 
 part of 'create_or_update_app_pricing_dto.dart';
 
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
 CreateOrUpdateAppPricingDto _$CreateOrUpdateAppPricingDtoFromJson(
   Map<String, dynamic> json,
 ) => $checkedCreate('CreateOrUpdateAppPricingDto', json, ($checkedConvert) {

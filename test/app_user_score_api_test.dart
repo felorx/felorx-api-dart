@@ -1,7 +1,6 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for AppUserScoreApi
 void main() {
   final instance = FelorxApiClient().getAppUserScoreApi();
@@ -11,6 +10,5 @@ void main() {
     test('test createAppUserScore', () async {
       // TODO
     });
-
   });
 }

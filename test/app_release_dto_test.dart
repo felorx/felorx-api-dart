@@ -104,6 +104,11 @@ void main() {
       // TODO
     });
 
+    // String architecture
+    test('to test the property `architecture`', () async {
+      // TODO
+    });
+
     // AppPublisher publisher
     test('to test the property `publisher`', () async {
       // TODO
@@ -128,6 +133,5 @@ void main() {
     test('to test the property `channel`', () async {
       // TODO
     });
-
   });
 }

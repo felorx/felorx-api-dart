@@ -14,7 +14,12 @@ _$CreateUpdateMessageSourceRouteSubDtoFromJson(Map<String, dynamic> json) =>
       final val = CreateUpdateMessageSourceRouteSubDto(
         routeId: $checkedConvert('routeId', (v) => v as String?),
         path: $checkedConvert('path', (v) => v as String?),
-        values: $checkedConvert('values', (v) => v),
+        values: $checkedConvert(
+          'values',
+          (v) => (v as Map<String, dynamic>?)?.map(
+            (k, e) => MapEntry(k, e as Object),
+          ),
+        ),
       );
       return val;
     });

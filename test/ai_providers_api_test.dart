@@ -1,29 +1,13 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for AiProvidersApi
 void main() {
   final instance = FelorxApiClient().getAiProvidersApi();
 
   group(AiProvidersApi, () {
-    //Future<AiProviderDto> aiProvidersSetDefaultModel({ SetDefaultAiModelDto setDefaultAiModelDto }) async
-    test('test aiProvidersSetDefaultModel', () async {
-      // TODO
-    });
-
-    //Future<AiProviderDto> aiProvidersSetEnabled(String id, { SetAiProviderEnabledDto setAiProviderEnabledDto }) async
-    test('test aiProvidersSetEnabled', () async {
-      // TODO
-    });
-
-    //Future<AiProviderDto> aiProvidersTest(String id, { TestAiProviderDto testAiProviderDto }) async
-    test('test aiProvidersTest', () async {
-      // TODO
-    });
-
-    //Future<AiProviderDto> create({ CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
-    test('test create', () async {
+    //Future<AiProviderDto> createPostApiAiProviders({ CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
+    test('test createPostApiAiProviders', () async {
       // TODO
     });
 
@@ -42,10 +26,24 @@ void main() {
       // TODO
     });
 
+    //Future<AiProviderDto> setDefaultModelPostApiAiProvidersDefaultModel({ SetDefaultAiModelDto setDefaultAiModelDto }) async
+    test('test setDefaultModelPostApiAiProvidersDefaultModel', () async {
+      // TODO
+    });
+
+    //Future<AiProviderDto> setEnabledPostApiAiProvidersIdEnabled(String id, { SetAiProviderEnabledDto setAiProviderEnabledDto }) async
+    test('test setEnabledPostApiAiProvidersIdEnabled', () async {
+      // TODO
+    });
+
+    //Future<AiProviderDto> testPostApiAiProvidersIdTest(String id, { TestAiProviderDto testAiProviderDto }) async
+    test('test testPostApiAiProvidersIdTest', () async {
+      // TODO
+    });
+
     //Future<AiProviderDto> update(String id, { CreateOrUpdateAiProviderDto createOrUpdateAiProviderDto }) async
     test('test update', () async {
       // TODO
     });
-
   });
 }

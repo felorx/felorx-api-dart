@@ -28,6 +28,20 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
         'deletionTime',
         (v) => v == null ? null : DateTime.parse(v as String),
       ),
+      verifiedCapabilities: $checkedConvert(
+        'verified_capabilities',
+        (v) => (v as List<dynamic>?)
+            ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
+            .toList(),
+      ),
+      capabilityCertificateVersion: $checkedConvert(
+        'capability_certificate_version',
+        (v) => v as String?,
+      ),
+      capabilityTestedAt: $checkedConvert(
+        'capability_tested_at',
+        (v) => v == null ? null : DateTime.parse(v as String),
+      ),
       providerId: $checkedConvert('provider_id', (v) => v as String?),
       routeName: $checkedConvert('route_name', (v) => v as String?),
       name: $checkedConvert('name', (v) => v as String?),
@@ -37,20 +51,6 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
         (v) => (v as List<dynamic>?)
             ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
             .toList(),
-      ),
-      verifiedCapabilities: $checkedConvert(
-        'verified_capabilities',
-        (v) => (v as List<dynamic>?)
-            ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
-            .toList(),
-      ),
-      capabilityTestedAt: $checkedConvert(
-        'capability_tested_at',
-        (v) => v == null ? null : DateTime.parse(v as String),
-      ),
-      capabilityCertificateVersion: $checkedConvert(
-        'capability_certificate_version',
-        (v) => v as String?,
       ),
       enabled: $checkedConvert('enabled', (v) => v as bool?),
       isDefault: $checkedConvert('is_default', (v) => v as bool?),
@@ -64,12 +64,12 @@ AiModelDto _$AiModelDtoFromJson(Map<String, dynamic> json) => $checkedCreate(
     return val;
   },
   fieldKeyMap: const {
+    'verifiedCapabilities': 'verified_capabilities',
+    'capabilityCertificateVersion': 'capability_certificate_version',
+    'capabilityTestedAt': 'capability_tested_at',
     'providerId': 'provider_id',
     'routeName': 'route_name',
     'displayName': 'display_name',
-    'verifiedCapabilities': 'verified_capabilities',
-    'capabilityTestedAt': 'capability_tested_at',
-    'capabilityCertificateVersion': 'capability_certificate_version',
     'isDefault': 'is_default',
     'defaultParameters': 'default_parameters',
   },
@@ -85,6 +85,11 @@ Map<String, dynamic> _$AiModelDtoToJson(AiModelDto instance) =>
       'isDeleted': ?instance.isDeleted,
       'deleterId': ?instance.deleterId,
       'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'verified_capabilities': ?instance.verifiedCapabilities
+          ?.map((e) => _$AiCapabilityEnumMap[e]!)
+          .toList(),
+      'capability_certificate_version': ?instance.capabilityCertificateVersion,
+      'capability_tested_at': ?instance.capabilityTestedAt?.toIso8601String(),
       'provider_id': ?instance.providerId,
       'route_name': ?instance.routeName,
       'name': ?instance.name,
@@ -92,11 +97,6 @@ Map<String, dynamic> _$AiModelDtoToJson(AiModelDto instance) =>
       'capabilities': ?instance.capabilities
           ?.map((e) => _$AiCapabilityEnumMap[e]!)
           .toList(),
-      'verified_capabilities': ?instance.verifiedCapabilities
-          ?.map((e) => _$AiCapabilityEnumMap[e]!)
-          .toList(),
-      'capability_tested_at': ?instance.capabilityTestedAt?.toIso8601String(),
-      'capability_certificate_version': ?instance.capabilityCertificateVersion,
       'enabled': ?instance.enabled,
       'is_default': ?instance.isDefault,
       'default_parameters': ?instance.defaultParameters,
@@ -104,16 +104,6 @@ Map<String, dynamic> _$AiModelDtoToJson(AiModelDto instance) =>
 
 const _$AiCapabilityEnumMap = {
   AiCapability.chat: 'Chat',
-  AiCapability.responses: 'Responses',
-  AiCapability.responsesStreaming: 'ResponsesStreaming',
-  AiCapability.responsesStateful: 'ResponsesStateful',
-  AiCapability.responsesBackground: 'ResponsesBackground',
-  AiCapability.responsesCompaction: 'ResponsesCompaction',
-  AiCapability.responsesInputTokens: 'ResponsesInputTokens',
-  AiCapability.responsesWebSocket: 'ResponsesWebSocket',
-  AiCapability.functionCalling: 'FunctionCalling',
-  AiCapability.hostedTools: 'HostedTools',
-  AiCapability.reasoning: 'Reasoning',
   AiCapability.vision: 'Vision',
   AiCapability.ocr: 'Ocr',
   AiCapability.imageLabel: 'ImageLabel',
@@ -122,4 +112,14 @@ const _$AiCapabilityEnumMap = {
   AiCapability.caption: 'Caption',
   AiCapability.imageGeneration: 'ImageGeneration',
   AiCapability.videoGeneration: 'VideoGeneration',
+  AiCapability.responses: 'Responses',
+  AiCapability.responsesStreaming: 'ResponsesStreaming',
+  AiCapability.responsesStateful: 'ResponsesStateful',
+  AiCapability.responsesWebSocket: 'ResponsesWebSocket',
+  AiCapability.functionCalling: 'FunctionCalling',
+  AiCapability.responsesBackground: 'ResponsesBackground',
+  AiCapability.responsesCompaction: 'ResponsesCompaction',
+  AiCapability.responsesInputTokens: 'ResponsesInputTokens',
+  AiCapability.reasoning: 'Reasoning',
+  AiCapability.hostedTools: 'HostedTools',
 };

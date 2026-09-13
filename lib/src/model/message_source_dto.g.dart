@@ -9,6 +9,8 @@ part of 'message_source_dto.dart';
 MessageSourceDto _$MessageSourceDtoFromJson(Map<String, dynamic> json) =>
     $checkedCreate('MessageSourceDto', json, ($checkedConvert) {
       final val = MessageSourceDto(
+        id: $checkedConvert('id', (v) => v as String?),
+        categoryId: $checkedConvert('categoryId', (v) => v as String?),
         name: $checkedConvert('name', (v) => v as String?),
         description: $checkedConvert('description', (v) => v as String?),
         isPublished: $checkedConvert('isPublished', (v) => v as bool?),
@@ -29,6 +31,8 @@ MessageSourceDto _$MessageSourceDtoFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$MessageSourceDtoToJson(MessageSourceDto instance) =>
     <String, dynamic>{
+      'id': ?instance.id,
+      'categoryId': ?instance.categoryId,
       'name': ?instance.name,
       'description': ?instance.description,
       'isPublished': ?instance.isPublished,

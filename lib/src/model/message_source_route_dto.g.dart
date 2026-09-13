@@ -10,6 +10,7 @@ MessageSourceRouteDto _$MessageSourceRouteDtoFromJson(
   Map<String, dynamic> json,
 ) => $checkedCreate('MessageSourceRouteDto', json, ($checkedConvert) {
   final val = MessageSourceRouteDto(
+    id: $checkedConvert('id', (v) => v as String?),
     title: $checkedConvert('title', (v) => v as String?),
     description: $checkedConvert('description', (v) => v as String?),
     path: $checkedConvert('path', (v) => v as String?),
@@ -27,6 +28,7 @@ MessageSourceRouteDto _$MessageSourceRouteDtoFromJson(
 Map<String, dynamic> _$MessageSourceRouteDtoToJson(
   MessageSourceRouteDto instance,
 ) => <String, dynamic>{
+  'id': ?instance.id,
   'title': ?instance.title,
   'description': ?instance.description,
   'path': ?instance.path,

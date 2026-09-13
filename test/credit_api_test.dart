@@ -1,24 +1,23 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
-
 /// tests for CreditApi
 void main() {
   final instance = FelorxApiClient().getCreditApi();
 
   group(CreditApi, () {
-    //Future<CreateCreditAlipayOrderResultDto> createAlipayOrder({ CreateCreditAlipayOrderDto createCreditAlipayOrderDto }) async
-    test('test createAlipayOrder', () async {
+    //Future<CreateCreditAlipayOrderResultDto> createAlipayOrderPostApiAppCreditAlipayOrder({ CreateCreditAlipayOrderDto createCreditAlipayOrderDto }) async
+    test('test createAlipayOrderPostApiAppCreditAlipayOrder', () async {
       // TODO
     });
 
-    //Future<CreateCreditPayPalOrderResultDto> createPayPalOrder({ CreateCreditPayPalOrderDto createCreditPayPalOrderDto }) async
-    test('test createPayPalOrder', () async {
+    //Future<CreateCreditPayPalOrderResultDto> createPayPalOrderPostApiAppCreditPayPalOrder({ CreateCreditPayPalOrderDto createCreditPayPalOrderDto }) async
+    test('test createPayPalOrderPostApiAppCreditPayPalOrder', () async {
       // TODO
     });
 
-    //Future<CreditAccountDto> creditGetAccount(String appId) async
-    test('test creditGetAccount', () async {
+    //Future<CreditAccountDto> getAccountGetApiAppCreditAccountAppId(String appId) async
+    test('test getAccountGetApiAppCreditAccountAppId', () async {
       // TODO
     });
 
@@ -36,6 +35,5 @@ void main() {
     test('test spend', () async {
       // TODO
     });
-
   });
 }

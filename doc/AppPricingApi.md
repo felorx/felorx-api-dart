@@ -9,55 +9,14 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**appPricingGetListByAppId**](AppPricingApi.md#apppricinggetlistbyappid) | **GET** /api/app/app-pricing/by-app-id/{appId} | 获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
 [**createAppPricing**](AppPricingApi.md#createapppricing) | **POST** /api/app/app-pricing |
 [**deleteAppPricingById**](AppPricingApi.md#deleteapppricingbyid) | **DELETE** /api/app/app-pricing/{id} |
 [**getAppPricingById**](AppPricingApi.md#getapppricingbyid) | **GET** /api/app/app-pricing/{id} | 获取单条定价方案详情，允许匿名访问（与列表/商店展示一致）
 [**getAppPricingList**](AppPricingApi.md#getapppricinglist) | **GET** /api/app/app-pricing | 分页获取定价方案列表，允许匿名访问
+[**getListByAppIdGetApiAppAppPricingByAppIdAppId**](AppPricingApi.md#getlistbyappidgetapiappapppricingbyappidappid) | **GET** /api/app/app-pricing/by-app-id/{appId} | 获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
 [**getPricingItemsByAppId**](AppPricingApi.md#getpricingitemsbyappid) | **GET** /api/app/app-pricing/pricing-items-by-app-id/{appId} | 获取应用定价功能项定义（与客户端「功能对比」行一致），允许匿名访问供官网等场景展示
 [**updateAppPricing**](AppPricingApi.md#updateapppricing) | **PUT** /api/app/app-pricing/{id} |
 
-
-# **appPricingGetListByAppId**
-> List<AppPricingDto> appPricingGetListByAppId(appId)
-
-获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
-
-### Example
-```dart
-import 'package:felorx_api_client/api.dart';
-
-final api = FelorxApiClient().getAppPricingApi();
-final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
-
-try {
-    final response = api.appPricingGetListByAppId(appId);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling AppPricingApi->appPricingGetListByAppId: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **appId** | **String**|  |
-
-### Return type
-
-[**List&lt;AppPricingDto&gt;**](AppPricingDto.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **createAppPricing**
 > AppPricingDto createAppPricing(createOrUpdateAppPricingDto)
@@ -226,6 +185,47 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **getListByAppIdGetApiAppAppPricingByAppIdAppId**
+> List<AppPricingDto> getListByAppIdGetApiAppAppPricingByAppIdAppId(appId)
+
+获取应用定价方案列表，允许匿名访问供未登录用户查看订阅计划
+
+### Example
+```dart
+import 'package:felorx_api_client/api.dart';
+
+final api = FelorxApiClient().getAppPricingApi();
+final String appId = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
+
+try {
+    final response = api.getListByAppIdGetApiAppAppPricingByAppIdAppId(appId);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling AppPricingApi->getListByAppIdGetApiAppAppPricingByAppIdAppId: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **appId** | **String**|  |
+
+### Return type
+
+[**List&lt;AppPricingDto&gt;**](AppPricingDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **getPricingItemsByAppId**
 > List<AppPricingItemDto> getPricingItemsByAppId(appId)
 
@@ -309,4 +309,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

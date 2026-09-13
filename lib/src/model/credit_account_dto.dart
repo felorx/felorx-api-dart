@@ -8,7 +8,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'credit_account_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,66 +16,33 @@ part 'credit_account_dto.g.dart';
 )
 class CreditAccountDto {
   /// Returns a new [CreditAccountDto] instance.
-  CreditAccountDto({
+  CreditAccountDto({this.appId, this.balance, this.recentLedger});
 
-     this.appId,
-
-     this.balance,
-
-     this.recentLedger,
-  });
-
-  @JsonKey(
-    
-    name: r'appId',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'appId', required: false, includeIfNull: false)
   String? appId;
 
-
-
-  @JsonKey(
-    
-    name: r'balance',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'balance', required: false, includeIfNull: false)
   int? balance;
 
-
-
-  @JsonKey(
-    
-    name: r'recentLedger',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'recentLedger', required: false, includeIfNull: false)
   List<CreditLedgerEntryDto>? recentLedger;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is CreditAccountDto &&
+          other.appId == appId &&
+          other.balance == balance &&
+          other.recentLedger == recentLedger;
 
+  @override
+  int get hashCode =>
+      appId.hashCode +
+      balance.hashCode +
+      (recentLedger == null ? 0 : recentLedger.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is CreditAccountDto &&
-      other.appId == appId &&
-      other.balance == balance &&
-      other.recentLedger == recentLedger;
-
-    @override
-    int get hashCode =>
-        appId.hashCode +
-        balance.hashCode +
-        (recentLedger == null ? 0 : recentLedger.hashCode);
-
-  factory CreditAccountDto.fromJson(Map<String, dynamic> json) => _$CreditAccountDtoFromJson(json);
+  factory CreditAccountDto.fromJson(Map<String, dynamic> json) =>
+      _$CreditAccountDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$CreditAccountDtoToJson(this);
 
@@ -84,6 +50,4 @@ class CreditAccountDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

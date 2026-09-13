@@ -12,7 +12,7 @@ Method | HTTP request | Description
 [**createIdentityUser**](UserApi.md#createidentityuser) | **POST** /api/identity/users |
 [**deleteIdentityUserById**](UserApi.md#deleteidentityuserbyid) | **DELETE** /api/identity/users/{id} |
 [**findByEmail**](UserApi.md#findbyemail) | **GET** /api/identity/users/by-email/{email} |
-[**findByUsername**](UserApi.md#findbyusername) | **GET** /api/identity/users/by-username/{userName} |
+[**findByUsernameGetApiIdentityUsersByUsernameUserName**](UserApi.md#findbyusernamegetapiidentityusersbyusernameusername) | **GET** /api/identity/users/by-username/{userName} |
 [**getAssignableRoles**](UserApi.md#getassignableroles) | **GET** /api/identity/users/assignable-roles |
 [**getIdentityUserById**](UserApi.md#getidentityuserbyid) | **GET** /api/identity/users/{id} |
 [**getIdentityUserList**](UserApi.md#getidentityuserlist) | **GET** /api/identity/users |
@@ -143,8 +143,8 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **findByUsername**
-> IdentityUserDto findByUsername(userName)
+# **findByUsernameGetApiIdentityUsersByUsernameUserName**
+> IdentityUserDto findByUsernameGetApiIdentityUsersByUsernameUserName(userName)
 
 
 
@@ -156,10 +156,10 @@ final api = FelorxApiClient().getUserApi();
 final String userName = userName_example; // String |
 
 try {
-    final response = api.findByUsername(userName);
+    final response = api.findByUsernameGetApiIdentityUsersByUsernameUserName(userName);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling UserApi->findByUsername: $e\n');
+    print('Exception when calling UserApi->findByUsernameGetApiIdentityUsersByUsernameUserName: $e\n');
 }
 ```
 
@@ -434,4 +434,3 @@ No authorization required
  - **Accept**: text/plain, application/json, text/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

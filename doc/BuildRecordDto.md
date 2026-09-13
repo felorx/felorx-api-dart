@@ -30,6 +30,7 @@ Name | Type | Description | Notes
 **status** | [**BuildStatus**](BuildStatus.md) |  | [optional]
 **startedAt** | [**DateTime**](DateTime.md) | 开始时间 | [optional]
 **completedAt** | [**DateTime**](DateTime.md) | 结束时间 | [optional]
+**logs** | **String** | 构建日志 | [optional]
 **errorMessage** | **String** | 错误信息 | [optional]
 **artifactUrl** | **String** | 构建产物下载地址 | [optional]
 **artifactSize** | **int** | 构建产物大小 (字节) | [optional]
@@ -39,4 +40,3 @@ Name | Type | Description | Notes
 **duration** | **int** | 构建持续时间 (秒) | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-

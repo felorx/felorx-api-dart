@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ExtensionPropertyUiLookupDto
 void main() {
-  final ExtensionPropertyUiLookupDto? instance = /* ExtensionPropertyUiLookupDto(...) */ null;
+  final ExtensionPropertyUiLookupDto?
+  instance = /* ExtensionPropertyUiLookupDto(...) */ null;
   // TODO add properties to the entity
 
   group(ExtensionPropertyUiLookupDto, () {
@@ -31,6 +32,5 @@ void main() {
     test('to test the property `filterParamName`', () async {
       // TODO
     });
-
   });
 }

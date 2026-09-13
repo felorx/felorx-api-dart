@@ -9,7 +9,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'ai_chat_completion_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -19,113 +18,59 @@ part 'ai_chat_completion_dto.g.dart';
 class AiChatCompletionDto {
   /// Returns a new [AiChatCompletionDto] instance.
   AiChatCompletionDto({
+    this.id,
 
-     this.id,
+    this.object,
 
-     this.object,
+    this.created,
 
-     this.created,
+    this.model,
 
-     this.model,
+    this.choices,
 
-     this.choices,
-
-     this.usage,
+    this.usage,
   });
 
-  @JsonKey(
-    
-    name: r'id',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'id', required: false, includeIfNull: false)
   String? id;
 
-
-
-  @JsonKey(
-    
-    name: r'object',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'object', required: false, includeIfNull: false)
   String? object;
 
-
-
-  @JsonKey(
-    
-    name: r'created',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'created', required: false, includeIfNull: false)
   int? created;
 
-
-
-  @JsonKey(
-    
-    name: r'model',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'model', required: false, includeIfNull: false)
   String? model;
 
-
-
-  @JsonKey(
-    
-    name: r'choices',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'choices', required: false, includeIfNull: false)
   List<AiChatChoiceDto>? choices;
 
-
-
-  @JsonKey(
-    
-    name: r'usage',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'usage', required: false, includeIfNull: false)
   AiUsageDto? usage;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AiChatCompletionDto &&
+          other.id == id &&
+          other.object == object &&
+          other.created == created &&
+          other.model == model &&
+          other.choices == choices &&
+          other.usage == usage;
 
+  @override
+  int get hashCode =>
+      (id == null ? 0 : id.hashCode) +
+      (object == null ? 0 : object.hashCode) +
+      created.hashCode +
+      (model == null ? 0 : model.hashCode) +
+      (choices == null ? 0 : choices.hashCode) +
+      usage.hashCode;
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is AiChatCompletionDto &&
-      other.id == id &&
-      other.object == object &&
-      other.created == created &&
-      other.model == model &&
-      other.choices == choices &&
-      other.usage == usage;
-
-    @override
-    int get hashCode =>
-        (id == null ? 0 : id.hashCode) +
-        (object == null ? 0 : object.hashCode) +
-        created.hashCode +
-        (model == null ? 0 : model.hashCode) +
-        (choices == null ? 0 : choices.hashCode) +
-        usage.hashCode;
-
-  factory AiChatCompletionDto.fromJson(Map<String, dynamic> json) => _$AiChatCompletionDtoFromJson(json);
+  factory AiChatCompletionDto.fromJson(Map<String, dynamic> json) =>
+      _$AiChatCompletionDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AiChatCompletionDtoToJson(this);
 
@@ -133,6 +78,4 @@ class AiChatCompletionDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

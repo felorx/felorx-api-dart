@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppReleaseDto
 void main() {
-  final CreateOrUpdateAppReleaseDto? instance = /* CreateOrUpdateAppReleaseDto(...) */ null;
+  final CreateOrUpdateAppReleaseDto?
+  instance = /* CreateOrUpdateAppReleaseDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppReleaseDto, () {
@@ -59,6 +60,11 @@ void main() {
       // TODO
     });
 
+    // String architecture
+    test('to test the property `architecture`', () async {
+      // TODO
+    });
+
     // AppPublisher publisher
     test('to test the property `publisher`', () async {
       // TODO
@@ -89,6 +95,5 @@ void main() {
     test('to test the property `buildRecordId`', () async {
       // TODO
     });
-
   });
 }

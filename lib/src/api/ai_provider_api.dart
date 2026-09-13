@@ -22,7 +22,6 @@ import 'package:felorx_api_client/src/model/set_default_ai_model_dto.dart';
 import 'package:felorx_api_client/src/model/test_ai_provider_dto.dart';
 
 class AiProviderApi {
-
   final Dio _dio;
 
   const AiProviderApi(this._dio);
@@ -53,13 +52,8 @@ class AiProviderApi {
     final _path = r'/api/app/ai-provider';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -67,13 +61,10 @@ class AiProviderApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAiProviderDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAiProviderDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -92,9 +83,14 @@ _bodyData=jsonEncode(createOrUpdateAiProviderDto);
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -140,16 +136,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/ai-provider/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/ai-provider/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -187,16 +183,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/ai-provider/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/ai-provider/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -211,9 +207,14 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -274,13 +275,8 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     final _path = r'/api/app/ai-provider';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -306,9 +302,13 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     AiProviderDtoPagedResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto, AiProviderDtoPagedResultDto>(rawData, 'AiProviderDtoPagedResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<
+              AiProviderDtoPagedResultDto,
+              AiProviderDtoPagedResultDto
+            >(rawData, 'AiProviderDtoPagedResultDto', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -331,7 +331,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
     );
   }
 
-  /// setDefaultModel
+  /// setDefaultModelPostApiAppAiProviderSetDefaultModel
   ///
   ///
   /// Parameters:
@@ -345,7 +345,8 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> setDefaultModel({
+  Future<Response<AiProviderDto>>
+  setDefaultModelPostApiAppAiProviderSetDefaultModel({
     SetDefaultAiModelDto? setDefaultAiModelDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -357,13 +358,8 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
     final _path = r'/api/app/ai-provider/set-default-model';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -371,13 +367,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDtoPagedResultDto
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(setDefaultAiModelDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(setDefaultAiModelDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -396,9 +389,14 @@ _bodyData=jsonEncode(setDefaultAiModelDto);
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -421,7 +419,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     );
   }
 
-  /// setEnabled
+  /// setEnabledPostApiAppAiProviderIdSetEnabled
   ///
   ///
   /// Parameters:
@@ -436,7 +434,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> setEnabled({
+  Future<Response<AiProviderDto>> setEnabledPostApiAppAiProviderIdSetEnabled({
     required String id,
     SetAiProviderEnabledDto? setAiProviderEnabledDto,
     CancelToken? cancelToken,
@@ -446,16 +444,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/ai-provider/{id}/set-enabled'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/ai-provider/{id}/set-enabled'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -463,13 +461,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(setAiProviderEnabledDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(setAiProviderEnabledDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -488,9 +483,14 @@ _bodyData=jsonEncode(setAiProviderEnabledDto);
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -513,7 +513,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     );
   }
 
-  /// test
+  /// testPostApiAppAiProviderIdTest
   ///
   ///
   /// Parameters:
@@ -528,7 +528,7 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
   ///
   /// Returns a [Future] containing a [Response] with a [AiProviderDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AiProviderDto>> test({
+  Future<Response<AiProviderDto>> testPostApiAppAiProviderIdTest({
     required String id,
     TestAiProviderDto? testAiProviderDto,
     CancelToken? cancelToken,
@@ -538,16 +538,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/ai-provider/{id}/test'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/ai-provider/{id}/test'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -555,13 +555,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(testAiProviderDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(testAiProviderDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -580,9 +577,14 @@ _bodyData=jsonEncode(testAiProviderDto);
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -630,16 +632,16 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/ai-provider/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/app/ai-provider/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -647,13 +649,10 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(createOrUpdateAiProviderDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(createOrUpdateAiProviderDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -672,9 +671,14 @@ _bodyData=jsonEncode(createOrUpdateAiProviderDto);
     AiProviderDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDto>(rawData, 'AiProviderDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<AiProviderDto, AiProviderDto>(
+              rawData,
+              'AiProviderDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -696,5 +700,4 @@ _responseData = rawData == null ? null : deserialize<AiProviderDto, AiProviderDt
       extra: _response.extra,
     );
   }
-
 }

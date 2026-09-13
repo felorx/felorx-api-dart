@@ -9,7 +9,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'app_storefront_landing_dto.g.dart';
 
-
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -18,50 +17,27 @@ part 'app_storefront_landing_dto.g.dart';
 )
 class AppStorefrontLandingDto {
   /// Returns a new [AppStorefrontLandingDto] instance.
-  AppStorefrontLandingDto({
+  AppStorefrontLandingDto({this.hero, this.features});
 
-     this.hero,
-
-     this.features,
-  });
-
-  @JsonKey(
-    
-    name: r'hero',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'hero', required: false, includeIfNull: false)
   AppStorefrontHeroDto? hero;
 
-
-
-  @JsonKey(
-    
-    name: r'features',
-    required: false,
-    includeIfNull: false,
-  )
-
-
+  @JsonKey(name: r'features', required: false, includeIfNull: false)
   List<AppStorefrontFeatureBlockDto>? features;
 
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is AppStorefrontLandingDto &&
+          other.hero == hero &&
+          other.features == features;
 
+  @override
+  int get hashCode =>
+      hero.hashCode + (features == null ? 0 : features.hashCode);
 
-
-
-    @override
-    bool operator ==(Object other) => identical(this, other) || other is AppStorefrontLandingDto &&
-      other.hero == hero &&
-      other.features == features;
-
-    @override
-    int get hashCode =>
-        hero.hashCode +
-        (features == null ? 0 : features.hashCode);
-
-  factory AppStorefrontLandingDto.fromJson(Map<String, dynamic> json) => _$AppStorefrontLandingDtoFromJson(json);
+  factory AppStorefrontLandingDto.fromJson(Map<String, dynamic> json) =>
+      _$AppStorefrontLandingDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppStorefrontLandingDtoToJson(this);
 
@@ -69,6 +45,4 @@ class AppStorefrontLandingDto {
   String toString() {
     return toJson().toString();
   }
-
 }
-

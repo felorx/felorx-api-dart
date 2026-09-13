@@ -46,6 +46,12 @@ void main() {
       // TODO
     });
 
+    // 目标架构（x64、arm64、arm、riscv64、universal 或 multiarch）。
+    // String architecture
+    test('to test the property `architecture`', () async {
+      // TODO
+    });
+
     // 环境
     // String environment
     test('to test the property `environment`', () async {
@@ -69,6 +75,5 @@ void main() {
     test('to test the property `ciBuildUrl`', () async {
       // TODO
     });
-
   });
 }

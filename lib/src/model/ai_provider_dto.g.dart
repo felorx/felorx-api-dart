@@ -30,6 +30,20 @@ AiProviderDto _$AiProviderDtoFromJson(
         'deletionTime',
         (v) => v == null ? null : DateTime.parse(v as String),
       ),
+      verifiedCapabilities: $checkedConvert(
+        'verified_capabilities',
+        (v) => (v as List<dynamic>?)
+            ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
+            .toList(),
+      ),
+      capabilityCertificateVersion: $checkedConvert(
+        'capability_certificate_version',
+        (v) => v as String?,
+      ),
+      capabilityTestedAt: $checkedConvert(
+        'capability_tested_at',
+        (v) => v == null ? null : DateTime.parse(v as String),
+      ),
       name: $checkedConvert('name', (v) => v as String?),
       displayName: $checkedConvert('display_name', (v) => v as String?),
       providerType: $checkedConvert(
@@ -44,20 +58,6 @@ AiProviderDto _$AiProviderDtoFromJson(
         (v) => (v as List<dynamic>?)
             ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
             .toList(),
-      ),
-      verifiedCapabilities: $checkedConvert(
-        'verified_capabilities',
-        (v) => (v as List<dynamic>?)
-            ?.map((e) => $enumDecode(_$AiCapabilityEnumMap, e))
-            .toList(),
-      ),
-      capabilityTestedAt: $checkedConvert(
-        'capability_tested_at',
-        (v) => v == null ? null : DateTime.parse(v as String),
-      ),
-      capabilityCertificateVersion: $checkedConvert(
-        'capability_certificate_version',
-        (v) => v as String?,
       ),
       secretConfigured: $checkedConvert('secret_configured', (v) => v as bool?),
       metadata: $checkedConvert(
@@ -76,12 +76,12 @@ AiProviderDto _$AiProviderDtoFromJson(
     return val;
   },
   fieldKeyMap: const {
+    'verifiedCapabilities': 'verified_capabilities',
+    'capabilityCertificateVersion': 'capability_certificate_version',
+    'capabilityTestedAt': 'capability_tested_at',
     'displayName': 'display_name',
     'providerType': 'provider_type',
     'baseUrl': 'base_url',
-    'verifiedCapabilities': 'verified_capabilities',
-    'capabilityTestedAt': 'capability_tested_at',
-    'capabilityCertificateVersion': 'capability_certificate_version',
     'secretConfigured': 'secret_configured',
   },
 );
@@ -96,6 +96,11 @@ Map<String, dynamic> _$AiProviderDtoToJson(AiProviderDto instance) =>
       'isDeleted': ?instance.isDeleted,
       'deleterId': ?instance.deleterId,
       'deletionTime': ?instance.deletionTime?.toIso8601String(),
+      'verified_capabilities': ?instance.verifiedCapabilities
+          ?.map((e) => _$AiCapabilityEnumMap[e]!)
+          .toList(),
+      'capability_certificate_version': ?instance.capabilityCertificateVersion,
+      'capability_tested_at': ?instance.capabilityTestedAt?.toIso8601String(),
       'name': ?instance.name,
       'display_name': ?instance.displayName,
       'provider_type': ?_$AiProviderTypeEnumMap[instance.providerType],
@@ -105,34 +110,13 @@ Map<String, dynamic> _$AiProviderDtoToJson(AiProviderDto instance) =>
       'capabilities': ?instance.capabilities
           ?.map((e) => _$AiCapabilityEnumMap[e]!)
           .toList(),
-      'verified_capabilities': ?instance.verifiedCapabilities
-          ?.map((e) => _$AiCapabilityEnumMap[e]!)
-          .toList(),
-      'capability_tested_at': ?instance.capabilityTestedAt?.toIso8601String(),
-      'capability_certificate_version': ?instance.capabilityCertificateVersion,
       'secret_configured': ?instance.secretConfigured,
       'metadata': ?instance.metadata,
       'models': ?instance.models?.map((e) => e.toJson()).toList(),
     };
 
-const _$AiProviderTypeEnumMap = {
-  AiProviderType.mock: 'Mock',
-  AiProviderType.tencentCloud: 'TencentCloud',
-  AiProviderType.openAiCompatible: 'OpenAiCompatible',
-};
-
 const _$AiCapabilityEnumMap = {
   AiCapability.chat: 'Chat',
-  AiCapability.responses: 'Responses',
-  AiCapability.responsesStreaming: 'ResponsesStreaming',
-  AiCapability.responsesStateful: 'ResponsesStateful',
-  AiCapability.responsesBackground: 'ResponsesBackground',
-  AiCapability.responsesCompaction: 'ResponsesCompaction',
-  AiCapability.responsesInputTokens: 'ResponsesInputTokens',
-  AiCapability.responsesWebSocket: 'ResponsesWebSocket',
-  AiCapability.functionCalling: 'FunctionCalling',
-  AiCapability.hostedTools: 'HostedTools',
-  AiCapability.reasoning: 'Reasoning',
   AiCapability.vision: 'Vision',
   AiCapability.ocr: 'Ocr',
   AiCapability.imageLabel: 'ImageLabel',
@@ -141,4 +125,20 @@ const _$AiCapabilityEnumMap = {
   AiCapability.caption: 'Caption',
   AiCapability.imageGeneration: 'ImageGeneration',
   AiCapability.videoGeneration: 'VideoGeneration',
+  AiCapability.responses: 'Responses',
+  AiCapability.responsesStreaming: 'ResponsesStreaming',
+  AiCapability.responsesStateful: 'ResponsesStateful',
+  AiCapability.responsesWebSocket: 'ResponsesWebSocket',
+  AiCapability.functionCalling: 'FunctionCalling',
+  AiCapability.responsesBackground: 'ResponsesBackground',
+  AiCapability.responsesCompaction: 'ResponsesCompaction',
+  AiCapability.responsesInputTokens: 'ResponsesInputTokens',
+  AiCapability.reasoning: 'Reasoning',
+  AiCapability.hostedTools: 'HostedTools',
+};
+
+const _$AiProviderTypeEnumMap = {
+  AiProviderType.mock: 'Mock',
+  AiProviderType.tencentCloud: 'TencentCloud',
+  AiProviderType.openAiCompatible: 'OpenAiCompatible',
 };

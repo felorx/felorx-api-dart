@@ -16,7 +16,6 @@ import 'package:felorx_api_client/src/model/user_data.dart';
 import 'package:felorx_api_client/src/model/user_data_list_result_dto.dart';
 
 class UserLookupApi {
-
   final Dio _dio;
 
   const UserLookupApi(this._dio);
@@ -44,16 +43,16 @@ class UserLookupApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/lookup/{id}'.replaceAll('{' r'id' '}', id.toString());
+    final _path = r'/api/identity/users/lookup/{id}'.replaceAll(
+      '{'
+      r'id'
+      '}',
+      id.toString(),
+    );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -68,9 +67,14 @@ class UserLookupApi {
     UserData? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData, 'UserData', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<UserData, UserData>(
+              rawData,
+              'UserData',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -93,7 +97,7 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
     );
   }
 
-  /// findByUserName
+  /// findByUserNameGetApiIdentityUsersLookupByUsernameUserName
   ///
   ///
   /// Parameters:
@@ -107,7 +111,8 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
   ///
   /// Returns a [Future] containing a [Response] with a [UserData] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserData>> findByUserName({
+  Future<Response<UserData>>
+  findByUserNameGetApiIdentityUsersLookupByUsernameUserName({
     required String userName,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -116,16 +121,17 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/identity/users/lookup/by-username/{userName}'.replaceAll('{' r'userName' '}', userName.toString());
+    final _path = r'/api/identity/users/lookup/by-username/{userName}'
+        .replaceAll(
+          '{'
+          r'userName'
+          '}',
+          userName.toString(),
+        );
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -140,9 +146,14 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
     UserData? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData, 'UserData', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<UserData, UserData>(
+              rawData,
+              'UserData',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -191,13 +202,8 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
     final _path = r'/api/identity/users/lookup/count';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -217,9 +223,10 @@ _responseData = rawData == null ? null : deserialize<UserData, UserData>(rawData
     int? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<int, int>(rawData, 'int', growable: true);
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -274,13 +281,8 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
     final _path = r'/api/identity/users/lookup/search';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       validateStatus: validateStatus,
     );
 
@@ -303,9 +305,14 @@ _responseData = rawData == null ? null : deserialize<int, int>(rawData, 'int', g
     UserDataListResultDto? _responseData;
 
     try {
-final rawData = _response.data;
-_responseData = rawData == null ? null : deserialize<UserDataListResultDto, UserDataListResultDto>(rawData, 'UserDataListResultDto', growable: true);
-
+      final rawData = _response.data;
+      _responseData = rawData == null
+          ? null
+          : deserialize<UserDataListResultDto, UserDataListResultDto>(
+              rawData,
+              'UserDataListResultDto',
+              growable: true,
+            );
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -327,5 +334,4 @@ _responseData = rawData == null ? null : deserialize<UserDataListResultDto, User
       extra: _response.extra,
     );
   }
-
 }

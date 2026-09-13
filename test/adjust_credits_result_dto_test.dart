@@ -3,7 +3,8 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for AdjustCreditsResultDto
 void main() {
-  final AdjustCreditsResultDto? instance = /* AdjustCreditsResultDto(...) */ null;
+  final AdjustCreditsResultDto? instance = /* AdjustCreditsResultDto(...) */
+      null;
   // TODO add properties to the entity
 
   group(AdjustCreditsResultDto, () {
@@ -16,6 +17,5 @@ void main() {
     test('to test the property `ledgerEntry`', () async {
       // TODO
     });
-
   });
 }

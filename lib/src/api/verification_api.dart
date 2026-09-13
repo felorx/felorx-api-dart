@@ -15,7 +15,6 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/send_verification_code_dto.dart';
 
 class VerificationApi {
-
   final Dio _dio;
 
   const VerificationApi(this._dio);
@@ -46,13 +45,8 @@ class VerificationApi {
     final _path = r'/api/app/verification/send-code';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -60,13 +54,10 @@ class VerificationApi {
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(sendVerificationCodeDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(sendVerificationCodeDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -111,13 +102,8 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
     final _path = r'/api/app/verification/send-code-anonymous';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
+      headers: <String, dynamic>{...?headers},
+      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -125,13 +111,10 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
     dynamic _bodyData;
 
     try {
-_bodyData=jsonEncode(sendVerificationCodeDto);
-    } catch(error, stackTrace) {
+      _bodyData = jsonEncode(sendVerificationCodeDto);
+    } catch (error, stackTrace) {
       throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
+        requestOptions: _options.compose(_dio.options, _path),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -149,5 +132,4 @@ _bodyData=jsonEncode(sendVerificationCodeDto);
 
     return _response;
   }
-
 }
