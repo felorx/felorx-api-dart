@@ -15,13 +15,20 @@ part 'user_storage_item_dto.g.dart';
 )
 class UserStorageItemDto {
   /// Returns a new [UserStorageItemDto] instance.
-  UserStorageItemDto({this.name, this.title, this.count, this.size});
+  UserStorageItemDto({this.name, this.title, this.key, this.count, this.size});
 
   @JsonKey(name: r'name', required: false, includeIfNull: false)
   String? name;
 
   @JsonKey(name: r'title', required: false, includeIfNull: false)
   String? title;
+
+  /// 云空间类型标识（image/video/document/todo/note/billing…）。
+  ///
+  /// 与同步节点 `GET /sync/storage` 返回的 `items[].key` 一致，客户端据此
+  /// 渲染本地化类型名称，避免把类型写死成英文。
+  @JsonKey(name: r'key', required: false, includeIfNull: false)
+  String? key;
 
   @JsonKey(name: r'count', required: false, includeIfNull: false)
   int? count;
@@ -35,6 +42,7 @@ class UserStorageItemDto {
       other is UserStorageItemDto &&
           other.name == name &&
           other.title == title &&
+          other.key == key &&
           other.count == count &&
           other.size == size;
 
@@ -42,6 +50,7 @@ class UserStorageItemDto {
   int get hashCode =>
       (name == null ? 0 : name.hashCode) +
       (title == null ? 0 : title.hashCode) +
+      (key == null ? 0 : key.hashCode) +
       count.hashCode +
       size.hashCode;
 

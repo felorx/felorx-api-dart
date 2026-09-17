@@ -11,6 +11,7 @@ UserStorageItemDto _$UserStorageItemDtoFromJson(Map<String, dynamic> json) =>
       final val = UserStorageItemDto(
         name: $checkedConvert('name', (v) => v as String?),
         title: $checkedConvert('title', (v) => v as String?),
+        key: $checkedConvert('key', (v) => v as String?),
         count: $checkedConvert('count', (v) => (v as num?)?.toInt()),
         size: $checkedConvert('size', (v) => (v as num?)?.toInt()),
       );
@@ -21,6 +22,7 @@ Map<String, dynamic> _$UserStorageItemDtoToJson(UserStorageItemDto instance) =>
     <String, dynamic>{
       'name': ?instance.name,
       'title': ?instance.title,
+      'key': ?instance.key,
       'count': ?instance.count,
       'size': ?instance.size,
     };
