@@ -27,6 +27,7 @@ import 'package:felorx_api_client/src/model/set_app_linked_sdks_dto.dart';
 import 'package:felorx_api_client/src/model/storage_object_credentials.dart';
 
 class AppApi {
+
   final Dio _dio;
 
   const AppApi(this._dio);
@@ -57,8 +58,13 @@ class AppApi {
     final _path = r'/api/app/app';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -66,10 +72,13 @@ class AppApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateAppDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateAppDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -88,10 +97,9 @@ class AppApi {
     AppDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -137,16 +145,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -184,16 +192,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -208,10 +216,9 @@ class AppApi {
     AppDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -266,8 +273,13 @@ class AppApi {
     final _path = r'/api/app/app';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -290,14 +302,9 @@ class AppApi {
     AppDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(
-              rawData,
-              'AppDtoPagedResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(rawData, 'AppDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -346,12 +353,19 @@ class AppApi {
     final _path = r'/api/app/app/by-name';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{if (name != null) r'name': name};
+    final _queryParameters = <String, dynamic>{
+      if (name != null) r'name': name,
+    };
 
     final _response = await _dio.request<Object>(
       _path,
@@ -365,10 +379,9 @@ class AppApi {
     AppDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -416,20 +429,22 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/feature-list/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/app/feature-list/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{if (env != null) r'env': env};
+    final _queryParameters = <String, dynamic>{
+      if (env != null) r'env': env,
+    };
 
     final _response = await _dio.request<Object>(
       _path,
@@ -443,14 +458,9 @@ class AppApi {
     List<AppFeatureDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AppFeatureDto>, AppFeatureDto>(
-              rawData,
-              'List<AppFeatureDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AppFeatureDto>, AppFeatureDto>(rawData, 'List<AppFeatureDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -499,8 +509,13 @@ class AppApi {
     final _path = r'/api/app/app/by-developer-all';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -520,14 +535,9 @@ class AppApi {
     AppDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(
-              rawData,
-              'AppDtoPagedResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(rawData, 'AppDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -580,8 +590,13 @@ class AppApi {
     final _path = r'/api/app/app/public';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -603,14 +618,9 @@ class AppApi {
     AppDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(
-              rawData,
-              'AppDtoPagedResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDtoPagedResultDto, AppDtoPagedResultDto>(rawData, 'AppDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -667,8 +677,13 @@ class AppApi {
     final _path = r'/api/app/app/with-user';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -692,13 +707,9 @@ class AppApi {
     AppWithUserDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              AppWithUserDtoPagedResultDto,
-              AppWithUserDtoPagedResultDto
-            >(rawData, 'AppWithUserDtoPagedResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppWithUserDtoPagedResultDto, AppWithUserDtoPagedResultDto>(rawData, 'AppWithUserDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -746,20 +757,22 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/sdks-by-id/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/app/sdks-by-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{if (env != null) r'env': env};
+    final _queryParameters = <String, dynamic>{
+      if (env != null) r'env': env,
+    };
 
     final _response = await _dio.request<Object>(
       _path,
@@ -773,14 +786,9 @@ class AppApi {
     List<AppSdkDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AppSdkDto>, AppSdkDto>(
-              rawData,
-              'List<AppSdkDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AppSdkDto>, AppSdkDto>(rawData, 'List<AppSdkDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -826,16 +834,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/storefront-landing/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/app/storefront-landing/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -850,14 +858,9 @@ class AppApi {
     AppStorefrontLandingDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppStorefrontLandingDto, AppStorefrontLandingDto>(
-              rawData,
-              'AppStorefrontLandingDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppStorefrontLandingDto, AppStorefrontLandingDto>(rawData, 'AppStorefrontLandingDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -906,12 +909,19 @@ class AppApi {
     final _path = r'/api/app/app/upload-credentials';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{if (key != null) r'key': key};
+    final _queryParameters = <String, dynamic>{
+      if (key != null) r'key': key,
+    };
 
     final _response = await _dio.request<Object>(
       _path,
@@ -925,14 +935,9 @@ class AppApi {
     StorageObjectCredentials? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<StorageObjectCredentials, StorageObjectCredentials>(
-              rawData,
-              'StorageObjectCredentials',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<StorageObjectCredentials, StorageObjectCredentials>(rawData, 'StorageObjectCredentials', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -978,16 +983,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/{id}/with-user'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app/{id}/with-user'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -1002,14 +1007,9 @@ class AppApi {
     AppWithUserDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppWithUserDto, AppWithUserDto>(
-              rawData,
-              'AppWithUserDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppWithUserDto, AppWithUserDto>(rawData, 'AppWithUserDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -1058,8 +1058,13 @@ class AppApi {
     final _path = r'/api/app/app/run';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -1067,10 +1072,13 @@ class AppApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(appRunDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(appRunDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -1089,14 +1097,9 @@ class AppApi {
     AppRunRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppRunRecordDto, AppRunRecordDto>(
-              rawData,
-              'AppRunRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppRunRecordDto, AppRunRecordDto>(rawData, 'AppRunRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -1144,16 +1147,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/set-linked-sdks/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/app/set-linked-sdks/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -1161,10 +1164,13 @@ class AppApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(setAppLinkedSdksDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(setAppLinkedSdksDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -1208,16 +1214,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -1225,10 +1231,13 @@ class AppApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateAppDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateAppDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -1247,10 +1256,9 @@ class AppApi {
     AppDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppDto, AppDto>(rawData, 'AppDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -1298,16 +1306,16 @@ class AppApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app/{id}/run-state'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app/{id}/run-state'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -1315,10 +1323,13 @@ class AppApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(appRunRecordUpdateDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(appRunRecordUpdateDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -1337,14 +1348,9 @@ class AppApi {
     AppRunRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppRunRecordDto, AppRunRecordDto>(
-              rawData,
-              'AppRunRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppRunRecordDto, AppRunRecordDto>(rawData, 'AppRunRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -1366,4 +1372,5 @@ class AppApi {
       extra: _response.extra,
     );
   }
+
 }

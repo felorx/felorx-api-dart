@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for AccountDeletionStatusDto
 void main() {
-  final AccountDeletionStatusDto? instance = /* AccountDeletionStatusDto(...) */
-      null;
+  final AccountDeletionStatusDto? instance = /* AccountDeletionStatusDto(...) */ null;
   // TODO add properties to the entity
 
   group(AccountDeletionStatusDto, () {
@@ -52,5 +51,6 @@ void main() {
     test('to test the property `failureCode`', () async {
       // TODO
     });
+
   });
 }

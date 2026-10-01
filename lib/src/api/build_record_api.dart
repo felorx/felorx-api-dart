@@ -20,6 +20,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/update_build_record_dto.dart';
 
 class BuildRecordApi {
+
   final Dio _dio;
 
   const BuildRecordApi(this._dio);
@@ -50,8 +51,13 @@ class BuildRecordApi {
     final _path = r'/api/app/build-record';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -59,10 +65,13 @@ class BuildRecordApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createBuildRecordDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createBuildRecordDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -81,14 +90,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +138,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -181,16 +185,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -205,14 +209,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -279,8 +278,13 @@ class BuildRecordApi {
     final _path = r'/api/app/build-record';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -309,13 +313,9 @@ class BuildRecordApi {
     BuildRecordDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              BuildRecordDtoPagedResultDto,
-              BuildRecordDtoPagedResultDto
-            >(rawData, 'BuildRecordDtoPagedResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDtoPagedResultDto, BuildRecordDtoPagedResultDto>(rawData, 'BuildRecordDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -361,17 +361,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/by-ci-build-id/{ciBuildId}'
-        .replaceAll(
-          '{'
-          r'ciBuildId'
-          '}',
-          ciBuildId.toString(),
-        );
+    final _path = r'/api/app/build-record/by-ci-build-id/{ciBuildId}'.replaceAll('{' r'ciBuildId' '}', ciBuildId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -386,14 +385,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -445,16 +439,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/latest/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/build-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -476,14 +470,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -529,16 +518,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}/mark-as-building'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}/mark-as-building'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -553,14 +542,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -597,8 +581,7 @@ class BuildRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>>
-  markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled({
+  Future<Response<BuildRecordDto>> markAsCanceledPostApiAppBuildRecordIdMarkAsCanceled({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -607,16 +590,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}/mark-as-canceled'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}/mark-as-canceled'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -631,14 +614,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -676,8 +654,7 @@ class BuildRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>>
-  markAsFailedPostApiAppBuildRecordIdMarkAsFailed({
+  Future<Response<BuildRecordDto>> markAsFailedPostApiAppBuildRecordIdMarkAsFailed({
     required String id,
     String? errorMessage,
     CancelToken? cancelToken,
@@ -687,16 +664,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}/mark-as-failed'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}/mark-as-failed'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -716,14 +693,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -762,8 +734,7 @@ class BuildRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuildRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuildRecordDto>>
-  markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded({
+  Future<Response<BuildRecordDto>> markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded({
     required String id,
     String? artifactUrl,
     int? artifactSize,
@@ -774,16 +745,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}/mark-as-succeeded'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}/mark-as-succeeded'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -804,14 +775,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -859,16 +825,16 @@ class BuildRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/build-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/build-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -876,10 +842,13 @@ class BuildRecordApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(updateBuildRecordDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(updateBuildRecordDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -898,14 +867,9 @@ class BuildRecordApi {
     BuildRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<BuildRecordDto, BuildRecordDto>(
-              rawData,
-              'BuildRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<BuildRecordDto, BuildRecordDto>(rawData, 'BuildRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -927,4 +891,5 @@ class BuildRecordApi {
       extra: _response.extra,
     );
   }
+
 }

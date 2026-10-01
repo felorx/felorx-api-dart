@@ -9,6 +9,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'feature_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -18,73 +19,145 @@ part 'feature_dto.g.dart';
 class FeatureDto {
   /// Returns a new [FeatureDto] instance.
   FeatureDto({
-    this.name,
 
-    this.displayName,
+     this.name,
 
-    this.value,
+     this.displayName,
 
-    this.provider,
+     this.value,
 
-    this.description,
+     this.provider,
 
-    this.valueType,
+     this.description,
 
-    this.depth,
+     this.valueType,
 
-    this.parentName,
+     this.depth,
+
+     this.parentName,
   });
 
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  @JsonKey(name: r'displayName', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'displayName',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? displayName;
 
-  @JsonKey(name: r'value', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'value',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? value;
 
-  @JsonKey(name: r'provider', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'provider',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   FeatureProviderDto? provider;
 
-  @JsonKey(name: r'description', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'description',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? description;
 
-  @JsonKey(name: r'valueType', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'valueType',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   IStringValueType? valueType;
 
-  @JsonKey(name: r'depth', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'depth',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   int? depth;
 
-  @JsonKey(name: r'parentName', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'parentName',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? parentName;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is FeatureDto &&
-          other.name == name &&
-          other.displayName == displayName &&
-          other.value == value &&
-          other.provider == provider &&
-          other.description == description &&
-          other.valueType == valueType &&
-          other.depth == depth &&
-          other.parentName == parentName;
 
-  @override
-  int get hashCode =>
-      (name == null ? 0 : name.hashCode) +
-      (displayName == null ? 0 : displayName.hashCode) +
-      (value == null ? 0 : value.hashCode) +
-      provider.hashCode +
-      (description == null ? 0 : description.hashCode) +
-      valueType.hashCode +
-      depth.hashCode +
-      (parentName == null ? 0 : parentName.hashCode);
 
-  factory FeatureDto.fromJson(Map<String, dynamic> json) =>
-      _$FeatureDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is FeatureDto &&
+      other.name == name &&
+      other.displayName == displayName &&
+      other.value == value &&
+      other.provider == provider &&
+      other.description == description &&
+      other.valueType == valueType &&
+      other.depth == depth &&
+      other.parentName == parentName;
+
+    @override
+    int get hashCode =>
+        (name == null ? 0 : name.hashCode) +
+        (displayName == null ? 0 : displayName.hashCode) +
+        (value == null ? 0 : value.hashCode) +
+        provider.hashCode +
+        (description == null ? 0 : description.hashCode) +
+        valueType.hashCode +
+        depth.hashCode +
+        (parentName == null ? 0 : parentName.hashCode);
+
+  factory FeatureDto.fromJson(Map<String, dynamic> json) => _$FeatureDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$FeatureDtoToJson(this);
 
@@ -92,4 +165,5 @@ class FeatureDto {
   String toString() {
     return toJson().toString();
   }
+
 }

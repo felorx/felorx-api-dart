@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateCreditAlipayOrderResultDto
 void main() {
-  final CreateCreditAlipayOrderResultDto?
-  instance = /* CreateCreditAlipayOrderResultDto(...) */ null;
+  final CreateCreditAlipayOrderResultDto? instance = /* CreateCreditAlipayOrderResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateCreditAlipayOrderResultDto, () {
@@ -37,5 +36,6 @@ void main() {
     test('to test the property `orderString`', () async {
       // TODO
     });
+
   });
 }

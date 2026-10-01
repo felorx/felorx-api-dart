@@ -66,5 +66,6 @@ void main() {
     test('to test the property `deviceToken`', () async {
       // TODO
     });
+
   });
 }

@@ -18,6 +18,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'application_configuration_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -27,101 +28,209 @@ part 'application_configuration_dto.g.dart';
 class ApplicationConfigurationDto {
   /// Returns a new [ApplicationConfigurationDto] instance.
   ApplicationConfigurationDto({
-    this.localization,
 
-    this.auth,
+     this.localization,
 
-    this.setting,
+     this.auth,
 
-    this.currentUser,
+     this.setting,
 
-    this.features,
+     this.currentUser,
 
-    this.globalFeatures,
+     this.features,
 
-    this.multiTenancy,
+     this.globalFeatures,
 
-    this.currentTenant,
+     this.multiTenancy,
 
-    this.timing,
+     this.currentTenant,
 
-    this.clock,
+     this.timing,
 
-    this.objectExtensions,
+     this.clock,
 
-    this.extraProperties,
+     this.objectExtensions,
+
+     this.extraProperties,
   });
 
-  @JsonKey(name: r'localization', required: false, includeIfNull: false)
+  @JsonKey(
+
+    name: r'localization',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ApplicationLocalizationConfigurationDto? localization;
 
-  @JsonKey(name: r'auth', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'auth',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ApplicationAuthConfigurationDto? auth;
 
-  @JsonKey(name: r'setting', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'setting',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ApplicationSettingConfigurationDto? setting;
 
-  @JsonKey(name: r'currentUser', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'currentUser',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   CurrentUserDto? currentUser;
 
-  @JsonKey(name: r'features', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'features',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ApplicationFeatureConfigurationDto? features;
 
-  @JsonKey(name: r'globalFeatures', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'globalFeatures',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ApplicationGlobalFeatureConfigurationDto? globalFeatures;
 
-  @JsonKey(name: r'multiTenancy', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'multiTenancy',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   MultiTenancyInfoDto? multiTenancy;
 
-  @JsonKey(name: r'currentTenant', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'currentTenant',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   CurrentTenantDto? currentTenant;
 
-  @JsonKey(name: r'timing', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'timing',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   TimingDto? timing;
 
-  @JsonKey(name: r'clock', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'clock',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ClockDto? clock;
 
-  @JsonKey(name: r'objectExtensions', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'objectExtensions',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   ObjectExtensionsDto? objectExtensions;
 
-  @JsonKey(name: r'extraProperties', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'extraProperties',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   Map<String, Object>? extraProperties;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ApplicationConfigurationDto &&
-          other.localization == localization &&
-          other.auth == auth &&
-          other.setting == setting &&
-          other.currentUser == currentUser &&
-          other.features == features &&
-          other.globalFeatures == globalFeatures &&
-          other.multiTenancy == multiTenancy &&
-          other.currentTenant == currentTenant &&
-          other.timing == timing &&
-          other.clock == clock &&
-          other.objectExtensions == objectExtensions &&
-          other.extraProperties == extraProperties;
 
-  @override
-  int get hashCode =>
-      localization.hashCode +
-      auth.hashCode +
-      setting.hashCode +
-      currentUser.hashCode +
-      features.hashCode +
-      globalFeatures.hashCode +
-      multiTenancy.hashCode +
-      currentTenant.hashCode +
-      timing.hashCode +
-      clock.hashCode +
-      objectExtensions.hashCode +
-      (extraProperties == null ? 0 : extraProperties.hashCode);
 
-  factory ApplicationConfigurationDto.fromJson(Map<String, dynamic> json) =>
-      _$ApplicationConfigurationDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is ApplicationConfigurationDto &&
+      other.localization == localization &&
+      other.auth == auth &&
+      other.setting == setting &&
+      other.currentUser == currentUser &&
+      other.features == features &&
+      other.globalFeatures == globalFeatures &&
+      other.multiTenancy == multiTenancy &&
+      other.currentTenant == currentTenant &&
+      other.timing == timing &&
+      other.clock == clock &&
+      other.objectExtensions == objectExtensions &&
+      other.extraProperties == extraProperties;
+
+    @override
+    int get hashCode =>
+        localization.hashCode +
+        auth.hashCode +
+        setting.hashCode +
+        currentUser.hashCode +
+        features.hashCode +
+        globalFeatures.hashCode +
+        multiTenancy.hashCode +
+        currentTenant.hashCode +
+        timing.hashCode +
+        clock.hashCode +
+        objectExtensions.hashCode +
+        (extraProperties == null ? 0 : extraProperties.hashCode);
+
+  factory ApplicationConfigurationDto.fromJson(Map<String, dynamic> json) => _$ApplicationConfigurationDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationConfigurationDtoToJson(this);
 
@@ -129,4 +238,5 @@ class ApplicationConfigurationDto {
   String toString() {
     return toJson().toString();
   }
+
 }

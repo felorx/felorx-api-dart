@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ActionApiDescriptionModel
 void main() {
-  final ActionApiDescriptionModel?
-  instance = /* ActionApiDescriptionModel(...) */ null;
+  final ActionApiDescriptionModel? instance = /* ActionApiDescriptionModel(...) */ null;
   // TODO add properties to the entity
 
   group(ActionApiDescriptionModel, () {
@@ -57,5 +56,6 @@ void main() {
     test('to test the property `implementFrom`', () async {
       // TODO
     });
+
   });
 }

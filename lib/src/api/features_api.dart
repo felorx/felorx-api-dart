@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/update_features_dto.dart';
 
 class FeaturesApi {
+
   final Dio _dio;
 
   const FeaturesApi(this._dio);
@@ -48,8 +49,13 @@ class FeaturesApi {
     final _path = r'/api/feature-management/features';
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -98,8 +104,13 @@ class FeaturesApi {
     final _path = r'/api/feature-management/features';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -120,14 +131,9 @@ class FeaturesApi {
     GetFeatureListResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<GetFeatureListResultDto, GetFeatureListResultDto>(
-              rawData,
-              'GetFeatureListResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<GetFeatureListResultDto, GetFeatureListResultDto>(rawData, 'GetFeatureListResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -180,8 +186,13 @@ class FeaturesApi {
     final _path = r'/api/feature-management/features';
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -194,10 +205,10 @@ class FeaturesApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(updateFeaturesDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(updateFeaturesDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(
+         requestOptions: _options.compose(
           _dio.options,
           _path,
           queryParameters: _queryParameters,
@@ -220,4 +231,5 @@ class FeaturesApi {
 
     return _response;
   }
+
 }

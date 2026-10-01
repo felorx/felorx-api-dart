@@ -9,6 +9,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'time_zone.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,24 +18,50 @@ part 'time_zone.g.dart';
 )
 class TimeZone {
   /// Returns a new [TimeZone] instance.
-  TimeZone({this.iana, this.windows});
+  TimeZone({
 
-  @JsonKey(name: r'iana', required: false, includeIfNull: false)
+     this.iana,
+
+     this.windows,
+  });
+
+  @JsonKey(
+
+    name: r'iana',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   IanaTimeZone? iana;
 
-  @JsonKey(name: r'windows', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'windows',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   WindowsTimeZone? windows;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is TimeZone && other.iana == iana && other.windows == windows;
 
-  @override
-  int get hashCode => iana.hashCode + windows.hashCode;
 
-  factory TimeZone.fromJson(Map<String, dynamic> json) =>
-      _$TimeZoneFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is TimeZone &&
+      other.iana == iana &&
+      other.windows == windows;
+
+    @override
+    int get hashCode =>
+        iana.hashCode +
+        windows.hashCode;
+
+  factory TimeZone.fromJson(Map<String, dynamic> json) => _$TimeZoneFromJson(json);
 
   Map<String, dynamic> toJson() => _$TimeZoneToJson(this);
 
@@ -42,4 +69,5 @@ class TimeZone {
   String toString() {
     return toJson().toString();
   }
+
 }

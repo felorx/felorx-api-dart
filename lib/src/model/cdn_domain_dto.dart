@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'cdn_domain_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,36 +16,69 @@ part 'cdn_domain_dto.g.dart';
 )
 class CdnDomainDto {
   /// Returns a new [CdnDomainDto] instance.
-  CdnDomainDto({this.name, this.description, this.cdnDomain});
+  CdnDomainDto({
 
-  /// 配置名称
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+     this.name,
+
+     this.description,
+
+     this.cdnDomain,
+  });
+
+      /// 配置名称
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  /// 配置描述
-  @JsonKey(name: r'description', required: false, includeIfNull: false)
+
+
+      /// 配置描述
+  @JsonKey(
+
+    name: r'description',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? description;
 
-  /// CDN 域名
-  @JsonKey(name: r'cdnDomain', required: false, includeIfNull: false)
+
+
+      /// CDN 域名
+  @JsonKey(
+
+    name: r'cdnDomain',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? cdnDomain;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is CdnDomainDto &&
-          other.name == name &&
-          other.description == description &&
-          other.cdnDomain == cdnDomain;
 
-  @override
-  int get hashCode =>
-      (name == null ? 0 : name.hashCode) +
-      (description == null ? 0 : description.hashCode) +
-      (cdnDomain == null ? 0 : cdnDomain.hashCode);
 
-  factory CdnDomainDto.fromJson(Map<String, dynamic> json) =>
-      _$CdnDomainDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is CdnDomainDto &&
+      other.name == name &&
+      other.description == description &&
+      other.cdnDomain == cdnDomain;
+
+    @override
+    int get hashCode =>
+        (name == null ? 0 : name.hashCode) +
+        (description == null ? 0 : description.hashCode) +
+        (cdnDomain == null ? 0 : cdnDomain.hashCode);
+
+  factory CdnDomainDto.fromJson(Map<String, dynamic> json) => _$CdnDomainDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$CdnDomainDtoToJson(this);
 
@@ -52,4 +86,5 @@ class CdnDomainDto {
   String toString() {
     return toJson().toString();
   }
+
 }

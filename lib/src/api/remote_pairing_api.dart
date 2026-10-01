@@ -18,6 +18,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/verify_remote_pairing_assertion_dto.dart';
 
 class RemotePairingApi {
+
   final Dio _dio;
 
   const RemotePairingApi(this._dio);
@@ -48,8 +49,13 @@ class RemotePairingApi {
     final _path = r'/api/app/remote-pairing/issue-assertion';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -57,10 +63,13 @@ class RemotePairingApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(remotePairingBindingDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(remotePairingBindingDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -79,14 +88,9 @@ class RemotePairingApi {
     RemotePairingAssertionDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<RemotePairingAssertionDto, RemotePairingAssertionDto>(
-              rawData,
-              'RemotePairingAssertionDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<RemotePairingAssertionDto, RemotePairingAssertionDto>(rawData, 'RemotePairingAssertionDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -135,8 +139,13 @@ class RemotePairingApi {
     final _path = r'/api/app/remote-pairing/verify-assertion';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -144,10 +153,13 @@ class RemotePairingApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(verifyRemotePairingAssertionDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(verifyRemotePairingAssertionDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -166,13 +178,9 @@ class RemotePairingApi {
     RemotePairingVerificationDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              RemotePairingVerificationDto,
-              RemotePairingVerificationDto
-            >(rawData, 'RemotePairingVerificationDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<RemotePairingVerificationDto, RemotePairingVerificationDto>(rawData, 'RemotePairingVerificationDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -194,4 +202,5 @@ class RemotePairingApi {
       extra: _response.extra,
     );
   }
+
 }

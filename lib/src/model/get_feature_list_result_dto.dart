@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'get_feature_list_result_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,21 +17,34 @@ part 'get_feature_list_result_dto.g.dart';
 )
 class GetFeatureListResultDto {
   /// Returns a new [GetFeatureListResultDto] instance.
-  GetFeatureListResultDto({this.groups});
+  GetFeatureListResultDto({
 
-  @JsonKey(name: r'groups', required: false, includeIfNull: false)
+     this.groups,
+  });
+
+  @JsonKey(
+
+    name: r'groups',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<FeatureGroupDto>? groups;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is GetFeatureListResultDto && other.groups == groups;
 
-  @override
-  int get hashCode => (groups == null ? 0 : groups.hashCode);
 
-  factory GetFeatureListResultDto.fromJson(Map<String, dynamic> json) =>
-      _$GetFeatureListResultDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is GetFeatureListResultDto &&
+      other.groups == groups;
+
+    @override
+    int get hashCode =>
+        (groups == null ? 0 : groups.hashCode);
+
+  factory GetFeatureListResultDto.fromJson(Map<String, dynamic> json) => _$GetFeatureListResultDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$GetFeatureListResultDtoToJson(this);
 
@@ -38,4 +52,5 @@ class GetFeatureListResultDto {
   String toString() {
     return toJson().toString();
   }
+
 }

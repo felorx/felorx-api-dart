@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateCreditPayPalOrderDto
 void main() {
-  final CreateCreditPayPalOrderDto?
-  instance = /* CreateCreditPayPalOrderDto(...) */ null;
+  final CreateCreditPayPalOrderDto? instance = /* CreateCreditPayPalOrderDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateCreditPayPalOrderDto, () {
@@ -27,5 +26,6 @@ void main() {
     test('to test the property `cancelUrl`', () async {
       // TODO
     });
+
   });
 }

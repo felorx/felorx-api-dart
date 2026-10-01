@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/message_source_route_sub_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageSourceRouteSubApi {
+
   final Dio _dio;
 
   const MessageSourceRouteSubApi(this._dio);
@@ -46,8 +47,13 @@ class MessageSourceRouteSubApi {
     final _path = r'/api/app/message-source-route-sub';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -55,10 +61,13 @@ class MessageSourceRouteSubApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createUpdateMessageSourceRouteSubDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -100,16 +109,16 @@ class MessageSourceRouteSubApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -147,16 +156,16 @@ class MessageSourceRouteSubApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -171,14 +180,9 @@ class MessageSourceRouteSubApi {
     MessageSourceRouteSubDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<MessageSourceRouteSubDto, MessageSourceRouteSubDto>(
-              rawData,
-              'MessageSourceRouteSubDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<MessageSourceRouteSubDto, MessageSourceRouteSubDto>(rawData, 'MessageSourceRouteSubDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -214,8 +218,7 @@ class MessageSourceRouteSubApi {
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageSourceRouteSubDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageSourceRouteSubDto>>>
-  getMessageSourceRouteSubList({
+  Future<Response<List<MessageSourceRouteSubDto>>> getMessageSourceRouteSubList({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -226,8 +229,13 @@ class MessageSourceRouteSubApi {
     final _path = r'/api/app/message-source-route-sub';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -242,13 +250,9 @@ class MessageSourceRouteSubApi {
     List<MessageSourceRouteSubDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              List<MessageSourceRouteSubDto>,
-              MessageSourceRouteSubDto
-            >(rawData, 'List<MessageSourceRouteSubDto>', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<MessageSourceRouteSubDto>, MessageSourceRouteSubDto>(rawData, 'List<MessageSourceRouteSubDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -296,16 +300,16 @@ class MessageSourceRouteSubApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-source-route-sub/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -313,10 +317,13 @@ class MessageSourceRouteSubApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createUpdateMessageSourceRouteSubDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createUpdateMessageSourceRouteSubDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -334,4 +341,5 @@ class MessageSourceRouteSubApi {
 
     return _response;
   }
+
 }

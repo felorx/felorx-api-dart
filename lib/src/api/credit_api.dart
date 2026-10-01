@@ -22,6 +22,7 @@ import 'package:felorx_api_client/src/model/credit_package_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class CreditApi {
+
   final Dio _dio;
 
   const CreditApi(this._dio);
@@ -40,8 +41,7 @@ class CreditApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CreateCreditAlipayOrderResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateCreditAlipayOrderResultDto>>
-  createAlipayOrderPostApiAppCreditAlipayOrder({
+  Future<Response<CreateCreditAlipayOrderResultDto>> createAlipayOrderPostApiAppCreditAlipayOrder({
     CreateCreditAlipayOrderDto? createCreditAlipayOrderDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -53,8 +53,13 @@ class CreditApi {
     final _path = r'/api/app/credit/alipay-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -62,10 +67,13 @@ class CreditApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createCreditAlipayOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createCreditAlipayOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -84,13 +92,9 @@ class CreditApi {
     CreateCreditAlipayOrderResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              CreateCreditAlipayOrderResultDto,
-              CreateCreditAlipayOrderResultDto
-            >(rawData, 'CreateCreditAlipayOrderResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<CreateCreditAlipayOrderResultDto, CreateCreditAlipayOrderResultDto>(rawData, 'CreateCreditAlipayOrderResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -127,8 +131,7 @@ class CreditApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CreateCreditPayPalOrderResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateCreditPayPalOrderResultDto>>
-  createPayPalOrderPostApiAppCreditPayPalOrder({
+  Future<Response<CreateCreditPayPalOrderResultDto>> createPayPalOrderPostApiAppCreditPayPalOrder({
     CreateCreditPayPalOrderDto? createCreditPayPalOrderDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -140,8 +143,13 @@ class CreditApi {
     final _path = r'/api/app/credit/pay-pal-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -149,10 +157,13 @@ class CreditApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createCreditPayPalOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createCreditPayPalOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -171,13 +182,9 @@ class CreditApi {
     CreateCreditPayPalOrderResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              CreateCreditPayPalOrderResultDto,
-              CreateCreditPayPalOrderResultDto
-            >(rawData, 'CreateCreditPayPalOrderResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<CreateCreditPayPalOrderResultDto, CreateCreditPayPalOrderResultDto>(rawData, 'CreateCreditPayPalOrderResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -223,16 +230,16 @@ class CreditApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/credit/account/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/credit/account/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -247,14 +254,9 @@ class CreditApi {
     CreditAccountDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<CreditAccountDto, CreditAccountDto>(
-              rawData,
-              'CreditAccountDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<CreditAccountDto, CreditAccountDto>(rawData, 'CreditAccountDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -300,16 +302,16 @@ class CreditApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/credit/packages/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/credit/packages/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -324,14 +326,9 @@ class CreditApi {
     List<CreditPackageDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<CreditPackageDto>, CreditPackageDto>(
-              rawData,
-              'List<CreditPackageDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<CreditPackageDto>, CreditPackageDto>(rawData, 'List<CreditPackageDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -380,8 +377,13 @@ class CreditApi {
     final _path = r'/api/app/credit/refund';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -389,10 +391,13 @@ class CreditApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(adjustCreditsDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(adjustCreditsDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -411,14 +416,9 @@ class CreditApi {
     AdjustCreditsResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AdjustCreditsResultDto, AdjustCreditsResultDto>(
-              rawData,
-              'AdjustCreditsResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AdjustCreditsResultDto, AdjustCreditsResultDto>(rawData, 'AdjustCreditsResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -467,8 +467,13 @@ class CreditApi {
     final _path = r'/api/app/credit/spend';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -476,10 +481,13 @@ class CreditApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(adjustCreditsDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(adjustCreditsDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -498,14 +506,9 @@ class CreditApi {
     AdjustCreditsResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AdjustCreditsResultDto, AdjustCreditsResultDto>(
-              rawData,
-              'AdjustCreditsResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AdjustCreditsResultDto, AdjustCreditsResultDto>(rawData, 'AdjustCreditsResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -527,4 +530,5 @@ class CreditApi {
       extra: _response.extra,
     );
   }
+
 }

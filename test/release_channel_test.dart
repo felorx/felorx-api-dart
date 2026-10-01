@@ -3,5 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ReleaseChannel
 void main() {
-  group(ReleaseChannel, () {});
+
+  group(ReleaseChannel, () {
+  });
 }

@@ -15,6 +15,7 @@ import 'package:felorx_api_client/src/model/name_value.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class TimeZoneSettingsApi {
+
   final Dio _dio;
 
   const TimeZoneSettingsApi(this._dio);
@@ -43,8 +44,13 @@ class TimeZoneSettingsApi {
     final _path = r'/api/setting-management/timezone';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -59,10 +65,9 @@ class TimeZoneSettingsApi {
     String? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<String, String>(rawData, 'String', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<String, String>(rawData, 'String', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -109,8 +114,13 @@ class TimeZoneSettingsApi {
     final _path = r'/api/setting-management/timezone/timezones';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -125,14 +135,9 @@ class TimeZoneSettingsApi {
     List<NameValue>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<NameValue>, NameValue>(
-              rawData,
-              'List<NameValue>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<NameValue>, NameValue>(rawData, 'List<NameValue>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -181,8 +186,13 @@ class TimeZoneSettingsApi {
     final _path = r'/api/setting-management/timezone';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -201,4 +211,5 @@ class TimeZoneSettingsApi {
 
     return _response;
   }
+
 }

@@ -106,5 +106,6 @@ void main() {
     test('to test the property `releaseNote`', () async {
       // TODO
     });
+
   });
 }

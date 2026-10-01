@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'message_unsubscribe_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,21 +16,34 @@ part 'message_unsubscribe_dto.g.dart';
 )
 class MessageUnsubscribeDto {
   /// Returns a new [MessageUnsubscribeDto] instance.
-  MessageUnsubscribeDto({this.appId});
+  MessageUnsubscribeDto({
 
-  @JsonKey(name: r'appId', required: false, includeIfNull: false)
+     this.appId,
+  });
+
+  @JsonKey(
+
+    name: r'appId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? appId;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is MessageUnsubscribeDto && other.appId == appId;
 
-  @override
-  int get hashCode => appId.hashCode;
 
-  factory MessageUnsubscribeDto.fromJson(Map<String, dynamic> json) =>
-      _$MessageUnsubscribeDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is MessageUnsubscribeDto &&
+      other.appId == appId;
+
+    @override
+    int get hashCode =>
+        appId.hashCode;
+
+  factory MessageUnsubscribeDto.fromJson(Map<String, dynamic> json) => _$MessageUnsubscribeDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$MessageUnsubscribeDtoToJson(this);
 
@@ -37,4 +51,5 @@ class MessageUnsubscribeDto {
   String toString() {
     return toJson().toString();
   }
+
 }

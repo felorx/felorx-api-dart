@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'identity_user_role.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,33 +16,66 @@ part 'identity_user_role.g.dart';
 )
 class IdentityUserRole {
   /// Returns a new [IdentityUserRole] instance.
-  IdentityUserRole({this.tenantId, this.userId, this.roleId});
+  IdentityUserRole({
 
-  @JsonKey(name: r'tenantId', required: false, includeIfNull: false)
+     this.tenantId,
+
+     this.userId,
+
+     this.roleId,
+  });
+
+  @JsonKey(
+
+    name: r'tenantId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? tenantId;
 
-  @JsonKey(name: r'userId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'userId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? userId;
 
-  @JsonKey(name: r'roleId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'roleId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? roleId;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is IdentityUserRole &&
-          other.tenantId == tenantId &&
-          other.userId == userId &&
-          other.roleId == roleId;
 
-  @override
-  int get hashCode =>
-      (tenantId == null ? 0 : tenantId.hashCode) +
-      userId.hashCode +
-      roleId.hashCode;
 
-  factory IdentityUserRole.fromJson(Map<String, dynamic> json) =>
-      _$IdentityUserRoleFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is IdentityUserRole &&
+      other.tenantId == tenantId &&
+      other.userId == userId &&
+      other.roleId == roleId;
+
+    @override
+    int get hashCode =>
+        (tenantId == null ? 0 : tenantId.hashCode) +
+        userId.hashCode +
+        roleId.hashCode;
+
+  factory IdentityUserRole.fromJson(Map<String, dynamic> json) => _$IdentityUserRoleFromJson(json);
 
   Map<String, dynamic> toJson() => _$IdentityUserRoleToJson(this);
 
@@ -49,4 +83,5 @@ class IdentityUserRole {
   String toString() {
     return toJson().toString();
   }
+
 }

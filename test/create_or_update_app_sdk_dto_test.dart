@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateAppSdkDto
 void main() {
-  final CreateOrUpdateAppSdkDto? instance = /* CreateOrUpdateAppSdkDto(...) */
-      null;
+  final CreateOrUpdateAppSdkDto? instance = /* CreateOrUpdateAppSdkDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateAppSdkDto, () {
@@ -32,5 +31,6 @@ void main() {
     test('to test the property `homePage`', () async {
       // TODO
     });
+
   });
 }

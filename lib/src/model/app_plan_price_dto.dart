@@ -10,6 +10,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'app_plan_price_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -19,171 +20,369 @@ part 'app_plan_price_dto.g.dart';
 class AppPlanPriceDto {
   /// Returns a new [AppPlanPriceDto] instance.
   AppPlanPriceDto({
-    this.id,
 
-    this.creationTime,
+     this.id,
 
-    this.creatorId,
+     this.creationTime,
 
-    this.lastModificationTime,
+     this.creatorId,
 
-    this.lastModifierId,
+     this.lastModificationTime,
 
-    this.isDeleted,
+     this.lastModifierId,
 
-    this.deleterId,
+     this.isDeleted,
 
-    this.deletionTime,
+     this.deleterId,
 
-    this.appId,
+     this.deletionTime,
 
-    this.pricingId,
+     this.appId,
 
-    this.period,
+     this.pricingId,
 
-    this.mode,
+     this.period,
 
-    this.market,
+     this.mode,
 
-    this.currency,
+     this.market,
 
-    this.amount,
+     this.currency,
 
-    this.discountAmount,
+     this.amount,
 
-    this.effectiveAmount,
+     this.discountAmount,
 
-    this.durationDays,
+     this.effectiveAmount,
 
-    this.isEnabled,
+     this.durationDays,
 
-    this.sortIndex,
+     this.isEnabled,
 
-    this.displayName,
+     this.sortIndex,
 
-    this.description,
+     this.displayName,
+
+     this.description,
   });
 
-  @JsonKey(name: r'id', required: false, includeIfNull: false)
+  @JsonKey(
+
+    name: r'id',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? id;
 
-  @JsonKey(name: r'creationTime', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'creationTime',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   DateTime? creationTime;
 
-  @JsonKey(name: r'creatorId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'creatorId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? creatorId;
 
-  @JsonKey(name: r'lastModificationTime', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'lastModificationTime',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   DateTime? lastModificationTime;
 
-  @JsonKey(name: r'lastModifierId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'lastModifierId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? lastModifierId;
 
-  @JsonKey(name: r'isDeleted', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'isDeleted',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isDeleted;
 
-  @JsonKey(name: r'deleterId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'deleterId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? deleterId;
 
-  @JsonKey(name: r'deletionTime', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'deletionTime',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   DateTime? deletionTime;
 
-  @JsonKey(name: r'appId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'appId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? appId;
 
-  @JsonKey(name: r'pricingId', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'pricingId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? pricingId;
 
-  @JsonKey(name: r'period', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'period',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   SubBillingPeriod? period;
 
-  @JsonKey(name: r'mode', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'mode',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   BillingMode? mode;
 
-  @JsonKey(name: r'market', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'market',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   BillingMarket? market;
 
-  @JsonKey(name: r'currency', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'currency',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? currency;
 
-  @JsonKey(name: r'amount', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'amount',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   double? amount;
 
-  @JsonKey(name: r'discountAmount', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'discountAmount',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   double? discountAmount;
 
-  @JsonKey(name: r'effectiveAmount', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'effectiveAmount',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   double? effectiveAmount;
 
-  @JsonKey(name: r'durationDays', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'durationDays',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   int? durationDays;
 
-  @JsonKey(name: r'isEnabled', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'isEnabled',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isEnabled;
 
-  @JsonKey(name: r'sortIndex', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'sortIndex',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   int? sortIndex;
 
-  @JsonKey(name: r'displayName', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'displayName',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? displayName;
 
-  @JsonKey(name: r'description', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'description',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? description;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is AppPlanPriceDto &&
-          other.id == id &&
-          other.creationTime == creationTime &&
-          other.creatorId == creatorId &&
-          other.lastModificationTime == lastModificationTime &&
-          other.lastModifierId == lastModifierId &&
-          other.isDeleted == isDeleted &&
-          other.deleterId == deleterId &&
-          other.deletionTime == deletionTime &&
-          other.appId == appId &&
-          other.pricingId == pricingId &&
-          other.period == period &&
-          other.mode == mode &&
-          other.market == market &&
-          other.currency == currency &&
-          other.amount == amount &&
-          other.discountAmount == discountAmount &&
-          other.effectiveAmount == effectiveAmount &&
-          other.durationDays == durationDays &&
-          other.isEnabled == isEnabled &&
-          other.sortIndex == sortIndex &&
-          other.displayName == displayName &&
-          other.description == description;
 
-  @override
-  int get hashCode =>
-      id.hashCode +
-      creationTime.hashCode +
-      (creatorId == null ? 0 : creatorId.hashCode) +
-      (lastModificationTime == null ? 0 : lastModificationTime.hashCode) +
-      (lastModifierId == null ? 0 : lastModifierId.hashCode) +
-      isDeleted.hashCode +
-      (deleterId == null ? 0 : deleterId.hashCode) +
-      (deletionTime == null ? 0 : deletionTime.hashCode) +
-      appId.hashCode +
-      pricingId.hashCode +
-      period.hashCode +
-      mode.hashCode +
-      market.hashCode +
-      (currency == null ? 0 : currency.hashCode) +
-      amount.hashCode +
-      (discountAmount == null ? 0 : discountAmount.hashCode) +
-      effectiveAmount.hashCode +
-      (durationDays == null ? 0 : durationDays.hashCode) +
-      isEnabled.hashCode +
-      sortIndex.hashCode +
-      (displayName == null ? 0 : displayName.hashCode) +
-      (description == null ? 0 : description.hashCode);
 
-  factory AppPlanPriceDto.fromJson(Map<String, dynamic> json) =>
-      _$AppPlanPriceDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is AppPlanPriceDto &&
+      other.id == id &&
+      other.creationTime == creationTime &&
+      other.creatorId == creatorId &&
+      other.lastModificationTime == lastModificationTime &&
+      other.lastModifierId == lastModifierId &&
+      other.isDeleted == isDeleted &&
+      other.deleterId == deleterId &&
+      other.deletionTime == deletionTime &&
+      other.appId == appId &&
+      other.pricingId == pricingId &&
+      other.period == period &&
+      other.mode == mode &&
+      other.market == market &&
+      other.currency == currency &&
+      other.amount == amount &&
+      other.discountAmount == discountAmount &&
+      other.effectiveAmount == effectiveAmount &&
+      other.durationDays == durationDays &&
+      other.isEnabled == isEnabled &&
+      other.sortIndex == sortIndex &&
+      other.displayName == displayName &&
+      other.description == description;
+
+    @override
+    int get hashCode =>
+        id.hashCode +
+        creationTime.hashCode +
+        (creatorId == null ? 0 : creatorId.hashCode) +
+        (lastModificationTime == null ? 0 : lastModificationTime.hashCode) +
+        (lastModifierId == null ? 0 : lastModifierId.hashCode) +
+        isDeleted.hashCode +
+        (deleterId == null ? 0 : deleterId.hashCode) +
+        (deletionTime == null ? 0 : deletionTime.hashCode) +
+        appId.hashCode +
+        pricingId.hashCode +
+        period.hashCode +
+        mode.hashCode +
+        market.hashCode +
+        (currency == null ? 0 : currency.hashCode) +
+        amount.hashCode +
+        (discountAmount == null ? 0 : discountAmount.hashCode) +
+        effectiveAmount.hashCode +
+        (durationDays == null ? 0 : durationDays.hashCode) +
+        isEnabled.hashCode +
+        sortIndex.hashCode +
+        (displayName == null ? 0 : displayName.hashCode) +
+        (description == null ? 0 : description.hashCode);
+
+  factory AppPlanPriceDto.fromJson(Map<String, dynamic> json) => _$AppPlanPriceDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppPlanPriceDtoToJson(this);
 
@@ -191,4 +390,5 @@ class AppPlanPriceDto {
   String toString() {
     return toJson().toString();
   }
+
 }

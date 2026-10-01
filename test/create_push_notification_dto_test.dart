@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreatePushNotificationDto
 void main() {
-  final CreatePushNotificationDto?
-  instance = /* CreatePushNotificationDto(...) */ null;
+  final CreatePushNotificationDto? instance = /* CreatePushNotificationDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreatePushNotificationDto, () {
@@ -42,5 +41,6 @@ void main() {
     test('to test the property `app`', () async {
       // TODO
     });
+
   });
 }

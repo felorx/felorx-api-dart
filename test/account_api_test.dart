@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for AccountApi
 void main() {
   final instance = FelorxApiClient().getAccountApi();
@@ -15,6 +16,11 @@ void main() {
     //
     //Future<CheckSyncAuthResultDto> checkSyncAuth() async
     test('test checkSyncAuth', () async {
+      // TODO
+    });
+
+    //Future confirmEmail({ ConfirmAccountEmailDto confirmAccountEmailDto }) async
+    test('test confirmEmail', () async {
       // TODO
     });
 
@@ -43,6 +49,16 @@ void main() {
       // TODO
     });
 
+    //Future<String> sendDeletionCode() async
+    test('test sendDeletionCode', () async {
+      // TODO
+    });
+
+    //Future<String> sendEmailConfirmationCode() async
+    test('test sendEmailConfirmationCode', () async {
+      // TODO
+    });
+
     //Future sendPasswordResetCode({ SendPasswordResetCodeDto sendPasswordResetCodeDto }) async
     test('test sendPasswordResetCode', () async {
       // TODO
@@ -52,5 +68,6 @@ void main() {
     test('test verifyPasswordResetToken', () async {
       // TODO
     });
+
   });
 }

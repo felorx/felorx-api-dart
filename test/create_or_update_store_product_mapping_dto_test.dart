@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for CreateOrUpdateStoreProductMappingDto
 void main() {
-  final CreateOrUpdateStoreProductMappingDto?
-  instance = /* CreateOrUpdateStoreProductMappingDto(...) */ null;
+  final CreateOrUpdateStoreProductMappingDto? instance = /* CreateOrUpdateStoreProductMappingDto(...) */ null;
   // TODO add properties to the entity
 
   group(CreateOrUpdateStoreProductMappingDto, () {
@@ -62,5 +61,6 @@ void main() {
     test('to test the property `isEnabled`', () async {
       // TODO
     });
+
   });
 }

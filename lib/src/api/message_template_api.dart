@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/message_template_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageTemplateApi {
+
   final Dio _dio;
 
   const MessageTemplateApi(this._dio);
@@ -46,8 +47,13 @@ class MessageTemplateApi {
     final _path = r'/api/app/message-template';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -55,10 +61,13 @@ class MessageTemplateApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateMessageTemplateDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateMessageTemplateDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -77,14 +86,9 @@ class MessageTemplateApi {
     MessageTemplateDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<MessageTemplateDto, MessageTemplateDto>(
-              rawData,
-              'MessageTemplateDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<MessageTemplateDto, MessageTemplateDto>(rawData, 'MessageTemplateDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -130,16 +134,16 @@ class MessageTemplateApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-template/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-template/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -177,16 +181,16 @@ class MessageTemplateApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-template/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-template/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -201,14 +205,9 @@ class MessageTemplateApi {
     MessageTemplateDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<MessageTemplateDto, MessageTemplateDto>(
-              rawData,
-              'MessageTemplateDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<MessageTemplateDto, MessageTemplateDto>(rawData, 'MessageTemplateDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -255,8 +254,13 @@ class MessageTemplateApi {
     final _path = r'/api/app/message-template';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -271,14 +275,9 @@ class MessageTemplateApi {
     List<MessageTemplateDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<MessageTemplateDto>, MessageTemplateDto>(
-              rawData,
-              'List<MessageTemplateDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<MessageTemplateDto>, MessageTemplateDto>(rawData, 'List<MessageTemplateDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -326,16 +325,16 @@ class MessageTemplateApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/message-template/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/message-template/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -343,10 +342,13 @@ class MessageTemplateApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateMessageTemplateDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateMessageTemplateDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -365,14 +367,9 @@ class MessageTemplateApi {
     MessageTemplateDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<MessageTemplateDto, MessageTemplateDto>(
-              rawData,
-              'MessageTemplateDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<MessageTemplateDto, MessageTemplateDto>(rawData, 'MessageTemplateDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -394,4 +391,5 @@ class MessageTemplateApi {
       extra: _response.extra,
     );
   }
+
 }

@@ -18,6 +18,7 @@ import 'package:felorx_api_client/src/model/message_unsubscribe_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageApi {
+
   final Dio _dio;
 
   const MessageApi(this._dio);
@@ -48,8 +49,13 @@ class MessageApi {
     final _path = r'/api/app/message/publish';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -57,10 +63,13 @@ class MessageApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(messagePublishDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(messagePublishDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -105,8 +114,13 @@ class MessageApi {
     final _path = r'/api/app/message/recall';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -114,10 +128,13 @@ class MessageApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(messageRecallDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(messageRecallDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -162,8 +179,13 @@ class MessageApi {
     final _path = r'/api/app/message/subscribe';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -171,10 +193,13 @@ class MessageApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(messageSubscribeDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(messageSubscribeDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -219,8 +244,13 @@ class MessageApi {
     final _path = r'/api/app/message/unsubscribe';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -228,10 +258,13 @@ class MessageApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(messageUnsubscribeDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(messageUnsubscribeDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -249,4 +282,5 @@ class MessageApi {
 
     return _response;
   }
+
 }

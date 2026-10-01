@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'identity_role_dto_list_result_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,21 +17,34 @@ part 'identity_role_dto_list_result_dto.g.dart';
 )
 class IdentityRoleDtoListResultDto {
   /// Returns a new [IdentityRoleDtoListResultDto] instance.
-  IdentityRoleDtoListResultDto({this.items});
+  IdentityRoleDtoListResultDto({
 
-  @JsonKey(name: r'items', required: false, includeIfNull: false)
+     this.items,
+  });
+
+  @JsonKey(
+
+    name: r'items',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<IdentityRoleDto>? items;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is IdentityRoleDtoListResultDto && other.items == items;
 
-  @override
-  int get hashCode => (items == null ? 0 : items.hashCode);
 
-  factory IdentityRoleDtoListResultDto.fromJson(Map<String, dynamic> json) =>
-      _$IdentityRoleDtoListResultDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is IdentityRoleDtoListResultDto &&
+      other.items == items;
+
+    @override
+    int get hashCode =>
+        (items == null ? 0 : items.hashCode);
+
+  factory IdentityRoleDtoListResultDto.fromJson(Map<String, dynamic> json) => _$IdentityRoleDtoListResultDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$IdentityRoleDtoListResultDtoToJson(this);
 
@@ -38,4 +52,5 @@ class IdentityRoleDtoListResultDto {
   String toString() {
     return toJson().toString();
   }
+
 }

@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ApplicationLocalizationDto
 void main() {
-  final ApplicationLocalizationDto?
-  instance = /* ApplicationLocalizationDto(...) */ null;
+  final ApplicationLocalizationDto? instance = /* ApplicationLocalizationDto(...) */ null;
   // TODO add properties to the entity
 
   group(ApplicationLocalizationDto, () {
@@ -12,5 +11,6 @@ void main() {
     test('to test the property `resources`', () async {
       // TODO
     });
+
   });
 }

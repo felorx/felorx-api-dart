@@ -15,6 +15,7 @@ import 'package:felorx_api_client/src/model/application_configuration_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AbpApplicationConfigurationApi {
+
   final Dio _dio;
 
   const AbpApplicationConfigurationApi(this._dio);
@@ -45,14 +46,18 @@ class AbpApplicationConfigurationApi {
     final _path = r'/api/abp/application-configuration';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
     final _queryParameters = <String, dynamic>{
-      if (includeLocalizationResources != null)
-        r'IncludeLocalizationResources': includeLocalizationResources,
+      if (includeLocalizationResources != null) r'IncludeLocalizationResources': includeLocalizationResources,
     };
 
     final _response = await _dio.request<Object>(
@@ -67,13 +72,9 @@ class AbpApplicationConfigurationApi {
     ApplicationConfigurationDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              ApplicationConfigurationDto,
-              ApplicationConfigurationDto
-            >(rawData, 'ApplicationConfigurationDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<ApplicationConfigurationDto, ApplicationConfigurationDto>(rawData, 'ApplicationConfigurationDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -95,4 +96,5 @@ class AbpApplicationConfigurationApi {
       extra: _response.extra,
     );
   }
+
 }

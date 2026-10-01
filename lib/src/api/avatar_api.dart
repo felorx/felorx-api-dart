@@ -17,6 +17,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/storage_object_credentials.dart';
 
 class AvatarApi {
+
   final Dio _dio;
 
   const AvatarApi(this._dio);
@@ -47,8 +48,13 @@ class AvatarApi {
     final _path = r'/api/app/avatar';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -56,10 +62,13 @@ class AvatarApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createAvatarDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createAvatarDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -78,14 +87,9 @@ class AvatarApi {
     AvatarDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AvatarDto, AvatarDto>(
-              rawData,
-              'AvatarDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AvatarDto, AvatarDto>(rawData, 'AvatarDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,12 +138,19 @@ class AvatarApi {
     final _path = r'/api/app/avatar/credentials';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
-    final _queryParameters = <String, dynamic>{if (key != null) r'key': key};
+    final _queryParameters = <String, dynamic>{
+      if (key != null) r'key': key,
+    };
 
     final _response = await _dio.request<Object>(
       _path,
@@ -153,14 +164,9 @@ class AvatarApi {
     StorageObjectCredentials? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<StorageObjectCredentials, StorageObjectCredentials>(
-              rawData,
-              'StorageObjectCredentials',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<StorageObjectCredentials, StorageObjectCredentials>(rawData, 'StorageObjectCredentials', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -182,4 +188,5 @@ class AvatarApi {
       extra: _response.extra,
     );
   }
+
 }

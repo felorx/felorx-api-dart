@@ -15,6 +15,7 @@ import 'package:felorx_api_client/src/model/message_source_category_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class MessageSourceCategoryApi {
+
   final Dio _dio;
 
   const MessageSourceCategoryApi(this._dio);
@@ -32,8 +33,7 @@ class MessageSourceCategoryApi {
   ///
   /// Returns a [Future] containing a [Response] with a [List<MessageSourceCategoryDto>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<List<MessageSourceCategoryDto>>>
-  getMessageSourceCategoryList({
+  Future<Response<List<MessageSourceCategoryDto>>> getMessageSourceCategoryList({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -44,8 +44,13 @@ class MessageSourceCategoryApi {
     final _path = r'/api/app/message-source-category';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -60,13 +65,9 @@ class MessageSourceCategoryApi {
     List<MessageSourceCategoryDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              List<MessageSourceCategoryDto>,
-              MessageSourceCategoryDto
-            >(rawData, 'List<MessageSourceCategoryDto>', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<MessageSourceCategoryDto>, MessageSourceCategoryDto>(rawData, 'List<MessageSourceCategoryDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -88,4 +89,5 @@ class MessageSourceCategoryApi {
       extra: _response.extra,
     );
   }
+
 }

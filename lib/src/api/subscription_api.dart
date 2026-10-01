@@ -30,6 +30,7 @@ import 'package:felorx_api_client/src/model/verify_receipt_dto.dart';
 import 'package:felorx_api_client/src/model/verify_receipt_result.dart';
 
 class SubscriptionApi {
+
   final Dio _dio;
 
   const SubscriptionApi(this._dio);
@@ -58,8 +59,13 @@ class SubscriptionApi {
     final _path = r'/api/app/alipay/notify';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -74,10 +80,9 @@ class SubscriptionApi {
     String? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<String, String>(rawData, 'String', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<String, String>(rawData, 'String', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -126,8 +131,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/apple-notifications';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -135,10 +145,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(appleNotificaionDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(appleNotificaionDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -183,8 +196,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/capture-pay-pal-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -192,10 +210,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(capturePayPalOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(capturePayPalOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -214,14 +235,9 @@ class SubscriptionApi {
     SubscriptionDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<SubscriptionDto, SubscriptionDto>(
-              rawData,
-              'SubscriptionDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<SubscriptionDto, SubscriptionDto>(rawData, 'SubscriptionDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -258,8 +274,7 @@ class SubscriptionApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CreateAlipayOrderResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateAlipayOrderResultDto>>
-  createAlipayOrderPostApiAppSubscriptionAlipayOrder({
+  Future<Response<CreateAlipayOrderResultDto>> createAlipayOrderPostApiAppSubscriptionAlipayOrder({
     CreateAlipayOrderDto? createAlipayOrderDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -271,8 +286,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/alipay-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -280,10 +300,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createAlipayOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createAlipayOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -302,14 +325,9 @@ class SubscriptionApi {
     CreateAlipayOrderResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<CreateAlipayOrderResultDto, CreateAlipayOrderResultDto>(
-              rawData,
-              'CreateAlipayOrderResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<CreateAlipayOrderResultDto, CreateAlipayOrderResultDto>(rawData, 'CreateAlipayOrderResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -358,8 +376,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -367,10 +390,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrGetSubscriptionOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrGetSubscriptionOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -389,14 +415,9 @@ class SubscriptionApi {
     SubscriptionOrderDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<SubscriptionOrderDto, SubscriptionOrderDto>(
-              rawData,
-              'SubscriptionOrderDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<SubscriptionOrderDto, SubscriptionOrderDto>(rawData, 'SubscriptionOrderDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -433,8 +454,7 @@ class SubscriptionApi {
   ///
   /// Returns a [Future] containing a [Response] with a [CreatePayPalOrderResultDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreatePayPalOrderResultDto>>
-  createPayPalOrderPostApiAppSubscriptionPayPalOrder({
+  Future<Response<CreatePayPalOrderResultDto>> createPayPalOrderPostApiAppSubscriptionPayPalOrder({
     CreatePayPalOrderDto? createPayPalOrderDto,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -446,8 +466,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/pay-pal-order';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -455,10 +480,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createPayPalOrderDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createPayPalOrderDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -477,14 +505,9 @@ class SubscriptionApi {
     CreatePayPalOrderResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<CreatePayPalOrderResultDto, CreatePayPalOrderResultDto>(
-              rawData,
-              'CreatePayPalOrderResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<CreatePayPalOrderResultDto, CreatePayPalOrderResultDto>(rawData, 'CreatePayPalOrderResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -530,17 +553,16 @@ class SubscriptionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/plan-prices/by-app-id/{appId}'
-        .replaceAll(
-          '{'
-          r'appId'
-          '}',
-          appId.toString(),
-        );
+    final _path = r'/api/app/subscription/plan-prices/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -555,14 +577,9 @@ class SubscriptionApi {
     List<AppPlanPriceDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(
-              rawData,
-              'List<AppPlanPriceDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(rawData, 'List<AppPlanPriceDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -614,17 +631,16 @@ class SubscriptionApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription/store-products/by-app-id/{appId}'
-        .replaceAll(
-          '{'
-          r'appId'
-          '}',
-          appId.toString(),
-        );
+    final _path = r'/api/app/subscription/store-products/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -646,14 +662,9 @@ class SubscriptionApi {
     List<StoreProductMappingDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(
-              rawData,
-              'List<StoreProductMappingDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(rawData, 'List<StoreProductMappingDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -702,8 +713,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -723,14 +739,9 @@ class SubscriptionApi {
     SubscriptionDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<SubscriptionDto, SubscriptionDto>(
-              rawData,
-              'SubscriptionDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<SubscriptionDto, SubscriptionDto>(rawData, 'SubscriptionDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -777,8 +788,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/list';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -793,14 +809,9 @@ class SubscriptionApi {
     List<SubscriptionDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<SubscriptionDto>, SubscriptionDto>(
-              rawData,
-              'List<SubscriptionDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<SubscriptionDto>, SubscriptionDto>(rawData, 'List<SubscriptionDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -851,8 +862,13 @@ class SubscriptionApi {
     final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -897,8 +913,13 @@ class SubscriptionApi {
     final _path = r'/api/app/paypal/notify';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -913,13 +934,9 @@ class SubscriptionApi {
     PayPalWebhookProcessResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              PayPalWebhookProcessResultDto,
-              PayPalWebhookProcessResultDto
-            >(rawData, 'PayPalWebhookProcessResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<PayPalWebhookProcessResultDto, PayPalWebhookProcessResultDto>(rawData, 'PayPalWebhookProcessResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -968,8 +985,13 @@ class SubscriptionApi {
     final _path = r'/api/app/subscription/verify-receipt';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -977,10 +999,13 @@ class SubscriptionApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(verifyReceiptDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(verifyReceiptDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -999,14 +1024,9 @@ class SubscriptionApi {
     VerifyReceiptResult? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<VerifyReceiptResult, VerifyReceiptResult>(
-              rawData,
-              'VerifyReceiptResult',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<VerifyReceiptResult, VerifyReceiptResult>(rawData, 'VerifyReceiptResult', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -1028,4 +1048,5 @@ class SubscriptionApi {
       extra: _response.extra,
     );
   }
+
 }

@@ -18,6 +18,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/store_product_mapping_dto.dart';
 
 class SubscriptionBillingAdminApi {
+
   final Dio _dio;
 
   const SubscriptionBillingAdminApi(this._dio);
@@ -48,8 +49,13 @@ class SubscriptionBillingAdminApi {
     final _path = r'/api/app/subscription-billing-admin/plan-prices';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -57,10 +63,13 @@ class SubscriptionBillingAdminApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateAppPlanPriceDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateAppPlanPriceDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -79,14 +88,9 @@ class SubscriptionBillingAdminApi {
     AppPlanPriceDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppPlanPriceDto, AppPlanPriceDto>(
-              rawData,
-              'AppPlanPriceDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPriceDto>(rawData, 'AppPlanPriceDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -132,17 +136,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'
-        .replaceAll(
-          '{'
-          r'id'
-          '}',
-          id.toString(),
-        );
+    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -180,17 +183,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription-billing-admin/store-mappings/{id}'
-        .replaceAll(
-          '{'
-          r'id'
-          '}',
-          id.toString(),
-        );
+    final _path = r'/api/app/subscription-billing-admin/store-mappings/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -228,17 +230,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'
-        .replaceAll(
-          '{'
-          r'id'
-          '}',
-          id.toString(),
-        );
+    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -253,14 +254,9 @@ class SubscriptionBillingAdminApi {
     AppPlanPriceDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppPlanPriceDto, AppPlanPriceDto>(
-              rawData,
-              'AppPlanPriceDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPriceDto>(rawData, 'AppPlanPriceDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -306,18 +302,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path =
-        r'/api/app/subscription-billing-admin/plan-prices/by-app-id/{appId}'
-            .replaceAll(
-              '{'
-              r'appId'
-              '}',
-              appId.toString(),
-            );
+    final _path = r'/api/app/subscription-billing-admin/plan-prices/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -332,14 +326,9 @@ class SubscriptionBillingAdminApi {
     List<AppPlanPriceDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(
-              rawData,
-              'List<AppPlanPriceDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(rawData, 'List<AppPlanPriceDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -385,18 +374,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path =
-        r'/api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId}'
-            .replaceAll(
-              '{'
-              r'pricingId'
-              '}',
-              pricingId.toString(),
-            );
+    final _path = r'/api/app/subscription-billing-admin/plan-prices/by-pricing-id/{pricingId}'.replaceAll('{' r'pricingId' '}', pricingId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -411,14 +398,9 @@ class SubscriptionBillingAdminApi {
     List<AppPlanPriceDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(
-              rawData,
-              'List<AppPlanPriceDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AppPlanPriceDto>, AppPlanPriceDto>(rawData, 'List<AppPlanPriceDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -464,18 +446,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path =
-        r'/api/app/subscription-billing-admin/store-mappings/by-app-id/{appId}'
-            .replaceAll(
-              '{'
-              r'appId'
-              '}',
-              appId.toString(),
-            );
+    final _path = r'/api/app/subscription-billing-admin/store-mappings/by-app-id/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -490,14 +470,9 @@ class SubscriptionBillingAdminApi {
     List<StoreProductMappingDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(
-              rawData,
-              'List<StoreProductMappingDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(rawData, 'List<StoreProductMappingDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -543,18 +518,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path =
-        r'/api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId}'
-            .replaceAll(
-              '{'
-              r'planPriceId'
-              '}',
-              planPriceId.toString(),
-            );
+    final _path = r'/api/app/subscription-billing-admin/store-mappings/by-plan-price-id/{planPriceId}'.replaceAll('{' r'planPriceId' '}', planPriceId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -569,14 +542,9 @@ class SubscriptionBillingAdminApi {
     List<StoreProductMappingDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(
-              rawData,
-              'List<StoreProductMappingDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<StoreProductMappingDto>, StoreProductMappingDto>(rawData, 'List<StoreProductMappingDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -624,17 +592,16 @@ class SubscriptionBillingAdminApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'
-        .replaceAll(
-          '{'
-          r'id'
-          '}',
-          id.toString(),
-        );
+    final _path = r'/api/app/subscription-billing-admin/plan-prices/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -642,10 +609,13 @@ class SubscriptionBillingAdminApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateAppPlanPriceDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateAppPlanPriceDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -664,14 +634,9 @@ class SubscriptionBillingAdminApi {
     AppPlanPriceDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppPlanPriceDto, AppPlanPriceDto>(
-              rawData,
-              'AppPlanPriceDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppPlanPriceDto, AppPlanPriceDto>(rawData, 'AppPlanPriceDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -720,8 +685,13 @@ class SubscriptionBillingAdminApi {
     final _path = r'/api/app/subscription-billing-admin/store-mappings/upsert';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -729,10 +699,13 @@ class SubscriptionBillingAdminApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateStoreProductMappingDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateStoreProductMappingDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -751,14 +724,9 @@ class SubscriptionBillingAdminApi {
     StoreProductMappingDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<StoreProductMappingDto, StoreProductMappingDto>(
-              rawData,
-              'StoreProductMappingDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<StoreProductMappingDto, StoreProductMappingDto>(rawData, 'StoreProductMappingDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -780,4 +748,5 @@ class SubscriptionBillingAdminApi {
       extra: _response.extra,
     );
   }
+
 }

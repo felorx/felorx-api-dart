@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/update_permissions_dto.dart';
 
 class PermissionsApi {
+
   final Dio _dio;
 
   const PermissionsApi(this._dio);
@@ -48,8 +49,13 @@ class PermissionsApi {
     final _path = r'/api/permission-management/permissions';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -70,14 +76,9 @@ class PermissionsApi {
     GetPermissionListResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<GetPermissionListResultDto, GetPermissionListResultDto>(
-              rawData,
-              'GetPermissionListResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<GetPermissionListResultDto, GetPermissionListResultDto>(rawData, 'GetPermissionListResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -130,8 +131,13 @@ class PermissionsApi {
     final _path = r'/api/permission-management/permissions';
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -144,10 +150,10 @@ class PermissionsApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(updatePermissionsDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(updatePermissionsDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(
+         requestOptions: _options.compose(
           _dio.options,
           _path,
           queryParameters: _queryParameters,
@@ -170,4 +176,5 @@ class PermissionsApi {
 
     return _response;
   }
+
 }

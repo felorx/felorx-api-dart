@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for DeployRecordApi
 void main() {
   final instance = FelorxApiClient().getDeployRecordApi();
@@ -57,16 +58,14 @@ void main() {
     });
 
     //Future<DeployRecordDto> markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded(String id, { String deployUrl }) async
-    test(
-      'test markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded',
-      () async {
-        // TODO
-      },
-    );
+    test('test markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded', () async {
+      // TODO
+    });
 
     //Future<DeployRecordDto> updateDeployRecord(String id, { UpdateDeployRecordDto updateDeployRecordDto }) async
     test('test updateDeployRecord', () async {
       // TODO
     });
+
   });
 }

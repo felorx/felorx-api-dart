@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'extension_property_ui_table_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,21 +16,34 @@ part 'extension_property_ui_table_dto.g.dart';
 )
 class ExtensionPropertyUiTableDto {
   /// Returns a new [ExtensionPropertyUiTableDto] instance.
-  ExtensionPropertyUiTableDto({this.isVisible});
+  ExtensionPropertyUiTableDto({
 
-  @JsonKey(name: r'isVisible', required: false, includeIfNull: false)
+     this.isVisible,
+  });
+
+  @JsonKey(
+
+    name: r'isVisible',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isVisible;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ExtensionPropertyUiTableDto && other.isVisible == isVisible;
 
-  @override
-  int get hashCode => isVisible.hashCode;
 
-  factory ExtensionPropertyUiTableDto.fromJson(Map<String, dynamic> json) =>
-      _$ExtensionPropertyUiTableDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is ExtensionPropertyUiTableDto &&
+      other.isVisible == isVisible;
+
+    @override
+    int get hashCode =>
+        isVisible.hashCode;
+
+  factory ExtensionPropertyUiTableDto.fromJson(Map<String, dynamic> json) => _$ExtensionPropertyUiTableDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$ExtensionPropertyUiTableDtoToJson(this);
 
@@ -37,4 +51,5 @@ class ExtensionPropertyUiTableDto {
   String toString() {
     return toJson().toString();
   }
+
 }

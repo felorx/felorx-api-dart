@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for RemoteServiceErrorInfo
 void main() {
-  final RemoteServiceErrorInfo? instance = /* RemoteServiceErrorInfo(...) */
-      null;
+  final RemoteServiceErrorInfo? instance = /* RemoteServiceErrorInfo(...) */ null;
   // TODO add properties to the entity
 
   group(RemoteServiceErrorInfo, () {
@@ -32,5 +31,6 @@ void main() {
     test('to test the property `validationErrors`', () async {
       // TODO
     });
+
   });
 }

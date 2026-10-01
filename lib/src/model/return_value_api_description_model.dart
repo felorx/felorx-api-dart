@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'return_value_api_description_model.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,28 +16,50 @@ part 'return_value_api_description_model.g.dart';
 )
 class ReturnValueApiDescriptionModel {
   /// Returns a new [ReturnValueApiDescriptionModel] instance.
-  ReturnValueApiDescriptionModel({this.type, this.typeSimple});
+  ReturnValueApiDescriptionModel({
 
-  @JsonKey(name: r'type', required: false, includeIfNull: false)
+     this.type,
+
+     this.typeSimple,
+  });
+
+  @JsonKey(
+
+    name: r'type',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? type;
 
-  @JsonKey(name: r'typeSimple', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'typeSimple',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? typeSimple;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ReturnValueApiDescriptionModel &&
-          other.type == type &&
-          other.typeSimple == typeSimple;
 
-  @override
-  int get hashCode =>
-      (type == null ? 0 : type.hashCode) +
-      (typeSimple == null ? 0 : typeSimple.hashCode);
 
-  factory ReturnValueApiDescriptionModel.fromJson(Map<String, dynamic> json) =>
-      _$ReturnValueApiDescriptionModelFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is ReturnValueApiDescriptionModel &&
+      other.type == type &&
+      other.typeSimple == typeSimple;
+
+    @override
+    int get hashCode =>
+        (type == null ? 0 : type.hashCode) +
+        (typeSimple == null ? 0 : typeSimple.hashCode);
+
+  factory ReturnValueApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$ReturnValueApiDescriptionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ReturnValueApiDescriptionModelToJson(this);
 
@@ -44,4 +67,5 @@ class ReturnValueApiDescriptionModel {
   String toString() {
     return toJson().toString();
   }
+
 }

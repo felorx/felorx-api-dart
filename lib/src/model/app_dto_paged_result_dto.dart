@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'app_dto_paged_result_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,27 +17,50 @@ part 'app_dto_paged_result_dto.g.dart';
 )
 class AppDtoPagedResultDto {
   /// Returns a new [AppDtoPagedResultDto] instance.
-  AppDtoPagedResultDto({this.items, this.totalCount});
+  AppDtoPagedResultDto({
 
-  @JsonKey(name: r'items', required: false, includeIfNull: false)
+     this.items,
+
+     this.totalCount,
+  });
+
+  @JsonKey(
+
+    name: r'items',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<AppDto>? items;
 
-  @JsonKey(name: r'totalCount', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'totalCount',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   int? totalCount;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is AppDtoPagedResultDto &&
-          other.items == items &&
-          other.totalCount == totalCount;
 
-  @override
-  int get hashCode =>
-      (items == null ? 0 : items.hashCode) + totalCount.hashCode;
 
-  factory AppDtoPagedResultDto.fromJson(Map<String, dynamic> json) =>
-      _$AppDtoPagedResultDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is AppDtoPagedResultDto &&
+      other.items == items &&
+      other.totalCount == totalCount;
+
+    @override
+    int get hashCode =>
+        (items == null ? 0 : items.hashCode) +
+        totalCount.hashCode;
+
+  factory AppDtoPagedResultDto.fromJson(Map<String, dynamic> json) => _$AppDtoPagedResultDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$AppDtoPagedResultDtoToJson(this);
 
@@ -44,4 +68,5 @@ class AppDtoPagedResultDto {
   String toString() {
     return toJson().toString();
   }
+
 }

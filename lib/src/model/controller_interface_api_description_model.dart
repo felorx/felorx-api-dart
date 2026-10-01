@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'controller_interface_api_description_model.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,40 +17,72 @@ part 'controller_interface_api_description_model.g.dart';
 )
 class ControllerInterfaceApiDescriptionModel {
   /// Returns a new [ControllerInterfaceApiDescriptionModel] instance.
-  ControllerInterfaceApiDescriptionModel({this.type, this.name, this.methods});
+  ControllerInterfaceApiDescriptionModel({
 
-  @JsonKey(name: r'type', required: false, includeIfNull: false)
+     this.type,
+
+     this.name,
+
+     this.methods,
+  });
+
+  @JsonKey(
+
+    name: r'type',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? type;
 
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  @JsonKey(name: r'methods', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'methods',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<InterfaceMethodApiDescriptionModel>? methods;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ControllerInterfaceApiDescriptionModel &&
-          other.type == type &&
-          other.name == name &&
-          other.methods == methods;
 
-  @override
-  int get hashCode =>
-      (type == null ? 0 : type.hashCode) +
-      (name == null ? 0 : name.hashCode) +
-      (methods == null ? 0 : methods.hashCode);
 
-  factory ControllerInterfaceApiDescriptionModel.fromJson(
-    Map<String, dynamic> json,
-  ) => _$ControllerInterfaceApiDescriptionModelFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$ControllerInterfaceApiDescriptionModelToJson(this);
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is ControllerInterfaceApiDescriptionModel &&
+      other.type == type &&
+      other.name == name &&
+      other.methods == methods;
+
+    @override
+    int get hashCode =>
+        (type == null ? 0 : type.hashCode) +
+        (name == null ? 0 : name.hashCode) +
+        (methods == null ? 0 : methods.hashCode);
+
+  factory ControllerInterfaceApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$ControllerInterfaceApiDescriptionModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$ControllerInterfaceApiDescriptionModelToJson(this);
 
   @override
   String toString() {
     return toJson().toString();
   }
+
 }

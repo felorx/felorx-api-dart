@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for MessageTemplateApi
 void main() {
   final instance = FelorxApiClient().getMessageTemplateApi();
@@ -30,5 +31,6 @@ void main() {
     test('test updateMessageTemplate', () async {
       // TODO
     });
+
   });
 }

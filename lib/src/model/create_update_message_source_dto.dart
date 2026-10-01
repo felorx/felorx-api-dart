@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'create_update_message_source_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,59 +18,113 @@ part 'create_update_message_source_dto.g.dart';
 class CreateUpdateMessageSourceDto {
   /// Returns a new [CreateUpdateMessageSourceDto] instance.
   CreateUpdateMessageSourceDto({
-    this.categoryId,
 
-    this.name,
+     this.categoryId,
 
-    this.description,
+     this.name,
 
-    this.isPublished,
+     this.description,
 
-    this.iconUrl,
+     this.isPublished,
 
-    this.routes,
+     this.iconUrl,
+
+     this.routes,
   });
 
-  @JsonKey(name: r'categoryId', required: false, includeIfNull: false)
+  @JsonKey(
+
+    name: r'categoryId',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? categoryId;
 
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  @JsonKey(name: r'description', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'description',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? description;
 
-  @JsonKey(name: r'isPublished', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'isPublished',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isPublished;
 
-  @JsonKey(name: r'iconUrl', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'iconUrl',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? iconUrl;
 
-  @JsonKey(name: r'routes', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'routes',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<CreateUpdateMessageSourceRouteSubDto>? routes;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is CreateUpdateMessageSourceDto &&
-          other.categoryId == categoryId &&
-          other.name == name &&
-          other.description == description &&
-          other.isPublished == isPublished &&
-          other.iconUrl == iconUrl &&
-          other.routes == routes;
 
-  @override
-  int get hashCode =>
-      categoryId.hashCode +
-      (name == null ? 0 : name.hashCode) +
-      (description == null ? 0 : description.hashCode) +
-      isPublished.hashCode +
-      (iconUrl == null ? 0 : iconUrl.hashCode) +
-      (routes == null ? 0 : routes.hashCode);
 
-  factory CreateUpdateMessageSourceDto.fromJson(Map<String, dynamic> json) =>
-      _$CreateUpdateMessageSourceDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is CreateUpdateMessageSourceDto &&
+      other.categoryId == categoryId &&
+      other.name == name &&
+      other.description == description &&
+      other.isPublished == isPublished &&
+      other.iconUrl == iconUrl &&
+      other.routes == routes;
+
+    @override
+    int get hashCode =>
+        categoryId.hashCode +
+        (name == null ? 0 : name.hashCode) +
+        (description == null ? 0 : description.hashCode) +
+        isPublished.hashCode +
+        (iconUrl == null ? 0 : iconUrl.hashCode) +
+        (routes == null ? 0 : routes.hashCode);
+
+  factory CreateUpdateMessageSourceDto.fromJson(Map<String, dynamic> json) => _$CreateUpdateMessageSourceDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$CreateUpdateMessageSourceDtoToJson(this);
 
@@ -77,4 +132,5 @@ class CreateUpdateMessageSourceDto {
   String toString() {
     return toJson().toString();
   }
+
 }

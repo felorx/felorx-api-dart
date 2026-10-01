@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'i_string_value_type.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,33 +17,66 @@ part 'i_string_value_type.g.dart';
 )
 class IStringValueType {
   /// Returns a new [IStringValueType] instance.
-  IStringValueType({this.name, this.properties, this.validator});
+  IStringValueType({
 
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+     this.name,
+
+     this.properties,
+
+     this.validator,
+  });
+
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  @JsonKey(name: r'properties', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'properties',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   Map<String, Object>? properties;
 
-  @JsonKey(name: r'validator', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'validator',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   IValueValidator? validator;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is IStringValueType &&
-          other.name == name &&
-          other.properties == properties &&
-          other.validator == validator;
 
-  @override
-  int get hashCode =>
-      (name == null ? 0 : name.hashCode) +
-      (properties == null ? 0 : properties.hashCode) +
-      validator.hashCode;
 
-  factory IStringValueType.fromJson(Map<String, dynamic> json) =>
-      _$IStringValueTypeFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is IStringValueType &&
+      other.name == name &&
+      other.properties == properties &&
+      other.validator == validator;
+
+    @override
+    int get hashCode =>
+        (name == null ? 0 : name.hashCode) +
+        (properties == null ? 0 : properties.hashCode) +
+        validator.hashCode;
+
+  factory IStringValueType.fromJson(Map<String, dynamic> json) => _$IStringValueTypeFromJson(json);
 
   Map<String, dynamic> toJson() => _$IStringValueTypeToJson(this);
 
@@ -50,4 +84,5 @@ class IStringValueType {
   String toString() {
     return toJson().toString();
   }
+
 }

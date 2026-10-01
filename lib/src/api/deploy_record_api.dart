@@ -20,6 +20,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/update_deploy_record_dto.dart';
 
 class DeployRecordApi {
+
   final Dio _dio;
 
   const DeployRecordApi(this._dio);
@@ -50,8 +51,13 @@ class DeployRecordApi {
     final _path = r'/api/app/deploy-record';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -59,10 +65,13 @@ class DeployRecordApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createDeployRecordDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createDeployRecordDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -81,14 +90,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +138,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -181,17 +185,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/by-ci-deploy-id/{ciDeployId}'
-        .replaceAll(
-          '{'
-          r'ciDeployId'
-          '}',
-          ciDeployId.toString(),
-        );
+    final _path = r'/api/app/deploy-record/by-ci-deploy-id/{ciDeployId}'.replaceAll('{' r'ciDeployId' '}', ciDeployId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -206,14 +209,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -259,16 +257,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -283,14 +281,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -355,8 +348,13 @@ class DeployRecordApi {
     final _path = r'/api/app/deploy-record';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -384,13 +382,9 @@ class DeployRecordApi {
     DeployRecordDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              DeployRecordDtoPagedResultDto,
-              DeployRecordDtoPagedResultDto
-            >(rawData, 'DeployRecordDtoPagedResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDtoPagedResultDto, DeployRecordDtoPagedResultDto>(rawData, 'DeployRecordDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -440,16 +434,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/latest/{appId}'.replaceAll(
-      '{'
-      r'appId'
-      '}',
-      appId.toString(),
-    );
+    final _path = r'/api/app/deploy-record/latest/{appId}'.replaceAll('{' r'appId' '}', appId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -470,14 +464,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -523,17 +512,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/by-build-record-id/{buildRecordId}'
-        .replaceAll(
-          '{'
-          r'buildRecordId'
-          '}',
-          buildRecordId.toString(),
-        );
+    final _path = r'/api/app/deploy-record/by-build-record-id/{buildRecordId}'.replaceAll('{' r'buildRecordId' '}', buildRecordId.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -548,14 +536,9 @@ class DeployRecordApi {
     List<DeployRecordDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<DeployRecordDto>, DeployRecordDto>(
-              rawData,
-              'List<DeployRecordDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<DeployRecordDto>, DeployRecordDto>(rawData, 'List<DeployRecordDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -592,8 +575,7 @@ class DeployRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>>
-  markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled({
+  Future<Response<DeployRecordDto>> markAsCanceledPostApiAppDeployRecordIdMarkAsCanceled({
     required String id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -602,16 +584,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-canceled'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}/mark-as-canceled'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -626,14 +608,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -679,16 +656,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-deploying'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}/mark-as-deploying'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -703,14 +680,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -748,8 +720,7 @@ class DeployRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>>
-  markAsFailedPostApiAppDeployRecordIdMarkAsFailed({
+  Future<Response<DeployRecordDto>> markAsFailedPostApiAppDeployRecordIdMarkAsFailed({
     required String id,
     String? errorMessage,
     CancelToken? cancelToken,
@@ -759,16 +730,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-failed'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}/mark-as-failed'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -788,14 +759,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -833,8 +799,7 @@ class DeployRecordApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeployRecordDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeployRecordDto>>
-  markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded({
+  Future<Response<DeployRecordDto>> markAsSucceededPostApiAppDeployRecordIdMarkAsSucceeded({
     required String id,
     String? deployUrl,
     CancelToken? cancelToken,
@@ -844,16 +809,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}/mark-as-succeeded'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}/mark-as-succeeded'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -873,14 +838,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -928,16 +888,16 @@ class DeployRecordApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/deploy-record/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/deploy-record/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -945,10 +905,13 @@ class DeployRecordApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(updateDeployRecordDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(updateDeployRecordDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -967,14 +930,9 @@ class DeployRecordApi {
     DeployRecordDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<DeployRecordDto, DeployRecordDto>(
-              rawData,
-              'DeployRecordDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<DeployRecordDto, DeployRecordDto>(rawData, 'DeployRecordDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -996,4 +954,5 @@ class DeployRecordApi {
       extra: _response.extra,
     );
   }
+
 }

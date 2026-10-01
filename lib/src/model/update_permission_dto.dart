@@ -7,6 +7,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'update_permission_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -15,26 +16,50 @@ part 'update_permission_dto.g.dart';
 )
 class UpdatePermissionDto {
   /// Returns a new [UpdatePermissionDto] instance.
-  UpdatePermissionDto({this.name, this.isGranted});
+  UpdatePermissionDto({
 
-  @JsonKey(name: r'name', required: false, includeIfNull: false)
+     this.name,
+
+     this.isGranted,
+  });
+
+  @JsonKey(
+
+    name: r'name',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? name;
 
-  @JsonKey(name: r'isGranted', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'isGranted',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isGranted;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is UpdatePermissionDto &&
-          other.name == name &&
-          other.isGranted == isGranted;
 
-  @override
-  int get hashCode => (name == null ? 0 : name.hashCode) + isGranted.hashCode;
 
-  factory UpdatePermissionDto.fromJson(Map<String, dynamic> json) =>
-      _$UpdatePermissionDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is UpdatePermissionDto &&
+      other.name == name &&
+      other.isGranted == isGranted;
+
+    @override
+    int get hashCode =>
+        (name == null ? 0 : name.hashCode) +
+        isGranted.hashCode;
+
+  factory UpdatePermissionDto.fromJson(Map<String, dynamic> json) => _$UpdatePermissionDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UpdatePermissionDtoToJson(this);
 
@@ -42,4 +67,5 @@ class UpdatePermissionDto {
   String toString() {
     return toJson().toString();
   }
+
 }

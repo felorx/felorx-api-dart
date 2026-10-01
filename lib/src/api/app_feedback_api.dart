@@ -20,6 +20,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/reply_app_feedback_dto.dart';
 
 class AppFeedbackApi {
+
   final Dio _dio;
 
   const AppFeedbackApi(this._dio);
@@ -50,8 +51,13 @@ class AppFeedbackApi {
     final _path = r'/api/app/app-feedback';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -59,10 +65,13 @@ class AppFeedbackApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createAppFeedbackDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createAppFeedbackDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -81,14 +90,9 @@ class AppFeedbackApi {
     AppFeedbackDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppFeedbackDto, AppFeedbackDto>(
-              rawData,
-              'AppFeedbackDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedbackDto>(rawData, 'AppFeedbackDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -134,16 +138,16 @@ class AppFeedbackApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-feedback/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app-feedback/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'DELETE',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -181,16 +185,16 @@ class AppFeedbackApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-feedback/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app-feedback/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -205,14 +209,9 @@ class AppFeedbackApi {
     AppFeedbackDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppFeedbackDto, AppFeedbackDto>(
-              rawData,
-              'AppFeedbackDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedbackDto>(rawData, 'AppFeedbackDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -271,8 +270,13 @@ class AppFeedbackApi {
     final _path = r'/api/app/app-feedback';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -297,13 +301,9 @@ class AppFeedbackApi {
     AppFeedbackDtoPagedResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<
-              AppFeedbackDtoPagedResultDto,
-              AppFeedbackDtoPagedResultDto
-            >(rawData, 'AppFeedbackDtoPagedResultDto', growable: true);
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppFeedbackDtoPagedResultDto, AppFeedbackDtoPagedResultDto>(rawData, 'AppFeedbackDtoPagedResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -349,16 +349,16 @@ class AppFeedbackApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-feedback/{id}/mark-as-processed'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app-feedback/{id}/mark-as-processed'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -373,14 +373,9 @@ class AppFeedbackApi {
     AppFeedbackDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppFeedbackDto, AppFeedbackDto>(
-              rawData,
-              'AppFeedbackDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedbackDto>(rawData, 'AppFeedbackDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -428,16 +423,16 @@ class AppFeedbackApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/app-feedback/{id}/reply'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/app/app-feedback/{id}/reply'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -445,10 +440,13 @@ class AppFeedbackApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(replyAppFeedbackDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(replyAppFeedbackDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -467,14 +465,9 @@ class AppFeedbackApi {
     AppFeedbackDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppFeedbackDto, AppFeedbackDto>(
-              rawData,
-              'AppFeedbackDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppFeedbackDto, AppFeedbackDto>(rawData, 'AppFeedbackDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -496,4 +489,5 @@ class AppFeedbackApi {
       extra: _response.extra,
     );
   }
+
 }

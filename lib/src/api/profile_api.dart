@@ -17,6 +17,7 @@ import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 import 'package:felorx_api_client/src/model/update_profile_dto.dart';
 
 class ProfileApi {
+
   final Dio _dio;
 
   const ProfileApi(this._dio);
@@ -47,8 +48,13 @@ class ProfileApi {
     final _path = r'/api/account/my-profile/change-password';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -56,10 +62,13 @@ class ProfileApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(changePasswordInput);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(changePasswordInput);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -102,8 +111,13 @@ class ProfileApi {
     final _path = r'/api/account/my-profile';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -118,14 +132,9 @@ class ProfileApi {
     ProfileDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<ProfileDto, ProfileDto>(
-              rawData,
-              'ProfileDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<ProfileDto, ProfileDto>(rawData, 'ProfileDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -174,8 +183,13 @@ class ProfileApi {
     final _path = r'/api/account/my-profile';
     final _options = Options(
       method: r'PUT',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -183,10 +197,13 @@ class ProfileApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(updateProfileDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(updateProfileDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -205,14 +222,9 @@ class ProfileApi {
     ProfileDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<ProfileDto, ProfileDto>(
-              rawData,
-              'ProfileDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<ProfileDto, ProfileDto>(rawData, 'ProfileDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -234,4 +246,5 @@ class ProfileApi {
       extra: _response.extra,
     );
   }
+
 }

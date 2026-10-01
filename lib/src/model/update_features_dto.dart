@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'update_features_dto.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -16,21 +17,34 @@ part 'update_features_dto.g.dart';
 )
 class UpdateFeaturesDto {
   /// Returns a new [UpdateFeaturesDto] instance.
-  UpdateFeaturesDto({this.features});
+  UpdateFeaturesDto({
 
-  @JsonKey(name: r'features', required: false, includeIfNull: false)
+     this.features,
+  });
+
+  @JsonKey(
+
+    name: r'features',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<UpdateFeatureDto>? features;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is UpdateFeaturesDto && other.features == features;
 
-  @override
-  int get hashCode => (features == null ? 0 : features.hashCode);
 
-  factory UpdateFeaturesDto.fromJson(Map<String, dynamic> json) =>
-      _$UpdateFeaturesDtoFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is UpdateFeaturesDto &&
+      other.features == features;
+
+    @override
+    int get hashCode =>
+        (features == null ? 0 : features.hashCode);
+
+  factory UpdateFeaturesDto.fromJson(Map<String, dynamic> json) => _$UpdateFeaturesDtoFromJson(json);
 
   Map<String, dynamic> toJson() => _$UpdateFeaturesDtoToJson(this);
 
@@ -38,4 +52,5 @@ class UpdateFeaturesDto {
   String toString() {
     return toJson().toString();
   }
+
 }

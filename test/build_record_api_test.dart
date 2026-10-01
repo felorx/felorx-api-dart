@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for BuildRecordApi
 void main() {
   final instance = FelorxApiClient().getBuildRecordApi();
@@ -52,16 +53,14 @@ void main() {
     });
 
     //Future<BuildRecordDto> markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded(String id, { String artifactUrl, int artifactSize }) async
-    test(
-      'test markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded',
-      () async {
-        // TODO
-      },
-    );
+    test('test markAsSucceededPostApiAppBuildRecordIdMarkAsSucceeded', () async {
+      // TODO
+    });
 
     //Future<BuildRecordDto> updateBuildRecord(String id, { UpdateBuildRecordDto updateBuildRecordDto }) async
     test('test updateBuildRecord', () async {
       // TODO
     });
+
   });
 }

@@ -15,6 +15,7 @@ import 'package:felorx_api_client/src/model/find_tenant_result_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AbpTenantApi {
+
   final Dio _dio;
 
   const AbpTenantApi(this._dio);
@@ -42,16 +43,16 @@ class AbpTenantApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/abp/multi-tenancy/tenants/by-id/{id}'.replaceAll(
-      '{'
-      r'id'
-      '}',
-      id.toString(),
-    );
+    final _path = r'/api/abp/multi-tenancy/tenants/by-id/{id}'.replaceAll('{' r'id' '}', id.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -66,14 +67,9 @@ class AbpTenantApi {
     FindTenantResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<FindTenantResultDto, FindTenantResultDto>(
-              rawData,
-              'FindTenantResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<FindTenantResultDto, FindTenantResultDto>(rawData, 'FindTenantResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -119,16 +115,16 @@ class AbpTenantApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/abp/multi-tenancy/tenants/by-name/{name}'.replaceAll(
-      '{'
-      r'name'
-      '}',
-      name.toString(),
-    );
+    final _path = r'/api/abp/multi-tenancy/tenants/by-name/{name}'.replaceAll('{' r'name' '}', name.toString());
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -143,14 +139,9 @@ class AbpTenantApi {
     FindTenantResultDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<FindTenantResultDto, FindTenantResultDto>(
-              rawData,
-              'FindTenantResultDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<FindTenantResultDto, FindTenantResultDto>(rawData, 'FindTenantResultDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -172,4 +163,5 @@ class AbpTenantApi {
       extra: _response.extra,
     );
   }
+
 }

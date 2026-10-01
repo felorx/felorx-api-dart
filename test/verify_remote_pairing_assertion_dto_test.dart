@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for VerifyRemotePairingAssertionDto
 void main() {
-  final VerifyRemotePairingAssertionDto?
-  instance = /* VerifyRemotePairingAssertionDto(...) */ null;
+  final VerifyRemotePairingAssertionDto? instance = /* VerifyRemotePairingAssertionDto(...) */ null;
   // TODO add properties to the entity
 
   group(VerifyRemotePairingAssertionDto, () {
@@ -37,5 +36,6 @@ void main() {
     test('to test the property `assertion`', () async {
       // TODO
     });
+
   });
 }

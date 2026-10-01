@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for GetFeatureListResultDto
 void main() {
-  final GetFeatureListResultDto? instance = /* GetFeatureListResultDto(...) */
-      null;
+  final GetFeatureListResultDto? instance = /* GetFeatureListResultDto(...) */ null;
   // TODO add properties to the entity
 
   group(GetFeatureListResultDto, () {
@@ -12,5 +11,6 @@ void main() {
     test('to test the property `groups`', () async {
       // TODO
     });
+
   });
 }

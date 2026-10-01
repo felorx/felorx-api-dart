@@ -12,9 +12,6 @@ import 'package:felorx_api_client/src/api/abp_application_configuration_api.dart
 import 'package:felorx_api_client/src/api/abp_application_localization_api.dart';
 import 'package:felorx_api_client/src/api/abp_tenant_api.dart';
 import 'package:felorx_api_client/src/api/account_api.dart';
-import 'package:felorx_api_client/src/api/ai_provider_api.dart';
-import 'package:felorx_api_client/src/api/ai_providers_api.dart';
-import 'package:felorx_api_client/src/api/ai_usage_api.dart';
 import 'package:felorx_api_client/src/api/api_keys_api.dart';
 import 'package:felorx_api_client/src/api/app_api.dart';
 import 'package:felorx_api_client/src/api/app_asset_api.dart';
@@ -44,12 +41,10 @@ import 'package:felorx_api_client/src/api/message_source_route_sub_api.dart';
 import 'package:felorx_api_client/src/api/message_template_api.dart';
 import 'package:felorx_api_client/src/api/message_template_release_api.dart';
 import 'package:felorx_api_client/src/api/notification_api.dart';
-import 'package:felorx_api_client/src/api/open_ai_compatible_chat_api.dart';
 import 'package:felorx_api_client/src/api/ops_crypto_api.dart';
 import 'package:felorx_api_client/src/api/permissions_api.dart';
 import 'package:felorx_api_client/src/api/profile_api.dart';
 import 'package:felorx_api_client/src/api/remote_pairing_api.dart';
-import 'package:felorx_api_client/src/api/responses_api.dart';
 import 'package:felorx_api_client/src/api/role_api.dart';
 import 'package:felorx_api_client/src/api/storage_object_api.dart';
 import 'package:felorx_api_client/src/api/subscription_api.dart';
@@ -68,15 +63,13 @@ class FelorxApiClient {
     Dio? dio,
     String? basePathOverride,
     List<Interceptor>? interceptors,
-  }) : this.dio =
-           dio ??
-           Dio(
-             BaseOptions(
-               baseUrl: basePathOverride ?? basePath,
-               connectTimeout: const Duration(milliseconds: 5000),
-               receiveTimeout: const Duration(milliseconds: 3000),
-             ),
-           ) {
+  })  :
+        this.dio = dio ??
+            Dio(BaseOptions(
+              baseUrl: basePathOverride ?? basePath,
+              connectTimeout: const Duration(milliseconds: 5000),
+              receiveTimeout: const Duration(milliseconds: 3000),
+            )) {
     if (interceptors == null) {
       this.dio.interceptors.addAll([
         OAuthInterceptor(),
@@ -91,41 +84,25 @@ class FelorxApiClient {
 
   void setOAuthToken(String name, String token) {
     if (this.dio.interceptors.any((i) => i is OAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor)
-                  as OAuthInterceptor)
-              .tokens[name] =
-          token;
+      (this.dio.interceptors.firstWhere((i) => i is OAuthInterceptor) as OAuthInterceptor).tokens[name] = token;
     }
   }
 
   void setBearerAuth(String name, String token) {
     if (this.dio.interceptors.any((i) => i is BearerAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor)
-                  as BearerAuthInterceptor)
-              .tokens[name] =
-          token;
+      (this.dio.interceptors.firstWhere((i) => i is BearerAuthInterceptor) as BearerAuthInterceptor).tokens[name] = token;
     }
   }
 
   void setBasicAuth(String name, String username, String password) {
     if (this.dio.interceptors.any((i) => i is BasicAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor)
-              as BasicAuthInterceptor)
-          .authInfo[name] = BasicAuthInfo(
-        username,
-        password,
-      );
+      (this.dio.interceptors.firstWhere((i) => i is BasicAuthInterceptor) as BasicAuthInterceptor).authInfo[name] = BasicAuthInfo(username, password);
     }
   }
 
   void setApiKey(String name, String apiKey) {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
-      (this.dio.interceptors.firstWhere(
-                    (element) => element is ApiKeyAuthInterceptor,
-                  )
-                  as ApiKeyAuthInterceptor)
-              .apiKeys[name] =
-          apiKey;
+      (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
   }
 
@@ -157,24 +134,6 @@ class FelorxApiClient {
   /// by doing that all interceptors will not be executed
   AccountApi getAccountApi() {
     return AccountApi(dio);
-  }
-
-  /// Get AiProviderApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  AiProviderApi getAiProviderApi() {
-    return AiProviderApi(dio);
-  }
-
-  /// Get AiProvidersApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  AiProvidersApi getAiProvidersApi() {
-    return AiProvidersApi(dio);
-  }
-
-  /// Get AiUsageApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  AiUsageApi getAiUsageApi() {
-    return AiUsageApi(dio);
   }
 
   /// Get ApiKeysApi instance, base route and serializer can be overridden by a given but be careful,
@@ -351,12 +310,6 @@ class FelorxApiClient {
     return NotificationApi(dio);
   }
 
-  /// Get OpenAiCompatibleChatApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  OpenAiCompatibleChatApi getOpenAiCompatibleChatApi() {
-    return OpenAiCompatibleChatApi(dio);
-  }
-
   /// Get OpsCryptoApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
   OpsCryptoApi getOpsCryptoApi() {
@@ -379,12 +332,6 @@ class FelorxApiClient {
   /// by doing that all interceptors will not be executed
   RemotePairingApi getRemotePairingApi() {
     return RemotePairingApi(dio);
-  }
-
-  /// Get ResponsesApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  ResponsesApi getResponsesApi() {
-    return ResponsesApi(dio);
   }
 
   /// Get RoleApi instance, base route and serializer can be overridden by a given but be careful,

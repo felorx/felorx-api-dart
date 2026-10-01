@@ -1,6 +1,7 @@
 import 'package:test/test.dart';
 import 'package:felorx_api_client/felorx_api_client.dart';
 
+
 /// tests for UserLookupApi
 void main() {
   final instance = FelorxApiClient().getUserLookupApi();
@@ -12,12 +13,9 @@ void main() {
     });
 
     //Future<UserData> findByUserNameGetApiIdentityUsersLookupByUsernameUserName(String userName) async
-    test(
-      'test findByUserNameGetApiIdentityUsersLookupByUsernameUserName',
-      () async {
-        // TODO
-      },
-    );
+    test('test findByUserNameGetApiIdentityUsersLookupByUsernameUserName', () async {
+      // TODO
+    });
 
     //Future<int> getCount({ String filter }) async
     test('test getCount', () async {
@@ -28,5 +26,6 @@ void main() {
     test('test search', () async {
       // TODO
     });
+
   });
 }

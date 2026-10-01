@@ -108,5 +108,6 @@ void main() {
     test('to test the property `lastVerifiedAt`', () async {
       // TODO
     });
+
   });
 }

@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for RemotePairingVerificationDto
 void main() {
-  final RemotePairingVerificationDto?
-  instance = /* RemotePairingVerificationDto(...) */ null;
+  final RemotePairingVerificationDto? instance = /* RemotePairingVerificationDto(...) */ null;
   // TODO add properties to the entity
 
   group(RemotePairingVerificationDto, () {
@@ -12,5 +11,6 @@ void main() {
     test('to test the property `valid`', () async {
       // TODO
     });
+
   });
 }

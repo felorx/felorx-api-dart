@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ParameterApiDescriptionModel
 void main() {
-  final ParameterApiDescriptionModel?
-  instance = /* ParameterApiDescriptionModel(...) */ null;
+  final ParameterApiDescriptionModel? instance = /* ParameterApiDescriptionModel(...) */ null;
   // TODO add properties to the entity
 
   group(ParameterApiDescriptionModel, () {
@@ -57,5 +56,6 @@ void main() {
     test('to test the property `descriptorName`', () async {
       // TODO
     });
+
   });
 }

@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for RemotePairingBindingDto
 void main() {
-  final RemotePairingBindingDto? instance = /* RemotePairingBindingDto(...) */
-      null;
+  final RemotePairingBindingDto? instance = /* RemotePairingBindingDto(...) */ null;
   // TODO add properties to the entity
 
   group(RemotePairingBindingDto, () {
@@ -32,5 +31,6 @@ void main() {
     test('to test the property `accountHash`', () async {
       // TODO
     });
+
   });
 }

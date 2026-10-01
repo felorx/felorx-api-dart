@@ -9,6 +9,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'application_api_description_model.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,28 +18,50 @@ part 'application_api_description_model.g.dart';
 )
 class ApplicationApiDescriptionModel {
   /// Returns a new [ApplicationApiDescriptionModel] instance.
-  ApplicationApiDescriptionModel({this.modules, this.types});
+  ApplicationApiDescriptionModel({
 
-  @JsonKey(name: r'modules', required: false, includeIfNull: false)
+     this.modules,
+
+     this.types,
+  });
+
+  @JsonKey(
+
+    name: r'modules',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   Map<String, ModuleApiDescriptionModel>? modules;
 
-  @JsonKey(name: r'types', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'types',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   Map<String, TypeApiDescriptionModel>? types;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is ApplicationApiDescriptionModel &&
-          other.modules == modules &&
-          other.types == types;
 
-  @override
-  int get hashCode =>
-      (modules == null ? 0 : modules.hashCode) +
-      (types == null ? 0 : types.hashCode);
 
-  factory ApplicationApiDescriptionModel.fromJson(Map<String, dynamic> json) =>
-      _$ApplicationApiDescriptionModelFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is ApplicationApiDescriptionModel &&
+      other.modules == modules &&
+      other.types == types;
+
+    @override
+    int get hashCode =>
+        (modules == null ? 0 : modules.hashCode) +
+        (types == null ? 0 : types.hashCode);
+
+  factory ApplicationApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$ApplicationApiDescriptionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$ApplicationApiDescriptionModelToJson(this);
 
@@ -46,4 +69,5 @@ class ApplicationApiDescriptionModel {
   String toString() {
     return toJson().toString();
   }
+
 }

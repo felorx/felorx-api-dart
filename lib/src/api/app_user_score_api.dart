@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/create_or_update_app_user_score_dto.
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AppUserScoreApi {
+
   final Dio _dio;
 
   const AppUserScoreApi(this._dio);
@@ -46,8 +47,13 @@ class AppUserScoreApi {
     final _path = r'/api/app/app-user-score';
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       contentType: 'application/json',
       validateStatus: validateStatus,
     );
@@ -55,10 +61,13 @@ class AppUserScoreApi {
     dynamic _bodyData;
 
     try {
-      _bodyData = jsonEncode(createOrUpdateAppUserScoreDto);
-    } catch (error, stackTrace) {
+_bodyData=jsonEncode(createOrUpdateAppUserScoreDto);
+    } catch(error, stackTrace) {
       throw DioException(
-        requestOptions: _options.compose(_dio.options, _path),
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
         type: DioExceptionType.unknown,
         error: error,
         stackTrace: stackTrace,
@@ -77,14 +86,9 @@ class AppUserScoreApi {
     AppUserScoreDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AppUserScoreDto, AppUserScoreDto>(
-              rawData,
-              'AppUserScoreDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AppUserScoreDto, AppUserScoreDto>(rawData, 'AppUserScoreDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -106,4 +110,5 @@ class AppUserScoreApi {
       extra: _response.extra,
     );
   }
+
 }

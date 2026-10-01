@@ -8,6 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'type_api_description_model.g.dart';
 
+
 @JsonSerializable(
   checked: true,
   createToJson: true,
@@ -17,59 +18,113 @@ part 'type_api_description_model.g.dart';
 class TypeApiDescriptionModel {
   /// Returns a new [TypeApiDescriptionModel] instance.
   TypeApiDescriptionModel({
-    this.baseType,
 
-    this.isEnum,
+     this.baseType,
 
-    this.enumNames,
+     this.isEnum,
 
-    this.enumValues,
+     this.enumNames,
 
-    this.genericArguments,
+     this.enumValues,
 
-    this.properties,
+     this.genericArguments,
+
+     this.properties,
   });
 
-  @JsonKey(name: r'baseType', required: false, includeIfNull: false)
+  @JsonKey(
+
+    name: r'baseType',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   String? baseType;
 
-  @JsonKey(name: r'isEnum', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'isEnum',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   bool? isEnum;
 
-  @JsonKey(name: r'enumNames', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'enumNames',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<String>? enumNames;
 
-  @JsonKey(name: r'enumValues', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'enumValues',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<Object>? enumValues;
 
-  @JsonKey(name: r'genericArguments', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'genericArguments',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<String>? genericArguments;
 
-  @JsonKey(name: r'properties', required: false, includeIfNull: false)
+
+
+  @JsonKey(
+
+    name: r'properties',
+    required: false,
+    includeIfNull: false,
+  )
+
+
   List<PropertyApiDescriptionModel>? properties;
 
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is TypeApiDescriptionModel &&
-          other.baseType == baseType &&
-          other.isEnum == isEnum &&
-          other.enumNames == enumNames &&
-          other.enumValues == enumValues &&
-          other.genericArguments == genericArguments &&
-          other.properties == properties;
 
-  @override
-  int get hashCode =>
-      (baseType == null ? 0 : baseType.hashCode) +
-      isEnum.hashCode +
-      (enumNames == null ? 0 : enumNames.hashCode) +
-      (enumValues == null ? 0 : enumValues.hashCode) +
-      (genericArguments == null ? 0 : genericArguments.hashCode) +
-      (properties == null ? 0 : properties.hashCode);
 
-  factory TypeApiDescriptionModel.fromJson(Map<String, dynamic> json) =>
-      _$TypeApiDescriptionModelFromJson(json);
+
+
+    @override
+    bool operator ==(Object other) => identical(this, other) || other is TypeApiDescriptionModel &&
+      other.baseType == baseType &&
+      other.isEnum == isEnum &&
+      other.enumNames == enumNames &&
+      other.enumValues == enumValues &&
+      other.genericArguments == genericArguments &&
+      other.properties == properties;
+
+    @override
+    int get hashCode =>
+        (baseType == null ? 0 : baseType.hashCode) +
+        isEnum.hashCode +
+        (enumNames == null ? 0 : enumNames.hashCode) +
+        (enumValues == null ? 0 : enumValues.hashCode) +
+        (genericArguments == null ? 0 : genericArguments.hashCode) +
+        (properties == null ? 0 : properties.hashCode);
+
+  factory TypeApiDescriptionModel.fromJson(Map<String, dynamic> json) => _$TypeApiDescriptionModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$TypeApiDescriptionModelToJson(this);
 
@@ -77,4 +132,5 @@ class TypeApiDescriptionModel {
   String toString() {
     return toJson().toString();
   }
+
 }

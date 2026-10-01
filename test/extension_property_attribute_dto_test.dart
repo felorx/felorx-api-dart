@@ -3,8 +3,7 @@ import 'package:felorx_api_client/felorx_api_client.dart';
 
 // tests for ExtensionPropertyAttributeDto
 void main() {
-  final ExtensionPropertyAttributeDto?
-  instance = /* ExtensionPropertyAttributeDto(...) */ null;
+  final ExtensionPropertyAttributeDto? instance = /* ExtensionPropertyAttributeDto(...) */ null;
   // TODO add properties to the entity
 
   group(ExtensionPropertyAttributeDto, () {
@@ -17,5 +16,6 @@ void main() {
     test('to test the property `config`', () async {
       // TODO
     });
+
   });
 }

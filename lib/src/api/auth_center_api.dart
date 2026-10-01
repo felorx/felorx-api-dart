@@ -16,6 +16,7 @@ import 'package:felorx_api_client/src/model/authorized_app_dto.dart';
 import 'package:felorx_api_client/src/model/remote_service_error_response.dart';
 
 class AuthCenterApi {
+
   final Dio _dio;
 
   const AuthCenterApi(this._dio);
@@ -44,8 +45,13 @@ class AuthCenterApi {
     final _path = r'/api/app/auth-center/authorized-apps';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -60,14 +66,9 @@ class AuthCenterApi {
     List<AuthorizedAppDto>? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<List<AuthorizedAppDto>, AuthorizedAppDto>(
-              rawData,
-              'List<AuthorizedAppDto>',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<AuthorizedAppDto>, AuthorizedAppDto>(rawData, 'List<AuthorizedAppDto>', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -90,7 +91,7 @@ class AuthCenterApi {
     );
   }
 
-  /// getSummaryGetApiAppAuthCenterSummary
+  /// getSummary
   ///
   ///
   /// Parameters:
@@ -103,7 +104,7 @@ class AuthCenterApi {
   ///
   /// Returns a [Future] containing a [Response] with a [AuthCenterSummaryDto] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<AuthCenterSummaryDto>> getSummaryGetApiAppAuthCenterSummary({
+  Future<Response<AuthCenterSummaryDto>> getSummary({
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -114,8 +115,13 @@ class AuthCenterApi {
     final _path = r'/api/app/auth-center/summary';
     final _options = Options(
       method: r'GET',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -130,14 +136,9 @@ class AuthCenterApi {
     AuthCenterSummaryDto? _responseData;
 
     try {
-      final rawData = _response.data;
-      _responseData = rawData == null
-          ? null
-          : deserialize<AuthCenterSummaryDto, AuthCenterSummaryDto>(
-              rawData,
-              'AuthCenterSummaryDto',
-              growable: true,
-            );
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<AuthCenterSummaryDto, AuthCenterSummaryDto>(rawData, 'AuthCenterSummaryDto', growable: true);
+
     } catch (error, stackTrace) {
       throw DioException(
         requestOptions: _response.requestOptions,
@@ -183,17 +184,16 @@ class AuthCenterApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/app/auth-center/revoke-authorized-app/{clientId}'
-        .replaceAll(
-          '{'
-          r'clientId'
-          '}',
-          clientId.toString(),
-        );
+    final _path = r'/api/app/auth-center/revoke-authorized-app/{clientId}'.replaceAll('{' r'clientId' '}', clientId.toString());
     final _options = Options(
       method: r'POST',
-      headers: <String, dynamic>{...?headers},
-      extra: <String, dynamic>{'secure': <Map<String, String>>[], ...?extra},
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
       validateStatus: validateStatus,
     );
 
@@ -207,4 +207,5 @@ class AuthCenterApi {
 
     return _response;
   }
+
 }
