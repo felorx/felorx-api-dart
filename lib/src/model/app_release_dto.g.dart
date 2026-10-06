@@ -123,6 +123,7 @@ const _$ArtifactTypeEnumMap = {
   ArtifactType.bin: 'Bin',
   ArtifactType.other: 'Other',
   ArtifactType.fdu: 'Fdu',
+  ArtifactType.fapp: 'Fapp',
 };
 
 const _$AppPublisherEnumMap = {

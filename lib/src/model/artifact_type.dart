@@ -60,7 +60,9 @@ enum ArtifactType {
       other(r'Other'),
           /// Represents the type of an artifact.
       @JsonValue(r'Fdu')
-      fdu(r'Fdu');
+      fdu(r'Fdu'),
+      @JsonValue(r'Fapp')
+      fapp(r'Fapp');
 
   const ArtifactType(this.value);
 
