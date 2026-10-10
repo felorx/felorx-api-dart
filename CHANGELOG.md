@@ -1,3 +1,7 @@
+## 1.34.0
+
+ - **FEAT**(felorx_api_client): 支持 Fapp 制品类型.
+
 ## 1.33.0
 
  - **REFACTOR**(felorx_api_client): 移除旧定价字段.
