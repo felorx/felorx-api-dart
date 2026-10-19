@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **body** | **String** |  | [optional]
 **url** | **String** |  | [optional]
 **felorxId** | **String** |  | [optional]
+**senderId** | **String** |  | [optional]
 **creatorId** | **String** |  | [optional]
 **app** | **String** |  | [optional]
 

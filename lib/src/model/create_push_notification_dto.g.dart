@@ -15,6 +15,7 @@ CreatePushNotificationDto _$CreatePushNotificationDtoFromJson(
     body: $checkedConvert('body', (v) => v as String?),
     url: $checkedConvert('url', (v) => v as String?),
     felorxId: $checkedConvert('felorxId', (v) => v as String?),
+    senderId: $checkedConvert('senderId', (v) => v as String?),
     creatorId: $checkedConvert('creatorId', (v) => v as String?),
     app: $checkedConvert('app', (v) => v as String?),
   );
@@ -29,6 +30,7 @@ Map<String, dynamic> _$CreatePushNotificationDtoToJson(
   'body': ?instance.body,
   'url': ?instance.url,
   'felorxId': ?instance.felorxId,
+  'senderId': ?instance.senderId,
   'creatorId': ?instance.creatorId,
   'app': ?instance.app,
 };
