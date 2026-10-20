@@ -1,3 +1,7 @@
+## 1.34.1
+
+ - **FIX**(felorx_api_client): 更新消息推送契约并补充序列化回归.
+
 ## 1.34.0
 
  - **FEAT**(felorx_api_client): 支持 Fapp 制品类型.
